@@ -1,0 +1,18 @@
+<div class="image">
+    <img src="${pdict.image.src.desktop}" alt="${pdict.alt ? pdict.alt : imageName}" />
+</div>
+<div class="inner">
+    <div class="content">
+        <div class="logo">
+            <img src="${pdict.logo.src.desktop}" alt="AARP Hearing Solutions | United Healthcare Hearing" />
+        </div>
+        <div class="headline">
+            <h1>${pdict.headline ? pdict.headline : "May is Better Hearing and Speech Month"}</h1>
+        </div>
+        <div class="cta">
+            <a href="${pdict.buttonLink}" class="primary button">
+                ${pdict.buttonText}
+            </a>
+        </div>
+    </div>
+</div>

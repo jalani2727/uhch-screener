@@ -1,0 +1,12 @@
+<header class="minimal-header">
+    <nav role="navigation">
+        <div class="header container">
+            <div class="col-12">
+                <div class="navbar-header brand row">
+                    <img class="hidden-md-down" src="${URLUtils.staticURL('/images/logo.svg')}" alt="${Resource.msg('global.storename', 'common', null)}" />
+                    <img class="d-lg-none" src="${URLUtils.staticURL('/images/logo-small.svg')}" alt="${Resource.msg('global.storename', 'common', null)}" />
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

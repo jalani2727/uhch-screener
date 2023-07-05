@@ -1,0 +1,140 @@
+.search-form-container {
+    background: $primary-col-2;
+    border: 1px solid $uhc-border-color;
+    padding: 24px 26px 24px 21px;
+}
+
+.provider-search-title {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $uhc-border-color;
+    margin-bottom: 22px;
+}
+
+.provider-search-description {
+    margin-bottom: 18px;
+}
+
+.form-container {
+    width: 100%;
+
+    input[type='text'],
+    select {
+        width: 120px;
+    }
+
+    .zipcode-wrapper,
+    .state-wrapper {
+        margin-bottom: 15px;
+    }
+
+    .radius-wrapper {
+        margin-bottom: 40px;
+    }
+
+    .search-button-wrapper {
+        margin-bottom: 15px;
+    }
+}
+
+.text-container {
+    label {
+        margin-bottom: 6px;
+    }
+}
+
+.radio-container {
+    display: flex;
+
+    label {
+        padding-left: 8px;
+        padding-top: 2px;
+    }
+
+    .custom-radio:first-child {
+        margin-right: 26px;
+    }
+}
+
+.virtual-visits-container {
+    margin-top: 20px;
+
+    h4 {
+        font-family: 'UHCSansBold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 20px;
+        color: $primary-col-1;
+        padding-bottom: 13px;
+        border-bottom: 1px solid $uhc-border-color;
+        margin-bottom: 12px;
+    }
+
+    .provider-search-description {
+        margin-bottom: 0;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .search-form-container {
+        padding: 28px 48px 48px 34px;
+    }
+
+    .provider-search-title {
+        font-size: 28px;
+        line-height: 44px;
+    }
+
+    .provider-search-description {
+        max-width: 530px;
+        margin-bottom: 48px;
+    }
+
+    .form-container {
+        .text-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .zipcode-wrapper,
+        .radius-wrapper,
+        .state-wrapper {
+            margin-bottom: 26px;
+            margin-right: 14px;
+        }
+
+        .search-button-wrapper {
+            margin-top: 20px;
+        }
+    }
+
+    .virtual-visits-container {
+        margin-top: 33px;
+    }
+}
+
+.provider-search-form .text-container {
+    position: relative;
+}
+
+.zipcode-custom-error,
+.state-custom-error {
+    display: none;
+    font-size: 80%;
+    color: $uhc-error;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    background: $white;
+
+    @include media-breakpoint-down(md) {
+        bottom: 50px;
+    }
+}
+
+.form-control.is-invalid ~ {
+    .zipcode-custom-error,
+    .state-custom-error {
+        display: block;
+    }
+}

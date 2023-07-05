@@ -1,0 +1,21 @@
+<a href="${URLUtils.https('Login-OAuthLogin', 'oauthLoginTargetEndPoint', pdict.oAuthReentryEndpoint)}" class="oauth-salesforce" aria-pressed="true">
+    ${Resource.msg('label.create.an.account','login',null)}
+</a> ${Resource.msg('label.or','login',null)}
+<a href="${URLUtils.https('Login-OAuthLogin', 'oauthLoginTargetEndPoint', pdict.oAuthReentryEndpoint)}" class="oauth-salesforce" aria-pressed="true">
+    ${Resource.msg('label.sign-in','login',null)}
+</a> ${Resource.msg('content.login.page','login',null)}
+
+<div class="row btn-container">
+    <div class="form-group padding-zero col-sm-12 col-md-12 col-lg-5">
+        <a href="${URLUtils.https('Login-OAuthLogin', 'oauthLoginTargetEndPoint', pdict.oAuthReentryEndpoint)}" class="btn btn-primary btn-block oauth-salesforce"
+           role="button" aria-pressed="true">
+            ${Resource.msg('heading.create.account', 'checkout', null)}
+        </a>
+    </div>
+    <div class="form-group padding-zero col-sm-12 col-md-12 col-lg-5">
+        <a href="${URLUtils.https('Login-OAuthLogin', 'oauthLoginTargetEndPoint', pdict.oAuthReentryEndpoint)}" class="btn btn-outline-primary btn-block oauth-salesforce"
+           role="button" aria-pressed="true">
+            ${Resource.msg('link.header.login', 'account', null)}
+        </a>
+    </div>
+</div>

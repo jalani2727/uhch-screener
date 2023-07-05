@@ -1,0 +1,27 @@
+<div class="row justify-content-center">
+    <div class="col-sm-6">
+        <!---Profile--->
+        <isinclude template="account/profileCard"/>
+
+        <!---Order History--->
+        <isif condition="${pdict.account.orderHistory}">
+            <isset name="order" value="${pdict.account.orderHistory}" scope="page"/>
+            <isinclude template="account/order/orderHistoryCard"/>
+        <iselse>
+            <!---Address Book--->
+            <isinclude template="account/addressBookCard"/>
+        </isif>
+    </div>
+    <div class="col-sm-6">
+        <isif condition="${!pdict.account.isExternallyAuthenticated}">
+            <!---Password--->
+            <isinclude template="account/passwordCard"/>
+        </isif>
+        <isif condition="${pdict.account.orderHistory}">
+            <!---Address Book--->
+            <isinclude template="account/addressBookCard"/>
+        </isif>
+        <!---Payment--->
+        <isinclude template="account/paymentCard"/>
+    </div>
+</div>

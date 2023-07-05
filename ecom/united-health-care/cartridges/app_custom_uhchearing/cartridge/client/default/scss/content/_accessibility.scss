@@ -1,0 +1,17 @@
+.accessibility-page {
+    max-width: 970px;
+    margin-bottom: 107px;
+
+    .link-inside-content-styling {
+        color: $uhc-link-color;
+    }
+
+    .font-uhc-black {
+        color: $uhc-black;
+    }
+
+    @include media-breakpoint-up(md) {
+        margin-top: 62px;
+        margin-bottom: 158px;
+    }
+}

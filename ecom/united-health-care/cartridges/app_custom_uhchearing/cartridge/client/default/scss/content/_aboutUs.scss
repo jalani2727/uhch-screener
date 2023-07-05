@@ -1,0 +1,81 @@
+$section-2-bckg-color: #f6f7f8;
+
+.about-us-landing-page {
+    .about-us-section-2 {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .about-us-section-1 {
+        padding-bottom: 24px;
+    }
+
+    .sub-section-1-content,
+    .sub-section-2-content,
+    .section-2-content {
+        margin-top: 15px;
+    }
+
+    .about-us-section-2-container {
+        background-color: $section-2-bckg-color;
+    }
+
+    .about-us-page-title {
+        font-family: $uhc-font-serif;
+        font-size: 28px;
+        color: $primary-col-1;
+    }
+
+    .section-heading {
+        font-family: $uhc-font-serif;
+        font-size: 22px;
+        color: $primary-col-1;
+    }
+
+    .about-us-sub-section-2 {
+        margin-top: 24px;
+    }
+
+    .font-family-bold {
+        font-family: $uhc-font-sans-bold;
+        color: $uhc-form-label;
+    }
+
+    .link-inside-content-styling {
+        color: $uhc-link-color;
+    }
+
+    @include media-breakpoint-up(lg) {
+        .about-us-section-1,
+        .about-us-section-2 {
+            padding: 62px 0 63px 92px;
+        }
+
+        .sub-section-1-content,
+        .sub-section-2-content,
+        .section-2-content {
+            margin-top: 25px;
+        }
+
+        .about-us-sub-section-1,
+        .about-us-sub-section-2 {
+            width: 945px;
+        }
+
+        .about-us-page-title {
+            font-size: 36px;
+        }
+
+        .section-heading {
+            font-size: 28px;
+        }
+
+        .about-us-sub-section-2 {
+            margin-top: 30px;
+        }
+
+        .about-us-section-2 {
+            padding-top: 60px;
+        }
+    }
+}

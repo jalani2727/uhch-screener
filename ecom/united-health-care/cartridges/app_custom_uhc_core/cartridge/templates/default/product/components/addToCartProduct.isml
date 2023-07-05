@@ -1,0 +1,25 @@
+<div class="row cart-and-ipay">
+    <div class="col-sm-12">
+        <isif condition="${pdict.isTypeButton}">
+            <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}">
+            <isif condition="${pdict.product.isPriceAvailable}">
+            <button class="add-to-cart btn btn-primary"
+                    data-toggle="modal" data-target="#chooseBonusProductModal"
+                    data-pid="${pdict.product.id}"
+                    ${(!pdict.product.readyToOrder || !pdict.product.available) ? "disabled" : ""}>
+                <isprint value="${pdict.addToCartText}" encoding="off" />
+            </button>
+            </isif>
+        <iselse/>
+            <div class="mb-sm-3">
+                <a href="${pdict.addToCartUrl}"
+                    class="btn btn-primary btn-block checkout-btn" role="button">
+                    <isprint value="${pdict.addToCartText}" encoding="off" />
+                </a>
+            </div>
+        </isif>
+        <isinclude template="/components/modules" sf-toolkit="off" />
+        <iscontentasset aid="${pdict.informationMessageAssetID}" />
+        <isinclude template="product/components/addToCartButtonExtension"/>
+    </div>
+</div>

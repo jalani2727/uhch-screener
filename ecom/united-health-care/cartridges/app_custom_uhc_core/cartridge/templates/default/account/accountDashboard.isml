@@ -1,0 +1,17 @@
+<isdecorate template="common/layout/page">
+
+    <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+        <isinclude template="reporting/reportingUrls" />
+    </isif>
+    <isinclude template="/components/modules" sf-toolkit="off" />
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/account/dashboard.css');
+    </isscript>
+    <isset name="isorderHistory" value="${false}" scope="page" />
+    <div class="container my-account-details">
+        <h1 class="my-account-title uhc-blue uhc-serif uhc-main-title">${Resource.msg('title.my-account','account',null)}
+        </h1>
+        <isinclude template="account/dashboardProfileCards"/>
+    </div>
+</isdecorate>

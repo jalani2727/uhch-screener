@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customer-groups xmlns="http://www.demandware.com/xml/impex/customergroup/2007-06-30">
+    <customer-group group-id="GoodHearing">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.hearingresult</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>good</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="ModerateHearing">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.hearingresult</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>moderate</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="PoorHearing">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.hearingresult</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>poor</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="Everyone">
+        <description>Represents all customers of the site, both unregistered and registered.</description>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="Registered">
+        <description>Represents all registered customers of the site.</description>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="Unregistered">
+        <description>Represents all unregistered customers of the site.</description>
+        <custom-attributes/>
+    </customer-group>
+
+</customer-groups>

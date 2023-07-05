@@ -1,0 +1,65 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/articles.css');
+    </isscript>
+
+    <div class="articles-landing">
+        <div class="article-section-1">
+            <div class="container">
+                <div class="article-bannertext-container m-auto">
+                    <h1 class="uhc-blue uhc-serif uhc-main-title mb-0">${pdict.displayName}</h1>
+                    <div class="pt-4">${pdict.description}</div>
+                </div>
+            </div>
+        </div>
+        <isloop items="${pdict.content}" var="asset">
+            <div class="article-section-2">
+                <div class="container">
+                    <div class="article-video-container m-auto">
+                        <div class="article-video-banner">
+                            <isprint value="${asset.custom.body.markup}" encoding="off" />
+                        </div>
+                        <div class="uhc-blue uhc-sans-700 article-video-caption">${asset.name}</div>
+                    </div>
+                </div>
+            </div>
+            <isbreak/>
+        </isloop>
+        <isloop items="${pdict.subFolders}" var="subFolder">
+            <div class="col-12 col-md-auto pt-4 pt-md-0">
+                <div class="article-section-3 article-tile-section">
+                    <div class="container">
+                        <div class="uhc-blue uhc-serif uhc-main-title-two mb-4 pb-3">${subFolder.getDisplayName()}</div>
+                        <div class="row align-items-stretch">
+                            <isloop items="${subFolder.content}" var="asset">
+                                <isif condition="${asset.online}">
+                                    <isif condition="${asset.custom.articleIdentifier.value === 'article'}">
+                                        <div class="col-12 col-md-4 pb-4">
+                                            <div class="article-tile">
+                                                <isif condition="${asset.custom.tileImage && asset.custom.tileImage.getAbsURL()}">
+                                                    <div class="article-tile-img d-flex justify-content-center overflow-hidden">
+                                                        <img alt="${asset.name}" src="${asset.custom.tileImage.getAbsURL()}" title="${asset.name}" />
+                                                    </div>
+                                                    <div class="article-tile-bottom d-flex align-items-start flex-column">
+                                                        <div class="uhc-blue uhc-serif uhc-sub-title-two mb-2 article-tile-title">
+                                                            ${asset.name}
+                                                        </div>
+                                                        <div class="article-tile-text">${asset.description}</div>
+                                                        <a class="mt-auto btn btn-primary" href="${asset.custom.articleContent.getAbsURL()}" target="_blank">
+                                                            ${Resource.msg('resources.btn.see.more', 'search', null)}
+                                                        </a>
+                                                    </div>
+                                                </isif>
+                                            </div>
+                                        </div>
+                                    </isif>
+                                </isif>
+                            </isloop>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </isloop>
+    </div>
+</isdecorate>

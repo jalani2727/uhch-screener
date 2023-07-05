@@ -1,0 +1,21 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/providerSearch.css');
+        assets.addJs('/js/providerSearch.js');
+    </isscript>
+
+    <div class="container">
+        <div class="provider-search-page-container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <isinclude template="providerSearch/searchForm" />
+                    <isinclude template="providerSearch/infoSection" />
+                </div>
+                <div class="col-12 col-lg-6">
+                    <isinclude template="providerSearch/fileUpload" />
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

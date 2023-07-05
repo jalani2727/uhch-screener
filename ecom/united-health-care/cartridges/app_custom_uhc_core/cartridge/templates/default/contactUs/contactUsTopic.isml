@@ -1,0 +1,39 @@
+<option value="">
+    ${Resource.msg('label.select', 'common', null)}
+</option>
+<option
+    value="${Resource.msg('label.input.contact.reason.benefits', 'contactUs', null)}">
+    ${Resource.msg('label.input.contact.reason.benefits', 'contactUs', null)}
+</option>
+<option
+    value="${Resource.msg('label.input.contact.reason.orderstatus', 'contactUs', null)}">
+    ${Resource.msg('label.input.contact.reason.orderstatus', 'contactUs', null)}
+</option>
+<option
+    value="${Resource.msg('label.input.contact.reason.provider', 'contactUs', null)}">
+    ${Resource.msg('label.input.contact.reason.provider', 'contactUs', null)}
+</option>
+<option
+    value="${Resource.msg('label.input.contact.reason.learnmore', 'contactUs', null)}">
+    ${Resource.msg('label.input.contact.reason.learnmore', 'contactUs', null)}
+</option>
+<option
+    value="${Resource.msg('label.input.contact.reason.loss', 'contactUs', null)}">
+    ${Resource.msg('label.input.contact.reason.loss', 'contactUs', null)}
+</option>
+<option
+    value="${Resource.msg('label.input.contact-topic-other', 'contactUs', null)}">
+    ${Resource.msg('label.input.contact-topic-other', 'contactUs', null)}
+</option>
+<option
+    value="${Resource.msg('label.input.contact.reason.returns', 'contactUs', null)}">
+    ${Resource.msg('label.input.contact.reason.returns', 'contactUs', null)}
+</option>
+<option
+    value="${Resource.msg('label.input.contact.reason.appointment', 'contactUs', null)}">
+    ${Resource.msg('label.input.contact.reason.appointment', 'contactUs', null)}
+</option>
+<option
+    value="${Resource.msg('label.input.contact.reason.service', 'contactUs', null)}">
+    ${Resource.msg('label.input.contact.reason.service', 'contactUs', null)}
+</option>

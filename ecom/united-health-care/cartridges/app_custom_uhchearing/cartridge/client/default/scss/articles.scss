@@ -1,0 +1,145 @@
+@import 'bootstrap/scss/mixins/breakpoints';
+@import './variables';
+
+$vdo-banner-br: #b7b7b7;
+$vdo-banner-bg: $tints-col-4;
+
+.play-video-container {
+    position: relative;
+}
+
+.play-video-icon {
+    width: 66px;
+    height: 66px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjYiIGhlaWdodD0iNjYiIHZpZXdCb3g9IjAgMCA2NiA2NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzMiIGN5PSIzMyIgcj0iMzMiIGZpbGw9IiMyNDI0MjQiLz4KPHBhdGggZD0iTTQ2Ljc5NjYgMzEuMzA1NEM0OC4wNDY5IDMyLjA4OTIgNDguMDQ2OSAzMy45MTA4IDQ2Ljc5NjYgMzQuNjk0NkwyNy4wODQzIDQ3LjA1MUMyNS43NTIzIDQ3Ljg4NiAyNC4wMjIxIDQ2LjkyODUgMjQuMDIyMSA0NS4zNTY0TDI0LjAyMjEgMjAuNjQzNkMyNC4wMjIxIDE5LjA3MTYgMjUuNzUyMyAxOC4xMTQxIDI3LjA4NDMgMTguOTQ5TDQ2Ljc5NjYgMzEuMzA1NFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=');
+}
+
+.article-section-1 {
+    .article-bannertext-container {
+        padding: 16px 0 50px;
+
+        @include media-breakpoint-up(md) {
+            max-width: 835px;
+            padding: 60px 0;
+        }
+    }
+}
+
+.article-section-2 {
+    background-color: $vdo-banner-bg;
+
+    .article-video-container {
+        padding: 30px 0 47px;
+
+        @include media-breakpoint-up(md) {
+            max-width: 835px;
+            padding: 60px 0;
+        }
+    }
+
+    .article-video-banner {
+        position: relative;
+        padding-bottom: calc(56.25% + 36px);
+        margin-bottom: 13px;
+        border: 1px solid $vdo-banner-br;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .article-video-caption {
+        font-size: 18px;
+        line-height: 24px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+}
+
+.article-section-3 {
+    padding-top: 50px;
+
+    @include media-breakpoint-up(md) {
+        padding-top: 63px;
+    }
+}
+
+.article-section-4 {
+    padding: 30px 0 50px;
+}
+
+.article-tile-section {
+    .article-tile {
+        border: 1px solid $uhc-border-color;
+        height: 100%;
+        max-width: 408px;
+        margin: 0 auto;
+    }
+
+    .article-tile-img {
+        height: 272px;
+    }
+
+    .article-tile-bottom {
+        padding: 40px 20px;
+        height: calc(100% - 272px);
+
+        @include media-breakpoint-up(md) {
+            padding: 40px 40px 48px;
+        }
+    }
+
+    .article-tile-text {
+        line-height: 23px;
+        color: $uhc-form-label;
+        padding-bottom: 22px;
+
+        @include media-breakpoint-up(md) {
+            padding-bottom: 50px;
+        }
+    }
+}
+
+.video-tutorials-landing {
+    margin: 12px 0 36px;
+
+    @include media-breakpoint-up(md) {
+        margin: 63px 0 32px;
+    }
+}
+
+.video-player-page {
+    padding: 0 0 66px;
+
+    @include media-breakpoint-up(md) {
+        padding: 66px 0;
+    }
+
+    .video-container {
+        max-width: 1056px;
+    }
+
+    .iframe-video-banner {
+        position: relative;
+        padding-bottom: calc(56.25% + 36px);
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns="http://www.demandware.com/xml/impex/services/2014-09-26">
+    <service-credential service-credential-id="ease.http.auth.cred">
+        <url>https://test.salesforce.com/services/oauth2/token</url>
+        <user-id>integrationuhchearing@optum.com.ecomdev</user-id>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-credential service-credential-id="ease.http.create.lead.cred">
+        <url>https://epichearing--ecomdev.sandbox.my.salesforce.com/services/apexrest/leadServiceOAP/</url>
+        <user-id/>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-credential service-credential-id="ease.http.middleware.auth.cred">
+        <url>https://hearingmiddlewaredev.azurewebsites.net/api/token/gettoken</url>
+        <user-id>dJgNjQnTqVsYv2x4A7C9EcHeKhPkRnUrWtYw3y5A8DaFdJfMhQmSpUsXuZw4</user-id>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-credential service-credential-id="ease.http.middleware.cred">
+        <url>https://hearingmiddlewaredev.azurewebsites.net/api/middleware/check-member-eligibility</url>
+        <user-id>ad19e8adcb0832f1976d97c8d54af1d078b48bdb37</user-id>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-credential service-credential-id="ease.http.provider.search.cred">
+        <url>https://epichearing--ecomdev.sandbox.my.salesforce.com/services/apexrest/getProviderSearchAPI/</url>
+        <user-id/>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-credential service-credential-id="ease.rest.eligibility.cred">
+        <url>https://epichearing--ecomdev.sandbox.my.salesforce.com/services/apexrest/eligibilityApiMember/</url>
+        <user-id/>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-credential service-credential-id="ease.rest.invoicelookup.cred">
+        <url>https://epichearing--ecomdev.sandbox.my.salesforce.com/services/apexrest/ecomInvoiceLookupService/</url>
+        <user-id/>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.rest.auth">
+        <url>https://mc0qt0qqzrshjcm96mnlszccb2j4.auth.marketingcloudapis.com/v2/token</url>
+        <user-id>wxvjms5jxvh6wvci9v7y96w6</user-id>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-credential service-credential-id="marketingcloud.sftp">
+        <url>ftp.YOUR_INSTANCE.exacttarget.com</url>
+        <user-id>SFTP USER ID</user-id>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-credential service-credential-id="uhc.http.google.recaptcha.cred">
+        <url>https://www.google.com/recaptcha/api/siteverify</url>
+        <user-id/>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-credential service-credential-id="uhc.sftp.cred.dev">
+        <url>ecgpe.healthtechnologygroup.com</url>
+        <user-id>es10m9b</user-id>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-credential service-credential-id="uhc.sftp.cred.prod">
+        <url>ecgpe.healthtechnologygroup.com</url>
+        <user-id>es10m9b</user-id>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-credential service-credential-id="upg.http.payment.cred">
+        <url>https://gateway-stage.optum.com/api/stg/fin/uhgpg/xurls/v1</url>
+        <user-id>api-sf564uhh</user-id>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-credential service-credential-id="upg.http.stargate.auth.cred">
+        <url>https://gateway-stage.optum.com/auth/oauth2/cached/token</url>
+        <user-id>h8DX9VPSlGxjIKJGfFWEAM3v4gZz3HnX</user-id>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-credential service-credential-id="ups.http.address.validation.cred">
+        <url>https://wwwcie.ups.com/addressvalidation/v1/1</url>
+        <user-id>epic320</user-id>
+        <password masked="true">********</password>
+    </service-credential>
+
+    <service-profile service-profile-id="ease.profile">
+        <timeout-millis>0</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="ease.profile.auth">
+        <timeout-millis>5000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>true</cb-enabled>
+        <cb-calls>10</cb-calls>
+        <cb-millis>10000</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="ease.profile.middleware">
+        <timeout-millis>0</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="ease.profile.provider.search">
+        <timeout-millis>5000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>true</cb-enabled>
+        <cb-calls>10</cb-calls>
+        <cb-millis>10000</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="marketingcloud.rest">
+        <timeout-millis>5000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>true</cb-enabled>
+        <cb-calls>10</cb-calls>
+        <cb-millis>10000</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="marketingcloud.sftp">
+        <timeout-millis>0</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="marketingcloud.soap">
+        <timeout-millis>0</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="stargate.profile">
+        <timeout-millis>5000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>true</cb-enabled>
+        <cb-calls>10</cb-calls>
+        <cb-millis>10000</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="uhc.profile.google.recaptcha">
+        <timeout-millis>1000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>true</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="uhc.sftp">
+        <timeout-millis>3000000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="upg.profile.payment">
+        <timeout-millis>5000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>true</cb-enabled>
+        <cb-calls>10</cb-calls>
+        <cb-millis>10000</cb-millis>
+    </service-profile>
+
+    <service-profile service-profile-id="ups.profile.address.validation">
+        <timeout-millis>5000</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>true</cb-enabled>
+        <cb-calls>10</cb-calls>
+        <cb-millis>10000</cb-millis>
+    </service-profile>
+
+    <service service-id="ease.http.auth">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>sf-ease-auth</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>ease.profile.auth</profile-id>
+        <credential-id>ease.http.auth.cred</credential-id>
+    </service>
+
+    <service service-id="ease.http.create.lead">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>ease-create-lead</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>ease.profile</profile-id>
+        <credential-id>ease.http.create.lead.cred</credential-id>
+    </service>
+
+    <service service-id="ease.http.eligibility.get">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>ease-eligibility-get</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>ease.profile</profile-id>
+        <credential-id>ease.rest.eligibility.cred</credential-id>
+    </service>
+
+    <service service-id="ease.http.middleware.auth">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>ease-stargate-auth</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>ease.profile</profile-id>
+        <credential-id>ease.http.middleware.auth.cred</credential-id>
+    </service>
+
+    <service service-id="ease.http.middleware.get">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>ease-middleware-get</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>ease.profile.middleware</profile-id>
+        <credential-id>ease.http.middleware.cred</credential-id>
+    </service>
+
+    <service service-id="ease.http.invoicelookup.get">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>ease-invoicelookup-get</log-prefix>
+        <comm-log-enabled>false</comm-log-enabled>
+        <force-prd-enabled>true</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>ease.profile</profile-id>
+        <credential-id>ease.rest.invoicelookup.cred</credential-id>
+    </service>
+
+    <service service-id="ease.http.provider.search">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>provider-search</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>ease.profile.provider.search</profile-id>
+        <credential-id>ease.http.provider.search.cred</credential-id>
+    </service>
+
+    <service service-id="marketingcloud.rest.auth">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>marketingcloud_rest_auth</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>marketingcloud.rest</profile-id>
+        <credential-id>marketingcloud.rest.auth</credential-id>
+    </service>
+
+    <service service-id="marketingcloud.rest.messaging.send">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>marketingcloud_rest</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>marketingcloud.rest</profile-id>
+        <credential-id/>
+    </service>
+
+    <service service-id="marketingcloud.sftp">
+        <service-type>SFTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix/>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>marketingcloud.sftp</profile-id>
+        <credential-id>marketingcloud.sftp</credential-id>
+    </service>
+
+    <service service-id="marketingcloud.soap.create">
+        <service-type>SOAP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>marketingcloud_soap</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>marketingcloud.soap</profile-id>
+        <credential-id/>
+    </service>
+
+    <service service-id="marketingcloud.soap.retrieve">
+        <service-type>SOAP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>marketingcloud_soap</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>marketingcloud.soap</profile-id>
+        <credential-id/>
+    </service>
+
+    <service service-id="uhc.http.google.recaptcha">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>Re-Captcha</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>uhc.profile.google.recaptcha</profile-id>
+        <credential-id>uhc.http.google.recaptcha.cred</credential-id>
+    </service>
+
+    <service service-id="uhc.sftp">
+        <service-type>SFTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>uhc-sftp</log-prefix>
+        <comm-log-enabled>false</comm-log-enabled>
+        <force-prd-enabled>true</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>uhc.sftp</profile-id>
+        <credential-id>uhc.sftp.cred.dev</credential-id>
+    </service>
+
+    <service service-id="upg.http.payment.find">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>upg-payment-find</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>upg.profile.payment</profile-id>
+        <credential-id>upg.http.payment.cred</credential-id>
+    </service>
+
+    <service service-id="upg.http.payment.get">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>upg-payment-get</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>upg.profile.payment</profile-id>
+        <credential-id>upg.http.payment.cred</credential-id>
+    </service>
+
+    <service service-id="upg.http.stargate.auth">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>upg-stargate-auth</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>stargate.profile</profile-id>
+        <credential-id>upg.http.stargate.auth.cred</credential-id>
+    </service>
+
+    <service service-id="ups.http.address.validation">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>ups-address-validation</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>false</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>ups.profile.address.validation</profile-id>
+        <credential-id>ups.http.address.validation.cred</credential-id>
+    </service>
+
+</services>

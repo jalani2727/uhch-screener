@@ -1,0 +1,221 @@
+$bckg-color-1: #f6f7f8;
+
+.secondary-header-page-container {
+    .secondary-header-page {
+        padding: 0 0 50px;
+    }
+
+    .list-items {
+        padding-left: 25px;
+    }
+
+    .content-page-title {
+        font-size: 28px;
+        color: $primary-col-1;
+        font-family: $uhc-font-serif;
+        margin-bottom: 0;
+    }
+
+    .content-body {
+        margin-top: 20px;
+    }
+
+    .lr-padding {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .sub-section-heading {
+        font-size: 22px;
+        color: $primary-col-1;
+        font-family: $uhc-font-serif;
+    }
+
+    .sub-heading {
+        font-size: 18px;
+        color: $primary-col-1;
+        font-family: $uhc-font-serif;
+    }
+
+    .section-separator-margin-top,
+    .learn-more-section {
+        margin-top: 50px;
+    }
+
+    .why-uhc-hearing-section {
+        background-color: $bckg-color-1;
+        padding: 54px 0;
+    }
+
+    .why-uhc-hearing-section-heading {
+        font-size: 22px;
+        color: $primary-col-1;
+        font-family: $uhc-font-serif;
+    }
+
+    .why-uhc-hearing-section-content {
+        margin-top: 24px;
+    }
+
+    .custom-card {
+        background-color: $primary-col-2;
+        padding: 30px 17px 18px;
+        border: 1px solid $uhc-border-color;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .custom-card-heading {
+        font-size: 22px;
+        color: $primary-col-1;
+        font-family: $uhc-font-serif;
+        margin-top: 30px;
+    }
+
+    .custom-card-content {
+        margin-top: 24px;
+        color: $uhc-form-label;
+    }
+
+    .custom-card-container-1 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .custom-card-container-2,
+    .custom-card-container-3 {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 30px;
+    }
+
+    .bottom-section,
+    .join-us-section {
+        padding-top: 50px;
+        padding-bottom: 68px;
+    }
+
+    .btn-container {
+        padding-top: 30px;
+        margin-top: auto;
+    }
+
+    .bottom-section-content {
+        padding-left: 10px;
+        font-size: 14px;
+
+        li {
+            padding-left: 5px;
+            color: $tints-col-3;
+        }
+    }
+
+    .join-us-section-container {
+        background-color: $bckg-color-1;
+    }
+
+    @include media-breakpoint-up(lg) {
+        .secondary-header-page {
+            padding: 62px 0 58px;
+        }
+
+        .content-page-title {
+            font-size: 36px;
+        }
+
+        .content-body {
+            margin-top: 30px;
+            max-width: 947px;
+            box-sizing: content-box;
+        }
+
+        .lr-padding {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        .sub-section-heading {
+            font-size: 28px;
+        }
+
+        .sub-heading {
+            font-size: 22px;
+            color: $primary-col-1;
+            font-family: $uhc-font-serif;
+        }
+
+        .section-separator-margin-top {
+            margin-top: 30px;
+        }
+
+        .why-uhc-hearing-section {
+            background-color: $bckg-color-1;
+            padding: 54px 0;
+        }
+
+        .why-uhc-hearing-section-heading {
+            font-size: 28px;
+        }
+
+        .why-uhc-hearing-section-content {
+            margin-top: 36px;
+        }
+
+        .custom-card-container-1 {
+            padding-left: 0;
+            padding-right: 16px;
+            margin-top: 0;
+        }
+
+        .custom-card-container-2 {
+            padding-left: 8px;
+            padding-right: 8px;
+            margin-top: 0;
+        }
+
+        .custom-card-container-3 {
+            padding-left: 16px;
+            padding-right: 0;
+            margin-top: 0;
+        }
+
+        .custom-card {
+            padding: 50px 37px;
+            height: 100%;
+        }
+
+        .custom-card-content {
+            margin-top: 25px;
+        }
+
+        .bottom-section,
+        .join-us-section {
+            padding-top: 58px;
+            padding-bottom: 62px;
+        }
+    }
+
+    .label-font-color {
+        color: $uhc-form-label;
+    }
+}
+
+.link-inside-content-styling {
+    color: $uhc-link-color;
+}
+
+.for-employers-page,
+.for-health-plans-page,
+.for-brokers-page,
+.for-providers-page {
+    .font-family-bold {
+        font-family: $uhc-font-sans-bold;
+        color: $uhc-form-label;
+    }
+}
+
+.btn-width-sm-100 {
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+}

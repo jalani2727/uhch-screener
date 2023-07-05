@@ -1,0 +1,932 @@
+[data-action='HearingTest-IFrameLanding'],
+[data-action='HearingTest-Lifestyle'],
+[data-action='HearingTest-LifestyleForm'] {
+    #maincontent {
+        background: $ls-bg;
+    }
+}
+
+.hearing-test-page {
+    max-width: 839px;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 75px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 13px;
+        padding-bottom: 61px;
+    }
+
+    .options {
+        font-family: $uhc-font-sans-bold;
+        color: $primary-col-1;
+    }
+
+    .upload-a-copy {
+        color: $uhc-link-color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    ul {
+        @include media-breakpoint-up(sm) {
+            padding-left: 30px;
+        }
+    }
+
+    .unordered-list-value {
+        padding-left: 0;
+    }
+}
+
+.section-1 {
+    background: $hearing-test-background;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 26px;
+        padding-bottom: 41px;
+    }
+}
+
+.container-hearing-test {
+    margin: auto;
+    max-width: 650px;
+
+    .btn-container {
+        max-width: 401px;
+        margin: 20px auto auto;
+    }
+}
+
+.section-1-heading {
+    font-family: $uhc-font-serif;
+    color: $primary-col-1;
+    font-size: 36px;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 26px;
+    }
+}
+
+.hearing-test-sub-heading {
+    max-width: 580px;
+    margin: auto;
+    font-size: 18px;
+    color: $primary-col-1;
+    font-family: $uhc-font-sans-bold;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.hearing-test-info {
+    max-width: 651px;
+    margin: auto;
+}
+
+.hearing-test-infotext {
+    font-size: 12px;
+}
+
+.section-title {
+    font-family: $uhc-font-serif;
+    color: $primary-col-1;
+    font-size: 32px;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 26px;
+    }
+}
+
+.btn-upload-hearing-test {
+    max-width: 203px;
+    margin-top: 20px;
+}
+
+.section-container {
+    @include media-breakpoint-down(md) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.section-separation-margin-top {
+    margin-top: 35px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+nav .ht-header {
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 103px;
+    }
+
+    @include media-breakpoint-up(md) {
+        height: auto;
+    }
+
+    .ht-header-row {
+        min-height: 48px;
+        @include media-breakpoint-up(md) {
+            min-height: 114px;
+        }
+    }
+
+    .navbar-header {
+        min-height: auto;
+        height: auto;
+        padding: 0;
+    }
+}
+
+.ht-tracker-wrapper {
+    @include media-breakpoint-down(sm) {
+        position: absolute;
+        top: 63px;
+    }
+}
+
+.ht-tracker {
+    max-width: 870px;
+}
+
+.ht-level {
+    width: 100%;
+    padding-bottom: 22px;
+    text-align: center;
+    position: relative;
+}
+
+.ht-head {
+    @include media-breakpoint-down(sm) {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    color: $ht-head-col;
+    min-height: 34px;
+    padding: 0 5px 9px;
+    font-family: $uhc-font-sans-semi-bold;
+}
+
+.ht-level-2,
+.ht-level-3,
+.ht-level-4 {
+    .ht-head::before {
+        content: '';
+        width: 50%;
+        height: 2px;
+        position: absolute;
+        background: $uhc-border-color;
+        bottom: 10px;
+        right: 50%;
+    }
+}
+
+.ht-level-1,
+.ht-level-2,
+.ht-level-3 {
+    .ht-head::after {
+        content: '';
+        width: 50%;
+        height: 2px;
+        position: absolute;
+        background: $uhc-border-color;
+        bottom: 10px;
+        left: 50%;
+    }
+}
+
+.ht-radio {
+    width: 22px;
+    height: 22px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 11px);
+    z-index: 1;
+    background: transparent $radio-gray no-repeat;
+}
+
+@mixin ht-fill {
+    .ht-head {
+        color: $uhc-link-color;
+
+        &::before,
+        &::after {
+            background-color: $uhc-link-color;
+        }
+    }
+
+    .ht-radio {
+        background-image: $radio-blue;
+    }
+}
+
+.stage-1 {
+    .ht-level-1 {
+        @include ht-fill;
+    }
+}
+
+.stage-2 {
+    .ht-level-1,
+    .ht-level-2 {
+        @include ht-fill;
+    }
+}
+
+.stage-3 {
+    .ht-level-1,
+    .ht-level-2,
+    .ht-level-3 {
+        @include ht-fill;
+    }
+}
+
+.stage-4 {
+    .ht-level-1,
+    .ht-level-2,
+    .ht-level-3,
+    .ht-level-4 {
+        @include ht-fill;
+    }
+}
+
+.ht-close {
+    width: 21px;
+    height: 21px;
+    background: transparent $close-blue no-repeat center;
+    background-size: contain;
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+.ht-exit {
+    color: $ht-exit-col;
+    font-family: $uhc-font-sans-semi-bold;
+}
+
+.ht-iframe-wrapper {
+    max-width: 795px;
+}
+
+#hearing-test-iframe {
+    border: 0;
+    width: 100%;
+    height: 803px;
+
+    @include media-breakpoint-up(md) {
+        margin: 75px 0 60px;
+    }
+
+    html {
+        overflow: hidden;
+    }
+}
+
+.ls-form {
+    max-width: 652px;
+    padding: 22px 0 52px;
+    @include media-breakpoint-up(md) {
+        padding: 55px 0 52px;
+    }
+
+    .card {
+        background: $white;
+    }
+}
+
+.life-style-guest-accurate {
+    color: $uhc-form-label;
+    font-family: $uhc-font-sans-bold;
+}
+
+.life-style-questions-form {
+    max-width: 757px;
+    padding: 30px 0 60px;
+    position: relative;
+    @include media-breakpoint-up(md) {
+        padding: 74px 0 104px;
+    }
+}
+
+.ls-qus-box {
+    height: 565px;
+    position: relative;
+    border-radius: 18px;
+    background-color: $uhc-white;
+    background-position: center 80px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    @include media-breakpoint-up(md) {
+        height: 374px;
+    }
+}
+
+.life-style-questions-text {
+    width: 100%;
+    padding: 30px 18px;
+    font-size: 22px;
+    line-height: 24px;
+    text-align: center;
+    color: $ls-radio-col;
+    background-color: $uhc-white;
+    @include media-breakpoint-up(md) {
+        padding: 30px 60px;
+    }
+
+    #UHC300 & {
+        padding-top: 80px;
+    }
+}
+
+.life-style-questions-img img {
+    width: 100%;
+}
+
+.ls-input-wrapper {
+    #UHC100 &,
+    #UHC200 & {
+        margin: 24px;
+        border-radius: 27px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: calc(100% - 48px);
+        overflow: hidden;
+    }
+
+    #UHC300 & {
+        padding: 35px 25px 0;
+        @include media-breakpoint-up(md) {
+            padding: 10px 100px 0;
+        }
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+}
+
+.ls-radio-container {
+    display: block;
+    position: relative;
+    height: 54px;
+    margin: 0;
+    background: $uhc-white;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    @include media-breakpoint-down(sm) {
+        border-radius: 27px;
+        overflow: hidden;
+    }
+}
+
+.ls-radio-text {
+    width: 100%;
+    padding: 9px;
+    line-height: 18px;
+    color: $ls-radio-col;
+    z-index: 1;
+}
+
+.ls-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 54px;
+}
+
+.ls-input-wrapper input {
+    &:hover,
+    &:checked {
+        ~ .ls-checkmark {
+            background-color: $ls-btn-bg-hover;
+        }
+
+        ~ .ls-radio-text {
+            color: $uhc-white;
+        }
+    }
+}
+
+.ls-checkbox {
+    min-height: 40px;
+}
+
+.ls-btn-wrapper {
+    padding-top: 60px;
+
+    @include media-breakpoint-up(md) {
+        padding-top: 40px;
+    }
+
+    .btn {
+        height: 51px;
+        font-family: $uhc-font-sans-medium;
+    }
+
+    .ls-back {
+        width: 60px;
+        border-radius: 26px 0 0 26px;
+        background: $ls-btn-bg $arrow-left-black no-repeat 27px center;
+
+        @include media-breakpoint-up(md) {
+            width: 98px;
+        }
+
+        &:hover,
+        &:active {
+            background-color: $ls-btn-back-hover;
+        }
+
+        + .ls-next {
+            border-radius: 0 26px 26px 0;
+            margin-left: -3px;
+        }
+    }
+
+    .ls-next {
+        width: 223px;
+        color: $uhc-white;
+        background: $ls-btn-bg-hover $arrow-right-white no-repeat calc(100% - 33px) center;
+
+        &:hover {
+            color: $uhc-white;
+        }
+
+        &.disabled {
+            color: $ls-btn-col;
+            background: $ls-btn-bg $arrow-right-gray no-repeat calc(100% - 33px) center;
+            pointer-events: none;
+            opacity: 1;
+        }
+    }
+}
+
+.life-style-policy {
+    position: absolute;
+    bottom: 149px;
+    right: 0;
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+        bottom: 123px;
+        text-align: center;
+    }
+
+    .ls-tc-link {
+        line-height: 18px;
+    }
+
+    a {
+        font-size: 12px;
+        font-family: $uhc-font-sans-semi-bold;
+        color: $uhc-black !important;
+    }
+}
+
+#lifestyle-exit {
+    .modal-dialog {
+        max-width: 436px;
+        margin-top: 150px;
+    }
+
+    .modal-header {
+        font-size: 26px;
+        font-family: $uhc-font-serif;
+        line-height: 40px;
+        color: $uhc-title;
+        padding: 50px 18px 0;
+        border: 0;
+
+        @include media-breakpoint-up(md) {
+            padding: 50px 70px 0;
+        }
+
+        .close {
+            position: absolute;
+            top: 42px;
+            right: 40px;
+            padding: 0;
+            width: 21px;
+            height: 21px;
+            background: transparent $close-blue no-repeat center;
+            background-size: contain;
+            opacity: 1;
+        }
+    }
+
+    .modal-body {
+        font-weight: 600;
+        font-family: $uhc-font-sans-semi-bold;
+        font-size: 18px;
+        color: $uhc-black;
+        padding: 24px 18px;
+
+        @include media-breakpoint-up(md) {
+            padding: 24px 70px;
+        }
+    }
+
+    .modal-footer {
+        border: 0;
+        padding: 0 70px 60px;
+
+        .btn {
+            min-width: 85px;
+        }
+    }
+}
+
+.hearing-test-results-page {
+    border: 2px solid $tints-col-4;
+
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .your-results-heading {
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+        font-size: 36px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 26px;
+        }
+    }
+
+    .section-2-sub-heading {
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+        font-size: 28px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 26px;
+        }
+    }
+
+    .section-create-account {
+        background: $primary-col-2;
+        color: $font-black;
+        padding: 40px 16px 48px;
+    }
+
+    .section-hearing-test-results-1 {
+        background: $primary-col-2;
+        color: $font-black;
+        padding: 30px 16px 0;
+
+        @include media-breakpoint-down(sm) {
+            padding: 23px 16px 0;
+        }
+
+        .your-test-result-heading {
+            font-family: $uhc-font-sans-bold;
+            margin: 0;
+            color: $primary-col-1;
+            font-size: 20px;
+        }
+
+        .your-test-result {
+            font-family: $uhc-font-sans-bold;
+            margin: 0;
+            color: $primary-col-1;
+            font-size: 28px;
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 26px;
+            }
+        }
+    }
+
+    .results-info-1 {
+        margin-top: 40px;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 10px;
+        }
+    }
+
+    .results-info-2 {
+        margin-top: 40px;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 20px;
+        }
+    }
+
+    .result-guage-bar {
+        margin: 41px auto 0;
+    }
+
+    .result-details {
+        margin-top: 50px;
+
+        @include media-breakpoint-down(md) {
+            margin-top: 30px;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .results-info-2-heading,
+    .custom-card-heading {
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+        font-size: 22px;
+    }
+
+    .better-hearing-heading {
+        max-width: 463px;
+        margin: auto;
+
+        @include media-breakpoint-down(sm) {
+            margin: 10px auto 0;
+        }
+    }
+
+    .section-hearing-test-results-2 {
+        background: $hearing-test-results-section-2-bg;
+        color: $font-black;
+        padding: 53px 16px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 24px 16px;
+        }
+    }
+
+    .section-hearing-test-learn-more {
+        background: $hearing-test-results-section-2-bg;
+        color: $font-black;
+        padding: 0 16px 69px;
+
+        @include media-breakpoint-down(md) {
+            padding: 0 16px 60px;
+        }
+    }
+
+    .section-hearing-test-results-3 {
+        background: $hearing-test-background-two;
+        color: $primary-col-1;
+        padding: 68px 16px 90px;
+
+        @include media-breakpoint-down(md) {
+            padding: 30px 16px 60px;
+        }
+    }
+
+    .heading-content-separator {
+        margin-top: 10px;
+    }
+
+    .font-family-bold {
+        font-family: $uhc-font-sans-bold;
+    }
+
+    .custom-card-container {
+        margin: 35px auto 0;
+        @include media-breakpoint-down(md) {
+            margin: 24px auto;
+        }
+    }
+
+    .custom-card {
+        background: $primary-col-2;
+        border: 1px solid $uhc-border-color;
+        padding: 34px 26px;
+
+        img {
+            height: 30px;
+            width: 30px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            height: 100%;
+        }
+
+        @include media-breakpoint-down(md) {
+            padding: 22px;
+        }
+    }
+
+    .card-container-separator-top {
+        @include media-breakpoint-down(md) {
+            margin-top: 24px;
+        }
+    }
+
+    .better-hearing-steps-container {
+        margin-top: 50px;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 0;
+        }
+    }
+
+    .better-hearing-step {
+        max-width: 240px;
+    }
+
+    .btn-container {
+        margin-top: 30px;
+
+        @include media-breakpoint-down(md) {
+            margin-top: 24px;
+        }
+    }
+}
+
+.link-styling {
+    color: $uhc-link-color;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.hearing-test-upload-page {
+    max-width: 654px;
+    margin-bottom: 82px;
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 57px;
+    }
+
+    .col {
+        padding: 0;
+    }
+
+    .hearing-test-user-details {
+        margin-top: 53px;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 24px;
+        }
+    }
+
+    .page-title {
+        padding: 18px 0 20px;
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+        font-size: 28px;
+        left: auto;
+        line-height: 44px;
+        margin: 0;
+
+        @include media-breakpoint-down(sm) {
+            padding: 6px 0 15px;
+            font-size: 26px;
+            line-height: 34px;
+        }
+    }
+
+    .hearing-test-upload-info {
+        margin: 10px auto 26px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+        }
+    }
+
+    .upload-file-container {
+        margin: 47px auto 41px;
+
+        @include media-breakpoint-down(sm) {
+            margin: 24px auto 26px;
+        }
+
+        input[type='file'] {
+            display: none;
+        }
+
+        .upload-file {
+            margin-top: 15px;
+            background: $uhc-white;
+            padding: 20px 24px;
+
+            @include media-breakpoint-down(sm) {
+                padding: 15px 24px;
+            }
+        }
+
+        .select-file-btn {
+            margin-top: 15px;
+        }
+
+        .file-name-container {
+            font-size: 18px;
+        }
+
+        .file-upload-label {
+            font-size: 18px;
+            font-family: $uhc-font-sans-semi-bold;
+        }
+    }
+
+    .hearing-test-submit {
+        max-width: 542px;
+        margin-top: 42px;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 27px;
+        }
+
+        .hearing-test-submit-btn {
+            width: 100%;
+        }
+    }
+
+    .captcha-container {
+        margin: 40px auto;
+        max-width: 296px;
+
+        @include media-breakpoint-down(sm) {
+            margin: 24px auto;
+        }
+    }
+
+    .user-consent-container {
+        margin-top: 57px;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 25px;
+        }
+
+        .custom-control-label {
+            color: $tints-col-3;
+        }
+    }
+
+    .custom-control-label {
+        padding-left: 10px;
+    }
+
+    .check-mark-success {
+        visibility: hidden;
+    }
+}
+
+.hearing-test-confirmation-page {
+    .confirmation-title {
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+        font-size: 28px;
+        margin-top: 96px;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            margin-top: 0;
+            font-size: 26px;
+        }
+    }
+
+    .confirmation-title-content {
+        margin-top: 35px;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 15px;
+        }
+    }
+
+    .btn-container {
+        width: 119px;
+        margin: 37px auto 71px;
+
+        @include media-breakpoint-down(sm) {
+            margin: 24px auto 61px;
+            width: 100%;
+        }
+
+        .hearing-test-shop-btn {
+            width: 100%;
+        }
+    }
+}

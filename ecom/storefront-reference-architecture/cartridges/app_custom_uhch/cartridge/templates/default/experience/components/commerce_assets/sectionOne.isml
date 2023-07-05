@@ -1,0 +1,32 @@
+<div class="inner">
+  <div class="left">
+    <div class="content">
+      <h2>${pdict.leftHeadline}</h2>
+        <isprint value="${pdict.leftDescription}" encoding="off" />
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="content">
+      <div class="panel">
+        <h2>${pdict.rightHeadline}</h2>
+        <isprint value="${pdict.rightDescription}" encoding="off" />
+
+        <div class="videos">
+          <div class="video">
+            <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2297431/sp/229743100/embedIframeJs/uiconf_id/40040682/partner_id/2297431?iframeembed=true&playerId=kaltura_player&entry_id=1_71im3mi3&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_l2xdgzeh" width="400" height="285" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="With Hearing Aids"></iframe>
+            <h3>${pdict.videoOneCaption}</h3>
+          </div>
+          <div class="video">
+            <iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2297431/sp/229743100/embedIframeJs/uiconf_id/40040682/partner_id/2297431?iframeembed=true&playerId=kaltura_player&entry_id=1_035darub&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_rp0wrd2b" width="400" height="285" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Without Hearing Aids"></iframe>
+            <h3>${pdict.videoTwoCaption}</h3>
+          </div>
+        </div>
+
+        <div class="attribution">
+          <isprint value="${pdict.videoAttribution}" encoding="off" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

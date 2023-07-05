@@ -1,0 +1,27 @@
+<div class="search-form-container">
+    <h1 class="provider-search-title">${Resource.msg('title.provider.search.find.provider', 'providersearch', null)}</h1>
+    <isslot id="provider-search-landing-content" description="Content for Provider Search Landing" context="global" />
+    <div class="provider-search-option-section-1">
+        <div class="section-heading">
+            ${Resource.msg('heading.request-appointment', 'providersearch', null)}
+        </div>
+        <div class="section-content">
+            <a href="${URLUtils.https('Login-OAuthLogin', 'oauthLoginTargetEndPoint', pdict.oauthLoginTargetEndPoint || 1 )}" class="link-styling link-with-r-vector">
+                ${Resource.msg('label.btn.sign-in', 'providersearch', null)}
+            </a>
+        </div>
+    </div>
+    <div class="provider-search-option-section-2">
+        <div class="section-heading">
+            ${Resource.msg('heading.continue-as-guest', 'providersearch', null)}
+        </div>
+        <div class="section-content">
+            <p>
+                ${Resource.msg('info.no-existing-account', 'providersearch', null)}
+            </p>
+            <a href="${URLUtils.url('ProviderSearch-Show', 'providerType', 'guest')}" class="link-styling link-with-r-vector">
+                ${Resource.msg('label.btn.continue-as-guest', 'providersearch', null)}
+            </a>
+        </div>
+    </div>
+</div>

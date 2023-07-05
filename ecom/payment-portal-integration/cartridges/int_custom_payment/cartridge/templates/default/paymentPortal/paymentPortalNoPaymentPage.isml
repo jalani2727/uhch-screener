@@ -1,0 +1,42 @@
+<isdecorate template="common/layout/page">
+    <isinclude template="/components/modules" sf-toolkit="off" />
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/paymentPortal.css');
+    </isscript>
+
+    <div class="container payment-portal-container payment-portal-no-payment-page">
+        <div class="justify-content-center">
+            <div class="payment-portal-title-container text-center">
+                <h1 class="uhc-main-title-one uhc-blue">
+                    ${Resource.msg('title.no-payment-needed', 'paymentportal', null)}
+                </h1>
+                <div class="pt-4 invoice-paid-msg">
+                    <iscontentasset aid="payment-portal-invoice-paid" />
+                </div>
+            </div>
+            <div class="payment-portal-no-payment">
+                <div class="card">
+                    <div class="card-header text-center pb-4">
+                        <h2 class="uhc-blue title-payment-amount">
+                            ${Resource.msg('number.payment.zero-with-two-decimals', 'paymentportal', null)}
+                        </h2>
+                        <span class="uhc-black-333 current-balance">${Resource.msg('label.current-balance', 'paymentportal', null)}</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="detail-section text-center pb-3 pt-3">
+                            <dl>
+                                <dt class="uhc-black-333 uhc-sans-700 detail-section-label">${Resource.msg('label.result.patient-name', 'paymentportal', null)}</dt>
+                                <dd>${pdict.patientName}</dd>
+                            </dl>
+                            <dl>
+                                <dt class="uhc-black-333 uhc-sans-700 detail-section-label">${Resource.msg('label.result.invoice-number', 'paymentportal', null)}</dt>
+                                <dd>${pdict.invoiceId}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

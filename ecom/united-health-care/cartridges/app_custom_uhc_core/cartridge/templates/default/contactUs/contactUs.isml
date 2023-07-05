@@ -1,0 +1,209 @@
+<isdecorate template="common/layout/page">
+    <isinclude template="/components/modules" sf-toolkit="off" />
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/contactUs.js');
+        assets.addCss('/css/contactUs.css');
+    </isscript>
+
+    <div class="container contact-us-landing-page">
+        <div class="justify-content-center">
+            <div class="contact-us-title-container">
+                <h1 class="contact-us-page-title">
+                    ${Resource.msg('title.contact.us.page', 'contactUs', null)}
+                </h1>
+                <div class="contact-us-title-content">
+                    <iscontentasset aid="contactus-landing" />
+                </div>
+            </div>
+            <div class="contact-us-enter-details">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-body-section-1">
+                            <p>${Resource.msg('msg.contact-us.validation.fields', 'contactUs', null)}</p>
+                            <p>${Resource.msg('msg.contact-us.validation.name', 'contactUs', null)}</p>
+                        </div>
+                        <form action="${pdict.actionUrl}" class="contact-us" method="POST" name="contact-us"
+                            has-recaptcha-v2 data-recaptchaenable="${pdict.recaptchaEnable}">
+                            <!--- contact us first name --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="contact-first-name">
+                                        ${Resource.msg('label.input.contact-us-first-name', 'contactUs', null)}
+                                    </label>
+                                    <input type="text" required class="form-control required"
+                                        aria-describedby="form-contact-first-name-error" id="contact-first-name"
+                                        name="contactFirstName" value="${pdict.profile ? pdict.profile.firstName : ''}">
+                                    <div class="invalid-feedback" id="form-contact-first-name-error"></div>
+                                </div>
+                            </div>
+
+                            <!--- contact us  last name --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="contact-last-name">
+                                        ${Resource.msg('label.input.contact-us-last-name', 'contactUs', null)}
+                                    </label>
+                                    <input type="text" required class="form-control required"
+                                        aria-describedby="form-contact-last-name-error" id="contact-last-name"
+                                        name="contactLastName" value="${pdict.profile ? pdict.profile.lastName : ''}">
+                                    <div class="invalid-feedback" id="form-contact-last-name-error"></div>
+                                </div>
+                            </div>
+
+                            <!--- contact us  DOB --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="contact-dob">
+                                        ${Resource.msg('label.input.contact.us.dateofbirth', 'contactUs', null)}
+                                    </label>
+                                    <input type="date" required class="form-control required" max="${pdict.maxDate}"
+                                        aria-describedby="form-contact-dob-error" id="contact-dob" name="contactDob"
+                                        value="${pdict.profile ? pdict.profile.dob : ''}"
+                                        data-range-error="${Resource.msg('error.message.invalid-dob','forms',null)}">
+                                    <div class="invalid-feedback" id="form-contact-dob-error"></div>
+                                </div>
+                            </div>
+
+                            <!--- contact us  Street --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="contact-street">
+                                        ${Resource.msg('label.input.contact.us.street', 'contactUs', null)}
+                                    </label>
+                                    <input type="text" required class="form-control required"
+                                        aria-describedby="form-contact-street-error" id="contact-street"
+                                        name="contactStreet">
+                                    <div class="invalid-feedback" id="form-contact-street-error"></div>
+                                </div>
+                            </div>
+
+                            <!--- contact us  City --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="contact-city">
+                                        ${Resource.msg('label.input.contact.us.city', 'contactUs', null)}
+                                    </label>
+                                    <input type="text" required class="form-control required"
+                                        aria-describedby="form-contact-city-error" id="contact-city" name="contactCity">
+                                    <div class="invalid-feedback" id="form-contact-city-error"></div>
+                                </div>
+                            </div>
+
+
+                            <!--- contact us  State --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="contact-state">
+                                        ${Resource.msg('label.input.contact.us.state', 'contactUs', null)}
+                                    </label>
+                                    <select type="text" required class="form-control required" id="contact-state"
+                                        name="contactState">
+                                        <isinclude template="/contactUs/contactUsState" />
+                                    </select>
+                                    <div class="invalid-feedback" id="form-contact-state-error"></div>
+                                </div>
+                            </div>
+
+                            <!--- contact us  ZipCode --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="contact-state">
+                                        ${Resource.msg('label.input.contact.us.zipcode', 'contactUs', null)}
+                                    </label>
+                                    <input type="text" required class="form-control required"
+                                        aria-describedby="form-contact-zipcode-error" id="contact-zipcode"
+                                        name="contactZipCode" maxlength="10" minlength="5"
+                                        pattern="(^\d{5}(-\d{4})?$)|(^[abceghjklmnprstvxyABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Za-z]{1} *\d{1}[A-Za-z]{1}\d{1}$)">
+                                    <div class="invalid-feedback" id="form-contact-zipcode-error"></div>
+                                </div>
+                            </div>
+
+                            <!--- contact us  Phone --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="contact-phone">
+                                        ${Resource.msg('label.input.contact.us.phone', 'contactUs', null)}
+                                    </label>
+                                    <input type="tel" required class="form-control required input-phone"
+                                        aria-describedby="form-contact-phone-error" id="contact-phone"
+                                        placeholder="${Resource.msg('label.form.field.phone.placeholder', 'forms', null)}"
+                                        name="contactPhone" maxlength="12" pattern="(^\d{3}-\d{3}-\d{4}$)"
+                                        data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+                                        data-pattern-mismatch="${Resource.msg('error.message.parse.phone', 'forms', null)}"
+                                        value="${pdict.profile && pdict.profile.phoneHome ? pdict.profile.phone : ''}">
+                                    <div class="invalid-feedback" id="form-contact-phone-error"></div>
+                                </div>
+                            </div>
+                            <!--- contact us email --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="contact-email">
+                                        ${Resource.msg('label.input.contact-us-email', 'contactUs', null)}
+                                    </label>
+                                    <input type="email" required class="form-control required"
+                                        aria-describedby="form-contact-email-error" id="contact-email"
+                                        name="contactEmail" value="${pdict.profile ? pdict.profile.email : ''}"
+                                        pattern="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$"
+                                        data-pattern-mismatch="${Resource.msg('error.message.form.invalid-email','forms',null)}">
+                                    <div class="invalid-feedback" id="form-contact-email-error"></div>
+                                </div>
+                            </div>
+
+
+                            <!--- contact us topic --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="contact-topic">
+                                        ${Resource.msg('label.input.contact.us.reason', 'contactUs', null)}
+                                    </label>
+                                    <select type="text" required class="form-control required" id="contact-topic"
+                                        name="contactTopic">
+                                        <isinclude template="/contactUs/contactUsTopic" />
+                                    </select>
+                                    <div class="invalid-feedback" id="form-contact-topic-error"></div>
+                                </div>
+                            </div>
+
+                            <!--- contact us comment --->
+                            <div class="contact-us-comment">
+                                <div class="col">
+                                    <div class="form-group required">
+                                        <label class="form-control-label" for="contact-comment">
+                                            ${Resource.msg('label.input.contact-us-comment', 'contactUs', null)}
+                                        </label>
+                                        <textarea class="form-control" required id="contact-comment"
+                                            name="contactComment" rows="4" maxlength="250"></textarea>
+                                        <div class="invalid-feedback" id="form-contact-comment-error"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- User's consent  -->
+                            <div class="user-consent-container">
+                                <iscontentasset aid="contactus-consent" />
+                            </div>
+
+                            <isif condition="${pdict.recaptchaEnable}">
+                                <div class="captcha-container">
+                                    <div id="recaptcha-element"></div>
+                                    <div id="g-recaptcha-error"></div>
+                                </div>
+                            </isif>
+                            <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+                            <!--- contact us submit --->
+                            <div class="contact-us-submnit">
+                                <button class="btn btn-block btn-primary subscribe-contact-us" type="submit"
+                                    name="submit" value="submit">
+                                    ${Resource.msg('label.input.contact-us-submit', 'contactUs', null)}
+                                </button>
+                            </div>
+                        </form>
+                        <isif condition="${pdict.recaptchaEnable}">
+                            <isinclude template="/recaptcha/recaptchaScript" />
+                        </isif>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

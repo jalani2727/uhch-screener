@@ -1,0 +1,30 @@
+@import '~base/homePage';
+@import './variables';
+@import '~uhchearing/common/hero';
+@import '~uhchearing/common/gettingStarted';
+@import '~uhchearing/common/pathSelection';
+@import '~uhchearing/common/signIn';
+@import '~uhchearing/common/takeTheTest';
+@import '~uhchearing/common/direction';
+@import '~uhchearing/components/registrationSuccessfulModal';
+
+.image-content img {
+    max-width: 100%;
+}
+
+.take-the-test-container {
+    .take-the-test-title {
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    .take-the-test-info {
+        margin: 10px 0 24px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        .take-the-test-info {
+            margin: 24px 0;
+        }
+    }
+}

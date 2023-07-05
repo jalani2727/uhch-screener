@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site xmlns="http://www.demandware.com/xml/impex/site/2007-04-30" site-id="EPICHearing">
+    <name>EPIC Hearing Healthcare</name>
+    <description>eCommerce Storefront for EPIC Hearing Healthcare Services</description>
+    <currency>USD</currency>
+    <taxation>net</taxation>
+    <brand>EPIC</brand>
+    <custom-cartridges>int_adobe_datalayer:app_custom_epichearing:app_custom_uhchearing:app_custom_uhc_core:int_custom_marketing_cloud:int_marketing_cloud:int_handlerframework:bc_job_components:int_upg_payment:int_ups_addressvalidation:int_ease_services:plugin_ordermanagement:plugin_dis:plugin_sitemap:app_storefront_base</custom-cartridges>
+    <storefront-status>online</storefront-status>
+    <storefront-password>$s0$b0401$LTuiEoVK4ARPBfhnEjM3/w==$LzTkIradv6iY6MQWNjNmIQZO8IpY66icfEOKi6RGAGE=</storefront-password>
+    <home-page-meta-tag-rules>
+        <page-meta-tag-rule rule-id="homepage"/>
+    </home-page-meta-tag-rules>
+</site>
+

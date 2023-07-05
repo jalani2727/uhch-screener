@@ -1,0 +1,80 @@
+.address-recommendation {
+    .modal-dialog {
+        max-width: 650px;
+    }
+
+    .modal-content {
+        padding: 50px;
+        top: 75px;
+        @include media-breakpoint-down(sm) {
+            padding: 32px 24px;
+        }
+    }
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: 0;
+    }
+
+    .modal-header {
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        flex-direction: column;
+    }
+
+    .modal-title,
+    .radio-inline,
+    .divider-label {
+        font-size: 16px;
+        font-family: $uhc-font-sans-bold;
+        color: $uhc-form-label;
+    }
+
+    .margin-top-24 {
+        margin-top: 24px;
+    }
+
+    .sub-heading {
+        margin-bottom: 15px;
+    }
+
+    .radio-inline {
+        margin-bottom: 0;
+    }
+
+    .addr-sugg-footer {
+        padding-right: 0;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 50px;
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+        }
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .divider-label {
+        margin: 24px 0;
+    }
+
+    tr {
+        td:nth-child(1) {
+            vertical-align: top;
+        }
+
+        td:nth-child(2) {
+            padding-left: 11px;
+        }
+    }
+
+    .address-format {
+        line-height: 30px;
+    }
+}

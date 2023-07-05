@@ -1,0 +1,77 @@
+<!-- regular US states -->
+<option value=""> ${Resource.msg('label.select', 'common', null)}</option>
+<option value="AL"> ${Resource.msg('state.us.alabama', 'forms', null)}</option>
+<option value="AK"> ${Resource.msg('state.us.alaska', 'forms', null)}</option>
+<option value="AZ"> ${Resource.msg('state.us.arizona', 'forms', null)} </option>
+<option value="AR"> ${Resource.msg('state.us.arkansas', 'forms', null)}
+</option>
+<option value="CA">${Resource.msg('state.us.california', 'forms', null)}
+</option>
+<option value="CO"> ${Resource.msg('state.us.colorado', 'forms', null)}
+</option>
+<option value="CT"> ${Resource.msg('state.us.connecticut', 'forms', null)}
+</option>
+<option value="DE"> ${Resource.msg('state.us.delaware', 'forms', null)} </option>
+<option value="DC"> ${Resource.msg('state.us.dc', 'forms', null)}</option>
+<option value="FL"> ${Resource.msg('state.us.florida', 'forms', null)} </option>
+<option value="GA"> ${Resource.msg('state.us.georgia', 'forms', null)} </option>
+<option value="HI"> ${Resource.msg('state.us.hawaii', 'forms', null)} </option>
+<option value="ID"> ${Resource.msg('state.us.idaho', 'forms', null)} </option>
+<option value="IL"> ${Resource.msg('state.us.illinois', 'forms', null)}
+</option>
+<option value="IN"> ${Resource.msg('state.us.indiana', 'forms', null)} </option>
+<option value="IA"> ${Resource.msg('state.us.iowa', 'forms', null)} </option>
+<option value="KS"> ${Resource.msg('state.us.kansas', 'forms', null)} </option>
+<option value="KY"> ${Resource.msg('state.us.kentucky', 'forms', null)}
+</option>
+<option value="LA"> ${Resource.msg('state.us.louisiana', 'forms', null)}
+</option>
+<option value="ME"> ${Resource.msg('state.us.maine', 'forms', null)}</option>
+<option value="MD"> ${Resource.msg('state.us.maryland', 'forms', null)}
+</option>
+<option value="MA"> ${Resource.msg('state.us.massachusetts', 'forms', null)}
+</option>
+<option value="MI">${Resource.msg('state.us.michigan', 'forms', null)} </option>
+<option value="MN">${Resource.msg('state.us.minnesota', 'forms', null)}
+</option>
+<option value="MS">${Resource.msg('state.us.mississippi', 'forms', null)}
+</option>
+<option value="MO"> ${Resource.msg('state.us.missouri', 'forms', null)}</option>
+<option value="MT"> ${Resource.msg('state.us.montana', 'forms', null)}</option>
+<option value="NE"> ${Resource.msg('state.us.nebraska', 'forms', null)}</option>
+<option value="NV">${Resource.msg('state.us.nevada', 'forms', null)} </option>
+<option value="NH"> ${Resource.msg('state.us.newhampshire', 'forms', null)}
+</option>
+<option value="NJ"> ${Resource.msg('state.us.newjersey', 'forms', null)}
+</option>
+<option value="NM">${Resource.msg('state.us.newmexico', 'forms', null)}
+</option>
+<option value="NY">${Resource.msg('state.us.newyork', 'forms', null)} </option>
+<option value="NC"> ${Resource.msg('state.us.northcarolina', 'forms', null)}
+</option>
+<option value="ND"> ${Resource.msg('state.us.northdakota', 'forms', null)}
+</option>
+<option value="OH">${Resource.msg('state.us.ohio', 'forms', null)} </option>
+<option value="OK">${Resource.msg('state.us.oklahoma', 'forms', null)} </option>
+<option value="OR"> ${Resource.msg('state.us.oregon', 'forms', null)}</option>
+<option value="PA"> ${Resource.msg('state.us.pennsylvania', 'forms', null)}
+</option>
+<option value="RI"> ${Resource.msg('state.us.rhodeisland', 'forms', null)}
+</option>
+<option value="SC"> ${Resource.msg('state.us.southcarolina', 'forms', null)}
+</option>
+<option value="SD"> ${Resource.msg('state.us.southdakota', 'forms', null)}
+</option>
+<option value="TN">${Resource.msg('state.us.tennessee', 'forms', null)}
+</option>
+<option value="TX">${Resource.msg('state.us.texas', 'forms', null)} </option>
+<option value="UT">${Resource.msg('state.us.utah', 'forms', null)} </option>
+<option value="VT"> ${Resource.msg('state.us.vermont', 'forms', null)}</option>
+<option value="VA"> ${Resource.msg('state.us.virginia', 'forms', null)}</option>
+<option value="WA"> ${Resource.msg('state.us.washington', 'forms', null)}
+</option>
+<option value="WV">${Resource.msg('state.us.westvirginia', 'forms', null)}
+</option>
+<option value="WI"> ${Resource.msg('state.us.wisconsin', 'forms', null)}
+</option>
+<option value="WY">${Resource.msg('state.us.wyoming', 'forms', null)} </option>

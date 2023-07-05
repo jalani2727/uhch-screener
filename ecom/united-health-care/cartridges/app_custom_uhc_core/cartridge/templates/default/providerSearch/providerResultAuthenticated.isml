@@ -1,0 +1,105 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+<isinclude template="/components/modules" sf-toolkit="off" />
+<script>
+    var results;
+    try {
+        results = JSON.parse('<isprint value="${JSON.stringify(pdict.providerResult)}" encoding="jsblock"/>');
+    } catch(e) {
+        results = {}
+    }
+</script>
+
+<iscomment>Results View</iscomment>
+<div class="results-view">
+    <h1 class="sr-only">${Resource.msg('heading.provider-search-results', 'providersearch', null)}</h1>
+    <iscomment>Provider Search Form</iscomment>
+    <form class="form-container provider-search-results-form-container full-width-bckg pl-lg-0" action="${pdict.searchActionURL}" method="POST"
+        name="provider-search-form">
+        <div class="form-group zipcode-wrapper required">
+            <label for="provider-search-zipcode" class="form-control-label">${Resource.msg('label.form.field.zip', 'providersearch', null)}</label>
+            <input id="provider-search-zipcode" class="form-control" type="text" required value="${pdict.searchForm.zipCode.htmlValue}" <isprint value="${pdict.searchForm.zipCode.attributes}" encoding="off" /> />
+            <div class="zipcode-custom-error">${Resource.msg('label.form.error.zipstate', 'providersearch', null)}</div>
+        </div>
+
+        <div class="form-group state-wrapper required">
+            <label for="provider-search-state" class="form-control-label">${Resource.msg('label.form.field.state', 'providersearch', null)}</label>
+            <select id="provider-search-state" class="form-control custom-select"
+                <isprint value="${pdict.searchForm.stateCode.attributes}" encoding="off" /> >
+                <option id="" value="" > ${Resource.msg('option.state.empty', 'providersearch', null)}</option>
+                <isloop items="${pdict.searchForm.stateCode.options}" var="state">
+                    <option id="${state.id}" value="${state.htmlValue}" <isif condition="${state.selected}"> selected </isif> >${state.htmlValue}</option>
+                </isloop>
+            </select>
+            <div class="zipcode-custom-error">${Resource.msg('label.form.error.zipstate', 'providersearch', null)}</div>
+        </div>
+
+        <div class="form-group radius-wrapper">
+            <label for="provider-search-radius" class="form-control-label">${Resource.msg('label.form.field.radius', 'providersearch', null)}</label>
+            <select id="provider-search-radius" class="form-control custom-select" <isprint value="${pdict.searchForm.radius.attributes}" encoding="off" /> >
+                <isloop items="${pdict.radiusValues}" var="radius">
+                    <option value = "${radius}" <isif condition="${pdict.searchForm.radius.value === radius}"> selected </isif> >${radius} ${Resource.msg('label.miles', 'providersearch', null)}</option>
+                </isloop>
+            </select>
+        </div>
+
+        <div class="form-group search-button-wrapper">
+            <button class="btn btn-block btn-outline-primary submit-btn btn-width-100"
+                type="submit">${Resource.msg('label.btn.search', 'providersearch', null)}</button>
+        </div>
+    </form>
+
+    <div class="card pl-lg-0">
+        <iscomment>Provider Search Title</iscomment>
+        <div class="card-header">
+            <h1 class="search-results-title">${Resource.msg('title.provider.search.results', 'providersearch', null)}</h1>
+        </div>
+
+        <iscontentasset aid="provider-search-get-started" />
+
+        <iscomment>Provider Search Filter Dropdowns</iscomment>
+        <div class="card-body pb-0">
+            <div class="row filter-container"
+                data-filter-by-brand-label="${Resource.msg('label.filter.by.brand', 'providersearch', null)}"
+                data-filter-by-provider-label="${Resource.msg('label.filter.by.provider', 'providersearch', null)}"
+                data-select-label="${Resource.msg('label.filter.select', 'providersearch', null)}"></div>
+
+            <iscomment>Provider Search Filter Results</iscomment>
+            <div class="results-container" data-miles-label="${Resource.msg('info.results.miles', 'providersearch', null)}">
+            </div>
+        </div>
+
+        <iscontentasset aid="provider-search-results-disclaimer" />
+    </div>
+</div>
+
+<iscomment>Practice View</iscomment>
+<div class="practice-view pl-lg-0" style="display: none;"
+    data-go-back-label="${Resource.msg('label.go.back', 'providersearch', null)}"
+    data-request-an-appointment-label="${Resource.msg('label.btn.requestappointment', 'providersearch', null)}"
+    data-hours-label="${Resource.msg('label.hours', 'providersearch', null)}"
+    data-providers-at-location-title="${Resource.msg('title.providersatlocation', 'providersearch', null)}"
+    data-npi-label="${Resource.msg('label.npi', 'providersearch', null)}"
+    data-miles-label="${Resource.msg('label.miles', 'providersearch', null)}"
+    data-request-appointment-action-url="${URLUtils.https('ProviderSearch-RequestAppointmentAuthForm')}">
+</div>
+
+<iscomment>Provider View</iscomment>
+<div class="provider-view pl-lg-0" style="display: none;"
+    data-license-type-map="${JSON.stringify(pdict.specialities)}"
+    data-yes-label="${Resource.msg('label.yes', 'common', null)}"
+    data-no-label="${Resource.msg('label.no', 'common', null)}"
+    data-go-back-label="${Resource.msg('label.go.back', 'providersearch', null)}"
+    data-go-back-info="${Resource.msg('info.go.back', 'providersearch', null)}"
+    data-speciality-label="${Resource.msg('label.speciality', 'providersearch', null)}"
+    data-gender-label="${Resource.msg('label.gender', 'providersearch', null)}"
+    data-phone-label="${Resource.msg('label.phone', 'providersearch', null)}"
+    data-getstarted-label="${Resource.msg('label.getstarted', 'providersearch', null)}"
+    data-accepting-patients-label="${Resource.msg('label.acceptingpatients', 'providersearch', null)}"
+    data-languages-spoken-label="${Resource.msg('label.languagesspoken', 'providersearch', null)}"
+    data-service-virtualcare-label="${Resource.msg('label.service.virtualcare', 'providersearch', null)}"
+    data-service-relate-label="${Resource.msg('label.service.relate', 'providersearch', null)}"
+    data-service-pediatrics-label="${Resource.msg('label.service.pediatrics', 'providersearch', null)}"
+    data-service-samedayfit-label="${Resource.msg('label.service.samedayfit', 'providersearch', null)}"
+    data-service-mobileprovider-label="${Resource.msg('label.service.mobileprovider', 'providersearch', null)}"
+    data-service-inofficepayments-label="${Resource.msg('label.service.inofficepayments', 'providersearch', null)}">
+</div>

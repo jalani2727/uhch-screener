@@ -1,0 +1,40 @@
+<div class="card">
+    <iscontentasset aid="my-account-security-and-sign-in" />
+    <div class="card-header clearfix">
+        <h2 class="pull-left profile-header">${Resource.msg('label.profile','account',null)}</h2>
+        <a href="${URLUtils.url('Account-EditDetails')}" class="pull-right" aria-label="${Resource.msg('label.profile.edit','account',null)}">${Resource.msg('link.edit','account',null)}</a>
+    </div>
+    <div class="card-body">
+        <iscontentasset aid="my-account-profile-card-desc" />
+        <isif condition="${pdict.account.profile.firstName !== 'undefined' && pdict.account.profile.firstName !== 'null' && pdict.account.profile.firstName !== ''}">
+            <dl>
+                <dt>${Resource.msg('label.profile.firstname','account',null)}</dt>
+                <dd>${pdict.account.profile.firstName}</dd>
+            </dl>
+        </isif>
+        <isif condition="${pdict.account.profile.lastName !== 'undefined' && pdict.account.profile.lastName !== 'null' && pdict.account.profile.lastName !== ''}">
+            <dl>
+                <dt>${Resource.msg('label.profile.lastname','account',null)}</dt>
+                <dd>${pdict.account.profile.lastName}</dd>
+            </dl>
+        </isif>
+        <dl>
+            <dt>${Resource.msg('label.profile.email','account',null)}</dt>
+            <dd>${pdict.account.profile.email}</dd>
+        </dl>
+        <isif condition="${pdict.account.profile.phone !== 'undefined' && pdict.account.profile.phone !== 'null' && pdict.account.profile.phone !== ''}">
+            <dl>
+                <dt id="profile-phone">${Resource.msg('label.profile.phone','account',null)}</dt>
+                <dd>
+                    <input class="input-phone input-unset-all" value="${pdict.account.profile.phone}" readonly aria-labelledby="profile-phone" />
+                </dd>
+            </dl>
+        </isif>
+        <isif condition="${pdict.communicationPreference !== 'null' && pdict.communicationPreference != 'undefined' && pdict.communicationPreference !== ''}">
+            <dl>
+                <dt>${Resource.msg('label.profile.communications-preference','account',null)}</dt>
+                <dd>${pdict.communicationPreference}</dd>
+            </dl>
+        </isif>
+    </div>
+</div>

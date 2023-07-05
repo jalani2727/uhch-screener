@@ -1,0 +1,105 @@
+<isset name="orderDetailsPage" value="${true}" scope="page" />
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/account/orderTrack.css');
+        assets.addCss('/css/account/profile.css');
+    </isscript>
+    <isset name="orderDetailsPage" value="${true}" scope="page" />
+    <isset name="order" value="${pdict.order}" scope="page"/>
+    <isset name="groupedItem" value="${order.totalItems}" scope="page"/>
+
+    <div class="container order-detail-page">
+
+        <div class="row">
+            <div class="col">
+                <div class="order-history-header">
+                    <h2 class="text-md-center uhc-blue uhc-main-title">${Resource.msg('title.order.detail', 'orderDetails', null)}</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header clearfix">
+                        <h2 class="pull-left">
+                            ${Resource.msg('label.orderhistory.name.label','account',null)}
+                            <isprint value="${pdict.order.sfccOrderNumber}"/></h2>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="summary-details order-date-summary">
+                            <span class="order-date-info-label uhc-black-333 od-bold-font">
+                                ${Resource.msg('label.order.details.date', 'orderDetails', null)}
+                            </span>
+                            <span class="order-date-details">
+                                <isset name="orderedDate" value="${pdict.order.orderedDate}" scope="page"/>
+                                <span class="date"><isprint value="${orderedDate}" style = "DATE_SHORT" /></span>
+                            </span>
+                        </div>
+                        
+                        <isset name="shipping" value="${pdict.order.shipping}" scope="page" />
+                        <isset name="billing" value="${pdict.order.billing}" scope="page" />
+                        <isinclude template="account/order/shippingAddress"/>
+
+                        <div class="summary-details shipping-method-summary">
+                            <div class="summary-section-label shipping-method-info-label">
+                                ${Resource.msg('label.order.details.shipping.method', 'orderDetails', null)}
+                            </div>
+                            <div class="shipping-method-details row leading-lines">
+                                <div class="col-8 start-lines">
+                                    <div class="shipping-method">
+                                        <span class="shipping-method-title" title="${pdict.order.shipping.deliveryMethodDescription}">${pdict.order.shipping.deliveryMethodName}</span>
+                                        <span class="shipping-method-arrival-time"><!-- arrival time decriptoin --></span>
+                                    </div>
+                                </div>
+                                <div class="col-4 end-lines">
+                                    <div class="text-right shipping-method-price od-bold-font">${pdict.order.totals.shipping}</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <isset name="payment" value="${billing.payment}" scope="page" />
+                        <isinclude template="account/order/paymentSummary"/>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row checkout-number-of-items no-gutters od-bold-font od-font-size-18 pb-4 mb-3">
+                            <div class="col-6">
+                                <span class="order-receipt-label grand-total-label">${Resource.msgf('label.number.items.in.cart', 'cart', null, order.totals.totalQuantity)}</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="grand-total-price">${order.totals.grandTotal}</span>
+                            </div>
+                        </div>
+                        <isloop items="${groupedItem}" var="orderTypeList" status="itemsLoopState">
+                            <isloop items="${orderTypeList}" var="orderType" status="itemsLoopState">
+                                <isset name="orderItems" value="${orderType.orderItems.orderItems}" scope="page" />
+                                <isinclude template="account/order/orderItems"/>
+                             </isloop>
+                        </isloop>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <isset name="totals" value="${pdict.order.totals}" scope="page" />
+                    <isinclude template="account/orderTotalSummary"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="row  text-center">
+            <div class="col-12">
+                <div class="my-account my-5">
+                    <a href="${pdict.exitLinkUrl}" title="${Resource.msg('link.orderdetails.myaccount','account',null)}" aria-label="${Resource.msg('link.orderdetails.myaccount','account',null)}">
+                        ${pdict.exitLinkText}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</isdecorate>

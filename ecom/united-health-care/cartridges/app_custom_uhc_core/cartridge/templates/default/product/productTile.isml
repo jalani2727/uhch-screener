@@ -1,0 +1,28 @@
+<div class="product-tile">
+    <!-- Product Badge -->
+    <isinclude template="product/components/productBadge" />
+    <!-- dwMarker="product" dwContentID="${product.uuid}" -->
+    <isinclude template="product/components/productTileImage" />
+    <div class="tile-body">
+        <isif condition="${pdict.display.swatches !== false}">
+            <isinclude template="product/components/productTileSwatch" />
+        </isif>
+
+        <isinclude template="product/components/productTileName" />
+
+        <isset name="price" value="${product.price}" scope="page" />
+        <isif condition="${product.productType === 'set'}">
+            <isinclude template="product/components/pricing/setPrice" />
+        <iselse>
+            <div class="price"></div>
+            <iscomment>
+                <isinclude template="product/components/pricing/main" />
+            </iscomment>
+        </isif>
+
+        <isif condition="${pdict.display.ratings !== false}">
+            <isinclude template="product/productTileFooter" />
+        </isif>
+    </div>
+    <!-- END_dwmarker -->
+</div>

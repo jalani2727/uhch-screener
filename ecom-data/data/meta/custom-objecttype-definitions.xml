@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <custom-type type-id="CommunicationHandlers">
+        <display-name xml:lang="x-default">Communication Handlers</display-name>
+        <description xml:lang="x-default">Configuration for Communication Handlers</description>
+        <staging-mode>source-to-target</staging-mode>
+        <storage-scope>site</storage-scope>
+        <key-definition attribute-id="instanceType">
+            <type>string</type>
+            <min-length>0</min-length>
+        </key-definition>
+        <attribute-definitions>
+            <attribute-definition attribute-id="configJson">
+                <display-name xml:lang="x-default">Handler Configuration JSON</display-name>
+                <description xml:lang="x-default">Configuration JSON object for Communication Handlers</description>
+                <type>text</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="default">
+                <display-name xml:lang="x-default">Default</display-name>
+                <attribute attribute-id="instanceType"/>
+                <attribute attribute-id="configJson"/>
+            </attribute-group>
+        </group-definitions>
+    </custom-type>
+
+    <custom-type type-id="LifestyleAnswer">
+        <display-name xml:lang="x-default">Lifestyle Answer</display-name>
+        <description xml:lang="x-default">Lifestyle Answer</description>
+        <staging-mode>no-staging</staging-mode>
+        <storage-scope>site</storage-scope>
+        <key-definition attribute-id="resultID">
+            <display-name xml:lang="x-default">result ID</display-name>
+            <type>string</type>
+            <min-length>0</min-length>
+        </key-definition>
+        <attribute-definitions>
+            <attribute-definition attribute-id="questionAnswers">
+                <display-name xml:lang="x-default">Question Answers</display-name>
+                <type>text</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="custom">
+                <display-name xml:lang="x-default">custom</display-name>
+                <attribute attribute-id="resultID"/>
+                <attribute attribute-id="lastModified" system="true"/>
+                <attribute attribute-id="creationDate" system="true"/>
+                <attribute attribute-id="questionAnswers"/>
+            </attribute-group>
+        </group-definitions>
+    </custom-type>
+
+    <custom-type type-id="LifestyleQuestions">
+        <display-name xml:lang="x-default">Lifestyle Questions</display-name>
+        <description xml:lang="x-default">Lifestyle Questions</description>
+        <staging-mode>source-to-target</staging-mode>
+        <storage-scope>site</storage-scope>
+        <key-definition attribute-id="questionID">
+            <display-name xml:lang="x-default">Question ID</display-name>
+            <type>string</type>
+            <min-length>0</min-length>
+        </key-definition>
+        <attribute-definitions>
+            <attribute-definition attribute-id="answers">
+                <display-name xml:lang="x-default">Answers</display-name>
+                <type>set-of-string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="nextQuestionID">
+                <display-name xml:lang="x-default">Next Question ID</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="previousQuestionID">
+                <display-name xml:lang="x-default">Previous Question ID</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="question">
+                <display-name xml:lang="x-default">Question</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="questionImage">
+                <display-name xml:lang="x-default">Question Image</display-name>
+                <type>image</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="questionType">
+                <display-name xml:lang="x-default">Question Type</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="custom">
+                <display-name xml:lang="x-default">custom</display-name>
+                <attribute attribute-id="answers"/>
+                <attribute attribute-id="previousQuestionID"/>
+                <attribute attribute-id="question"/>
+                <attribute attribute-id="questionID"/>
+                <attribute attribute-id="questionType"/>
+                <attribute attribute-id="nextQuestionID"/>
+                <attribute attribute-id="questionImage"/>
+                <attribute attribute-id="creationDate" system="true"/>
+                <attribute attribute-id="lastModified" system="true"/>
+            </attribute-group>
+        </group-definitions>
+    </custom-type>
+
+    <custom-type type-id="MarketingCloudAnalytics">
+        <display-name xml:lang="x-default">Marketing Cloud Analytics</display-name>
+        <description xml:lang="x-default">Marketing Cloud Analytics definitions</description>
+        <staging-mode>source-to-target</staging-mode>
+        <storage-scope>site</storage-scope>
+        <key-definition attribute-id="analyticEventID">
+            <display-name xml:lang="x-default">Analytic Event ID</display-name>
+            <description xml:lang="x-default">Event ID of the analytic activity being tracked</description>
+            <type>string</type>
+            <min-length>0</min-length>
+        </key-definition>
+        <attribute-definitions>
+            <attribute-definition attribute-id="analyticAttributes">
+                <display-name xml:lang="x-default">Analytic Attributes</display-name>
+                <description xml:lang="x-default">Analytic fields, data attributes, etc, should all be defined and mapped here.</description>
+                <type>text</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="customEventName">
+                <display-name xml:lang="x-default">Custom Event Name</display-name>
+                <description xml:lang="x-default">Custom event name that is sent to Marketing Cloud</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="description">
+                <display-name xml:lang="x-default">Description</display-name>
+                <description xml:lang="x-default">Analytic event description</description>
+                <type>text</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="enabled">
+                <display-name xml:lang="x-default">Enabled?</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="default">
+                <display-name xml:lang="x-default">Default</display-name>
+                <attribute attribute-id="analyticEventID"/>
+                <attribute attribute-id="customEventName"/>
+                <attribute attribute-id="description"/>
+                <attribute attribute-id="enabled"/>
+                <attribute attribute-id="analyticAttributes"/>
+                <attribute attribute-id="creationDate" system="true"/>
+                <attribute attribute-id="lastModified" system="true"/>
+            </attribute-group>
+        </group-definitions>
+    </custom-type>
+
+    <custom-type type-id="MarketingCloudAuthToken">
+        <display-name xml:lang="x-default">Marketing Cloud Auth Token</display-name>
+        <description xml:lang="x-default">Marketing Cloud OAuth Token</description>
+        <staging-mode>no-staging</staging-mode>
+        <storage-scope>site</storage-scope>
+        <retention-days>1</retention-days>
+        <key-definition attribute-id="siteID">
+            <type>string</type>
+            <min-length>0</min-length>
+        </key-definition>
+        <attribute-definitions>
+            <attribute-definition attribute-id="token">
+                <display-name xml:lang="x-default">Token</display-name>
+                <type>text</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>true</externally-managed-flag>
+            </attribute-definition>
+        </attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="default">
+                <display-name xml:lang="x-default">Default</display-name>
+                <attribute attribute-id="siteID"/>
+                <attribute attribute-id="token"/>
+                <attribute attribute-id="lastModified" system="true"/>
+            </attribute-group>
+        </group-definitions>
+    </custom-type>
+
+    <custom-type type-id="MarketingCloudDataExport">
+        <display-name xml:lang="x-default">Marketing Cloud Data Export</display-name>
+        <description xml:lang="x-default">Marketing Cloud Data Export definitions</description>
+        <staging-mode>source-to-target</staging-mode>
+        <storage-scope>site</storage-scope>
+        <key-definition attribute-id="exportID">
+            <display-name xml:lang="x-default">Export ID</display-name>
+            <description xml:lang="x-default">Export ID mapped from job in Business Manager</description>
+            <type>string</type>
+            <min-length>0</min-length>
+        </key-definition>
+        <attribute-definitions>
+            <attribute-definition attribute-id="description">
+                <display-name xml:lang="x-default">Description</display-name>
+                <description xml:lang="x-default">Export description</description>
+                <type>text</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="exportAttributes">
+                <display-name xml:lang="x-default">Export Attributes</display-name>
+                <description xml:lang="x-default">Export fields, data attributes, etc, should all be defined and mapped here.</description>
+                <type>text</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="default">
+                <display-name xml:lang="x-default">Default</display-name>
+                <attribute attribute-id="exportID"/>
+                <attribute attribute-id="description"/>
+                <attribute attribute-id="exportAttributes"/>
+                <attribute attribute-id="creationDate" system="true"/>
+                <attribute attribute-id="lastModified" system="true"/>
+            </attribute-group>
+        </group-definitions>
+    </custom-type>
+
+    <custom-type type-id="MarketingCloudDataExportStatus">
+        <display-name xml:lang="x-default">Marketing Cloud Data Export Status</display-name>
+        <description xml:lang="x-default">Tracks the last export for each feed to Marketing Cloud</description>
+        <staging-mode>no-staging</staging-mode>
+        <storage-scope>site</storage-scope>
+        <key-definition attribute-id="siteID_exportID">
+            <type>string</type>
+            <min-length>0</min-length>
+        </key-definition>
+        <attribute-definitions>
+            <attribute-definition attribute-id="lastExportRun">
+                <display-name xml:lang="x-default">Last Export Run</display-name>
+                <type>datetime</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>true</externally-managed-flag>
+            </attribute-definition>
+        </attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="default">
+                <display-name xml:lang="x-default">Default</display-name>
+                <attribute attribute-id="siteID_exportID"/>
+                <attribute attribute-id="lastExportRun"/>
+                <attribute attribute-id="creationDate" system="true"/>
+                <attribute attribute-id="lastModified" system="true"/>
+            </attribute-group>
+        </group-definitions>
+    </custom-type>
+
+    <custom-type type-id="MarketingCloudTriggers">
+        <display-name xml:lang="x-default">Marketing Cloud Triggers</display-name>
+        <description xml:lang="x-default">Triggers defined for use with int_marketing_cloud cartridge.</description>
+        <staging-mode>source-to-target</staging-mode>
+        <storage-scope>site</storage-scope>
+        <key-definition attribute-id="hookID">
+            <type>string</type>
+            <min-length>0</min-length>
+        </key-definition>
+        <attribute-definitions>
+            <attribute-definition attribute-id="customerKey">
+                <display-name xml:lang="x-default">Trigger External Key</display-name>
+                <description xml:lang="x-default">External Key of the entry event send definition.</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="description">
+                <display-name xml:lang="x-default">Description</display-name>
+                <description xml:lang="x-default">Description of what this trigger event does</description>
+                <type>text</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="enabled">
+                <display-name xml:lang="x-default">Enabled?</display-name>
+                <description xml:lang="x-default">If unchecked, the trigger is disabled, in which case no communication is issued.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="subscriberAttributes">
+                <display-name xml:lang="x-default">Subscriber Attributes</display-name>
+                <description xml:lang="x-default">Subscriber profile fields, data extension attributes, etc, should all be defined and mapped here.</description>
+                <type>text</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="default">
+                <display-name xml:lang="x-default">Default</display-name>
+                <attribute attribute-id="hookID"/>
+                <attribute attribute-id="customerKey"/>
+                <attribute attribute-id="description"/>
+                <attribute attribute-id="enabled"/>
+                <attribute attribute-id="subscriberAttributes"/>
+                <attribute attribute-id="creationDate" system="true"/>
+                <attribute attribute-id="lastModified" system="true"/>
+            </attribute-group>
+        </group-definitions>
+    </custom-type>
+
+    <custom-type type-id="UPGPayment">
+        <display-name xml:lang="x-default">UPG Payment</display-name>
+        <description xml:lang="x-default">Holds the Payment Portal Custom Objects</description>
+        <staging-mode>no-staging</staging-mode>
+        <storage-scope>site</storage-scope>
+        <retention-days>60</retention-days>
+        <key-definition attribute-id="transactionId">
+            <type>string</type>
+            <min-length>0</min-length>
+        </key-definition>
+        <attribute-definitions>
+            <attribute-definition attribute-id="collectionRecordCreated">
+                <display-name xml:lang="x-default">Collection Record Created</display-name>
+                <description xml:lang="x-default">Collection Record Created holds true of false depending on the API availability</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="collectionRecordRequestObj">
+                <display-name xml:lang="x-default">Collection Record Request Object</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="invoiceId">
+                <display-name xml:lang="x-default">Invoice ID</display-name>
+                <description xml:lang="x-default">Invoice ID for UPG payment</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="invoiceRecordId">
+                <display-name xml:lang="x-default">Invoice Record ID</display-name>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="status">
+                <display-name xml:lang="x-default">Status</display-name>
+                <description xml:lang="x-default">Transaction Status</description>
+                <type>string</type>
+                <localizable-flag>false</localizable-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="UGP Payment">
+                <display-name xml:lang="x-default">UPG Payment</display-name>
+                <attribute attribute-id="invoiceId"/>
+                <attribute attribute-id="status"/>
+                <attribute attribute-id="transactionId"/>
+                <attribute attribute-id="invoiceRecordId"/>
+                <attribute attribute-id="collectionRecordCreated"/>
+                <attribute attribute-id="collectionRecordRequestObj"/>
+            </attribute-group>
+        </group-definitions>
+    </custom-type>
+</metadata>

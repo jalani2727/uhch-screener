@@ -1,0 +1,40 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/login.css');
+        assets.addJs('/js/login.js');
+    </isscript>
+
+    <div class="container login-page mt-5">
+        <div class="row justify-content-center">
+            <div class="col-sm-8 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="login-form-nav">
+                            <isif condition="${'enableSSO' in dw.system.Site.current.preferences.custom && dw.system.Site.current.preferences.custom.enableSSO}">
+                                <isinclude template="account/components/loginpageSSO" />
+                            <iselse/>
+                                <isinclude template="account/components/navTabs" />
+                                <div class="tab-content">
+                                    <div class="tab-pane ${pdict.navTabValue === 'login' ? 'active' : ''}" id="login" role="tabpanel" aria-labelledby="login-tab">
+                                        <isinclude template="account/components/loginForm" />
+                                        <isinclude template="account/password/requestPasswordResetModal"/>
+                                    </div>
+                                    <div class="tab-pane ${pdict.navTabValue === "register" ? 'active' : ''}" id="register" role="tabpanel" aria-labelledby="register-tab">
+                                        <isinclude template="account/components/registerForm" />
+                                    </div>
+                                </div>
+                            </isif>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-6 check-order-status">
+                <h1 class="title-check-order-status">${Resource.msg('title.check.order.status', 'login', null)}</h1>
+                <div class="card">
+                    <isinclude template="account/components/trackOrderForm" />
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

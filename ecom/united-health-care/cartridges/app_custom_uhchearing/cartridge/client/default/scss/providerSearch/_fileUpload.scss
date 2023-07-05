@@ -1,0 +1,26 @@
+.file-upload-container {
+    margin-top: 22px;
+    margin-bottom: 50px;
+    padding: 30px 20px;
+    background: $tints-col-4;
+
+    .provider-search-title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .provider-search-description {
+        margin-bottom: 30px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 30px 50px;
+
+        .provider-search-title {
+            font-size: 28px;
+            line-height: 44px;
+        }
+    }
+}

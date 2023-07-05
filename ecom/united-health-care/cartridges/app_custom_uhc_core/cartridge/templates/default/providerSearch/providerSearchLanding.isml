@@ -1,0 +1,27 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/providerSearch.css');
+        assets.addJs('/js/providerSearch.js');
+    </isscript>
+
+    <isinclude template="/components/modules" sf-toolkit="off" />
+
+    <div class="container">
+        <div class="provider-search-container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <isif condition="${pdict.isDisplayForm}">
+                        <isinclude template="providerSearch/searchForm" />
+                    <iselse/>
+                        <isinclude template="providerSearch/guestProviderSearch"/>
+                    </isif>
+                    <isinclude template="providerSearch/infoSection" />
+                </div>
+                <div class="col-12 col-lg-6">
+                    <isinclude template="providerSearch/fileUpload" />
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

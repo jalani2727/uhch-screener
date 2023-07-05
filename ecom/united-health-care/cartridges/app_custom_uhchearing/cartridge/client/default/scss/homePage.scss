@@ -1,0 +1,13 @@
+@import '~base/homePage';
+@import './variables';
+@import './common/hero';
+@import './common/gettingStarted';
+@import './common/pathSelection';
+@import './common/signIn';
+@import './common/takeTheTest';
+@import './common/direction';
+@import './components/registrationSuccessfulModal';
+
+.image-content img {
+    max-width: 100%;
+}

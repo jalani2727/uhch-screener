@@ -1,0 +1,12 @@
+{
+    "hooks": [
+        {
+            "name": "app.payment.processor.upg_credit",
+            "script": "./cartridge/scripts/hooks/payment/processor/upg_credit"
+        },
+        {
+            "name": "dw.system.request.onRequest",
+            "script": "./cartridge/scripts/hooks/server/customRequest.js"
+        }
+    ]
+}

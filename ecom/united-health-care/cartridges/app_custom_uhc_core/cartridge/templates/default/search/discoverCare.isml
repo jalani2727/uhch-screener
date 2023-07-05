@@ -1,0 +1,42 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/discoverCare.css');
+    </isscript>
+
+    <div class="discover-care">
+        <div class="container dc-container">
+            <h1 class="uhc-blue uhc-serif uhc-main-title dc-title"><isif condition="${pdict.parentDisplayName}">${pdict.parentDisplayName}<iselse/>${pdict.displayName}</isif></h1>
+            <div class="dc-para"><isif condition="${pdict.parentDescription}">${pdict.parentDescription}<iselse/>${pdict.description}</isif></div>
+
+            <div class="dc-btn-row">
+                <div class="row">
+                    <div class="col-12 col-md-auto">
+                        <a href="${URLUtils.https('HearingTest-Landing')}" class="btn btn-primary btn-block"
+                            role="button" aria-pressed="true">
+                            ${Resource.msg('discover.care.takeonline.hearing.test', 'search', null)}
+                        </a>
+                    </div>
+                
+                    <isloop items="${pdict.subFolders}" var="subFolder">
+                        <div class="col-12 col-md-auto pt-4 pt-md-0">
+                        <isif condition="${!empty(subFolder.custom.categoryID)}">
+                            <a href="${URLUtils.url('Search-Show', 'cgid', subFolder.custom.categoryID)}" class="btn btn-outline-primary btn-block"
+                            role="button" aria-pressed="true">
+                                ${subFolder.getDisplayName()}
+                            </a>
+                        </isif>
+                        </div>
+                    </isloop>
+                </div>
+            </div>
+        </div>
+
+        <isloop items="${pdict.content}" var="asset">
+            <isif condition="${asset.online}">
+                <isprint value="${asset.custom.body.markup}" encoding="off" />
+            </isif>
+        </isloop>
+    </div>
+</isdecorate>
+

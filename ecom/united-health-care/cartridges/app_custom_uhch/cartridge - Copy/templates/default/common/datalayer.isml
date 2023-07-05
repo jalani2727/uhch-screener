@@ -1,0 +1,25 @@
+<!-- Datalayer Object -->
+<script type="text/javascript">
+    var adobeDataLayer = [];
+    var isAdobeDatalayer = 'true';
+    var buildContentViewURL = '${URLUtils.https('Build-BuildContentView').toString()}';
+    var datalayerContext = 'GlobalData';
+    var datalayerPageGroup = 'content';
+    var datalayerPageName = 'Hear BSHM';
+    var isErrorPage = 'false';
+    var isSections = 'true';
+    var datalayerSections = {};
+    if (isSections === 'true') {
+        datalayerSections = {"section2":"","section3":"","section4":""};
+    }
+</script>
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/tracking.js');
+</isscript>
+
+
+<!-- Adobe Launch -->
+<isif condition="${'adobeDatalayerScript' in dw.system.Site.current.preferences.custom && dw.system.Site.current.preferences.custom.adobeDatalayerScript}">
+    <script src="${dw.system.Site.current.preferences.custom.adobeDatalayerScript}" async></script>
+</isif>

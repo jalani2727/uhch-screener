@@ -1,0 +1,5 @@
+<ul class="return-list">
+        <isset name="orderItems" value="${pdict.orderItems}" scope="page" />
+        <isset name="orderItemsOptions" value="${pdict.orderItemsOptions}" scope="page" />
+        <isinclude template="account/order/orderItems"/>
+</ul>

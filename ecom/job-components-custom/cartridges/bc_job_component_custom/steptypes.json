@@ -1,0 +1,98 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id":"custom.upgOrderProcessing",
+                "description":"Custom job to check the order status",
+                "module":"bc_job_component_custom/cartridge/scripts/steps/UPGOrderProcessing.js",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "false",
+                "function":"execute",
+                "transactional":"false",
+                "parameters":{
+                   "parameter":[
+                   ]
+                },
+                "status-codes": {
+                    "status": [{
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        },
+                        {
+                            "@code": "NO_FILE_FOUND",
+                            "description": "Used when no files could be found in the source directory."
+                        }
+                    ]
+                }
+            },
+            {
+                "@type-id":"custom.paymentPortalPendingTransactions",
+                "description":"Custom job to process pending transactions for Payment Portal",
+                "module":"bc_job_component_custom/cartridge/scripts/steps/paymentPortalPendingTransactions.js",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "false",
+                "function":"execute",
+                "transactional":"false",
+                "parameters":{
+                   "parameter":[
+                    {  
+                        "@name":"BufferInMinutes",
+                        "description":"Enter the buffer time in minutes for picking up the custom object records",
+                        "@type":"long",
+                        "@required":true,
+                        "@trim":true,
+                        "default-value": "60"
+                     }
+                   ]
+                },
+                "status-codes": {
+                    "status": [{
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        },
+                        {
+                            "@code": "NO_FILE_FOUND",
+                            "description": "Used when no files could be found in the source directory."
+                        }
+                    ]
+                }
+            },
+            {
+                "@type-id":"custom.lifestyleData.cleanup",
+                "description":"Custom job to clean the lifestyle data",
+                "module":"bc_job_component_custom/cartridge/scripts/steps/LifestyleDataCleanup.js",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "false",
+                "function":"execute",
+                "transactional":"true",
+                "parameters":{
+                   "parameter":[
+                   ]
+                },
+                "status-codes": {
+                    "status": [{
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        },
+                        {
+                            "@code": "NO_FILE_FOUND",
+                            "description": "Used when no files could be found in the source directory."
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

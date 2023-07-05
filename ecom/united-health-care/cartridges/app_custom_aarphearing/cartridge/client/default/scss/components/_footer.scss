@@ -1,0 +1,10 @@
+.footer-disclaimer {
+    color: $primary-col-2;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 24px 0 40px;
+
+    @include media-breakpoint-up(lg) {
+        margin: 25px 0 35px;
+    }
+}

@@ -1,0 +1,7 @@
+<span class="html-slot-container-phonenumber">
+    <isif condition="${slotcontent != null}">
+        <isloop items="${slotcontent.content}" var="markupText">
+            <a class="common-phone" href="tel:${markupText.markup}"><isprint value="${markupText.markup}" encoding="off"/></a>
+        </isloop>
+    </isif>
+</span>

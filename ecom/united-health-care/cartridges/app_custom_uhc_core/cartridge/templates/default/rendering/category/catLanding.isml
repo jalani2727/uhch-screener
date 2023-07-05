@@ -1,0 +1,16 @@
+<isdecorate template="common/layout/page">
+    <isinclude url="${URLUtils.url('HealthPlan-Check')}" />
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addCss('/css/search.css');
+        assets.addJs('/js/healthPlan.js');
+    </isscript>
+
+    <isslot
+        id="cat-landing-slot"
+        context="category"
+        description="Category Landing Pages Slot"
+        context-object="${pdict.category}"
+    />
+
+</isdecorate>

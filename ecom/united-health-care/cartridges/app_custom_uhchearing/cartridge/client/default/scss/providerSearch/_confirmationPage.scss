@@ -1,0 +1,70 @@
+.provider-search-confirmation {
+    padding-bottom: 40px;
+
+    @include media-breakpoint-up(lg) {
+        padding: 96px 92px 63px;
+    }
+
+    .title-container {
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+        font-size: 26px;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 28px;
+        }
+    }
+
+    .section-separator {
+        margin-top: 24px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 37px;
+        }
+    }
+
+    .confirmation-page-info {
+        @include media-breakpoint-up(lg) {
+            padding: 0 70px;
+        }
+    }
+
+    .custom-card {
+        background: $primary-col-2;
+        border: 1px solid $uhc-border-color;
+        padding: 34px 37px;
+        height: 100%;
+
+        @include media-breakpoint-up(lg) {
+            padding: 58px 59px 53px 45px;
+        }
+    }
+
+    .custom-card-heading {
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+        font-size: 22px;
+    }
+
+    .custom-card-body {
+        color: $uhc-form-label;
+        padding-top: 19px;
+        padding-bottom: 26px;
+    }
+
+    .card-container-separator-top {
+        margin-top: 24px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
+        }
+    }
+
+    .font-family-bold {
+        font-family: $uhc-font-sans-bold;
+    }
+
+    .btn-container {
+        margin-top: auto;
+    }
+}

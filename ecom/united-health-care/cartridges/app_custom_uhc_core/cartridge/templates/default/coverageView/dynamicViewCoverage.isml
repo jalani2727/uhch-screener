@@ -1,0 +1,81 @@
+<div class="col-12 col-md-4 pb-4">
+    <iscontentasset aid="services-static-content" />
+</div>
+
+<isif condition="${pdict.benefits !== ''}">
+    <div class="col-12 col-md-4 pb-4">
+        <div class="vc-card">
+            <div class="vc-card-title uhc-blue">
+                ${Resource.msg('title.benefits.dynamicCoverage', 'coverage', null)}
+            </div>
+            <isloop items="${pdict.benefits}" var="benefit">
+                <div class="vc-card-content <isif condition="${pdict.benefitsAssets[benefit.grouping]}">collapsible-xl active </isif>">
+                    <div class="vc-card-sub-title <isif condition="${pdict.benefitsAssets[benefit.grouping]}">title</isif>">
+                        <div class="d-flex justify-content-between">
+                            <div class="vc-title-label uhc-blue">
+                                ${benefit.grouping}
+                            </div>
+                            <isif condition="${pdict.viewCoverageType === 'DynamicUHC-1'}">
+                                <div class="vc-title-value vc-ttile-benefits">
+                                    ${Resource.msgf('benefits.value.label', 'coverage', null, benefit.value)}
+                                </div>
+                            <iselseif condition="${pdict.viewCoverageType === 'DynamicUHC-2'}" />
+                                <div class="vc-title-value vc-ttile-benefits">
+                                    ${Resource.msgf('benefits.value.description', 'coverage', null, benefit.value)}
+                                </div>
+                            </isif>
+                        </div>
+                    </div>
+                    <isif condition="${pdict.benefitsAssets[benefit.grouping]}">
+                        <div class="vc-card-text content">
+                            <iscontentasset aid="${pdict.benefitsAssets[benefit.grouping]}" />
+                        </div>
+                    </isif>
+                </div>
+            </isloop>
+        </div>
+        <iscontentasset aid="${pdict.viewCoverageBenifitType}" />
+    </div>
+</isif>               
+
+<div class="col-12 col-md-4 pb-4">
+    <div class="vc-card">
+        <div class="vc-card-title uhc-blue">
+            ${Resource.msg('title.benefits.frequency', 'coverage', null)}
+        </div>
+        <div class="vc-card-content">
+            <div class="vc-card-sub-title">
+                <div class="d-flex justify-content-between">
+                    <div class="vc-title-value">
+                        <isif condition="${pdict.hearingAidQuantity}">
+                            <isprint value="${pdict.hearingAidQuantity}" encoding="off" /> 
+                        </isif>
+                        <span class="uhc-blue">
+                            ${Resource.msg('coverage.benefits.ears', 'coverage', null)}
+                        </span>
+                        <isprint value="${pdict.benefitFrequency}" encoding="off" /> 
+                        <span class="uhc-blue">
+                            ${Resource.msg('coverage.benefits.years', 'coverage', null)}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <isif condition="${pdict.viewCoverageType === 'DynamicUHC-2'}" >
+            <div class="vc-card-content">
+                <div class="vc-card-sub-title">
+                    <div class="d-flex justify-content-between">
+                        <div class="vc-title-value">
+                            <isif condition="${pdict.allowance}"> 
+                                <span class="uhc-blue">
+                                    ${Resource.msg('benefits.allowance.label', 'coverage', null)} 
+                                </span>
+                                <isprint value="${Resource.msgf('common.doller.sign', 'coverage', null, pdict.allowance)}" encoding="off" /> 
+                            </isif> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </isif>
+    </div>
+</div>

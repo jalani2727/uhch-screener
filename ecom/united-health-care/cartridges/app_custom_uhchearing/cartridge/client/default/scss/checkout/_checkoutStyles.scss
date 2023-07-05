@@ -1,0 +1,498 @@
+$checkout-customer-header-color: $primary-col-1;
+$checkout-greyed-out-header: $grey-out-color;
+$checkout-order-Items-font: $uhc-font-sans-bold;
+$checkout-summary-header-color: $uhc-form-label;
+$Checkout-product-name-font: $uhc-font-sans-bold;
+$Checkout-product-name-color: $uhc-form-label;
+$checkout-signin-text-font: $uhc-font-sans-medium;
+$checkout-signin-text-color: $tints-col-3;
+$checkout-view-cart-font: $uhc-font-sans-semi-bold;
+$checkout-shipping-method-font: $uhc-font-sans-bold;
+$checkout-arival-time-text: $uhc-font-sans-medium;
+$checkout-customer-info-text-font: $uhc-font-sans-bold;
+$checkout-help-number: $uhc-font-sans-bold;
+
+h1.page-title.checkout-main-header {
+    @include media-breakpoint-down(sm) {
+        margin: 20px 0;
+        padding: 10px 15px;
+    }
+}
+
+.edit-button,
+.btn-show-details,
+.btn-add-new,
+.view-cart-text {
+    color: $uhc-link-color;
+    font-family: $uhc-font-sans-bold;
+}
+
+#checkout-main {
+    @include media-breakpoint-down(sm) {
+        margin: 0 15px;
+        width: calc(100% - 30px);
+    }
+
+    .card-body {
+        color: $grey8;
+    }
+
+    .customer-summary {
+        .card-header {
+            border: 0;
+        }
+
+        .checkout-customer-details {
+            padding: 0;
+        }
+    }
+
+    .order-total-summary {
+        padding-bottom: 0;
+
+        p {
+            margin-bottom: 6px;
+        }
+    }
+
+    .order-product-summary {
+        padding-bottom: 0;
+
+        .checkout-order-product-summary {
+            padding-bottom: 0;
+
+            @include media-breakpoint-down(sm) {
+                padding-top: 0;
+            }
+        }
+    }
+
+    .checkout-customer-block {
+        padding: 0 0 67px;
+
+        @include media-breakpoint-down(sm) {
+            padding-bottom: 20px;
+        }
+
+        .card {
+            margin-bottom: 0;
+        }
+    }
+
+    .required-field::after {
+        content: ' *';
+    }
+
+    .already-have-account-text {
+        color: $checkout-signin-text-color;
+
+        .js-login-customer {
+            font-family: $uhc-font-sans-semi-bold;
+        }
+    }
+
+    .submit-guest-customer {
+        margin-bottom: 22px;
+    }
+
+    .guest-greyed-header {
+        color: $checkout-greyed-out-header;
+    }
+
+    .checkout-number-of-items {
+        border-bottom: 1px solid $uhc-border-color;
+        padding-bottom: 16px;
+
+        .start-lines,
+        .end-lines {
+            font-family: $checkout-order-Items-font;
+            font-size: 18px;
+            line-height: 24px;
+            color: $checkout-summary-header-color;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .leading-lines {
+        .end-lines span,
+        .start-lines span {
+            background-color: transparent;
+        }
+
+        .start-lines {
+            &::before {
+                content: none;
+            }
+        }
+    }
+
+    .checkout-productLineItem {
+        padding-bottom: 15px;
+        border-bottom: 1px solid $uhc-border-color;
+    }
+
+    .final-order-summary {
+        margin-top: 21px;
+    }
+
+    .line-item-pricing-info {
+        padding-bottom: 10px;
+    }
+
+    .line-item-total-text {
+        font-size: 16px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+        }
+    }
+
+    .checkout-total-amount {
+        font-family: $checkout-order-Items-font;
+    }
+
+    .product-attributes-value-styles {
+        font-family: $checkout-order-Items-font;
+        font-size: 18px;
+        line-height: 24px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 16px;
+        }
+    }
+
+    .shipping-method-option {
+        background-color: transparent;
+        min-height: 30px;
+    }
+
+    .shipping-methods-header {
+        margin: 0;
+        font-size: 18px;
+        line-height: 44px;
+        font-family: $uhc-font-sans-bold;
+        color: $checkout-customer-header-color;
+    }
+
+    .shipping-method-list {
+        font-family: $checkout-shipping-method-font;
+
+        .arrival-time {
+            font-family: $checkout-arival-time-text;
+            font-size: 16px;
+        }
+    }
+
+    .ghost {
+        opacity: 1;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .shipping-card-header {
+            border-top: 1px solid $uhc-border-color;
+        }
+
+        &.checkout-ghost-payment-on-login {
+            padding-bottom: 128px;
+
+            @include media-breakpoint-down(sm) {
+                padding-bottom: 40px;
+            }
+        }
+    }
+
+    .shipping-section {
+        padding-top: 0;
+    }
+
+    .customer-summary-email {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .customer-label {
+        font-family: $checkout-customer-info-text-font;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .checkout-shipping-address-form {
+        padding-top: 20px;
+        border-bottom: 0;
+        border-top: 1px solid $uhc-border-color;
+    }
+
+    .shipping-content {
+        padding-top: 0;
+    }
+
+    .shipping-method-block {
+        padding-top: 20px;
+    }
+
+    .checkout-need-help {
+        margin-top: -70px;
+        margin-bottom: 33px;
+        font-size: 18px;
+        line-height: 34px;
+
+        .help-phone-number {
+            font-family: $checkout-help-number;
+        }
+    }
+
+    .order-summary-main-block {
+        margin-bottom: 60px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 0;
+        }
+    }
+}
+
+.next-step-button {
+    padding: 0 40px 40px;
+    background-color: $tints-col-4;
+
+    @include media-breakpoint-down(sm) {
+        padding: 0;
+        width: 100%;
+        left: 0;
+    }
+}
+
+.data-checkout-stage[data-checkout-stage=customer] {
+    .next-step-button {
+        display: none;
+    }
+
+    .upload-hearing-test-section,
+    .upload-hearing-test-summary {
+        display: none;
+    }
+}
+
+.data-checkout-stage[data-checkout-stage=uploadHearingTest] {
+    .next-step-button {
+        display: none;
+    }
+
+    .card.ghost {
+        &.customer,
+        &.upload-hearing-test-card {
+            display: none;
+        }
+    }
+
+    .card.shipping-section {
+        display: none;
+    }
+
+    .card.payment-form {
+        display: none;
+    }
+
+    .upload-hearing-test-summary {
+        display: none;
+    }
+
+    button.submit-customer {
+        display: block;
+    }
+}
+
+.upload-hearing-test-summary {
+    padding-bottom: 0;
+
+    .card-header {
+        border-top: 1px solid $uhc-border-color;
+        border-bottom: 0;
+    }
+}
+
+.data-checkout-stage[data-checkout-stage=shipping] {
+    .card.ghost.payment {
+        display: block;
+
+        .billing-card-header {
+            border-top: 1px solid $uhc-border-color;
+        }
+    }
+
+    [data-address-mode=edit] .shipping-method-block {
+        margin-top: -20px;
+    }
+
+    .upload-hearing-test-section {
+        display: none;
+    }
+}
+
+.data-checkout-stage[data-checkout-stage=payment] {
+    .next-step-button {
+        display: none;
+    }
+
+    .shipping-summary,
+    .payment-form {
+        .card-header {
+            border-top: 1px solid $uhc-border-color;
+            border-bottom: 0;
+        }
+
+        .card-body {
+            padding: 0;
+        }
+    }
+
+    .upload-hearing-test-section {
+        display: none;
+    }
+}
+
+.data-checkout-stage[data-checkout-stage=payment] {
+    .upload-hearing-test-section {
+        display: none;
+    }
+}
+
+.summary-details {
+    font-size: 16px;
+
+    p {
+        margin: 0;
+    }
+}
+
+.shipping-addr-label,
+.shipping-method-label {
+    font-size: 18px;
+    line-height: 25px;
+    font-family: $uhc-font-sans-bold;
+}
+
+.payment-iframe-form {
+    iframe {
+        border: 0;
+    }
+}
+
+.update-address-checkout {
+    display: inline-block;
+
+    .btn-show-details {
+        padding: 20px 0 0;
+        font-family: $uhc-font-sans-bold;
+        border-radius: 0;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.font-family-semi-bold {
+    font-family: $uhc-font-sans-semi-bold;
+    color: $uhc-black;
+    font-size: 16px;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 18px;
+    }
+}
+
+.link-styling {
+    color: $uhc-link-color;
+    text-decoration: none;
+    font-size: 14px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.upload-hearing-test-info {
+    font-size: 14px;
+    color: $uhc-black;
+    margin: 14px 0 16px;
+
+    @include media-breakpoint-up(lg) {
+        margin: 15px 0 25px;
+    }
+}
+
+.card.upload-hearing-test-section {
+    padding-top: 0;
+}
+
+.upload-hearing-test-section {
+    .card-header {
+        border-top: 1px solid $uhc-border-color;
+        border-bottom: hidden;
+    }
+
+    .card-body {
+        @include media-breakpoint-up(lg) {
+            padding-top: 6px;
+        }
+    }
+}
+
+.upload-file-container {
+    input[type='file'] {
+        display: none;
+    }
+
+    .upload-file {
+        border: 1px dashed $uhc-border-color;
+        margin-top: 15px;
+        background: $uhc-white;
+        min-height: 126px;
+        padding: 15px 24px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 20px 24px;
+            min-height: 131px;
+        }
+    }
+
+    .select-file-btn {
+        margin-top: 15px;
+        width: 195px;
+        font-size: 16px;
+
+        @include media-breakpoint-up(lg) {
+            width: 195px;
+        }
+    }
+
+    .file-upload-label,
+    .uploaded-file,
+    .file-name,
+    .file-upload-text {
+        font-size: 16px;
+        font-family: $uhc-font-sans-semi-bold;
+        color: $uhc-black;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 18px;
+        }
+    }
+
+    .uploaded-file {
+        @include media-breakpoint-up(lg) {
+            margin-left: 22px;
+        }
+    }
+}
+
+.check-mark-success {
+    margin-left: 9.4px;
+}
+
+.hearing-test-upload-file .check-mark-success {
+    display: none;
+}

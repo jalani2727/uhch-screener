@@ -1,0 +1,8 @@
+<ul class="cancelation-list">
+        <isset name="orderItems" value="${pdict.orderItems}" scope="page" />
+        <isinclude template="account/order/orderItems"/>
+</ul>
+<div class="cancelation-reason">
+    <div><span>${Resource.msg('label.order.cancel.reason','orderCancel',null)}</span> ${pdict.reason}</div>
+    <div><span>${Resource.msg('label.order.cancel.amount','orderCancel',null)}</span> ${pdict.amount}</div>
+</div>

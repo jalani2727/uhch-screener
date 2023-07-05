@@ -1,0 +1,13 @@
+.provider-search-info-section {
+    margin-top: 24px;
+    font-family: $uhc-font-sans-medium;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $body-text-color;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 22px;
+    }
+}

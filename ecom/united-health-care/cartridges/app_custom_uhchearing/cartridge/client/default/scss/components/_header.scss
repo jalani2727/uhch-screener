@@ -1,0 +1,255 @@
+@import './menu';
+
+header {
+    @include media-breakpoint-up(md) {
+        box-shadow: 0 2px 4px #00000014;
+    }
+}
+
+nav > .header {
+    @include media-breakpoint-down(sm) {
+        height: 48px;
+        box-shadow: 0 2px 4px #00000014;
+    }
+}
+
+.header-banner {
+    background-color: $uhc-header-banner;
+
+    .close-button .close {
+        background: transparent $close-white no-repeat center center;
+    }
+}
+
+.brand {
+    width: 150px;
+    height: auto;
+    padding-top: 9px;
+    margin-left: -75px;
+    left: 50%;
+
+    @include media-breakpoint-up(md) {
+        width: 185px;
+        padding-top: 20px;
+        margin: 0;
+        left: 15px;
+    }
+}
+
+.my-account {
+    @include media-breakpoint-up(md) {
+        display: inline-block;
+    }
+}
+
+.uhc-signin {
+    > a,
+    > .nav-link {
+        background: $uhc-myaccount;
+        border-radius: 30px;
+        color: $uhc-myaccount-text;
+        font-family: $uhc-font-sans-semi-bold;
+        padding: 12px 20px;
+        text-decoration: none;
+
+        .menu-toggleable-left.in .nav & {
+            display: inline-block;
+            position: relative;
+            line-height: 20px;
+            margin: 26px 0;
+            padding: 12px 20px;
+            color: $uhc-myaccount-text;
+        }
+
+        &:hover {
+            color: $uhc-myaccount-text;
+        }
+    }
+
+    .dropdown-toggle {
+        &::after {
+            display: none;
+        }
+
+        .my-acc-icon a {
+            color: $uhc-white;
+        }
+    }
+
+    .my-acc-icon {
+        background: transparent $myacc-dropdown no-repeat right center;
+        padding-right: 20px;
+    }
+}
+
+.navbar-header {
+    @include media-breakpoint-up(md) {
+        height: 114px;
+
+        + .navbar-header {
+            padding-left: 190px;
+        }
+
+        .minimal-header & {
+            position: relative;
+            margin: 0 auto;
+        }
+    }
+
+    .user,
+    .country-selector,
+    .search,
+    .minicart {
+        @include media-breakpoint-up(lg) {
+            margin: 36px 10px 0;
+        }
+    }
+
+    .user .popover.show {
+        left: -9px;
+        top: 41px;
+
+        .nav {
+            flex-direction: column;
+        }
+    }
+
+    .my-account {
+        @include media-breakpoint-down(sm) {
+            float: left;
+        }
+    }
+
+    .minicart {
+        margin-right: 0;
+
+        @include media-breakpoint-down(sm) {
+            float: right;
+            margin: 12px -8px 0 0;
+        }
+    }
+
+    .navbar-toggler {
+        padding: 18px 16px;
+        margin-left: -15px;
+        border: 0;
+
+        .uhc-menu-toggle {
+            background-image: $menu-toggle;
+            background-repeat: no-repeat;
+            width: 18px;
+            height: 12px;
+            text-indent: -9999px;
+            display: block;
+        }
+    }
+}
+
+.minicart {
+    .minicart-icon {
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+        background-image: $minicart-icon;
+
+        @include media-breakpoint-up(md) {
+            width: 26px;
+            height: 26px;
+        }
+
+        &::before {
+            visibility: hidden;
+        }
+    }
+
+    .minicart-quantity {
+        background-color: $uhc-minicart-count;
+    }
+}
+
+.secondary-menu {
+    .navbar-header & {
+        position: relative;
+        margin: 44px 20px 20px;
+        float: left;
+
+        @include media-breakpoint-down(md) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 0 0 15px;
+            transform: scale(0.9);
+        }
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .menu-toggleable-left & {
+            flex-direction: column;
+        }
+    }
+
+    li {
+        a {
+            white-space: nowrap;
+            color: $uhc-sec-nav;
+            font-family: $uhc-font-sans-bold;
+
+            .menu-toggleable-left & {
+                font-size: 14px;
+                line-height: 30px;
+                color: $uhc-link-color;
+            }
+        }
+
+        + li {
+            padding-left: 27px;
+        }
+
+        .menu-toggleable-left & {
+            padding-left: 0;
+        }
+    }
+}
+
+.main-menu .container {
+    position: relative;
+}
+
+.header-needhelp {
+    color: $uhc-form-label;
+    font-size: 14px;
+    font-family: $uhc-font-sans-medium;
+    line-height: 30px;
+
+    @include media-breakpoint-up(md) {
+        color: $uhc-need-help;
+        font-size: 16px;
+        line-height: 23px;
+        padding: 0 0 15px;
+        text-align: right;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 14px;
+        position: absolute;
+        right: 15px;
+        top: 0;
+    }
+
+    span {
+        font-family: $uhc-font-sans-semi-bold;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .common-phone,
+    header ~ #maincontent .container a.common-phone:not(.btn-primary):not(.btn-outline-primary) {
+        color: inherit;
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,50 @@
+@import '~uhchearing/cart';
+
+.totals {
+    .authorization-container {
+        margin-top: 7px;
+
+        @include media-breakpoint-up(md) {
+            margin-top: 15px;
+        }
+    }
+
+    .btn-container {
+        @include media-breakpoint-up(sm) {
+            margin-top: 11px;
+        }
+    }
+
+    .btn-width-100 {
+        width: 100%;
+    }
+
+    .padding-top-btn-container {
+        @include media-breakpoint-up(sm) {
+            margin-top: 18px;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .btn-container-create-account {
+            padding-right: 0;
+        }
+
+        .btn-create-account {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+        .btn-container-sign-in {
+            padding-left: 15px;
+        }
+    }
+
+    .checkout-continue {
+        left: 0;
+    }
+
+    .aarp-subscribe-form {
+        background-color: $tints-col-4;
+    }
+}

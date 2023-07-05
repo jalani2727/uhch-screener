@@ -1,0 +1,37 @@
+<isif condition="${pdict.name === null}">
+    <li class="nav-item d-md-none uhc-signin js-guest-customer" role="menuitem">
+        <a href="${pdict.signInUrl}" class="nav-link">
+            <span class="user-message">${Resource.msg('link.header.login', 'account', null)}</span>
+        </a>
+    </li>
+<iselse/>
+    <li class="nav-item d-md-none dropdown uhc-signin js-registered-customer" role="menuitem">
+        <span class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">
+            <span class="user-message my-acc-icon"><a href="${URLUtils.https('Account-Show')}">${Resource.msg('link.header.myaccount', 'account', null)}</a></span>
+        </span>
+        <ul class="dropdown-menu" role="menu" aria-hidden="true">
+            <li class="dropdown-item" role="menuitem">
+                <a href="${URLUtils.https('Coverage-Show')}" class="dropdown-link" role="button">${Resource.msg('label.view-coverage', 'account', null)}</a>
+            </li>
+            <li class="dropdown-item" role="menuitem">
+                <a href="${URLUtils.url('Order-History')}" class="dropdown-link" role="button">${Resource.msg('link.header.order-history', 'account', null)}</a>
+            </li>
+            <li class="dropdown-item" role="menuitem">
+                <a href="${dw.system.Site.current.preferences.custom.editProfileLink}" class="dropdown-link" role="button">${Resource.msg('link.header.myprofile', 'account', null)}</a>
+            </li>
+            <li class="dropdown-item" role="menuitem">
+                <a href="${URLUtils.https('Address-List')}" class="dropdown-link" role="button">${Resource.msg('link.header.shippingaddress', 'account', null)}</a>
+            </li>
+            <li class="dropdown-item" role="menuitem">
+                <a href="${URLUtils.https('HearingTest-UploadFile')}" class="dropdown-link" role="button">${Resource.msg('label.hearing-test', 'account', null)}</a>
+            </li>
+            <li class="dropdown-item" role="menuitem">
+                <a href="${URLUtils.url('Login-Logout')}" class="dropdown-link" role="button">${Resource.msg('link.header.sign-out', 'account', null)}</a>
+            </li>
+        </ul>
+    </li>
+</isif>
+
+<isif condition="${customer.authenticated}">
+    <img class="sr-only" id="keep-alive-pixel" src="${dw.system.Site.current.preferences.custom.communitySessionRefreshURL}" alt="" role="hidden" data-keep-alive-refresh-rate="10.0" />
+</isif>

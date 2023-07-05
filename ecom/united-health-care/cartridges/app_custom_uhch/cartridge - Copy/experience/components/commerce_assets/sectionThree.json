@@ -1,0 +1,53 @@
+{
+    "name": "Section Three",
+    "description": "The second section on the landing page.",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "leftSide",
+            "name": "Left Side",
+            "attribute_definitions": [
+                {
+                    "id": "leftHeadline",
+                    "name": "Left Headline Text",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "buttonText",
+                    "name": "Button Text",
+                    "description": "The text shown in the button within the white box.",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "buttonLink",
+                    "name": "Button Link",
+                    "description": "The link to which users will be directed once clicking the button.",
+                    "type": "string",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "id": "rightSide",
+            "name": "Right Side",
+            "attribute_definitions": [
+                {
+                    "id": "rightImage",
+                    "name": "Image displayed on the right side of the second section",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "rightAlt",
+                    "name": "Alt Text",
+                    "description": "The image alt text shown by the component.",
+                    "type": "string",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

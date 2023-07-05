@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <standard-preferences>
+        <all-instances>
+            <preference preference-id="AccountNumberRetentionDays">30</preference>
+            <preference preference-id="AddProductToBasketBehavior">AllowRepeats</preference>
+            <preference preference-id="BasketLifetime">240</preference>
+            <preference preference-id="BasketPersistence">all</preference>
+            <preference preference-id="CouponGeneratorCodeLength">16</preference>
+            <preference preference-id="CouponGeneratorIncludeDashes">true</preference>
+            <preference preference-id="CouponGeneratorIncludeVowels">false</preference>
+            <preference preference-id="EnableSiteOrderNumbers">true</preference>
+            <preference preference-id="FailNonPlacedOrdersAfter">0</preference>
+            <preference preference-id="FailedOrderRetention">365</preference>
+            <preference preference-id="GenerateCustomerNumberEnabled">false</preference>
+            <preference preference-id="IntegrationOrderCenterIncludeSite">true</preference>
+            <preference preference-id="ItemPriceRoundingPolicy">Item-Level</preference>
+            <preference preference-id="OrderEditExportDelay">30</preference>
+            <preference preference-id="OrderExportDelay">30</preference>
+            <preference preference-id="OrderExportFormat">15.4</preference>
+            <preference preference-id="OrderIPLoggingEnabled">false</preference>
+            <preference preference-id="OrderLifetime">0</preference>
+            <preference preference-id="OrderRetentionDateField">LastModified</preference>
+            <preference preference-id="OversellWhenUndoCancelOrder">false</preference>
+            <preference preference-id="OversellWhenUndoFailOrder">false</preference>
+            <preference preference-id="RetainNonExportedOrders">false</preference>
+            <preference preference-id="SiteCatalog">siteCatalog_UHCHearing</preference>
+            <preference preference-id="SiteCurrencies">USD</preference>
+            <preference preference-id="SiteCustomerList">AARPMemberProfileList</preference>
+            <preference preference-id="SiteDefaultLocale">default</preference>
+            <preference preference-id="SiteInventoryList">inventory_UHCHearing</preference>
+            <preference preference-id="SiteLibrary">AARPHearing</preference>
+            <preference preference-id="SiteLocales">default</preference>
+            <preference preference-id="SitePriceBooks">PB-000630</preference>
+            <preference preference-id="SiteTimezone">US/Eastern</preference>
+            <preference preference-id="SkipCouponRedemptionLimitWhenUndoCancelOrder">false</preference>
+            <preference preference-id="SkipCouponRedemptionLimitWhenUndoFailOrder">false</preference>
+            <preference preference-id="SourceCodeCookieMaxAge">3</preference>
+            <preference preference-id="SourceCodeRedirectURL"/>
+            <preference preference-id="SourceCodeURLParameterName">src</preference>
+            <preference preference-id="StorefrontOrderAccess">unrestricted</preference>
+            <preference preference-id="StorefrontOrderFiltering">true</preference>
+            <preference preference-id="StorefrontURLsEnabled">true</preference>
+            <preference preference-id="TaxRoundingMode">HALF_UP</preference>
+        </all-instances>
+        <development>
+            <preference preference-id="ExternallyPublishProductIndex">false</preference>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">Cartridge</preference>
+        </development>
+        <staging>
+            <preference preference-id="ExternallyPublishProductIndex">false</preference>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="RobotsTxtContent"/>
+            <preference preference-id="RobotsTxtMode">DisallowAll</preference>
+        </staging>
+        <production>
+            <preference preference-id="ExternallyPublishProductIndex">false</preference>
+            <preference preference-id="MergedVariationGroupsDisplayMode">false</preference>
+            <preference preference-id="RobotsTxtContent">User-Agent: *&#13;
+Disallow: /account*&#13;
+Disallow: /login*&#13;
+Disallow: /cart*&#13;
+Disallow: /checkout*&#13;
+Disallow: /contactus*&#13;
+Disallow: /orders *&#13;
+Disallow: /search*&#13;
+Disallow: /view-coverage*&#13;
+Disallow: /submit-hearing-test&#13;
+Disallow: /hearingtest-begin&#13;
+&#13;
+Sitemap: https://www.aarphearingsolutions.com/sitemap_index.xml&#13;
+&#13;
+&#13;
+Disallow: /*pmin*&#13;
+Disallow: /*pmax*&#13;
+Disallow: /*prefn1*&#13;
+Disallow: /*prefn2*&#13;
+Disallow: /*prefn3*&#13;
+Disallow: /*prefn4*&#13;
+Disallow: /*prefv1*&#13;
+Disallow: /*prefv2*&#13;
+Disallow: /*prefv3*&#13;
+Disallow: /*prefv4*</preference>
+            <preference preference-id="RobotsTxtMode">Custom</preference>
+        </production>
+    </standard-preferences>
+    <custom-preferences>
+        <all-instances/>
+        <development>
+            <preference preference-id="PageTitle">{"ContactUs-Landing":{"pageTitle":"Contact Us Landing"},"ContactUs-Confirm":{"pageTitle":"Contact Us Confirmation"},"Order-Track":{"pageTitle":"Order Status"},"Order-Details":{"pageTitle":"Order Details"},"Order-History":{"pageTitle":"Order History"},"Coverage-Show":{"pageTitle":"View Coverage"},"Account-Show":{"pageTitle":"My Account"},"HearingTest-UploadFile":{"pageTitle":"Upload HearingTest"},"HearingTest-Confirm":{"pageTitle":"Upload HearingTest Confirmation"},"HearingTest-Lifestyle":{"pageTitle":"HearingTest Lifestyle"},"HearingTest-LifestyleForm":{"pageTitle":"HearingTest Lifestyle Form"},"HearingTest-Results":{"pageTitle":"HearingTest Results"},"ProviderSearch-Show":{"pageTitle":"Provider Search"},"ProviderSearch-Submit":{"pageTitle":"Request Appointment"},"ProviderSearch-RequestAppointmentSubmit":{"pageTitle":"Request Appointment Submit"},"Cart-Show":{"pageTitle":"Cart Page"},"Checkout-Begin":{"pageTitle":"Checkout Page"},"Order-Confirm":{"pageTitle":"Order Confirmation"},"Address-List":{"pageTitle":"Shipping Address"},"Error-Start":{"pageTitle":"Server Error"},"Home-ErrorNotFound":{"pageTitle":"404 Error"},"ProviderSearch-noResults":{"pageTitle":"Provider Search No Results found "},"ProviderSearch-Results":{"pageTitle":"Provider Search Results"},"ProviderSearch-RequestAppointmentAuthForm":{"pageTitle":"Request Appointment AuthForm"}
+}</preference>
+            <preference preference-id="UHCHearing_default_appId">UHCH_publicHome</preference>
+            <preference preference-id="allowedFilelength">1024</preference>
+            <preference preference-id="allowedFiles">.pdf,.docx,.png,.jpg,.bmp,.tif,.gif</preference>
+            <preference preference-id="brandingID">AARP</preference>
+            <preference preference-id="changePasswordLink">https://ecommqa-uhchearing.cs60.force.com/UHCHearingAARP/s/uchangepassword</preference>
+            <preference preference-id="checkTLS">false</preference>
+            <preference preference-id="communityLogoutURL">https://ecommqa-uhchearing.cs60.force.com/UHCHearingAARP/secur/logout.jsp</preference>
+            <preference preference-id="communitySessionRefreshURL">https://ecommqa-uhchearing.cs60.force.com/UHCHearingAARP/s/sessionmgmtpage</preference>
+            <preference preference-id="countryCode">US</preference>
+            <preference preference-id="coverageBenefitsDescription">{"Silver":"coverage-silver","Gold":"coverage-gold","Premium":"coverage-premier","Standard":"coverage-standard","ENTRY":"coverage-classic","Classic":"coverage-classic","Essential":"coverage-essential","Advanced":"coverage-advanced","Premier":"coverage-premier"}</preference>
+            <preference preference-id="coverageMapping">{"StaticAARP-1":{"assets":["services-static-content","hearingaids-static-content","otc-aarp-hearing-aids","hearingaid-accessories-static-content"]},
+"StaticUHC-1":{"assets":["services-static-content","hearingaids-static-content","otc-hearing-aids","hearingaid-accessories-static-content"]},
+"StaticAARP-2":{"assets":["services-static-content","hearingaids-static-content-medsupp","otc-aarp-hearing-aids","hearingaid-accessories-static-content"]}
+}</preference>
+            <preference preference-id="createdBy">Integration User</preference>
+            <preference preference-id="customerServiceEmail">uhchearing-no-reply@email.uhchearing.com</preference>
+            <preference preference-id="disImageSourceEnvironment">DEV</preference>
+            <preference preference-id="disableResponsiveDesign">false</preference>
+            <preference preference-id="eScreenerId">AWJOkE</preference>
+            <preference preference-id="editProfileLink">https://ecommqa-uhchearing.cs60.force.com/UHCHearingAARP/s/editaccount</preference>
+            <preference preference-id="enableInfiniteScroll">false</preference>
+            <preference preference-id="enableMultiShipping">false</preference>
+            <preference preference-id="enableSSO">true</preference>
+            <preference preference-id="enableSorting">false</preference>
+            <preference preference-id="enableTraditionalProduct">false</preference>
+            <preference preference-id="healthPlanCheckEnable">true</preference>
+            <preference preference-id="hearingtestbaseURL">https://hearing-screener-v5.beyondhearing.org/</preference>
+            <preference preference-id="leadSource">Ecom-AARP</preference>
+            <preference preference-id="lifestyleFirstQuestionsID">UHC100</preference>
+            <preference preference-id="listpricebookId">PB-000652</preference>
+            <preference preference-id="mapAPI">67Lx5nPPIMT1MU6h9VVY+5OTPWrPH7FEZx9C3aLaIc3A8pou+mmBWRUrOUS2HYjhwyEyZ5fx9kxSGLiwWmttMxveNReMebUb6k920LlhVRU=</preference>
+            <preference preference-id="maxSearchSuggestions">5.0</preference>
+            <preference preference-id="mcEnableAnalytics">false</preference>
+            <preference preference-id="mcEnableMailingLists">false</preference>
+            <preference preference-id="mcFromName">UnitedHealthcare Hearing</preference>
+            <preference preference-id="mcIncludeTrackingLink">false</preference>
+            <preference preference-id="mcMID">515011608</preference>
+            <preference preference-id="mcUnsubscribeAllowed">false</preference>
+            <preference preference-id="oauthProvider">SFIDPAARP</preference>
+            <preference preference-id="orderEncryptionKey">B374A26AB374A26AB374A26AB374A26A</preference>
+            <preference preference-id="orderEncryptionSalt">263BC60258FF4876</preference>
+            <preference preference-id="otcMaxOrderQty">5.0</preference>
+            <preference preference-id="priceRefinementMinValue">0</preference>
+            <preference preference-id="providerSearchRadius">
+                <value>10</value>
+                <value>20</value>
+                <value>30</value>
+                <value>40</value>
+            </preference>
+            <preference preference-id="recaptchSiteSecret">XNV1fp4Aw4ssRWFUHnNKpkhIttarmjtLVHFRC868M3CV/veV7Myd52ApoeKkLTi1GvxIslqfZ5ZioN1bS6bEJOq6lJvSwPUWDFrHOw+32I0=</preference>
+            <preference preference-id="recaptchaEnable">true</preference>
+            <preference preference-id="resourcesVideoURL">https://cdnapisec.kaltura.com/p/2297431/sp/229743100/embedIframeJs/uiconf_id/40040682/partner_id/2297431?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=videoID&amp;flashvars[streamerType]=auto&amp;amp;flashvars[localizationCode]=en&amp;amp;flashvars[leadWithHTML5]=true&amp;amp;flashvars[sideBarContainer.plugin]=true&amp;amp;flashvars[sideBarContainer.position]=left&amp;amp;flashvars[sideBarContainer.clickToClose]=true&amp;amp;flashvars[chapters.plugin]=true&amp;amp;flashvars[chapters.layout]=vertical&amp;amp;flashvars[chapters.thumbnailRotator]=false&amp;amp;flashvars[streamSelector.plugin]=true&amp;amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;amp;flashvars[dualScreen.plugin]=true&amp;amp;flashvars[hotspots.plugin]=1&amp;amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;amp;&amp;wid=1_90fauzjf</preference>
+            <preference preference-id="restrictedBrands">
+                <value>unitron</value>
+                <value>widex</value>
+            </preference>
+            <preference preference-id="screenerIDMobile">6u0vPF</preference>
+            <preference preference-id="sf-ease-clientId">DwRJs5ftoKLfu24vZE04lmiJJ9VYCNGyu3bXP2VKMhe8vqnc/wiEm6c6hllz7MrW+3W85t70EeBpcjXt+SnnxWgXHzK9uUISc1VNcut1MDxbT9ROCv8htyRL94UY093/BJuTNpKiCXo8xwr60M/aaLT62i9B8hGUVQvSjd1FlPM=</preference>
+            <preference preference-id="sf-ease-clientSecret">SZwRS5LI8+00VMXiVnk4NPqnlIUGY/8B93Fv7EFtvokmCN2svUIF7UMJHR7htvGZjhbs5MaAAKwy4v/mL7jvif6vIWQO9d5Rri2e3K74d/NBTL+WeZbBdbFlOplSq1/+</preference>
+            <preference preference-id="sfraEnableOverlayApplePay">false</preference>
+            <preference preference-id="sfraEnableOverlayCommercePayments">false</preference>
+            <preference preference-id="sfraEnableOverlayDataDownload">false</preference>
+            <preference preference-id="sfraEnableOverlayGiftRegistry">false</preference>
+            <preference preference-id="sfraEnableOverlayInStorePickup">false</preference>
+            <preference preference-id="sfraEnableOverlayProductCompare">false</preference>
+            <preference preference-id="sfraEnableOverlayWishlist">false</preference>
+            <preference preference-id="updatedBy">Ecom-AARP</preference>
+            <preference preference-id="upgAccountId">42001</preference>
+            <preference preference-id="upgAccountType">R</preference>
+            <preference preference-id="upgCancelURL">CheckoutServices-FailOrder</preference>
+            <preference preference-id="upgCreditCardType">{
+   "V":"Visa",
+   "M":"MasterCard",
+   "A":"American Express",
+   "D": "Discover"
+}</preference>
+            <preference preference-id="upgHPPRedirectEndpoint">https://uhgpghpp-stg.optum.com/gates/redirects/</preference>
+            <preference preference-id="upgNotifyURL">none</preference>
+            <preference preference-id="upgParsedData">{"pageTitle": "Optum Checkout - Step 4 of 4", "csPhone": "1-800-XXX-XXXX", "headerTitle": "Optum Checkout - Step 4 of 4", "cardInfo": "Card Information","acceptedCardAltText": "Accepted Cards are Mastercard, VISA, and American Express","requireHolderName": "Y","iFrame":"Y","cscLabel":"CVV/CSC","continueButton":"Place Order","declinedAction":"cancelURL", "expireDateLabel":"Expiration month and year"}</preference>
+            <preference preference-id="upgProcessingMode">queue</preference>
+            <preference preference-id="upgRequestTypeAuth">sale-auth</preference>
+            <preference preference-id="upgRequestTypeFind">find</preference>
+            <preference preference-id="upgReturnURL">CheckoutServices-PlaceOrder</preference>
+            <preference preference-id="upgReturnURLPolicy">redirect-approval</preference>
+            <preference preference-id="upgStyleURL">/resources/hpp/42001/paypage_card.css</preference>
+            <preference preference-id="upgTransactionIndustryType">RE</preference>
+            <preference preference-id="upsAccessKey">k54wYUHi/Vxg9QljR2G8QwFiO9Coa+OIA483E0x3In2mJa4M2hRkdboJ25dwrBaX</preference>
+            <preference preference-id="upsaddressValidationEnabled">true</preference>
+            <preference preference-id="adobeDatalayerScript">https://assets.adobedtm.com/512027f42d3c/cfa21978787f/launch-48864b0c0b92-staging.min.js</preference>
+        </development>
+        <staging>
+            <preference preference-id="PageTitle">{"ContactUs-Landing":{"pageTitle":"Contact Us Landing"},"ContactUs-Confirm":{"pageTitle":"Contact Us Confirmation"},"Order-Track":{"pageTitle":"Order Status"},"Order-Details":{"pageTitle":"Order Details"},"Order-History":{"pageTitle":"Order History"},"Coverage-Show":{"pageTitle":"View Coverage"},"Account-Show":{"pageTitle":"My Account"},"HearingTest-UploadFile":{"pageTitle":"Upload Hearing Test"},"HearingTest-Confirm":{"pageTitle":"Upload Hearing Test Confirmation"},"HearingTest-Lifestyle":{"pageTitle":"Hearing Test Lifestyle"},"HearingTest-LifestyleForm":{"pageTitle":"Hearing Test Member Information"},"HearingTest-Results":{"pageTitle":"Hearing Test Results"},"HearingTest-IFrameLanding":{"pageTitle":"Hearing Test Landing"},"ProviderSearch-Show":{"pageTitle":"Provider Search"},"ProviderSearch-Submit":{"pageTitle":"Request Appointment"},"ProviderSearch-RequestAppointmentSubmit":{"pageTitle":"Request Appointment Submit"},"ProviderSearch-RequestAppointmentAuthForm":{"pageTitle":"Request Appointment"},"Cart-Show":{"pageTitle":"Cart Page"},"Checkout-Begin":{"pageTitle":"Checkout Page"},"Order-Confirm":{"pageTitle":"Order Confirmation"},"Address-List":{"pageTitle":"Shipping Address"},"Error-Start":{"pageTitle":"Server Error"},"Home-ErrorNotFound":{"pageTitle":"404 Error"}
+}</preference>
+            <preference preference-id="UHCHearing_default_appId">UHCH_publicHome</preference>
+            <preference preference-id="allowedFilelength">1024</preference>
+            <preference preference-id="allowedFiles">.pdf,.docx,.png,.jpg,.bmp,.tif,.gif</preference>
+            <preference preference-id="brandingID">AARP</preference>
+            <preference preference-id="changePasswordLink">https://epichearing--uat.sandbox.my.site.com/UHCHearingAARP/s/uchangepassword</preference>
+            <preference preference-id="checkTLS">false</preference>
+            <preference preference-id="communityLogoutURL">https://epichearing--uat.sandbox.my.site.com/UHCHearingAARP/secur/logout.jsp</preference>
+            <preference preference-id="communitySessionRefreshURL">https://epichearing--uat.sandbox.my.site.com/UHCHearingAARP/s/sessionmgmtpage</preference>
+            <preference preference-id="countryCode">US</preference>
+            <preference preference-id="coverageBenefitsDescription">{"Silver":"coverage-silver","Gold":"coverage-gold","Premium":"coverage-premier","Standard":"coverage-standard","ENTRY":"coverage-classic","Classic":"coverage-classic","Essential":"coverage-essential","Advanced":"coverage-advanced","Premier":"coverage-premier"}</preference>
+            <preference preference-id="coverageMapping">{"StaticAARP-1":{"assets":["services-static-content","hearingaids-static-content","otc-aarp-hearing-aids","hearingaid-accessories-static-content"]},
+"StaticUHC-1":{"assets":["services-static-content","hearingaids-static-content","otc-hearing-aids","hearingaid-accessories-static-content"]},
+"StaticAARP-2":{"assets":["services-static-content","hearingaids-static-content-medsupp","otc-aarp-hearing-aids","hearingaid-accessories-static-content"]}
+}</preference>
+            <preference preference-id="createdBy">Integration User</preference>
+            <preference preference-id="customerServiceEmail">uhchearing-no-reply@email.uhchearing.com</preference>
+            <preference preference-id="disImageSourceEnvironment">STG</preference>
+            <preference preference-id="disableResponsiveDesign">false</preference>
+            <preference preference-id="eScreenerId">jVlfPs</preference>
+            <preference preference-id="editProfileLink">https://epichearing--uat.sandbox.my.site.com/UHCHearingAARP/s/editaccount</preference>
+            <preference preference-id="enableInfiniteScroll">false</preference>
+            <preference preference-id="enableMultiShipping">false</preference>
+            <preference preference-id="enableSSO">true</preference>
+            <preference preference-id="enableSorting">false</preference>
+            <preference preference-id="enableTraditionalProduct">false</preference>
+            <preference preference-id="healthPlanCheckEnable">true</preference>
+            <preference preference-id="hearingtestbaseURL">https://hearing-screener.beyondhearing.org/</preference>
+            <preference preference-id="leadSource">Ecom-AARP</preference>
+            <preference preference-id="lifestyleFirstQuestionsID">UHC100</preference>
+            <preference preference-id="listpricebookId">PB-000652</preference>
+            <preference preference-id="mapAPI">DoccHMKfe1iysMKMmySZbpOTPWrPH7FEZx9C3aLaIc3A8pou+mmBWRUrOUS2HYjhm9rgufXzWhKNQdONuI66XGLF8e8Go0GfiTUAiPgf1dk=</preference>
+            <preference preference-id="maxSearchSuggestions">5.0</preference>
+            <preference preference-id="mcEnableAnalytics">false</preference>
+            <preference preference-id="mcEnableMailingLists">false</preference>
+            <preference preference-id="mcFromName">UnitedHealthcare Hearing</preference>
+            <preference preference-id="mcIncludeTrackingLink">false</preference>
+            <preference preference-id="mcMID">515011608</preference>
+            <preference preference-id="mcUnsubscribeAllowed">false</preference>
+            <preference preference-id="oauthProvider">SFIDPAARP</preference>
+            <preference preference-id="orderEncryptionKey">B374A26AB374A26AB374A26AB374A26A</preference>
+            <preference preference-id="orderEncryptionSalt">263BC60258FF4876</preference>
+            <preference preference-id="otcMaxOrderQty">5.0</preference>
+            <preference preference-id="priceRefinementMinValue">0</preference>
+            <preference preference-id="providerSearchRadius">
+                <value>10</value>
+                <value>20</value>
+                <value>30</value>
+                <value>40</value>
+            </preference>
+            <preference preference-id="recaptchSiteSecret">0WpHh7+5zkmjHZ+CUgHQ10hIttarmjtLVHFRC868M3CV/veV7Myd52ApoeKkLTi1KwvXGDwkE+k2HXehnPkPhkmGGikMlT/iaZZ+oa7sFes=</preference>
+            <preference preference-id="recaptchaEnable">true</preference>
+            <preference preference-id="recaptchaSiteKey">FISBRggjOZJ7Popahlb/fkNnc8xpziw3ZondsgaZKYlM0EW7MXqeou5b0ShKS/urXMAhKFuTzFearoUiVZKedKKrnHcIh7sbSmce9DK7tuc=</preference>
+            <preference preference-id="resourcesVideoURL">https://cdnapisec.kaltura.com/p/2297431/sp/229743100/embedIframeJs/uiconf_id/40040682/partner_id/2297431?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=videoID&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[expandToggleBtn.plugin]=false</preference>
+            <preference preference-id="restrictedBrands">
+                <value>widex</value>
+                <value>unitron</value>
+            </preference>
+            <preference preference-id="screenerIDMobile">O9cDhj</preference>
+            <preference preference-id="sf-ease-clientId">F4Mti1ream3K92hphvvrzrcCFcajSgcR4FVqJW8ORhq5w4HXXUIZ2Z0yX3ct2KV9J7M2/q0+PtlqEk8tnAtncuCLF48D+Tacwt2hYdVkDNjJPDBK55s+ep9b+Ue0C+d9Qbgt6BPw/UXAbkpjHuoVdL5AcftrbSh9oXhJsVHNv5M=</preference>
+            <preference preference-id="sf-ease-clientSecret">CWOq+64NyFlAXLqWPUTtfBDf+kQbot79CjE8+9UX1msOglYtZyr2PJjWsKIwpKfkL6RysaT+uVa2EaAzwJd7R19rv3Wn0E2t7deGFHi5T52lLcKscTxPw3Vrt9B931AZ</preference>
+            <preference preference-id="sfraEnableOverlayApplePay">false</preference>
+            <preference preference-id="sfraEnableOverlayCommercePayments">false</preference>
+            <preference preference-id="sfraEnableOverlayDataDownload">false</preference>
+            <preference preference-id="sfraEnableOverlayGiftRegistry">false</preference>
+            <preference preference-id="sfraEnableOverlayInStorePickup">false</preference>
+            <preference preference-id="sfraEnableOverlayProductCompare">false</preference>
+            <preference preference-id="sfraEnableOverlayWishlist">false</preference>
+            <preference preference-id="updatedBy">Ecom-AARP</preference>
+            <preference preference-id="upgAccountId">42001</preference>
+            <preference preference-id="upgAccountType">R</preference>
+            <preference preference-id="upgCancelURL">CheckoutServices-FailOrder</preference>
+            <preference preference-id="upgCreditCardType">{
+   "V":"Visa",
+   "M":"MasterCard",
+   "A":"American Express",
+   "D": "Discover"
+}</preference>
+            <preference preference-id="upgHPPRedirectEndpoint">https://uhgpghpp-stg.optum.com/gates/redirects/</preference>
+            <preference preference-id="upgNotifyURL">none</preference>
+            <preference preference-id="upgParsedData">{"pageTitle": "Optum Checkout - Step 4 of 4", "csPhone": "1-866-956-5400", "headerTitle": "Optum Checkout - Step 4 of 4", "cardInfo": "Card Information","acceptedCardAltText": "Accepted Cards are Mastercard, VISA, and American Express","requireHolderName": "Y","iFrame":"Y","cscLabel":"CVV/CSC","continueButton":"Place Order","declinedAction":"cancelURL", "expireDateLabel":"Expiration month and year"}</preference>
+            <preference preference-id="upgProcessingMode">queue</preference>
+            <preference preference-id="upgRequestTypeAuth">sale-auth</preference>
+            <preference preference-id="upgRequestTypeFind">find</preference>
+            <preference preference-id="upgReturnURL">CheckoutServices-PlaceOrder</preference>
+            <preference preference-id="upgReturnURLPolicy">redirect-approval</preference>
+            <preference preference-id="upgStyleURL">/resources/hpp/42001/paypage_card.css</preference>
+            <preference preference-id="upgTransactionIndustryType">RE</preference>
+            <preference preference-id="upsAccessKey">A5w8eDXTm4ePXOf/nno37ZIh3oyWpF+sVoUwTjGOksRUly2fJCAIQeWAbE8umNP3</preference>
+            <preference preference-id="upsaddressValidationEnabled">true</preference>
+            <preference preference-id="adobeDatalayerScript">https://assets.adobedtm.com/512027f42d3c/cfa21978787f/launch-48864b0c0b92-staging.min.js</preference>
+
+        </staging>
+        <production>
+            <preference preference-id="PageTitle">{"ContactUs-Landing":{"pageTitle":"Contact Us Landing"},"ContactUs-Confirm":{"pageTitle":"Contact Us Confirmation"},"Order-Track":{"pageTitle":"Order Status"},"Order-Details":{"pageTitle":"Order Details"},"Order-History":{"pageTitle":"Order History"},"Coverage-Show":{"pageTitle":"View Coverage"},"Account-Show":{"pageTitle":"My Account"},"HearingTest-UploadFile":{"pageTitle":"Upload HearingTest"},"HearingTest-Confirm":{"pageTitle":"Upload HearingTest Confirmation"},"HearingTest-Lifestyle":{"pageTitle":"HearingTest Lifestyle"},"HearingTest-LifestyleForm":{"pageTitle":"HearingTest Lifestyle Form"},"HearingTest-Results":{"pageTitle":"HearingTest Results"},"ProviderSearch-Show":{"pageTitle":"Provider Search"},"ProviderSearch-Submit":{"pageTitle":"Request Appointment"},"ProviderSearch-RequestAppointmentSubmit":{"pageTitle":"Request Appointment Submit"},"Cart-Show":{"pageTitle":"Cart Page"},"Checkout-Begin":{"pageTitle":"Checkout Page"},"Order-Confirm":{"pageTitle":"Order Confirmation"},"Address-List":{"pageTitle":"Shipping Address"}
+}</preference>
+            <preference preference-id="UHCHearing_default_appId">UHCH_publicHome</preference>
+            <preference preference-id="allowedFilelength">1024</preference>
+            <preference preference-id="allowedFiles">.pdf,.docx,.png,.jpg,.bmp,.tif,.gif</preference>
+            <preference preference-id="brandingID">AARP</preference>
+            <preference preference-id="changePasswordLink">https://member.aarphearingsolutions.com/s/uchangepassword</preference>
+            <preference preference-id="communityLogoutURL">https://member.aarphearingsolutions.com/secur/logout.jsp</preference>
+            <preference preference-id="communitySessionRefreshURL">https://member.aarphearingsolutions.com/s/sessionmgmtpage</preference>
+            <preference preference-id="countryCode">US</preference>
+            <preference preference-id="coverageBenefitsDescription">{"Silver":"coverage-silver","Gold":"coverage-gold","Premium":"coverage-premier","Standard":"coverage-standard","ENTRY":"coverage-classic","Classic":"coverage-classic","Essential":"coverage-essential","Advanced":"coverage-advanced","Premier":"coverage-premier"}</preference>
+            <preference preference-id="coverageMapping">{"StaticAARP-1":{"assets":["services-static-content","hearingaids-static-content","otc-aarp-hearing-aids","hearingaid-accessories-static-content"]},
+"StaticUHC-1":{"assets":["services-static-content","hearingaids-static-content-medsupp","otc-hearing-aids","hearingaid-accessories-static-content"]},
+"StaticAARP-2":{"assets":["services-static-content","hearingaids-static-content-medsupp","otc-aarp-hearing-aids","hearingaid-accessories-static-content"]}
+}</preference>
+            <preference preference-id="createdBy">Integration User</preference>
+            <preference preference-id="customerServiceEmail">uhchearing-no-reply@email.uhchearing.com</preference>
+            <preference preference-id="disImageSourceEnvironment">PRD</preference>
+            <preference preference-id="eScreenerId">bc897G</preference>
+            <preference preference-id="editProfileLink">https://member.aarphearingsolutions.com/s/editaccount</preference>
+            <preference preference-id="enableInfiniteScroll">false</preference>
+            <preference preference-id="enableMultiShipping">false</preference>
+            <preference preference-id="enableSSO">true</preference>
+            <preference preference-id="enableSorting">false</preference>
+            <preference preference-id="enableTraditionalProduct">false</preference>
+            <preference preference-id="healthPlanCheckEnable">true</preference>
+            <preference preference-id="hearingtestbaseURL">https://hearing-screener.beyondhearing.org/</preference>
+            <preference preference-id="leadSource">Ecom-AARP</preference>
+            <preference preference-id="lifestyleFirstQuestionsID">UHC100</preference>
+            <preference preference-id="listpricebookId">PB-000652</preference>
+            <preference preference-id="mapAPI">E6u2Ar8scSi4/nJgd7W4rZOTPWrPH7FEZx9C3aLaIc3A8pou+mmBWRUrOUS2HYjh02yem5ai1Hju3kUj7HAaCzmMEmGj9LG5NM7QVdFK0xI=</preference>
+            <preference preference-id="maxSearchSuggestions">5.0</preference>
+            <preference preference-id="mcEnableAnalytics">false</preference>
+            <preference preference-id="mcEnableMailingLists">false</preference>
+            <preference preference-id="mcFromName">UnitedHealthcare Hearing</preference>
+            <preference preference-id="mcIncludeTrackingLink">false</preference>
+            <preference preference-id="mcMID">515011608</preference>
+            <preference preference-id="mcUnsubscribeAllowed">false</preference>
+            <preference preference-id="oauthProvider">SFIDPAARP</preference>
+            <preference preference-id="orderEncryptionKey">B374A26AB374A26AB374A26AB374A26A</preference>
+            <preference preference-id="orderEncryptionSalt">263BC60258FF4876</preference>
+            <preference preference-id="otcMaxOrderQty">5.0</preference>
+            <preference preference-id="priceRefinementMinValue">0</preference>
+            <preference preference-id="providerSearchRadius">
+                <value>10</value>
+                <value>20</value>
+                <value>30</value>
+                <value>40</value>
+            </preference>
+            <preference preference-id="recaptchSiteSecret">At4+2eOfSJfQ4aFHk4lyuUhIttarmjtLVHFRC868M3CV/veV7Myd52ApoeKkLTi1fKgEgZa4P8MSRvD5Bxk8DLsWEgOCGL945mwU+bs0qNc=</preference>
+            <preference preference-id="recaptchaEnable">true</preference>
+            <preference preference-id="resourcesVideoURL">https://cdnapisec.kaltura.com/p/2297431/sp/229743100/embedIframeJs/uiconf_id/40040682/partner_id/2297431?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=videoID&amp;flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[expandToggleBtn.plugin]=false</preference>
+            <preference preference-id="restrictedBrands">
+                <value>widex</value>
+                <value>unitron</value>
+            </preference>
+            <preference preference-id="screenerIDMobile">aPcEkk</preference>
+            <preference preference-id="sf-ease-clientId">ulOfynbL3cu0Gzs7Fk9XrAlQr4DviA/4ybvmunyq6C8G7Oqsi7RnwqdZ9xQX+3dJRV8FkLymHv6xL7QFg/pL1wgpESNP3L5s3iVnWBcps9fAaSMb+n2k6B8jThZG4LZuTIXDC2OaFOkSDzhxnL6F3LvetLYgFxE/OymTWjJfswg=</preference>
+            <preference preference-id="sf-ease-clientSecret">boAaXlKJTKEiQfVCVRxz1G4SPccRMGaWFjTjGlmjAM8dgq1ub6WEa/D+J4xSVHBKi3nOQzfj4v/qoD55Kf3nm9smdV38T/vGze9kh79Emaec/kfgKr8VoZ/9C3AFj5wM</preference>
+            <preference preference-id="sfraEnableOverlayApplePay">false</preference>
+            <preference preference-id="sfraEnableOverlayCommercePayments">false</preference>
+            <preference preference-id="sfraEnableOverlayDataDownload">false</preference>
+            <preference preference-id="sfraEnableOverlayGiftRegistry">false</preference>
+            <preference preference-id="sfraEnableOverlayInStorePickup">false</preference>
+            <preference preference-id="sfraEnableOverlayProductCompare">false</preference>
+            <preference preference-id="sfraEnableOverlayWishlist">false</preference>
+            <preference preference-id="updatedBy">Ecom-AARP</preference>
+            <preference preference-id="upgAccountId">37001</preference>
+            <preference preference-id="upgAccountType">R</preference>
+            <preference preference-id="upgCancelURL">CheckoutServices-FailOrder</preference>
+            <preference preference-id="upgCreditCardType">{
+   "V":"Visa",
+   "M":"MasterCard",
+   "A":"American Express",
+   "D": "Discover"
+}</preference>
+            <preference preference-id="upgHPPRedirectEndpoint">https://uhgpghpp.optum.com/gates/redirects/</preference>
+            <preference preference-id="upgNotifyURL">none</preference>
+            <preference preference-id="upgParsedData">{"pageTitle": "Optum Checkout - Step 4 of 4", "csPhone": "1-866-956-5400", "headerTitle": "Optum Checkout - Step 4 of 4", "cardInfo": "Card Information","acceptedCardAltText": "Accepted Cards are Mastercard, VISA, and American Express","requireHolderName": "Y","iFrame":"Y","cscLabel":"CVV/CSC","continueButton":"Place Order","declinedAction":"cancelURL", "expireDateLabel":"Expiration month and year"}</preference>
+            <preference preference-id="upgProcessingMode">queue</preference>
+            <preference preference-id="upgRequestTypeAuth">sale-auth</preference>
+            <preference preference-id="upgRequestTypeFind">find</preference>
+            <preference preference-id="upgReturnURL">CheckoutServices-PlaceOrder</preference>
+            <preference preference-id="upgReturnURLPolicy">redirect-approval</preference>
+            <preference preference-id="upgStyleURL">/resources/hpp/37001/paypage_card.css</preference>
+            <preference preference-id="upgTransactionIndustryType">RE</preference>
+            <preference preference-id="upsAccessKey">eui0P1g1LEWR1LorRDbOp9hFnqYADdmmpCU4SwGrURIy0o86AMJ2v1K1UC8PS2JR</preference>
+            <preference preference-id="upsaddressValidationEnabled">true</preference>
+            <preference preference-id="adobeDatalayerScript">https://assets.adobedtm.com/512027f42d3c/cfa21978787f/launch-47cbba64461f.min.js</preference>
+        </production>
+    </custom-preferences>
+</preferences>
+

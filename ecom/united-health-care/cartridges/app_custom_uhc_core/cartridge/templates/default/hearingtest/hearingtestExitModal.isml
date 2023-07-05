@@ -1,0 +1,24 @@
+<!-- Modal -->
+<div class="modal fade" id="lifestyle-exit" tabindex="-1" role="dialog" aria-labelledby="lifestyleexit">
+    <div class="modal-dialog" role="document">
+    <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                ${Resource.msg('exit.modal.title', 'hearingtest', null)}
+                <button type="button" class="close pull-right" data-dismiss="modal">
+                    <span aria-hidden="true"> </span>
+                    <span class="sr-only"> </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ${Resource.msg('exit.modal.text', 'hearingtest', null)}
+            </div>
+            <div class="modal-footer justify-content-center justify-content-md-start">
+                <div class="button-wrapper">
+                    <a href="${URLUtils.url('HearingTest-Landing')}" class="btn btn-primary">${Resource.msg('exit.modal.yes', 'hearingtest', null)}</a>
+                    <button class="btn btn-primary ml-3" data-dismiss="modal">${Resource.msg('exit.modal.no', 'hearingtest', null)}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

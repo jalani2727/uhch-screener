@@ -1,0 +1,8 @@
+{
+    "caches": [
+        {
+            "id": "JWT_Stargate",
+            "expireAfterSeconds": 600
+        }
+    ]
+}

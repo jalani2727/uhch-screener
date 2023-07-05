@@ -1,0 +1,9 @@
+<isif condition="${pdict.recaptchaKey}">
+    <script>
+        var onloadCallback = function() {
+            grecaptcha.render('recaptcha-element', {
+                'sitekey' : "${pdict.recaptchaKey}"
+            });
+        };
+    </script>
+</isif>

@@ -1,0 +1,5 @@
+<isif condition="${price.formatted}">
+${price.formatted}
+<iselse/>
+${Resource.msg('label.price.notavailable', 'pricing', null)}
+</isif>

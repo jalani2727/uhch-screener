@@ -1,0 +1,34 @@
+<isloop items="${orderItems}" var="orderItem" status="itemsLoopState">
+    <isif condition="${pdict.orderCardContext === 'account' && itemsLoopState.count > 5}">
+        <isbreak/>
+    </isif>
+
+    <div class="row order-history-card-details">
+        <div class="col-4">
+            <img class="img-fluid" src="${orderItem.images.small[0].url}"
+                alt="${orderItem.images.small[0].alt}"
+                title="${orderItem.images.small[0].title}">
+        </div>
+        <div class="col-8 item-details">
+            <p class="item-detail">
+                <isprint value="${orderItem.productName}"/>
+                <isif condition="${orderItem.quantity > 1}">
+                    (x<isprint value="${orderItem.quantity}" formatter="#"/>)
+                </isif>
+            </p>
+
+            <p class="item-detail"> ${orderItem.totalPrice} </p>
+
+            <isloop items="${orderItem.variationAttributes}" var="attribute">
+                <p class="line-item-attributes item-details">${attribute.displayName}: ${attribute.displayValue}</p>
+            </isloop>
+        </div>
+        <isif condition="${orderItemsOptions}">
+            <div class="col-12">
+                <div class="return-quantity"><span>${Resource.msg('label.order.return.number','orderReturn',null)}:</span> ${orderItem.quantity} of ${orderItem.qMax}</div>
+                <div class="return-reason"><span>${Resource.msg('label.order.return.reason','orderReturn',null)}:</span> ${orderItem.reason} </div>
+                <div class="return-amount"><span>${Resource.msg('label.order.return.amount','orderReturn',null)}:</span> ${orderItem.totalPrice}</div>
+            </div>
+        </isif>
+    </div>
+</isloop>

@@ -1,0 +1,14 @@
+<div class="summary-details shipping-address-summary">
+    <div class="summary-section-label shipping-address-info-label">
+        ${Resource.msg('label.order.details.shipping.address', 'orderDetails', null)}
+    </div>
+    <div class="shipping-address-details">
+        <span class="postalCode">${shipping.deliverToAddress.postalCode}</span>
+        <span class="stateCode">${shipping.deliverToAddress.state} ${shipping.deliverToAddress.city}</span>
+        <div class="address1">${shipping.deliverToAddress.street}</div>
+        <div class="address2"></div>
+        <div>
+            <span class="firstName">${shipping.deliverToName}</span>
+        </div>
+    </div>
+</div>

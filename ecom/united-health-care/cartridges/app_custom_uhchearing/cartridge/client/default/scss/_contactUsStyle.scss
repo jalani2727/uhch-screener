@@ -1,0 +1,82 @@
+.contact-us-landing-page,
+.contact-us-confirmation-page {
+    max-width: 624px;
+    margin-bottom: 74px;
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 55px;
+    }
+
+    .col {
+        padding: 0;
+    }
+
+    .page-title,
+    .contact-us-confirmation-title,
+    .contact-us-page-title {
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+        font-size: 36px;
+        @include media-breakpoint-down(sm) {
+            font-size: 26px;
+        }
+    }
+}
+
+.contact-us-title-container,
+.contact-us-confirmation-title-container {
+    max-width: 554px;
+    margin-top: 50px;
+
+    @include media-breakpoint-down(sm) {
+        margin-top: 20px;
+    }
+}
+
+.contact-us-confirmation-title {
+    @include media-breakpoint-up(sm) {
+        text-align: center;
+    }
+}
+
+.contact-us-title-content {
+    margin: 12px auto 26px;
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+    }
+}
+
+.contact-us-confirmation-title-content {
+    margin: 12px auto 26px;
+    margin-bottom: 50px;
+    @include media-breakpoint-up(sm) {
+        text-align: center;
+    }
+}
+
+.card-body-section-1 {
+    margin-bottom: 29px;
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+    }
+}
+
+.contact-us-submnit {
+    @include media-breakpoint-up(sm) {
+        max-width: 125px;
+        margin: auto;
+    }
+}
+
+.font-bold {
+    font-family: $uhc-font-sans-bold;
+}
+
+.captcha-container {
+    margin: 40px auto;
+    max-width: 304px;
+}
+
+.contact-us-enter-details .user-consent-container .custom-control-label {
+    color: $tints-col-3;
+}

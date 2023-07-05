@@ -1,0 +1,120 @@
+$faq-sec-border: #6f6f6f;
+$faq-sec-bg: #f6f7f8;
+
+.uhc-title {
+    font-size: 28px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 36px;
+    }
+}
+
+.sec-bckg {
+    background-color: $faq-sec-bg;
+}
+
+.faq-toggle-menu {
+    padding: 0 0 62px;
+    max-width: 840px;
+
+    @include media-breakpoint-up(md) {
+        padding: 48px 0 73px;
+    }
+}
+
+.faq-card-title {
+    font-size: 22px;
+    line-height: 24px;
+    padding: 20px 42px 20px 0;
+    margin-top: 30px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 28px;
+    }
+}
+
+.section-border-top {
+    border-top: 1px solid $faq-sec-border;
+}
+
+.section-border-bottom {
+    border-bottom: 1px solid $faq-sec-border;
+}
+
+.faq-card-content {
+    position: relative;
+    padding-right: 11px;
+
+    .faq-card-sub-title.title::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 16px;
+        width: 32px;
+        height: 32px;
+        margin: 0;
+        background-image: $toggle-arrow;
+        transform: rotate(180deg);
+        transition: 0.5s;
+    }
+
+    &.active .faq-card-sub-title.title::after {
+        transform: rotate(0deg);
+    }
+
+    .faq-card-sub-title {
+        font-size: 20.25px;
+        line-height: 24px;
+        padding: 20px 50px 20px 0;
+    }
+
+    .faq-card-text {
+        max-width: 600px;
+        margin-bottom: 27px;
+
+        ul {
+            padding-left: 20px;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        padding-right: 0;
+    }
+}
+
+.faq-section-2 {
+    max-width: 840px;
+    padding: 60px 0 44px;
+
+    @include media-breakpoint-up(md) {
+        padding: 64px 0 59px;
+    }
+}
+
+.faq-section-2-heading {
+    font-size: 22px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 28px;
+    }
+}
+
+.faq-section-2-content {
+    margin-top: 17px;
+}
+
+.link-with-r-vector {
+    color: $uhc-link-color;
+    font-family: $uhc-font-sans-bold;
+}
+
+.link-with-r-vector::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+    display: inline-block;
+    border: none;
+    background-image: url('../images/vector-right.svg');
+    background-repeat: no-repeat;
+}

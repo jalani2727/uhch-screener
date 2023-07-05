@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs xmlns="http://www.demandware.com/xml/impex/jobs/2015-07-01">
+    <job job-id="MCC-CompileMappingTemplates" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="SiteGenesis"/>
+            <step step-id="mcc-compile-datafeed-templates" type="custom.MCC-CompileMappingTemplates" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ObjectType">DataFeeds</parameter>
+                </parameters>
+            </step>
+            <step step-id="mcc-compile-trigger-templates" type="custom.MCC-CompileMappingTemplates" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ObjectType">Triggers</parameter>
+                </parameters>
+            </step>
+            <step step-id="mcc-compile-analytic-templates" type="custom.MCC-CompileMappingTemplates" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ObjectType">Analytics</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-10-03Z</date>
+                <time>05:03:15.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="MCC-Feed-Catalog" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="SiteGenesis"/>
+            <step step-id="mcc-feed-exportCatalog" type="custom.MCC-Feed-ExportCatalog" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ExportID">catalogFeed</parameter>
+                    <parameter name="ExportFileName">catalogFeed.psv</parameter>
+                    <parameter name="Delimiter">|</parameter>
+                    <parameter name="IncrementalExport">false</parameter>
+                </parameters>
+            </step>
+            <step step-id="mcc-feed-uploadcatalog" type="custom.MCC-Feed-UploadCatalog" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="SFTPServiceID">marketingcloud.sftp</parameter>
+                    <parameter name="ExportFileName">catalogFeed.psv</parameter>
+                    <parameter name="TargetPath">/Import/</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-05-30Z</date>
+                <time>20:17:25.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="MCC-Feed-Content" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="SiteGenesis"/>
+            <step step-id="mcc-feed-exportContent" type="custom.MCC-Feed-ExportContent" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="ExportID">contentFeed</parameter>
+                    <parameter name="ExportFileName">contentFeed.psv</parameter>
+                    <parameter name="Delimiter">|</parameter>
+                    <parameter name="IncrementalExport">false</parameter>
+                </parameters>
+            </step>
+            <step step-id="mcc-feed-uploadcontent" type="custom.MCC-Feed-UploadContent" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="SFTPServiceID">marketingcloud.sftp</parameter>
+                    <parameter name="ExportFileName">contentFeed.psv</parameter>
+                    <parameter name="TargetPath">/Import/</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-05-30Z</date>
+                <time>20:17:25.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="MCC-Feed-Customers" priority="0">
+        <description/>
+        <parameters/>
+        <split sequential="false">
+            <contexts template-ref="template_77">
+                <context site-id="SiteGenesis"/>
+            </contexts>
+            <flow-template template-id="template_77">
+                <step step-id="mcc-feed-exportcustomers" type="custom.MCC-Feed-ExportCustomers" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="ExportID">customersFeed</parameter>
+                        <parameter name="ExportFileName">customersFeed.psv</parameter>
+                        <parameter name="Delimiter">|</parameter>
+                        <parameter name="IncrementalExport">false</parameter>
+                    </parameters>
+                </step>
+                <step step-id="mcc-feed-uploadcustomers" type="custom.MCC-Feed-UploadCustomers" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="SFTPServiceID">marketingcloud.sftp</parameter>
+                        <parameter name="ExportFileName">customersFeed.psv</parameter>
+                        <parameter name="TargetPath">/Import/</parameter>
+                    </parameters>
+                </step>
+            </flow-template>
+        </split>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-06-19Z</date>
+                <time>15:41:10.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="MCC-Feed-Orders" priority="0">
+        <description/>
+        <parameters/>
+        <split sequential="false">
+            <contexts template-ref="template_59">
+                <context site-id="SiteGenesis"/>
+            </contexts>
+            <flow-template template-id="template_59">
+                <step step-id="mcc-feed-exportorders" type="custom.MCC-Feed-ExportOrders" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="ExportID">ordersFeed</parameter>
+                        <parameter name="ExportFileName">ordersFeed.psv</parameter>
+                        <parameter name="Delimiter">|</parameter>
+                        <parameter name="IncrementalExport">false</parameter>
+                    </parameters>
+                </step>
+                <step step-id="mcc-feed-uploadorders" type="custom.MCC-Feed-UploadOrders" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="SFTPServiceID">marketingcloud.sftp</parameter>
+                        <parameter name="ExportFileName">ordersFeed.psv</parameter>
+                        <parameter name="TargetPath">/Import/</parameter>
+                    </parameters>
+                </step>
+            </flow-template>
+        </split>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-06-19Z</date>
+                <time>15:37:40.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="MCC-Feed-Promotions" priority="0">
+        <description/>
+        <parameters/>
+        <split sequential="false">
+            <contexts template-ref="template_59">
+                <context site-id="SiteGenesis"/>
+            </contexts>
+            <flow-template template-id="template_59">
+                <step step-id="mcc-feed-exportpromotions" type="custom.MCC-Feed-ExportPromotions" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="ExportID">promotionsFeed</parameter>
+                        <parameter name="ExportFileName">promotionsFeed.psv</parameter>
+                        <parameter name="Delimiter">|</parameter>
+                        <parameter name="IncrementalExport">false</parameter>
+                    </parameters>
+                </step>
+                <step step-id="mcc-feed-uploadpromotions" type="custom.MCC-Feed-UploadPromotions" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="SFTPServiceID">marketingcloud.sftp</parameter>
+                        <parameter name="ExportFileName">promotionsFeed.psv</parameter>
+                        <parameter name="TargetPath">/Import/</parameter>
+                    </parameters>
+                </step>
+            </flow-template>
+        </split>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-06-19Z</date>
+                <time>15:37:40.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="MCC-InitTriggers" priority="0">
+        <description>For developer use, used to recreate trigger configurations</description>
+        <parameters/>
+        <split sequential="false">
+            <contexts template-ref="template_72">
+                <context site-id="SiteGenesis"/>
+            </contexts>
+            <flow-template template-id="template_72">
+                <step step-id="mcc-init-triggers" type="custom.MCC-InitTriggers" enforce-restart="false">
+                    <description/>
+                    <parameters/>
+                </step>
+            </flow-template>
+        </split>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2017-06-19Z</date>
+                <time>08:16:12.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="UPG Order Update" priority="0">
+        <description>The job is to check the payment status of the created Order</description>
+        <parameters>
+            <parameter name="SiteScope"/>
+        </parameters>
+        <flow>
+            <context site-id="UHCHearing"/>
+            <step step-id="test" type="custom.upgOrderProcessing" enforce-restart="false">
+                <description/>
+                <parameters/>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2022-06-01Z</date-from>
+                    <start-time>04:00:00.000Z</start-time>
+                    <interval>2m</interval>
+                    <day-of-week>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Friday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Monday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Tuesday</weekday>
+                    </day-of-week>
+                </recurrence>
+                <rules>
+                    <on-exit status="ERROR">
+                        <disable-trigger/>
+                    </on-exit>
+                </rules>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="test" priority="0">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="UHCHearing"/>
+            <step step-id="testorder" type="custom.CheckOrderStatus" enforce-restart="false">
+                <description/>
+                <parameters/>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2022-05-30Z</date>
+                <time>07:00:19.000Z</time>
+                <rules>
+                    <on-exit status="ERROR">
+                        <disable-trigger/>
+                    </on-exit>
+                </rules>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="UPG Order Processing" priority="0">
+        <description>Order Processing Job to update the orders which are in created state</description>
+        <parameters/>
+        <flow>
+            <context site-id="UHCHearing"/>
+            <step step-id="upg-order-process" type="custom.upgOrderProcessing" enforce-restart="false">
+                <description/>
+                <parameters/>
+                <rules>
+                    <on-exit status="ERROR">
+                        <stop-job/>
+                    </on-exit>
+                </rules>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-recurring enabled="true">
+                <recurrence>
+                    <date-from>2022-05-30Z</date-from>
+                    <start-time>09:00:00.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Friday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Monday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Tuesday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Lifestyle Data Cleanup" priority="0">
+        <description/>
+        <parameters/>
+        <split sequential="false">
+            <contexts template-ref="template_41">
+                <context site-id="AARPHearing"/>
+                <context site-id="UHCHearing"/>
+            </contexts>
+            <flow-template template-id="template_41">
+                <step step-id="lifestyle-data-cleanup" type="custom.lifestyleData.cleanup" enforce-restart="false">
+                    <description/>
+                    <parameters/>
+                    <rules>
+                        <on-exit status="ERROR">
+                            <stop-job/>
+                        </on-exit>
+                    </rules>
+                </step>
+            </flow-template>
+        </split>
+        <rules/>
+        <triggers>
+            <run-recurring enabled="false">
+                <recurrence>
+                    <date-from>2022-06-08Z</date-from>
+                    <start-time>08:00:00.000Z</start-time>
+                    <interval>1d</interval>
+                    <day-of-week>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Friday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Monday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Tuesday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import Master Catalog" priority="0">
+        <description>Schedule Job that downloads the Master Catalog from ECG SFTP Location and Import into Commerce Cloud in a REPLACE Mode</description>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="SFTP Download Catalogs" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description>Download the Catalog XML files from SFTP Location</description>
+                <parameters>
+                    <parameter name="ServiceID">uhc.sftp</parameter>
+                    <parameter name="FilePattern">^ProductCatalog_.*\.xml$</parameter>
+                    <parameter name="SourceFolder">/OMS/Out</parameter>
+                    <parameter name="TargetFolder">src/download/catalog</parameter>
+                    <parameter name="Recursive">false</parameter>
+                    <parameter name="DeleteRemoteFiles">false</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Catalog" type="ImportCatalog" enforce-restart="false">
+                <description>Import Downloaded Catalog XML File</description>
+                <parameters>
+                    <parameter name="WorkingFolder">/download/catalog</parameter>
+                    <parameter name="FileNamePattern">^ProductCatalog_.*\.xml$</parameter>
+                    <parameter name="NoFilesFoundHandling">NO_FILES_FOUND</parameter>
+                    <parameter name="ImportMode">Merge</parameter>
+                    <parameter name="ImportFailedHandling">WARN</parameter>
+                    <parameter name="AfterImportFileHandling">Archive</parameter>
+                    <parameter name="ArchiveFolder">src/archive/catalog</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="UHCHearing"/>
+            <step step-id="Rebuild Product Search Index" type="SearchReindex" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="Product related search indexes">true</parameter>
+                    <parameter name="Active data search index">false</parameter>
+                    <parameter name="Content search index">false</parameter>
+                    <parameter name="Indexer Type">Full Index Rebuild</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-recurring enabled="true">
+                <recurrence>
+                    <date-from>2022-05-23Z</date-from>
+                    <start-time>23:06:32.000Z</start-time>
+                    <interval>15m</interval>
+                    <day-of-week>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Friday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Monday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Tuesday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+    <job job-id="Import Pricebook" priority="0">
+        <description>Schedule Job that downloads the Pricebooks from ECG SFTP Location and Import into Commerce Cloud in a MERGE Mode</description>
+        <parameters/>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="SFTP Download Pricebooks" type="custom.CSComponents.FtpDownload" enforce-restart="false">
+                <description>Download All the pricebooks from ECG SFTP Location To impex &gt; src/download/pricebook</description>
+                <parameters>
+                    <parameter name="ServiceID">uhc.sftp</parameter>
+                    <parameter name="FilePattern">^Pricebook_.*\.xml$</parameter>
+                    <parameter name="SourceFolder">/OMS/Out</parameter>
+                    <parameter name="TargetFolder">src/download/pricebook</parameter>
+                    <parameter name="Recursive">false</parameter>
+                    <parameter name="NoFileFoundStatus">OK</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="Import Pricebooks" type="ImportPriceBook" enforce-restart="false">
+                <description>Import All the Pricebooks</description>
+                <parameters>
+                    <parameter name="WorkingFolder">/download/pricebook</parameter>
+                    <parameter name="FileNamePattern">^Pricebook_.*\.xml$</parameter>
+                    <parameter name="NoFilesFoundHandling">NO_FILES_FOUND</parameter>
+                    <parameter name="ImportMode">Merge</parameter>
+                    <parameter name="ImportFailedHandling">WARN</parameter>
+                    <parameter name="AfterImportFileHandling">Archive</parameter>
+                    <parameter name="ArchiveFolder">src/archive/pricebooks</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules>
+            <on-running runtime-threshold="15m" enabled="true">
+                <mark-job-as-hanging/>
+                <send-mail>
+                    <from>senthil.vadivel@optum.com</from>
+                    <to>svadivel@salesforce.com</to>
+                </send-mail>
+            </on-running>
+            <on-retry enabled="true">
+                <send-mail>
+                    <from>senthil.vadivel@optum.com</from>
+                    <to>svadivel@salesforce.com</to>
+                </send-mail>
+            </on-retry>
+            <on-exit status="OK,ERROR" enabled="true">
+                <send-mail>
+                    <from>senthil.vadivel@optum.com</from>
+                    <to>svadivel@salesforce.com</to>
+                </send-mail>
+            </on-exit>
+        </rules>
+        <triggers>
+            <run-recurring enabled="true">
+                <recurrence>
+                    <date-from>2022-05-23Z</date-from>
+                    <start-time>22:59:27.000Z</start-time>
+                    <interval>15m</interval>
+                    <day-of-week>
+                        <weekday>Wednesday</weekday>
+                        <weekday>Friday</weekday>
+                        <weekday>Sunday</weekday>
+                        <weekday>Monday</weekday>
+                        <weekday>Thursday</weekday>
+                        <weekday>Saturday</weekday>
+                        <weekday>Tuesday</weekday>
+                    </day-of-week>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+
+</jobs>

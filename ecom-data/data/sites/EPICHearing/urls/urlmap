@@ -1,0 +1,10 @@
+/medica i p,https,,,default/UHC-TPA,navDeepDive,EPIC_medica
+/bscamedicare i p,https,,,default/UHC-TPA,navDeepDive,EPIC_bscamedicare
+/calaborers i p,https,,,default/UHC-TPA,navDeepDive,EPIC_calaborers
+/gvs i p,https,,,default/UHC-TPA,navDeepDive,EPIC_gvs
+/lafire i p,https,,,default/UHC-TPA,navDeepDive,EPIC_lafire
+/nva i p,https,,,default/UHC-TPA,navDeepDive,EPIC_nva
+/navistar i p,https,,,default/UHC-TPA,navDeepDive,EPIC_navistar
+/nysut i p,https,,,default/UHC-TPA,navDeepDive,EPIC_nysut
+/horizonbcbsnj i p,https,,,default/UHC-TPA,navDeepDive,EPIC_horizonbcbsnj
+/SEIU775 i p,https,,,default/UHC-TPA,navDeepDive,EPIC_SEIU775

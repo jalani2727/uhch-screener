@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-objects xmlns="http://www.demandware.com/xml/impex/customobject/2006-10-31">
+    <custom-object type-id="MarketingCloudAuthToken" object-id="UHCHearing">
+        <object-attribute attribute-id="token">{"accessToken":"eyJhbGciOiJIUzI1NiIsImtpZCI6IjQiLCJ2ZXIiOiIxIiwidHlwIjoiSldUIn0.eyJhY2Nlc3NfdG9rZW4iOiJaczVyVFVPS3d4eGY2cVBqeUl0YXZvRjUiLCJjbGllbnRfaWQiOiJ3eHZqbXM1anh2aDZ3dmNpOXY3eTk2dzYiLCJlaWQiOjUxNTAxMTU3Mywic3RhY2tfa2V5IjoiUzEwIiwicGxhdGZvcm1fdmVyc2lvbiI6MiwiY2xpZW50X3R5cGUiOiJTZXJ2ZXJUb1NlcnZlciIsInBpZCI6MjQ0fQ.lUNVoYtNtJltuw1MPdRQBQqC6lAF_fNxdohozBqFV3c.hDLzIy3mBvjEaQJxmwreQXLDYmDuX7BzckMZ7sbn-W5-fI9j5BIE0OKsvIAZJwOAraNEXMYiYCWCf7DqzRcx3G-U8h57el1gv5F9QqMvWkpAmUAjo52oXBxq4WRhGQPLet8RhTTkBDNG5Jw0pB6CUyVlqTPWDjnS65YBE","tokenType":"Bearer","expiresIn":1079,"scope":"offline documents_and_images_read saved_content_read automations_read journeys_read email_read email_send email_write list_and_subscribers_read list_and_subscribers_write data_extensions_read data_extensions_write tracking_events_read","soapInstanceURL":"https://mc0qt0qqzrshjcm96mnlszccb2j4.soap.marketingcloudapis.com/","restInstanceURL":"https://mc0qt0qqzrshjcm96mnlszccb2j4.rest.marketingcloudapis.com/","issued":1664449324000,"expires":1664450403000}</object-attribute>
+    </custom-object>
+
+</custom-objects>

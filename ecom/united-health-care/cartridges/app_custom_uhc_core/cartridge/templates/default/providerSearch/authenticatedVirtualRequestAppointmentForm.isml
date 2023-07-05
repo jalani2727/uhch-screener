@@ -1,0 +1,108 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+<div class="lr-padding-zero authenticated-user-form">
+
+    <div class="user-form-section-card-2 card">
+        <iscontentasset aid="request-appointment-virtual-content" />
+        <div class="card-body">
+            <form action="${pdict.actionUrl}" class="contact-us adobe-form-event req-appt-form" data-name="${Resource.msg('label.adobe.request.appointment', 'hearingtest', null)}" method="POST" name="request-an-appointment-virtual" enctype="multipart/form-data">
+                <div class="card-header user-form-section-heading">
+                    ${Resource.msg('heading.name-contact-info','providersearch',null)}
+                </div>
+                <div class="pt-4">
+                    <p class="lr-padding-zero user-name">
+                       ${pdict.profile.fname} ${pdict.profile.lname}
+                    </p>
+                    <p class="lr-padding-zero user-email">
+                        ${pdict.profile.email}
+                    </p>
+                </div>
+                <!-- Phone Number -->
+                <div class="lr-padding-zero">
+                    <div class="form-group required">
+                        <label class="form-control-label" for="contact-phone">
+                            ${Resource.msg('label.input.contact.us.phone', 'contactUs', null)}
+                        </label>
+                        <input type="tel" required pattern="(^\d{3}-\d{3}-\d{4}$)" maxlength="12"
+                            data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+                            data-pattern-mismatch="${Resource.msg('error.message.parse.phone', 'forms', null)}"
+                            class="form-control required input-phone" aria-describedby="form-contact-phone-error"
+                            id="contact-phone"
+                            placeholder="${Resource.msg('label.form.field.phone.placeholder', 'forms', null)}"
+                            name="contactPhone"
+                            value="${pdict.profile && pdict.profile.phoneHome ? pdict.profile.phone : ''}">
+                        <div class="invalid-feedback" id="form-contact-zipcode-error"></div>
+                    </div>
+                </div>
+
+                <!-- Health Insuarance details -->
+                <div class="card-header user-form-section-heading">
+                    ${Resource.msg('title.form.health.insurance', 'providersearch', null)}
+                </div>
+                <div class="pt-4">
+                    <iscontentasset aid="request-appointment-no-insurance" />
+                </div>
+                <!--- Health Insurer --->
+                <div class="lr-padding-zero">
+                    <div class="form-group required">
+                        <label for="health-plan-insurer" class="form-control-label form-field-label">
+                            ${Resource.msg('label.health.plan.insurer', 'hearingtest', null)}
+                        </label>
+                        <input type="text"
+                            value="${pdict.profile && pdict.profile.healthPlanInsurer ? pdict.profile.healthPlanInsurer : ''}"
+                            required class="form-control" id="health-plan-insurer" name="healthPlanInsurerId">
+                        <div class="invalid-feedback" id="health-plan-insurer-error"></div>
+                    </div>
+                </div>
+
+                <!--- Health plan member Id --->
+                <div class="lr-padding-zero">
+                    <div class="form-group required">
+                        <label for="health-plan-member-id" class="form-control-label form-field-label">
+                            ${Resource.msg('label.membership.id', 'cart', null)}
+                            <div class="info-aarp-card">
+                                <div class="info-aarp-card-icon"></div>
+                                <div class="info-aarp-card-img">
+                                    <iscontentasset aid="healthplan-memberid-info-tooltip"/>
+                                </div>
+                            </div>
+                        </label>
+                        <input type="text"
+                            value="${pdict.profile && pdict.profile.healthPlanMemberID ? pdict.profile.healthPlanMemberID : ''}"
+                            required class="form-control" id="health-plan-member-id" name="healthPlanMemberId">
+                        <div class="invalid-feedback" id="health-plan-member-id-error"></div>
+                    </div>
+                </div>
+
+                <!--- Other Insurer --->
+                <div class="form-group">
+                    <label for="other-insurer" class="form-control-label">
+                        ${Resource.msg('label.field.other-insurer', 'providersearch', null)}
+                    </label>
+                    <select type="text" class="form-control custom-select" name="otherInsurer" id="other-insurer">
+                        <option value="">${Resource.msg('label.select', 'common', null)}</option>
+                        <option value="${Resource.msg('label.value.yes', 'hearingtest', null)}">
+                            ${Resource.msg('label.yes', 'hearingtest', null)}</option>
+                        <option value="${Resource.msg('label.value.no', 'hearingtest', null)}">
+                            ${Resource.msg('label.no', 'hearingtest', null)}</option>
+                    </select>
+                </div>
+                <!--- Hearing Test --->
+                <isinclude template="providerSearch/virtualCareHearingTestCheck" />
+
+                <!-- Consent info -->
+                <iscontentasset aid="request-appointment-consent" />
+
+                <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
+                <!--- submit --->
+                <div class="user-info-submit mx-auto">
+                    <div class="error-messages"> </div>
+                    <button class="btn btn-primary user-info-submit btn-width-100 custom-datalayer" 
+                        data-name="${Resource.msg('label.adobe.provider.submit', 'hearingtest', null)}" 
+                        data-location="${Resource.msg('label.adobe.provider.page', 'hearingtest', null)}" type="submit" name="submit" value="submit">
+                        ${Resource.msg('label.input.contact-us-submit', 'contactUs', null)}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<isdecorate template="common/layout/page">
+<isinclude template="/components/modules" sf-toolkit="off" />
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/providerSearchConfirmation.css');
+    </isscript>
+
+    <div class="container adobe-form-event"
+        data-form-custom="${Resource.msg('label.adobe.request.appointment', 'hearingtest', null)}">
+        <div class="row provider-search-confirmation mx-auto">
+            <div class="col-12 title-container text-center">
+                ${Resource.msg('title.provider.search.confirmation', 'providersearch', null)}
+            </div>
+          <iscontentasset aid="request-appointment-confirmation" />
+          <iscontentasset aid="provider-search-confirmation" />
+        </div>
+    </div>
+</isdecorate>
+  

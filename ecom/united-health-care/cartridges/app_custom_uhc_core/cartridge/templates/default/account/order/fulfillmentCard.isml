@@ -1,0 +1,26 @@
+<isloop items="${groupedItems}" var="groupedItem" status="loopState">
+    <div class="card-body fulfillment-info ">
+        <isif condition="${!(pdict.orderCardContext === 'account')}">
+            <div class="row fulfillment-status-row">
+                <div class="col">
+                    <p class="od-bold-font">
+                        <span class="order-status-label">${Resource.msg('label.orderhistory.status','account',null)}</span> ${groupedItem.statusDisplayLabel}
+                    </p>
+                </div>
+            </div>
+
+            <div class="row order-date-row">
+                <div class="col">
+                    <p class='order-date order-history-date'>
+                        ${Resource.msg('label.orderhistory.ordered.date.label','account',null)}
+                        <isprint value="${order.orderedDate}"/>
+                    </p>
+                </div>
+            </div>
+        </isif>
+        <isset name="orderItemsOptions" value="${groupedItem.orderItems.orderItemsOptions}" scope="page" />
+        <isset name="orderItems" value="${groupedItem.orderItems.orderItems}" scope="page" />
+        <isset name="orderType" value="${groupedItem}" scope="page" />
+        <isinclude template="account/order/orderItems"/>
+    </div>
+</isloop>

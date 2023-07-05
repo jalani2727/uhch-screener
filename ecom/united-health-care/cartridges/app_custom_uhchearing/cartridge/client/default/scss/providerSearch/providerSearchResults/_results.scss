@@ -1,0 +1,38 @@
+.results-container {
+    .list-item {
+        padding: 18px 0;
+        border-top: 1px solid $uhc-border-color;
+    }
+
+    .marker-icon {
+        max-width: 24px;
+    }
+
+    h3 {
+        margin: 0;
+        line-height: 16px;
+    }
+
+    .practice-name {
+        margin-bottom: 14px;
+        display: inline-block;
+    }
+
+    .practice-address {
+        margin-bottom: 0;
+    }
+
+    .practice-distance {
+        text-align: right;
+    }
+
+    @include media-breakpoint-up(lg) {
+        max-height: 545px;
+        overflow-y: auto;
+        padding-right: 15px;
+
+        .practice-name {
+            margin-bottom: 8px;
+        }
+    }
+}

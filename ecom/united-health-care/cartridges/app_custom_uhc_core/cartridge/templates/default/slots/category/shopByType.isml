@@ -1,0 +1,66 @@
+<isinclude template="/components/modules" />
+<isif condition="${slotcontent}">
+    <div class="category-slot">
+        <div class="shop-by-type-container">
+            <div class="top-section">
+                <iscontentasset aid="shop-by-type-top-content" />
+            </div>
+            <div class="bottom-section">
+                <div class="container">
+                    <div class="shop-by-type-slider">
+                        <div id="carouselIndicators" class="carousel slide" data-interval="false">
+                            <div class="carousel-inner">
+                                <isloop items="${slotcontent.content}" var="category" status="loopcount">
+                                    <isif condition="${category.custom.shopByTypeImage !== null}">
+                                        <div class="carousel-item <isif condition="${loopcount.count === 1}"> active </isif> " >
+                                            <div class="shop-by-type-item shop-by-type-carousel-item">
+                                                <div class="image-content">
+                                                    <img src="${category.custom.shopByTypeImage.getAbsURL()}" alt="${category.getDisplayName()}" />
+                                                </div>
+                                                <div class="text-content">
+                                                    <isprint value="${category.custom.headerMenuBanner}" encoding="off"/>
+                                                </div>
+                                                <div class="cta-content pb-1">
+                                                    <a href="${URLUtils.url('Search-Show', 'cgid', category.getID())}" class="btn btn-primary" >${Resource.msg('label.shop', 'common', null)}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </isif>
+                                </isloop>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">${Resource.msg('button.previous', 'common', null)}</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">${Resource.msg('button.next', 'common', null)}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <isloop items="${slotcontent.content}" var="category">
+                            <isif condition="${category.custom.shopByTypeImage !== null}">
+                                <div class="col-12 col-xl-4 margin-bottom-tile">
+                                    <div class="shop-by-type-item shop-by-type-tile">
+                                        <div class="image-content">
+                                            <img src="${category.custom.shopByTypeImage.getAbsURL()}" alt="${category.getDisplayName()}" />
+                                        </div>
+                                        <div class="text-content">
+                                            <isprint value="${category.custom.headerMenuBanner}" encoding="off"/>
+                                        </div>
+                                        <div class="cta-content">
+                                            <a href="${URLUtils.url('Search-Show', 'cgid', category.getID())}" class="btn btn-primary">${Resource.msg('label.shop', 'common', null)}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </isif>
+                        </isloop>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</isif>

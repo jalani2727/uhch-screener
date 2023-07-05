@@ -1,0 +1,44 @@
+<div class="card-header <isif condition="${pdict.isAuthenticated}">user-form-section-heading <iselse/>section-3-heading-2</isif>">
+    ${Resource.msg('title.form.hearing.test', 'providersearch', null)}
+</div>
+<div class="py-4 virtual-hearing-check" data-file-size-error="${Resource.msg('error.msg.file-size','hearingtest',null)}" data-file-format-error="${Resource.msgf('error.msg.file-format','hearingtest',null, pdict.allowedTypes)}" data-file-upload-error="${Resource.msg('text.error.fileupload','hearingtest',null)}">
+    <div class="m-0 row">
+        <div class="form-group required">
+            <label for="hearing-test-question" class="form-control-label">
+                ${Resource.msg('label.previous.hearing.test', 'hearingtest', null)}
+            </label>
+            <select type="text" class="form-control col-lg-3 custom-select hearing-test-question" name="hearingTestQuestion"
+                id="hearing-test-question" required>
+                <option value="">${Resource.msg('label.select', 'common', null)}</option>
+                <option value="${Resource.msg('label.value.yes', 'hearingtest', null)}">
+                    ${Resource.msg('label.yes', 'hearingtest', null)}</option>
+                <option value="${Resource.msg('label.value.no', 'hearingtest', null)}">
+                    ${Resource.msg('label.no', 'hearingtest', null)}</option>
+            </select>
+            <div class="invalid-feedback" id="hearing-test-question-error"></div>
+        </div>
+        <div class="file-upload-error-container d-none" role="alert">
+            <span class="file-upload-error alert alert-danger">${Resource.msg('text.error.fileupload','hearingtest',null)}</span>
+        </div>
+        <!-- Upload File -->
+        <div class="upload-file-container col-12 p-0 d-none">
+            ${Resource.msgf('label.file-upload.info', 'hearingtest', null, pdict.allowedTypes)}
+            <div class="upload-file">
+                <div class="hearing-test-file-upload">
+                    <span class="file-name-container"></span>
+                    <span class="file-upload-label d-none">${Resource.msg('label.file.upload', 'hearingtest', null)}</span>
+                    <span class="upload-file-error"></span>
+                    <input type="hidden" name="allowed-file-length"
+                        value="${pdict.allowedFileLength}" />
+                    <img class="check-mark-success"
+                        src="${URLUtils.staticURL('/images/hearing-test/checkmark.svg')}" alt="" />
+                </div>
+                <label class="btn btn-outline-primary select-file-btn">
+                    <input type="file" class="hearing-test-file" id="hearing-test-file" name="hearing-test-file"
+                        accept="${pdict.allowedTypes}">
+                    ${Resource.msg('label.select.file', 'hearingtest', null)}
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

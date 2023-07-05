@@ -1,0 +1,177 @@
+@import '~base/checkout/checkoutComponents';
+
+$order-confirmation-bg-color: #f4f4f4;
+
+.page {
+    background-color: $uhc-white;
+}
+
+.order-invoice {
+    .thank-you-msg-container {
+        margin: 54px auto 21px;
+
+        .order-thank-you-email-msg {
+            margin-bottom: 0;
+        }
+
+        .confirmation-email {
+            font-family: $uhc-font-sans-bold;
+            color: $uhc-black;
+        }
+    }
+
+    .order-thank-you-msg {
+        font-size: 36px;
+        color: $primary-col-1;
+        font-family: $uhc-font-serif;
+        text-align: center;
+
+        @include media-breakpoint-down(xs) {
+            text-align: left;
+        }
+    }
+
+    .order-thank-you-email-msg {
+        text-align: center;
+
+        @include media-breakpoint-down(xs) {
+            text-align: left;
+        }
+    }
+
+    .order-confirmation-alert-message {
+        margin-top: 6px;
+        text-align: center;
+        font-size: 18px;
+
+        @include media-breakpoint-down(xs) {
+            text-align: left;
+        }
+    }
+
+    .order-confirmation-detail-cards {
+        @include media-breakpoint-down(xs) {
+            padding: 16px;
+        }
+    }
+
+    .order-confirmation-details {
+        padding: 0;
+        max-width: 624px;
+        margin: 0 auto;
+    }
+
+    .leading-lines .start-lines span {
+        background-color: transparent;
+    }
+
+    .confirm-details {
+        .card-body {
+            line-height: 35px;
+
+            .summary-section-label {
+                font-size: 18px;
+                font-family: $uhc-font-sans-bold;
+                color: $uhc-black;
+            }
+
+            .single-shipping {
+                margin-bottom: 35px;
+            }
+
+            .summary-details.shipping {
+                margin-bottom: 35px;
+
+                .address-summary {
+                    margin-bottom: 0;
+                }
+            }
+
+            .shipping-method-price {
+                font-family: $uhc-font-sans-bold;
+                color: $uhc-black;
+            }
+
+            .summary-details {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .order-product-summary {
+        .card-body {
+            .grand-total-label,
+            .grand-total-price {
+                background: $order-confirmation-bg-color;
+                color: $uhc-black;
+                font-size: 18px;
+                font-family: $uhc-font-sans-bold;
+            }
+
+            .product-summary-block {
+                border-top: 1px solid $uhc-border-color;
+                padding-top: 15px;
+                margin-bottom: 0;
+            }
+
+            .product-line-item {
+                .product-line-item-details {
+                    border-bottom: 1px solid $uhc-border-color;
+                    padding-bottom: 15px;
+
+                    .line-item-attributes {
+                        font-size: 16px;
+                    }
+
+                    @include media-breakpoint-down(xs) {
+                        display: block !important;
+                    }
+                }
+
+                .line-item-name {
+                    font-size: 18px;
+                    color: $uhc-black;
+
+                    @include media-breakpoint-down(xs) {
+                        margin-top: 10px;
+                    }
+                }
+
+                .align-items-start {
+                    margin-top: 21px;
+
+                    .line-item-total-text {
+                        font-size: 16px;
+                    }
+
+                    .unit-price,
+                    .qty-card-quantity-count,
+                    .strike-through.non-adjusted-price,
+                    .line-item-total-price-amount {
+                        font-size: 18px;
+                        color: $uhc-black;
+                        font-family: $uhc-font-sans-bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-body.order-total-summary {
+        padding-bottom: 0;
+
+        .order-discount-label {
+            color: $tints-col-3;
+        }
+
+        .order-discount-total {
+            font-family: $uhc-font-sans-bold;
+            color: $uhc-black;
+        }
+
+        .grand-total-sum {
+            font-family: $uhc-font-sans-bold;
+            color: $uhc-black;
+        }
+    }
+}

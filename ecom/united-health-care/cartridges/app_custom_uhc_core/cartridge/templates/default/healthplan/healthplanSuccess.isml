@@ -1,0 +1,14 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<div class="modal-header border-0 d-block pb-0">
+    <div class="uhc-blue uhc-serif uhc-main-title text-center">
+        ${Resource.msg('hearingplan.confirmation.heading', 'hearingplan', null)}
+    </div>
+    <a class="close" href="" aria-label="Close"></a>
+</div>
+
+<div class="modal-body text-center mb-4">
+    <div class="pb-4"><isprint value="${pdict.confirmationMessage}" encoding="off" /></div>
+    <a class="btn btn-primary d-block d-md-inline-block mb-2 mb-md-4" href="${pdict.buttonURL}">
+        <isprint value="${pdict.buttonName}" encoding="off" />
+    </a>
+</div>

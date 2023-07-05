@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oauth-providers xmlns="http://www.demandware.com/xml/impex/oauthprovider/2013-07-16">
+    <oauth-provider provider-id="SFIDP">
+        <description>Salesforce OAuth provider for UHCHearing</description>
+        <client-id>3MVG9E8TNx7FN9y4UatO1_aPfxEkXB9PEOumBgHwHkQh8H9Uuzm5bml9uPVkFVwNuqQXNZFJKEwI56zlSflV4</client-id>
+        <client-secret>AE2241FD9878410F6644DEDD4C885C20FE06CB60A768B87E1A9DD0818C4D078A</client-secret>
+        <scopes>id,profile,email,address,phone</scopes>
+        <authorization-url>https://ecomdev-uhchearing.cs172.force.com/UHCHearing/services/oauth2/authorize</authorization-url>
+        <token-url>https://ecomdev-uhchearing.cs172.force.com/UHCHearing/services/oauth2/token</token-url>
+        <user-info-url>https://ecomdev-uhchearing.cs172.force.com/UHCHearing/services/oauth2/userinfo</user-info-url>
+        <access-token-name>access_token</access-token-name>
+        <redirect-pipeline-node>Login-OAuthReentry</redirect-pipeline-node>
+    </oauth-provider>
+
+    <oauth-provider provider-id="SFIDPAARP">
+        <description>Salesforce OAuth provider for AARP</description>
+        <client-id>3MVG9E8TNx7FN9y4UatO1_aPfxEkXB9PEOumBgHwHkQh8H9Uuzm5bml9uPVkFVwNuqQXNZFJKEwI56zlSflV4</client-id>
+        <client-secret>AE2241FD9878410F6644DEDD4C885C20FE06CB60A768B87E1A9DD0818C4D078A</client-secret>
+        <scopes>id,profile,email,address,phone</scopes>
+        <authorization-url>https://epichearing--ecomdev.sandbox.my.site.com/UHCHearingAARP/services/oauth2/authorize</authorization-url>
+        <token-url>https://epichearing--ecomdev.sandbox.my.site.com/UHCHearingAARP/services/oauth2/token</token-url>
+        <user-info-url>https://epichearing--ecomdev.sandbox.my.site.com/UHCHearingAARP/services/oauth2/userinfo</user-info-url>
+        <access-token-name>access_token</access-token-name>
+        <redirect-pipeline-node>Login-OAuthReentry</redirect-pipeline-node>
+    </oauth-provider>
+
+</oauth-providers>

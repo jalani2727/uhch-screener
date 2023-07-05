@@ -1,0 +1,167 @@
+.form-group.required .form-control-label {
+    font-size: 14px;
+    font-family: $uhc-form-label-font;
+    color: $uhc-form-label;
+
+    &::before {
+        display: none;
+    }
+
+    &::after {
+        content: '*';
+        color: $uhc-form-label;
+    }
+}
+
+.custom-control {
+    padding-left: 30px;
+}
+
+.custom-control-label {
+    &::before,
+    &::after {
+        left: -30px;
+        top: 0;
+    }
+}
+
+.custom-checkbox {
+    .custom-control-label {
+        &::before {
+            border: 2px solid $checkbox-border;
+            background: $white;
+            border-radius: 0;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .custom-control-input {
+        &:focus {
+            outline: none;
+
+            &:not(:checked) ~ .custom-control-label::before {
+                background: $white;
+            }
+
+            ~ .custom-control-label::before {
+                box-shadow: none;
+                border: 2px solid $checkbox-border;
+            }
+        }
+
+        &:checked {
+            ~ .custom-control-label {
+                &::before {
+                    border: 2px solid $checkbox-bg-checked;
+                    background-color: $checkbox-bg-checked;
+                }
+
+                &::after {
+                    width: 20px;
+                    height: 20px;
+                    background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2212%22%20viewBox%3D%220%200%2016%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M5.49992%209.49996L1.99992%205.99996L0.833252%207.16663L5.49992%2011.8333L15.4999%201.83329L14.3333%200.666626L5.49992%209.49996Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E%0A');
+                    background-repeat: no-repeat;
+                    background-size: auto;
+                }
+            }
+        }
+    }
+}
+
+.custom-radio {
+    .custom-control-label {
+        &::before {
+            border: 2px solid $checkbox-border;
+            background: $white;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .custom-control-input {
+        &:focus {
+            outline: none;
+
+            &:not(:checked) ~ .custom-control-label::before {
+                background: $white;
+            }
+
+            ~ .custom-control-label::before {
+                box-shadow: none;
+                border: 2px solid $checkbox-border;
+            }
+        }
+
+        &:checked {
+            ~ .custom-control-label {
+                &::before {
+                    border: 0;
+                    background-color: transparent;
+                }
+
+                &::after {
+                    width: 20px;
+                    height: 20px;
+                    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iOSIgc3Ryb2tlPSIjMTk2RUNGIiBzdHJva2Utd2lkdGg9IjIiLz4KPGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iNSIgZmlsbD0iIzE5NkVDRiIvPgo8L3N2Zz4K');
+                    background-repeat: no-repeat;
+                    background-size: auto;
+                }
+            }
+        }
+    }
+}
+
+.form-control {
+    border: 1px solid $uhc-form-input-border;
+    border-radius: 4px;
+    font-size: 16px;
+    color: $uhc-form-input;
+    line-height: 19px;
+    padding: 12px 15px;
+    height: 44px;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+    border-color: $uhc-error;
+}
+
+.invalid-feedback {
+    color: $uhc-error;
+
+    &::before {
+        content: '';
+        width: 9px;
+        height: 9px;
+        display: inline-block;
+        margin-right: 4px;
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDkgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik03LjA3MTA3IDAuOTY0NDY4TDguMTMxNzMgMi4wMjUxM0wxLjA2MDY2IDkuMDk2MkwwIDguMDM1NTRMNy4wNzEwNyAwLjk2NDQ2OFoiIGZpbGw9IiNDNzEzMDAiLz4KPHBhdGggZD0iTTEuNDQ4MzllLTA1IDEuOTY0NDdMMS4wNjA2NyAwLjkwMzgwOUw4LjEzMTc0IDcuOTc0ODhMNy4wNzEwOCA5LjAzNTU0TDEuNDQ4MzllLTA1IDEuOTY0NDdaIiBmaWxsPSIjQzcxMzAwIi8+Cjwvc3ZnPgo=');
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .mobile-block-view {
+        display: block;
+    }
+
+    .field-width-style {
+        max-width: 100%;
+    }
+
+    .edit-address-form {
+        display: block;
+
+        .btn-width-style {
+            max-width: 100%;
+        }
+
+        .edit-address-save-btn {
+            margin-bottom: 36px;
+        }
+    }
+}
+
+.input-unset-all {
+    all: unset;
+}

@@ -1,0 +1,105 @@
+.no-results-found-page {
+    .zip-radius-form {
+        background: $tints-col-4;
+        padding-bottom: 20px;
+        width: 100%;
+        padding-top: 18px;
+        padding-bottom: 18px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 18px 25px;
+        }
+
+        .form-control-label {
+            font-family: $uhc-font-sans-bold;
+            color: $uhc-form-label;
+            font-size: 14px;
+        }
+    }
+
+    .no-results-found {
+        .card {
+            background: $primary-col-2;
+        }
+
+        .card-header {
+            padding-bottom: 0;
+            border-bottom: hidden;
+            font-family: $uhc-font-serif;
+            color: $primary-col-1;
+            font-size: 26px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 28px;
+            }
+        }
+
+        .card-body {
+            padding: 5px 0;
+        }
+
+        .btn-container {
+            margin: 17px auto 22px;
+
+            @include media-breakpoint-up(lg) {
+                margin: 24px auto;
+            }
+        }
+    }
+
+    .recommended-provider-section {
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 10px;
+        }
+    }
+
+    .provider-search-btn {
+        margin-top: 30px;
+    }
+
+    #map {
+        position: relative;
+        overflow: visible;
+        height: 100%;
+    }
+
+    .provider-search-no-result-virtual-form {
+        margin: 24px auto;
+
+        input,
+        select {
+            display: none;
+        }
+    }
+}
+
+.zip-radius-form {
+    position: relative;
+
+    .form-group {
+        position: static;
+    }
+}
+
+.zipcode-custom-error,
+.state-custom-error {
+    display: none;
+    font-size: 80%;
+    color: $uhc-error;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    background: $tints-col-4;
+
+    @include media-breakpoint-down(md) {
+        left: 20px;
+        bottom: 88px;
+    }
+}
+
+.form-control.is-invalid ~ {
+    .zipcode-custom-error,
+    .state-custom-error {
+        display: block;
+    }
+}

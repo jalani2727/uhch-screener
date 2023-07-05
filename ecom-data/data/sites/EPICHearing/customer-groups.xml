@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customer-groups xmlns="http://www.demandware.com/xml/impex/customergroup/2007-06-30">
+    <customer-group group-id="EPIC_SEIU775">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>EPIC_SEIU775</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="EPIC_bscamedicare">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>EPIC_bscamedicare</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="EPIC_calaborers">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>EPIC_calaborers</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="EPIC_gvs">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>EPIC_gvs</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="EPIC_horizonbcbsnj">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>EPIC_horizonbcbsnj</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="EPIC_lafire">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>EPIC_lafire</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="EPIC_medica">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>EPIC_medica</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="EPIC_navistar">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>EPIC_navistar</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="EPIC_nva">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>EPIC_nva</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="EPIC_nysut">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>EPIC_nysut</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="GoodHearing">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.hearingresult</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>good</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="ModerateHearing">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.hearingresult</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>moderate</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="PoorHearing">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.hearingresult</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>poor</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="UHCH_AllSavers">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>UHCH_AllSavers</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="UHCH_CT">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>UHCH_CT</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="UHCH_ERS">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>UHCH_ERS</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="UHCH_MCHCP">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>UHCH_MCHCP</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="UHCH_SHBP">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>UHCH_SHBP</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="UHCH_SNP">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>UHCH_SNP</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="UHCH_SOI">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>UHCH_SOI</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="UHCH_TRB">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>UHCH_TRB</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="UHCH_TRS">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>UHCH_TRS</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="UHCH_employee">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>UHCH_employee</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="UHCH_flexwork">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>UHCH_flexwork</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="UHCH_hearing">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>UHCH_hearing</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="UHCH_medicare">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>UHCH_medicare</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="UHCH_relate">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>UHCH_relate</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="UHCH_retiree">
+        <membership-rule>
+            <included-customers>
+                <condition-group match-mode="all">
+                    <condition>
+                        <attribute-path>session.custom.appID</attribute-path>
+                        <operator>is-equal</operator>
+                        <string>UHCH_retiree</string>
+                    </condition>
+                </condition-group>
+            </included-customers>
+        </membership-rule>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="Everyone">
+        <description>Represents all customers of the site, both unregistered and registered.</description>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="Registered">
+        <description>Represents all registered customers of the site.</description>
+        <custom-attributes/>
+    </customer-group>
+
+    <customer-group group-id="Unregistered">
+        <description>Represents all unregistered customers of the site.</description>
+        <custom-attributes/>
+    </customer-group>
+
+</customer-groups>

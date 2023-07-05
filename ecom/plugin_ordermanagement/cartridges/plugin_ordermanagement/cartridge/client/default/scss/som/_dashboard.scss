@@ -1,0 +1,20 @@
+.order-history-card-row {
+    padding-bottom: 1rem;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .item-details {
+        padding-left: 0;
+
+        .item-detail {
+            font-weight: bold;
+        }
+    }
+}
+
+.order-history-card-row:last-child {
+    padding-bottom: 0;
+}
+

@@ -1,0 +1,4 @@
+<div id="create-account-redirect" class="create-account-redirect" data-url="${pdict.urlRedirect}"></div>
+<script>
+    window.top.location.href = document.getElementById('create-account-redirect').getAttribute('data-url');
+</script>

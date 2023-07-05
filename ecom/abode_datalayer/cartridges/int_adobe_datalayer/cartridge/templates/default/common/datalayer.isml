@@ -1,0 +1,25 @@
+<!-- Datalayer Object -->
+<script type="text/javascript">
+    var adobeDataLayer = [];
+    var isAdobeDatalayer = '${pdict.adobeDataLayer ? true : false}';
+    var buildContentViewURL = '${URLUtils.https('Build-BuildContentView').toString()}';
+    var datalayerContext = '${pdict.adobeDataLayer.Context}';
+    var datalayerPageGroup = '${pdict.adobeDataLayer.PageGroup}';
+    var datalayerPageName = '${pdict.adobeDataLayer.PageName}';
+    var isErrorPage = '${pdict.adobeDataLayer.isErrorPage ?  true : false }';
+    var isSections = '${'sections' in pdict.adobeDataLayer ?  true : false }';
+    var datalayerSections = {};
+    if (isSections === 'true') {
+        datalayerSections = <isprint value="${JSON.stringify(pdict.adobeDataLayer.sections)}" encoding="off"/>;
+    }
+</script>
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/tracking.js');
+</isscript>
+
+
+<!-- Adobe Launch -->
+<isif condition="${'adobeDatalayerScript' in dw.system.Site.current.preferences.custom && dw.system.Site.current.preferences.custom.adobeDatalayerScript}">
+    <script src="${dw.system.Site.current.preferences.custom.adobeDatalayerScript}" async></script>
+</isif>

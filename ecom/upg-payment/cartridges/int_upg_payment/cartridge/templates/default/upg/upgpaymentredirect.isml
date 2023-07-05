@@ -1,0 +1,5 @@
+
+<div id="payment-redirect" class="payment-redirect" data-url="${pdict.urlredirect}"></div>
+<script>
+    window.top.location.href = document.getElementById('payment-redirect').getAttribute('data-url');
+</script>

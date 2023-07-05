@@ -1,0 +1,36 @@
+<span class="confirmReturnPopup btn btn-block btn-primary"
+    data-url="${URLUtils.https('Order-ItemsForReturn')}"
+    >${Resource.msg('order.items.return.continue', 'orderReturn', null)}</span>
+<!-- Modal -->
+<div class="modal hide return-modal-wrapper" id="confirm-return" aria-modal="true" role="dialog">
+    <div class="modal-dialog return-modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-close-wrapper">
+                <button class="decline modal-close" data-dismiss="modal">
+                    ${Resource.msg('order.items.return.popup.close', 'orderReturn', null)}
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-header">
+                <h4 class="modal-title" id="dconfirm-return-title">
+                    ${Resource.msg('order.items.return.popup.heading', 'orderReturn', null)}
+                </h4>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <div class="button-wrapper">
+                    <button class="affirm btn btn-block btn-primary" data-url="${URLUtils.https('Order-ReturnAccept')}" autofocus data-dismiss="modal">
+                        ${Resource.msg('order.items.return.popup.confirm', 'orderReturn', null)}
+                    </button>
+                </div>
+                <div class="button-wrapper">
+                    <button class="decline btn btn-block btn-outline-primary" data-url=""
+                        data-dismiss="modal">
+                        ${Resource.msg('order.items.return.popup.reject', 'orderReturn', null)}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

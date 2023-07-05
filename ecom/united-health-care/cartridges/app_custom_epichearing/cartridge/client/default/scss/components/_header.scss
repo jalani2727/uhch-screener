@@ -1,0 +1,13 @@
+@import '~uhchearing/components/header';
+
+.brand {
+    width: 71px;
+    padding-top: 13px;
+    margin-left: -35px;
+
+    @include media-breakpoint-up(md) {
+        width: 177px;
+        padding-top: 30px;
+        margin-left: 0;
+    }
+}

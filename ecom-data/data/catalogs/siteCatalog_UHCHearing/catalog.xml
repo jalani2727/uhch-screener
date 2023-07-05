@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="http://www.demandware.com/xml/impex/catalog/2006-10-31" catalog-id="siteCatalog_UHCHearing">
+    <header>
+        <image-settings>
+            <internal-location base-path="/images"/>
+            <view-types>
+                <view-type>swatch</view-type>
+                <view-type>hi-res</view-type>
+            </view-types>
+            <variation-attribute-id>color</variation-attribute-id>
+            <alt-pattern>${productname}</alt-pattern>
+            <title-pattern>${productname}</title-pattern>
+        </image-settings>
+    </header>
+
+    <category category-id="root">
+        <display-name xml:lang="x-default">siteCatalog_UHCHearing</display-name>
+        <description xml:lang="x-default">Site / Storefront Catalog that defines the main storefront navigations.</description>
+        <online-flag>true</online-flag>
+        <image>Hero-Header_Accessories-Supplies-Default.jpg</image>
+        <template/>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">false</custom-attribute>
+            <custom-attribute attribute-id="slotBannerImage">Hero-Header_Accessories-Supplies-Default.jpg</custom-attribute>
+        </custom-attributes>
+        <refinement-definitions>
+            <refinement-definition type="category" bucket-type="none">
+                <display-name xml:lang="x-default">Category</display-name>
+                <sort-mode>category-position</sort-mode>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="technologyLevel" system="false">
+                <display-name xml:lang="x-default">Technology Level</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="color" system="false">
+                <display-name xml:lang="x-default">Color</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="isRechargeableBattery" system="false">
+                <display-name xml:lang="x-default">Rechargeable Battery</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="model" system="false">
+                <display-name xml:lang="x-default">Model</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="style" system="false">
+                <display-name xml:lang="x-default">Type</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="batteryType" system="false">
+                <display-name xml:lang="x-default">Battery Type</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="brand" system="true">
+                <display-name xml:lang="x-default">Brand</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="price" bucket-type="thresholds">
+                <display-name xml:lang="x-default">Price</display-name>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>0</cutoff-threshold>
+                <bucket-definitions>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$0 - $19.99</display-name>
+                        <threshold>20.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$20 - $49.99</display-name>
+                        <threshold>50.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$50 - $99.99</display-name>
+                        <threshold>100.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$100 - $499.99</display-name>
+                        <threshold>500.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$500 - $999.99</display-name>
+                        <threshold>1000.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$1,000 - $1,499.99</display-name>
+                        <threshold>1500.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$1,500 - $1,999.99</display-name>
+                        <threshold>2000.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$2,000 - $2,499.99</display-name>
+                        <threshold>2500.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$2,500 - $4,999.99</display-name>
+                        <threshold>5000.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$5,000  - $9,999.99</display-name>
+                        <threshold>10000.0</threshold>
+                    </price-bucket>
+                </bucket-definitions>
+            </refinement-definition>
+        </refinement-definitions>
+    </category>
+
+    <category category-id="discovercare">
+        <display-name xml:lang="x-default">Discover Care</display-name>
+        <description xml:lang="x-default">Uses Alternate Url</description>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <position>12.0</position>
+        <template/>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="alternativeUrl">$url('Search-DiscoverCare','cid', 'discover-care')$</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="findaprovider">
+        <display-name xml:lang="x-default">Find a Provider</display-name>
+        <description xml:lang="x-default">Uses Alternate Url</description>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <position>13.0</position>
+        <template/>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="alternativeUrl">$url('ProviderSearch-Show')$</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="shopproducts">
+        <display-name xml:lang="x-default">Shop Products</display-name>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <position>15.0</position>
+        <template/>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+        <refinement-definitions>
+            <refinement-definition type="category" bucket-type="none">
+                <display-name xml:lang="x-default">Category</display-name>
+                <sort-mode>category-position</sort-mode>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="technologyLevel" system="false">
+                <display-name xml:lang="x-default">Technology Level</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="color" system="false">
+                <display-name xml:lang="x-default">Color</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="isRechargeableBattery" system="false">
+                <display-name xml:lang="x-default">Rechargeable Battery</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="model" system="false">
+                <display-name xml:lang="x-default">Model</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="style" system="false">
+                <display-name xml:lang="x-default">Type</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="batteryType" system="false">
+                <display-name xml:lang="x-default">Battery Type</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="attribute" bucket-type="none" attribute-id="brand" system="true">
+                <display-name xml:lang="x-default">Brand</display-name>
+                <value-set>search-result</value-set>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>5</cutoff-threshold>
+            </refinement-definition>
+            <refinement-definition type="price" bucket-type="thresholds">
+                <display-name xml:lang="x-default">Price</display-name>
+                <sort-mode>value-name</sort-mode>
+                <sort-direction>ascending</sort-direction>
+                <cutoff-threshold>0</cutoff-threshold>
+                <bucket-definitions>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$0 - $19.99</display-name>
+                        <threshold>20.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$20 - $49.99</display-name>
+                        <threshold>50.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$50 - $99.99</display-name>
+                        <threshold>100.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$100 - $499.99</display-name>
+                        <threshold>500.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$500 - $999.99</display-name>
+                        <threshold>1000.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$1,000 - $1,499.99</display-name>
+                        <threshold>1500.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$1,500 - $1,999.99</display-name>
+                        <threshold>2000.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$2,000 - $2,499.99</display-name>
+                        <threshold>2500.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$2,500 - $4,999.99</display-name>
+                        <threshold>5000.0</threshold>
+                    </price-bucket>
+                    <price-bucket currency="USD">
+                        <display-name xml:lang="x-default">$5,000  - $9,999.99</display-name>
+                        <threshold>10000.0</threshold>
+                    </price-bucket>
+                </bucket-definitions>
+            </refinement-definition>
+        </refinement-definitions>
+    </category>
+
+    <category category-id="Accessories">
+        <display-name xml:lang="x-default">Accessories</display-name>
+        <online-flag>true</online-flag>
+        <parent>shopproducts</parent>
+        <template/>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="Over-the-Counter-Devices">
+        <display-name xml:lang="x-default">Over the Counter Devices</display-name>
+        <online-flag>true</online-flag>
+        <parent>shopproducts</parent>
+        <image>Hero-Header_OTC.jpg</image>
+        <template/>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+            <custom-attribute attribute-id="slotBannerImage">Hero-Header_OTC.jpg</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="Prescription-Hearing-Aids">
+        <display-name xml:lang="x-default">Prescription Hearing Aids</display-name>
+        <online-flag>true</online-flag>
+        <parent>shopproducts</parent>
+        <template/>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="Supplies">
+        <display-name xml:lang="x-default">Supplies</display-name>
+        <online-flag>true</online-flag>
+        <parent>shopproducts</parent>
+        <template/>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+            <custom-attribute attribute-id="slotBannerImage">Hero-Header_Accessories-Supplies-Default.jpg</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category category-id="resources">
+        <display-name xml:lang="x-default">Resources</display-name>
+        <description xml:lang="x-default">Uses Alternate Url</description>
+        <online-flag>true</online-flag>
+        <parent>root</parent>
+        <position>16.0</position>
+        <template/>
+        <page-attributes/>
+        <custom-attributes>
+            <custom-attribute attribute-id="alternativeUrl">$url('Home-Show')$</custom-attribute>
+            <custom-attribute attribute-id="enableCompare">false</custom-attribute>
+            <custom-attribute attribute-id="showInMenu">true</custom-attribute>
+        </custom-attributes>
+    </category>
+
+    <category-assignment category-id="Accessories" product-id="PDT-36217"/>
+
+    <category-assignment category-id="Accessories" product-id="SKU_PowerOne_10A_01CTN"/>
+
+    <category-assignment category-id="Over-the-Counter-Devices" product-id="25050736M-1">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Over-the-Counter-Devices" product-id="PDT-37565">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Over-the-Counter-Devices" product-id="PDT-37566">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Over-the-Counter-Devices" product-id="PDT-37567">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Over-the-Counter-Devices" product-id="PDT-37568">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Over-the-Counter-Devices" product-id="PDT-37569">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Over-the-Counter-Devices" product-id="PDT-37570">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Over-the-Counter-Devices" product-id="PDT-37571">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Over-the-Counter-Devices" product-id="PDT-37572">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Over-the-Counter-Devices" product-id="PDT-37573">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Over-the-Counter-Devices" product-id="PDT-37574">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Over-the-Counter-Devices" product-id="PDT-37575">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Over-the-Counter-Devices" product-id="PDT-37576">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Over-the-Counter-Devices" product-id="PDT-37577">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="008884303996M-1">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="008884304030M-1">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="008884304047M-1">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="25050736M-1"/>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-35588">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-35702">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-36110">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-36123">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-36134">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-36612">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-36613">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-36614">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-36724">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-36751">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37563">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37584">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37585">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37586">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37587">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37588">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37589">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37590">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37591">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37592">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37593">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37594">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37595">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37596">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37597">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37598">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37599">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37600">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37601">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37602">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37603">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37604">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37605">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37606">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37607">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37608">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37609">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37610">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37611">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37612">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37613">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37614">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37615">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37616">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37617">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37618">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37619">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37620">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37621">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37622">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37623">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37624">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37625">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37626">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37627">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37628">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37629">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37630">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37631">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37632">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37633">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="PDT-37634">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Prescription-Hearing-Aids" product-id="SKU_PowerOne_10A_01CTN">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="Supplies" product-id="25050736M-1"/>
+
+    <category-assignment category-id="Supplies" product-id="PDT-32068">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="discovercare" product-id="PDT-36217"/>
+
+    <category-assignment category-id="findaprovider" product-id="PDT-36217">
+        <primary-flag>true</primary-flag>
+    </category-assignment>
+
+    <category-assignment category-id="resources" product-id="PDT-36217"/>
+
+</catalog>

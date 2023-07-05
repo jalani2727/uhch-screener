@@ -1,0 +1,203 @@
+.clp-shop-by-technology-page {
+    .page-title {
+        font-size: 26px;
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 36px;
+        }
+    }
+
+    .section-1 {
+        padding-top: 0;
+        max-width: 1063px; // This is width is given to align the content as per the desired design
+
+        @include media-breakpoint-up(md) {
+            padding-top: 60px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 60px 0 50px 100px;
+        }
+
+        .sub-section-1,
+        .sub-section-2,
+        .sub-section-3 {
+            padding-top: 24px;
+            padding-bottom: 26px;
+        }
+
+        .sub-section-heading {
+            font-size: 22px;
+            font-family: $uhc-font-serif;
+            color: $primary-col-1;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 28px;
+            }
+        }
+
+        .sub-section-content {
+            padding-top: 24px;
+        }
+    }
+
+    .section-2 {
+        background-color: $tints-col-4;
+
+        .sub-section-1 {
+            max-width: 941px;
+            padding: 90px 0 72px 100px;
+        }
+    }
+
+    .section-3 {
+        padding-top: 24px;
+        padding-bottom: 78px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 92px 18px 92px 100px;
+        }
+
+        .section-3-heading {
+            font-size: 22px;
+            font-family: $uhc-font-serif;
+            color: $primary-col-1;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 28px;
+            }
+        }
+    }
+
+    .font-family-bold {
+        font-family: $uhc-font-sans-bold;
+        color: $uhc-form-label;
+    }
+
+    .link-styling {
+        color: $uhc-link-color;
+        font-family: $uhc-font-sans-bold;
+    }
+
+    .border-0 {
+        border: 0;
+    }
+
+    .table-bordered td {
+        border-color: $uhc-border-color;
+    }
+
+    th {
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+        font-family: $uhc-font-sans-bold;
+        width: 300px;
+        line-height: 52px;
+    }
+
+    .table-heading {
+        color: $primary-col-1;
+        font-family: $uhc-font-sans-bold;
+        font-size: 20px;
+    }
+
+    .img-container {
+        padding: 24px 54px;
+    }
+
+    .check-icon {
+        background-image: url('../images/check-icon.svg');
+        height: 13.4px;
+        width: 17.6px;
+        background-repeat: no-repeat;
+    }
+
+    .line-arrow-right {
+        background-image: url('../images/line-arrow-right.svg');
+        width: 248px;
+        height: 10px;
+        background-repeat: no-repeat;
+    }
+
+    .header-cell {
+        padding-bottom: 52px;
+    }
+
+    .custom-card-container-1 {
+        @include media-breakpoint-up(lg) {
+            padding-right: 14px;
+        }
+    }
+
+    .custom-card-container-2 {
+        @include media-breakpoint-up(lg) {
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+    }
+
+    .custom-card-container-3 {
+        @include media-breakpoint-up(lg) {
+            padding-left: 14px;
+        }
+    }
+
+    .custom-card {
+        background: $primary-col-2;
+        border: 1px solid $uhc-border-color;
+        padding: 24px;
+
+        @include media-breakpoint-up(lg) {
+            height: 100%;
+            padding: 29px 25px 32px 44px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+    .custom-card-heading {
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+        font-size: 22px;
+    }
+
+    .custom-card-body {
+        padding-top: 24px;
+    }
+
+    .card-container-separator-top {
+        margin-top: 24px;
+    }
+
+    .btn-shop-1 {
+        margin-top: 24px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 57px;
+        }
+    }
+
+    .btn-shop-2 {
+        margin-top: 24px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 91px;
+        }
+    }
+
+    .btn-shop-3 {
+        margin-top: 24px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 20px;
+        }
+    }
+}

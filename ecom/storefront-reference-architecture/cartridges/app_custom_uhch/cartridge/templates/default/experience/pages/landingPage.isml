@@ -1,0 +1,15 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+
+<isdecorate template="common/layout/landingPage">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/experience/landingPage.css');
+    </isscript>
+
+    <div class="landing-page" id="${pdict.page.ID}">
+        <isprint value="${pdict.regions.hero.setClassName("lp-hero").render()}" encoding="off" />
+        <isprint value="${pdict.regions.sectionOne.setClassName("section section-one").render()}" encoding="off" />
+        <isprint value="${pdict.regions.sectionTwo.setClassName("section section-two").render()}" encoding="off" />
+        <isprint value="${pdict.regions.sectionThree.setClassName("section section-three").render()}" encoding="off" />
+    </div>
+</isdecorate>

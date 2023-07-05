@@ -1,0 +1,53 @@
+@mixin take-the-test-tile-font {
+    font-family: $uhc-heading-font-1;
+    font-size: 26px;
+    line-height: 34px;
+    color: $primary-col-1;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
+.take-the-test-container {
+    .take-the-test-content {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0 60px;
+    }
+
+    .image-content {
+        margin-bottom: 14px;
+    }
+
+    .text-content {
+        .take-the-test-title {
+            @include take-the-test-tile-font;
+
+            margin-bottom: 35px;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .take-the-test-content {
+            flex-direction: row;
+            margin: 40px 8% 55px;
+        }
+
+        .image-content {
+            margin-bottom: 0;
+            margin-right: 8%;
+
+            img {
+                max-width: 280px;
+            }
+        }
+
+        .text-content {
+            .take-the-test-title {
+                margin-top: 30px;
+            }
+        }
+    }
+}

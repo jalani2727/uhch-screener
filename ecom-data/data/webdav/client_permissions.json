@@ -1,0 +1,47 @@
+{
+      "clients":
+      [
+        {
+          "client_id": "a33e2c16-01b1-48b8-9f85-57415b12ec07",
+          "permissions":
+          [
+            {
+              "path": "/impex",
+              "operations": [
+                "read_write"
+              ]
+            },
+            {
+              "path": "/cartridges",
+              "operations": [
+                "read_write"
+              ]
+            },
+            {
+              "path": "/static",
+              "operations": [
+                "read_write"
+              ]
+            },
+            {
+              "path": "/catalogs/<your-catalog-id>",
+              "operations": [
+                "read_write"
+              ]
+            },
+            {
+              "path": "/libraries/<your-library-id>",
+              "operations": [
+                "read_write"
+              ]
+            },
+            {
+              "path": "/dynamic/<your-site-id>",
+              "operations": [
+                "read_write"
+              ]
+            }
+          ]
+        }
+      ]
+    }

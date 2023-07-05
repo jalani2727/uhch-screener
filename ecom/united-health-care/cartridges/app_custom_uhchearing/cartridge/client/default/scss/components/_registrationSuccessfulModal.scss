@@ -1,0 +1,92 @@
+.registration-successful-modal {
+    .modal-header {
+        border-bottom: none;
+        display: flex;
+        justify-content: flex-end;
+        padding: 16px 16px 0 0;
+
+        .close {
+            margin: 0;
+            background-image: url('../images/close.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 1;
+        }
+    }
+
+    .modal-dialog {
+        max-width: 90%;
+        margin: 60px auto 0;
+    }
+
+    .image-content,
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-content {
+        margin-bottom: 23px;
+
+        img {
+            max-width: 202px;
+        }
+    }
+
+    .text-content {
+        margin: 0 36px 24px;
+        text-align: center;
+
+        h2 {
+            font-family: $uhc-heading-font-1;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 32px;
+            margin-bottom: 12px;
+            color: $uhc-title;
+        }
+
+        p {
+            margin-bottom: 24px;
+        }
+
+        a {
+            width: 100%;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .modal-header {
+            padding: 16px 16px 0 0;
+        }
+
+        .modal-dialog {
+            max-width: 58%;
+            margin-top: 200px;
+        }
+
+        .image-content {
+            margin-bottom: 36px;
+
+            img {
+                max-width: 286px;
+            }
+        }
+
+        .text-content {
+            margin-bottom: 38px;
+
+            h2 {
+                font-size: 36px;
+                line-height: 44px;
+            }
+
+            a {
+                width: auto;
+            }
+        }
+    }
+}

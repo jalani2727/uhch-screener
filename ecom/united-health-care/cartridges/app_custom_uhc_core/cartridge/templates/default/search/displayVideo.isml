@@ -1,0 +1,23 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/articles.css');
+    </isscript>
+
+    <div class="video-player-page">
+        <div class="container">
+            <div class="video-container mb-md-4">
+                <div class="iframe-video-banner">
+                    <iframe id="kaltura_player"
+                        src="${pdict.resourcesVideoURL}"
+                        width="400" height="285" allowfullscreen webkitallowfullscreen mozAllowFullScreen
+                        allow="autoplay *; fullscreen *; encrypted-media *"
+                        sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation"
+                        frameborder="0" title="Kaltura Player"></iframe>
+                </div>
+            </div>
+            <div class="uhc-blue uhc-serif uhc-main-title-one py-4"><isprint value="${pdict.videoName}" encoding="off" /></div>
+            <p class="m-0"><isprint value="${pdict.description}" encoding="off" /></p>
+        </div>
+    </div>
+</isdecorate>

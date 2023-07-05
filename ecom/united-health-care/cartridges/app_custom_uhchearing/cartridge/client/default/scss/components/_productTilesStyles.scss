@@ -1,0 +1,81 @@
+.product-tile {
+    position: relative;
+    min-height: auto;
+
+    .tile-body {
+        @include media-breakpoint-down(sm) {
+            padding: 24px 0;
+        }
+
+        .pdp-link a {
+            font-size: 16px;
+            line-height: 21px;
+            letter-spacing: 0.1px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-family: $uhc-font-sans-bold;
+            line-height: 44px;
+            color: $uhc-tile-price;
+            padding-top: 3px;
+        }
+    }
+
+    .price-sign-in {
+        font-style: italic;
+        line-height: 21px;
+        padding-top: 5px;
+        letter-spacing: 0.1px;
+    }
+
+    .color-swatches .swatches {
+        a span {
+            width: 29px;
+            height: 29px;
+            background: #fff;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border: 1px solid rgba(0, 0, 0, 0.3);
+                z-index: 1;
+            }
+
+            img {
+                margin: -2px 0 0 -2px;
+                border: none;
+                width: calc(100% + 4px);
+                height: calc(100% + 4px);
+            }
+        }
+
+        > span a {
+            vertical-align: top;
+        }
+    }
+}
+
+.product-badge {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    padding: 0 8px;
+    background-color: $badge-bg;
+    color: $primary-col-2;
+    font-size: 14px;
+    line-height: 28px;
+
+    .product-detail & {
+        font-size: 16px;
+        line-height: 30px;
+    }
+}

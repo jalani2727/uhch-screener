@@ -1,0 +1,53 @@
+<isinclude template="/components/modules" sf-toolkit="off" />
+<isset name="hasExistingHearingTestData" value="${session.privacy.hearingTestDate && session.privacy.hearingTestDate !== null}" scope="page" />
+
+<div class="card ghost upload-hearing-test-card">
+    <div class="card-header upload-hearing-test-header">
+        <h2 class="card-header-custom shipment-header guest-greyed-header">${Resource.msg('heading.checkout.uploadhearingtest', 'checkout', null)}</h2>
+    </div>
+</div>
+
+<div class="card upload-hearing-test-section">
+    <div class="card-header">
+        <h2 class="card-header-custom">${Resource.msg('heading.checkout.uploadhearingtest', 'checkout', null)}</h2>
+    </div>
+    <div class="card-body">
+        <!-- Upload File -->
+        <form action="${URLUtils.url('Checkout-UploadHearingTest')}" class="upload-hearing-test-form" method="POST" name="hearingtest-result" has-recaptcha-v2 >
+            <div class="upload-file-container">
+                <span class="font-family-semi-bold">${Resource.msg('label.attach.file.info', 'hearingtest', null)}</span><sub>${Resource.msg('label.valid.file.formats', 'hearingtest', null)}</sub>
+                <div class="upload-file">
+                    <isif condition="${hasExistingHearingTestData}">
+                        <div class="existing-file-details">
+                            <span class="existing-file-uploaded-date file-upload-text">${pdict.userFirstName} ${Resource.msg('label.hearing-test-message', 'account', null)} ${session.privacy.hearingTestDate} <img class="check-mark-success" src="${URLUtils.staticURL('/images/hearing-test/checkmark.svg')}" alt="" /></span>
+                        </div>
+                    </isif>
+                    <div class="hearing-test-upload-file">
+                        <span class="file-name-container"></span>
+                        <span class="file-upload-label"
+                            <isif condition="${hasExistingHearingTestData}">
+                                style="display: none;"
+                            </isif>
+                        >${Resource.msg('label.file.upload', 'hearingtest', null)}</span>
+                        <span class="upload-file-error"></span>
+                        <input type="hidden" name="allowed-file-length" value="${pdict.allowedFileLength}"/>
+                        <img class="check-mark-success" src="${URLUtils.staticURL('/images/hearing-test/checkmark.svg')}" alt="" />
+                    </div>
+                    <label class="btn btn-outline-primary select-file-btn">
+                        <input type="file" id="hearing-test-file" name="hearing-test-file"  accept="${pdict.allowedTypes}" data-has-existing-test-data="${hasExistingHearingTestData}">
+                            ${Resource.msg('label.select.file', 'hearingtest', null)}
+                    </label>
+                </div>
+                <p class="upload-hearing-test-info">
+                    <iscontentasset aid="checkout-upload-hearing-test-info" />
+                </p>
+                 <p class="error-message-text" style="display: none;"
+                    data-mandatory-field-error-message="${Resource.msg('error.uploadhearing.filemandatoryerror', 'checkout', null)}"
+                    data-api-error-message="${Resource.msg('error.uploadhearing.apierror', 'checkout', null)}"></p>
+                <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
+                <button class="btn btn-primary btn-block submit-upload-hearing-test" type="submit" name="submit"
+                    value="submit-upload-hearing-test">${Resource.msg('button.title.shippingstage', 'checkout', null)}</button>
+            </div>
+        </form>
+    </div>
+</div>

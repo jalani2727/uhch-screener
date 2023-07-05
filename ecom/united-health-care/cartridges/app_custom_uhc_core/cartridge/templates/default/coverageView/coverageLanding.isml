@@ -1,0 +1,19 @@
+<isdecorate template="common/layout/page">
+    <isinclude template="/components/modules" sf-toolkit="off" />
+    <isif condition="${'healthPlanCheckEnable' in dw.system.Site.current.preferences.custom && dw.system.Site.current.preferences.custom.healthPlanCheckEnable}">
+    <isinclude url="${URLUtils.url('HealthPlan-Check')}"/>
+    </isif> 
+    
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/healthPlan.js');
+        assets.addCss('/css/viewCoverage.css');
+    </isscript>
+   
+    <isif condition="${customer.authenticated && (pdict.viewCoverageType !== 'default')}">
+        <isinclude template="coverageView/customerCoverage"/>
+    <iselse/>
+        <isinclude template="coverageView/guestCoverage"/>
+    </isif>
+
+</isdecorate>

@@ -1,0 +1,86 @@
+$hero-title-font-color: $primary-col-1;
+$hero-description-font-color: $body-text-color;
+
+@mixin hero-title-font {
+    font-family: $uhc-heading-font-1;
+    font-size: 26px;
+    line-height: 34px;
+    color: $hero-title-font-color;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+@mixin hero-description-font {
+    font-family: $uhc-font-sans-medium;
+    font-size: 16px;
+    line-height: 20px;
+    color: $hero-description-font-color;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 16px;
+        line-height: 23px;
+    }
+}
+
+.hero-container {
+    position: relative;
+
+    .image-content img {
+        width: 100%;
+    }
+
+    .text-content {
+        padding: 16px 16px 42px;
+        max-width: 90%;
+        margin: 0 auto;
+        background-color: $primary-col-2;
+        position: relative;
+        top: -32px;
+        border-bottom: 1px solid $uhc-section-border-color;
+
+        .hero-title {
+            @include hero-title-font;
+
+            max-width: 208px;
+            margin-bottom: 8px;
+        }
+
+        .hero-description {
+            @include hero-description-font;
+
+            margin-bottom: 20px;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        max-height: 30vw;
+        overflow: hidden;
+
+        .text-content {
+            padding: 36px 36px 42px;
+            position: absolute;
+            top: 50%;
+            left: calc((100% - 1242px) / 2);
+            transform: translateY(-50%);
+            border-bottom: none;
+
+            .hero-title {
+                max-width: 268px;
+                margin-bottom: 10px;
+            }
+
+            .hero-description {
+                max-width: 318px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

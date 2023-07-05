@@ -1,0 +1,12 @@
+{
+    "caches":[
+        {
+            "id":"JWT_Ease",
+            "expireAfterSeconds":600
+        },
+        {
+            "id":"JWT_Middleware",
+            "expireAfterSeconds":600
+        }
+    ]
+}

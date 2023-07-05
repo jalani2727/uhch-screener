@@ -1,0 +1,123 @@
+@import '~base/account/orderTrack';
+@import '../variables';
+
+$order-history-bold-color: $uhc-form-label;
+
+.page {
+    background-color: $uhc-white;
+}
+
+.order-history-header {
+    margin: 0 0 15px;
+
+    @include media-breakpoint-up(md) {
+        margin: 55px 0 40px;
+    }
+}
+
+.order-filter-dropdown {
+    margin-bottom: 8px;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 45px;
+    }
+}
+
+.fulfillment-info {
+    color: $order-history-bold-color;
+}
+
+.fulfillment-status-row {
+    p {
+        line-height: 20px;
+        margin-bottom: 12px;
+    }
+}
+
+.order-list-container {
+    @include media-breakpoint-up(md) {
+        max-width: 624px;
+    }
+
+    .order-history-date {
+        line-height: 20px;
+    }
+
+    .card-header > a.od-view-link {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+#order-history-card-items {
+    margin-top: 5px;
+
+    .order-history-order-items {
+        p {
+            margin-bottom: 10px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            margin-top: 24px;
+        }
+    }
+
+    .image-on-history {
+        width: 145px;
+    }
+}
+
+.od-bold-font {
+    font-family: $uhc-font-sans-bold;
+}
+
+.od-font-size-18 {
+    font-size: 18px;
+}
+
+.order-detail-page {
+    @include media-breakpoint-up(md) {
+        max-width: 624px;
+    }
+
+    .card-body {
+        line-height: 26px;
+    }
+
+    .line-item-attributes {
+        font-size: 16px;
+    }
+
+    .od-value {
+        font-size: 18px;
+        color: $uhc-form-label;
+    }
+}
+
+.summary-section-label,
+.grand-total {
+    font-size: 18px;
+    font-family: $uhc-font-sans-bold;
+    color: $uhc-form-label;
+}
+
+.leading-lines .start-lines span {
+    background-color: transparent;
+}
+
+.checkout-number-of-items {
+    line-height: 24px;
+    color: $uhc-form-label;
+    border-bottom: 1px solid $uhc-border-color;
+}
+
+.order-history-card-details ~ .order-history-card-details::before {
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 1px dashed $uhc-border-color;
+    margin: 0 10px 15px;
+}

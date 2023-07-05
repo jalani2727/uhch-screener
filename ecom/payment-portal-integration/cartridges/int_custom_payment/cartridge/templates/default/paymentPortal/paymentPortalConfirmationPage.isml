@@ -1,0 +1,67 @@
+<isdecorate template="common/layout/page">
+    <isinclude template="/components/modules" sf-toolkit="off" />
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/paymentPortal.js');
+        assets.addCss('/css/paymentPortal.css');
+    </isscript>
+     <div class="container payment-portal-container payment-portal-confirmation-page">
+        <div class="justify-content-center">
+            <div class="payment-portal-title-container text-center">
+                <h1 class="uhc-main-title-one uhc-blue">
+                    ${Resource.msg('title.payment-portal.confirmation', 'paymentportal', null)}
+                </h1>
+            </div>
+            <div class="payment-confirmation-msg-container text-center">
+                <iscontentasset aid="payment-portal-payment-confirmation" />
+            </div>
+            <div class="payment-confirmation-details">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="uhc-sans-600 uhc-blue">
+                            ${Resource.msgf('sub-title.invoice-number', 'paymentportal', null, pdict.invoiceData.invoiceId)}
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="payment-summary">
+                            <div class="payment-date">
+                                <div class="payment-label uhc-black-333 uhc-sans-700">${Resource.msg('label.payment-date', 'paymentportal', null)}</div>
+                                <span>${pdict.invoiceData.formattedTransactionDate}</span>
+                            </div>
+                            <div class="payment-label uhc-black-333 uhc-sans-700">${Resource.msg('label.payment', 'paymentportal', null)}</div>
+                            <div class="credit-cart-type">
+                                <span>${pdict.invoiceData.cardType}</span>
+                            </div>
+                            <div class="credit-cart-number">
+                                <span>${pdict.invoiceData.accountNumberMasked}</span>
+                            </div>
+                        </div>
+                        <div class="row total-amount-paid uhc-black-333 uhc-sans-700">
+                            <div class="col-6 px-0">${Resource.msg('label.total-paid', 'paymentportal', null)}</div>
+                            <div class="col-6 text-right px-0">${Resource.msgf('common.dollar.sign', 'paymentportal', null, pdict.invoiceData.paidAmount)}</div>
+                        </div>
+                        <div class="email-confirmation-container text-center">
+                            <iscontentasset aid="payment-portal-email-confirmation" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--- print-receipt button --->
+            <div class="btn-container-print-receipt">
+<button class="btn btn-block btn-primary btn-print-receipt mx-auto custom-datalayer" 
+                    data-name="${Resource.msg('label.adobe.payment-portal.print-receipt', 'paymentportal', null)}" 
+                    data-location="${Resource.msg('label.adobe.payment-portal.print-receipt-location', 'paymentportal', null)}" type="submit"                    name="printReceipt">
+                    ${Resource.msg('label.btn.print-receipt', 'paymentportal', null)}
+                </button>
+            </div>
+        </div>
+        
+        <!--- Send Email --->
+        <isif condition="${!empty(pdict.invoiceData.emailAddress)}">
+        <isinclude url="${URLUtils.url('PaymentPortal-SendEmail','emailAddress', pdict.invoiceData.emailAddress)}"/>
+        </isif>
+        
+    </div>
+
+</isdecorate>

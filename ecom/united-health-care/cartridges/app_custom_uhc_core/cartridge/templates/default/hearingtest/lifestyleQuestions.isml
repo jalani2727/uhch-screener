@@ -1,0 +1,61 @@
+<isdecorate template="common/layout/hearingtestpage">
+<isinclude template="/components/modules" sf-toolkit="off" />
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/hearingTest.js');
+        assets.addCss('/css/hearingTest.css');
+    </isscript>
+
+    <div class="container">
+        <div class="life-style-questions-form m-auto" data-url="${URLUtils.https('HearingTest-LifestyleSubmit')}">
+            <isloop items="${pdict.customObjects}" var="customObject" status="objectLoopState">
+                <div class="questionID ${customObject.custom.questionID !== pdict.lifestyleFirstQuestionsID ? 'd-none' : ''}" id="${customObject.custom.questionID}">
+                    <div class="ls-qus-box" <isif condition="${customObject.custom.questionImage !== null}"> style="background-image: url(${customObject.custom.questionImage.getAbsURL()})"</isif>>
+                        <isif condition="${customObject.custom.question !== '' && customObject.custom.question !== null}">
+                            <div class="life-style-questions-text">
+                                ${customObject.custom.question}
+                            </div>
+                        </isif>
+
+                        <div class="ls-input-wrapper">
+                            <div class="row m-0">
+                                <isloop items="${customObject.custom.answers}" var="answer" status="answersCount">
+                                    <isif condition="${customObject.custom.questionType == 'radio'}">
+                                        <div class="col-12 col-md my-2 my-md-0 p-0">
+                                            <label class="ls-radio-container d-flex align-items-center">
+                                                <input type="${customObject.custom.questionType}" name="question_${customObject.custom.questionID}" value="${answer}"/>
+                                                <span class="ls-checkmark"></span>
+                                                <div class="ls-radio-text position-relative text-center">${answer}</div>
+                                            </label>
+                                        </div>
+                                    <iselse/>
+                                        <div class="col-12 my-2 my-md-0 p-0">
+                                            <div class="custom-control custom-checkbox ls-checkbox">
+                                                <input id="${answersCount.index}" class="custom-control-input" type="${customObject.custom.questionType}" name="question_${customObject.custom.questionID}" value="${answer}"/>
+                                                <label class="custom-control-label" for="${answersCount.index}">
+                                                    ${answer}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </isif>
+                                </isloop>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ls-btn-wrapper text-center">                    
+                        <isif condition="${customObject.custom.previousQuestionID !== '' && customObject.custom.previousQuestionID !== null}">
+                            <button class="btn ls-back" id="back_${customObject.custom.previousQuestionID}" data-action="${customObject.custom.previousQuestionID}"></button>
+                        </isif>
+                        <isif condition="${customObject.custom.nextQuestionID !== '' && customObject.custom.nextQuestionID !== null}">
+                            <button class="btn ls-next disabled" id="next_${customObject.custom.nextQuestionID}" data-action="${customObject.custom.nextQuestionID}">${Resource.msg('lifestyle.next.btn', 'hearingtest', null)}</button>
+                        </isif>
+                    </div>
+                </div>
+            </isloop>
+            <div class="life-style-policy">
+                <iscontentasset aid="life-style-policy" />
+            </div>
+        </div>
+    </div>
+</isdecorate>

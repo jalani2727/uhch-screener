@@ -1,0 +1,226 @@
+$vc-sec-border: #6f6f6f;
+$vc-sec-bg: #f6f7f8;
+$vc-br-top: #d9dcdd;
+
+.view-coverage-page {
+    padding: 60px 175px;
+
+    @include media-breakpoint-down(sm) {
+        padding: 0 0 36px;
+    }
+
+    .btn-container {
+        margin-top: 19px;
+    }
+}
+
+.guest-coverage-title {
+    font-family: $uhc-font-serif;
+    font-size: 36px;
+    margin-bottom: 0;
+    line-height: 44px;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 26px;
+        line-height: 34px;
+    }
+}
+
+.guest-coverage-message {
+    margin-top: 19px;
+
+    @include media-breakpoint-down(sm) {
+        margin-top: 9px;
+    }
+}
+
+.vc-title {
+    font-size: 26px;
+    line-height: 34px;
+    margin: 24px 0 15px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 36px;
+        line-height: 44px;
+        margin: 63px 0 24px;
+    }
+}
+
+.vc-text {
+    font-size: 18px;
+    font-family: $uhc-font-sans-bold;
+    line-height: 24px;
+    color: $uhc-form-label;
+    margin-bottom: 15px;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 24px;
+    }
+}
+
+.vc-sub-title {
+    font-size: 22px;
+    font-family: $uhc-font-serif;
+    line-height: 34px;
+}
+
+.vc-section-two {
+    margin: 15px 0 26px;
+
+    @include media-breakpoint-up(md) {
+        margin: 50px 0 26px;
+    }
+}
+
+.vc-card {
+    border: 1px solid $uhc-border-color;
+    padding: 40px 15px 25px;
+
+    @include media-breakpoint-up(md) {
+        padding: 40px 23px 33px;
+    }
+
+    .vc-card-title {
+        font-size: 28px;
+        font-family: $uhc-font-serif;
+        line-height: 34px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid $vc-sec-border;
+    }
+
+    .vc-card-content {
+        border-bottom: 1px solid $vc-sec-border;
+        position: relative;
+
+        .vc-card-sub-title.title::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 18px;
+            width: 32px;
+            height: 32px;
+            margin: 0;
+            background-image: $toggle-arrow;
+            transform: rotate(180deg);
+            transition: 0.5s;
+        }
+
+        &.active .vc-card-sub-title.title::after {
+            transform: rotate(0deg);
+        }
+    }
+
+    .vc-card-sub-title {
+        font-size: 20px;
+        font-family: $uhc-font-sans-bold;
+        line-height: 24px;
+        padding: 23px 0;
+
+        &.title {
+            padding-right: 48px;
+        }
+    }
+
+    .vc-title-value {
+        color: $uhc-link-color;
+        white-space: nowrap;
+        font-size: 18px;
+
+        &.vc-ttile-benefits {
+            text-align: right;
+            white-space: normal;
+
+            @include media-breakpoint-down(md) {
+                width: 100px;
+            }
+        }
+    }
+
+    .vc-card-text {
+        padding-bottom: 23px;
+    }
+}
+
+.vc-section-four {
+    background: $vc-sec-bg;
+    margin: 50px 0;
+    padding: 20px 0 0;
+
+    @include media-breakpoint-up(md) {
+        padding: 80px 0 56px;
+    }
+
+    .vc-tile {
+        border: 1px solid $uhc-border-color;
+        height: 100%;
+        max-width: 408px;
+        margin: 0 auto;
+    }
+
+    .vc-tile-img {
+        height: 272px;
+    }
+
+    .vc-tile-bottom {
+        padding: 40px 20px;
+        height: calc(100% - 272px);
+
+        @include media-breakpoint-up(md) {
+            padding: 40px 40px 48px;
+        }
+    }
+
+    .vc-tile-title {
+        font-size: 22px;
+        font-family: $uhc-font-serif;
+        line-height: 34px;
+    }
+
+    .vc-tile-text {
+        line-height: 23px;
+        color: $uhc-form-label;
+        padding-bottom: 22px;
+
+        @include media-breakpoint-up(md) {
+            padding-bottom: 50px;
+        }
+    }
+}
+
+.vc-section-five {
+    max-width: 1053px;
+    padding-bottom: 50px;
+
+    @include media-breakpoint-up(md) {
+        padding-bottom: 78px;
+    }
+
+    .vc-section-five-title {
+        font-size: 28px;
+        font-family: $uhc-font-serif;
+        line-height: 36px;
+    }
+
+    ul.vc-section-five-list {
+        margin: 0;
+        padding: 29px 0 51px 25px;
+        color: $uhc-form-label;
+    }
+
+    .vc-section-five-right img {
+        max-width: 100%;
+    }
+}
+
+.vc-section-six {
+    padding: 37px 0 35px;
+    border-top: 1px solid $vc-br-top;
+
+    .vc-section-six-text {
+        font-size: 18px;
+        font-family: $uhc-font-sans-bold;
+        padding-bottom: 12px;
+        line-height: 20px;
+        color: $uhc-form-label;
+    }
+}

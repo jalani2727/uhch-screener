@@ -1,0 +1,164 @@
+.card-header h2,
+.card-header h3 {
+    font-size: 22px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 28px;
+    }
+}
+
+.my-account-details {
+    margin-bottom: 40px;
+
+    .card {
+        .card-body:not(.fulfillment-info) {
+            padding-bottom: 0;
+
+            dd {
+                font-family: $uhc-font-sans-bold;
+            }
+        }
+
+        &.paperless-settings,
+        &.view-coverage,
+        &.hearing-test {
+            .card-body {
+                padding-bottom: 20px;
+
+                .communication-options {
+                    margin-top: 22px;
+
+                    .communication-option-mail {
+                        margin-top: 15px;
+                    }
+
+                    .communication-option-label {
+                        padding-left: 11px;
+                    }
+                }
+            }
+        }
+
+        &.order-history {
+            .product-details-container {
+                .title-most-recent-order {
+                    font-family: $uhc-font-sans-bold;
+                    color: $uhc-black;
+                }
+
+                .img-fluid {
+                    width: 145px;
+                }
+
+                .product-details {
+                    @include media-breakpoint-up(lg) {
+                        padding-left: 0;
+                    }
+                }
+            }
+
+            .dashboard-order-card-footer-value {
+                font-family: $uhc-font-sans-bold;
+                font-size: 18px;
+            }
+        }
+
+        &.address-card {
+            .dashboard-cards-block-title {
+                color: $uhc-black;
+                font-family: $uhc-font-sans-bold;
+            }
+
+            .address-info {
+                line-height: 30px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .content-btn-margin {
+        margin-top: 22px;
+    }
+
+    .my-account-title {
+        margin: 20px 0 24px;
+
+        @include media-breakpoint-up(md) {
+            margin: 50px 0 30px;
+        }
+    }
+
+    .card-header a {
+        text-decoration: none;
+        font-family: $uhc-font-sans-semi-bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .change-password-btn {
+        margin: 40px auto;
+
+        @include media-breakpoint-down(sm) {
+            margin: 40px auto 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.address-book-card,
+.edit-address {
+    //this class is for .address-book-card and .edit-address
+    max-width: 624px;
+
+    //this class is for .address-book-card
+    .card {
+        padding: 22px 40px;
+        @include media-breakpoint-up(xs) {
+            padding: 22px 21px;
+        }
+    }
+
+    //this class is for .address-book-card
+    .address-info {
+        line-height: 30px;
+    }
+
+    //this class is for .address-book-card
+    .title-shipping-address,
+    .title-edit-address {
+        font-size: 36px;
+        color: $primary-col-1;
+        font-family: $uhc-font-serif;
+        margin: 50px auto 30px;
+    }
+
+    .remove-btn {
+        top: 40px;
+        background: transparent $remove-address-icon no-repeat center 28%;
+
+        .times-symbol {
+            display: none;
+        }
+    }
+}
+
+.btn-container {
+    margin-top: 41px;
+}
+
+.back-to-account-setting {
+    margin: 50px auto 78px;
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

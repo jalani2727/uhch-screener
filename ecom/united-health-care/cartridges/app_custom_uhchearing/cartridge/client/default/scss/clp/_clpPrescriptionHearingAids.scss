@@ -1,0 +1,110 @@
+.clp-hearing-aids-page {
+    .page-title {
+        font-size: 26px;
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 36px;
+        }
+    }
+
+    .section {
+        max-width: 1063px; // This is width is given to align the content as per the desired design
+        padding-bottom: 50px;
+        padding-top: 0;
+
+        @include media-breakpoint-up(md) {
+            padding-top: 60px;
+            padding-bottom: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 60px 0 0 100px;
+        }
+    }
+
+    .sub-section-heading {
+        font-size: 22px;
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 28px;
+        }
+    }
+
+    .sub-section-content {
+        padding-top: 24px;
+    }
+
+    .section-here-to-help {
+        background-color: $tints-col-4;
+
+        @include media-breakpoint-up(md) {
+            margin-top: 50px;
+        }
+
+        .sub-section-1 {
+            max-width: 1063px;
+            padding-top: 50px;
+            padding-bottom: 55px;
+
+            @include media-breakpoint-up(lg) {
+                padding: 47px 0 44px 100px;
+            }
+        }
+    }
+
+    .font-family-bold {
+        font-family: $uhc-font-sans-bold;
+        color: $uhc-form-label;
+    }
+
+    .link-styling {
+        color: $uhc-link-color;
+        font-family: $uhc-font-sans-bold;
+    }
+
+    .btn-container {
+        margin-top: 24px;
+    }
+
+    .btn-shop-by-type {
+        @include media-breakpoint-up(md) {
+            max-width: 177px;
+        }
+    }
+
+    .btn-shop-by-tech-level {
+        @include media-breakpoint-up(md) {
+            max-width: 270px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 24px;
+        }
+    }
+
+    .btn-shop-accessories {
+        @include media-breakpoint-up(md) {
+            max-width: 210px;
+        }
+    }
+
+    .btn-shop-supplies {
+        @include media-breakpoint-up(md) {
+            max-width: 182px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 24px;
+        }
+    }
+
+    .btn-width-100 {
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+    }
+}

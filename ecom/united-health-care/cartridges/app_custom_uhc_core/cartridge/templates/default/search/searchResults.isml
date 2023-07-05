@@ -1,0 +1,11 @@
+<isdecorate template="common/layout/page">
+    <isif condition="${'healthPlanCheckEnable' in dw.system.Site.current.preferences.custom && dw.system.Site.current.preferences.custom.healthPlanCheckEnable}">
+    <isinclude url="${URLUtils.url('HealthPlan-Check')}"/>
+    </isif>
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/search.js');
+        assets.addCss('/css/search.css');
+    </isscript>
+    <isinclude template="search/searchResultsNoDecorator" />
+</isdecorate>

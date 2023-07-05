@@ -1,0 +1,50 @@
+.provider-search-container {
+    margin: 40px 0 0;
+
+    button {
+        font-family: $uhc-font-sans-medium;
+        line-height: 16px;
+        height: 43px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin: 75px 0 60px;
+    }
+
+    .provider-search-option-section-2 {
+        margin-top: 35px;
+    }
+
+    .section-heading {
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+        font-size: 18px;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 22px;
+        }
+    }
+
+    .section-content {
+        margin-top: 10px;
+
+        p {
+            margin-bottom: 10px;
+        }
+    }
+
+    .submit-btn {
+        width: 100%;
+
+        @include media-breakpoint-up(lg) {
+            width: 117px;
+        }
+    }
+
+    .form-container input,
+    .form-container select {
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+        }
+    }
+}

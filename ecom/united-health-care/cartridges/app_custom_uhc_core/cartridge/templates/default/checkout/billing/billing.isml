@@ -1,0 +1,30 @@
+<div class="card ghost payment checkout-ghost-payment-on-login">
+    <div class="card-header billing-card-header">
+        <h2 class="card-header-custom billing-header guest-greyed-header">${Resource.msg('heading.payment', 'checkout', null)}</h2>
+    </div>
+</div>
+
+<div class="card payment-form">
+    <div class="card-header">
+        <h2 class="card-header-custom">${Resource.msg('heading.payment', 'checkout', null)}</h2>
+    </div>
+    <div class="card-body">
+        <div class="cart-error-messaging cart-error">
+            <isif condition="${pdict.valid === 'false'}">
+                <div class="alert alert-danger alert-dismissible upg-payment-decline-message valid-cart-error fade show" role="alert">
+                    ${pdict.errorMsg}
+                </div>
+            </isif>
+        </div>
+
+        <div class="payment-error-messaging cart-error d-none">
+            <div class="alert alert-danger alert-dismissible valid-cart-error fade show" role="alert">
+                ${Resource.msg('upg.payment.notavailable', 'checkout', null)}
+            </div>
+        </div>
+
+        <div class="payment-iframe-form">
+            <iframe src="${pdict.iframeUrl ? pdict.iframeUrl : ''}" id="card-iframe" title="title" width="100%" height="590" sandbox="allow-top-navigation allow-scripts allow-forms allow-same-origin"></iframe>
+        </div>
+    </div>
+</div>

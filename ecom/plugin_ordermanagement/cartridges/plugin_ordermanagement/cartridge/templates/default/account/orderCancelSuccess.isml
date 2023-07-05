@@ -1,0 +1,65 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/account/orderTrack.css');
+        assets.addCss('/css/account/profile.css');
+    </isscript>
+    <isset name="totals" value="${pdict.orderSummary.totals}" scope="page" />
+
+    <div class="hero slant-down account-image">
+        <h1 class="page-title">${Resource.msg('title.orders', 'orderDetails', null)}</h1>
+    </div>
+
+    <div class="container">
+        <!---Breadcrumbs--->
+        <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+
+        <div class="row">
+            <div class="col">
+                <h2>${Resource.msg('title.order.cancel.success','orderCancel',null)}</h2>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="cancelation-success cancelation-success-first-line">${Resource.msg('text.order.cancel.success1','orderCancel',null)}</p>
+
+                        <p class="cancelation-success cancelation-success-second-line">${Resource.msgf(
+                            'text.order.cancel.success2',
+                            'orderCancel',
+                            null,
+                            pdict.amount,
+                            pdict.orderSummary.billing.address.email)}</p>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header clearfix">
+                        <h2 class="pull-left">${Resource.msg('title.order.canceled.items','orderCancel',null)}</h2>
+                    </div>
+                    <div class="card-body">
+                        <isset name="orderItems" value="${pdict.orderItems}" scope="page" />
+                        <isinclude template="account/order/orderItems"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header clearfix">
+                        <h2 class="pull-left">${Resource.msg('title.order.updadted.total','orderCancel',null)}</h2>
+                    </div>
+                    <isinclude template="account/orderTotalSummary"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-account">
+            <a href="${pdict.exitLinkUrl}" title="${Resource.msg('link.orderdetails.myaccount','account',null)}" aria-label="${Resource.msg('link.orderdetails.myaccount','account',null)}">
+                ${pdict.exitLinkText}
+            </a>
+        </div>
+
+    </div>
+</isdecorate>

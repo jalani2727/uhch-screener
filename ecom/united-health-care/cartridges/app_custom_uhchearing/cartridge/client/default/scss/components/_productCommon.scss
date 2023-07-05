@@ -1,0 +1,115 @@
+$pdp-bold-font: $uhc-font-sans-bold;
+$alert-msg-font-color: $tints-col-3;
+$pdp-quantity-label-font-color: $uhc-form-label;
+
+.add-to-basket-alert {
+    font-family: $pdp-bold-font;
+    color: $alert-msg-font-color;
+    font-size: 16px;
+    animation: fade 8s linear forwards;
+
+    &.alert-danger {
+        background-color: $uhc-white;
+    }
+}
+
+.prices-add-to-cart-actions {
+    padding: 0;
+    @include media-breakpoint-up(sm) {
+        .price {
+            text-align: left;
+            font-family: $pdp-bold-font;
+            font-size: 20px;
+        }
+    }
+
+    .cart-and-ipay {
+        text-align: left;
+
+        .btn {
+            min-width: 193px;
+        }
+    }
+
+    .checkout-btn {
+        @include media-breakpoint-up(sm) {
+            width: 193px;
+        }
+    }
+}
+
+.primary-images {
+    .img-custom {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .carousel-inner {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: (100% - 20);
+    }
+
+    @include media-breakpoint-down(md) {
+        .carousel-inner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: (100% - 25);
+        }
+    }
+}
+
+.attributes {
+    .attribute {
+        &.quantity,
+        &.eartype {
+            color: $pdp-quantity-label-font-color;
+            font-size: 14px;
+        }
+
+        &.eartype {
+            padding: 0;
+        }
+
+        .quantity-select,
+        .eartype-select {
+            width: 250px;
+            @include media-breakpoint-down(xs) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.product-breadcrumb {
+    .breadcrumb-item {
+        a {
+            font-size: 14px;
+        }
+    }
+}
+
+.follow-up {
+    margin-top: 37px;
+}
+
+.description-and-detail {
+    .description {
+        @include media-breakpoint-down(xs) {
+            margin-bottom: 2em;
+        }
+    }
+
+    .product-manual {
+        margin-top: 24px;
+        line-height: 30px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 20px;
+        }
+    }
+}

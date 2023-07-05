@@ -1,0 +1,13 @@
+<div class="mb-sm-3">
+    <isif condition="${hasErrorMessages && !miniCart}">
+        <div class="error-message-text-container checkout-items-error-message-section">
+            <isloop items=${pdict.cartErrorMessages} var="message">
+                <p class="error-message-text">${message}</p>
+            </isloop>
+        </div>
+    </isif>
+    <a href="${URLUtils.https('Checkout-Begin')}"
+        class="btn btn-primary btn-block checkout-btn ${((pdict.valid && pdict.valid.error) || hasErrorMessages) ? "disabled" : ""}" role="button">
+        ${Resource.msg('button.checkout', 'cart', null)}
+    </a>
+</div>

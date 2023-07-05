@@ -1,0 +1,144 @@
+<isset name="miniCart" value="${false}" scope="page" />
+<isset name="hasErrorMessages" value="${pdict.cartErrorMessages && pdict.cartErrorMessages.length > 0}" scope="page" />
+
+<isdecorate template="common/layout/page">
+<isinclude template="/components/modules" sf-toolkit="off" />
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/cart.css');
+    </isscript>
+
+    <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+        <isinclude template="reporting/reportingUrls" />
+    </isif>
+
+    <div class="cart-error-messaging cart-error">
+        <isif condition="${pdict.valid && pdict.valid.error && pdict.items.length !== 0}">
+            <div class="alert alert-danger alert-dismissible valid-cart-error fade show" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                ${pdict.valid.message}
+            </div>
+        </isif>
+    </div>
+
+    <div class="container">
+        <h1 class="page-title">${Resource.msg('title.cart', 'cart', null)}</h1>
+        <div class="d-inline-block hidden-xs-down">
+            <a class="continue-shopping-link" href="${URLUtils.url('Home-Show')}"
+                title="${Resource.msg('link.continue.shopping', 'cart', null)}">
+                ${Resource.msg('link.continue.shopping', 'cart', null)}
+            </a>
+        </div>
+        <div class="row cart-header">
+            <div class="col">
+                <div class="number-of-items">${Resource.msgf('label.number.items.in.cart', 'cart', null, pdict.numItems)}
+                </div>
+            </div>
+        </div>
+        <hr class="no-margin-top">
+    </div>
+
+    <isif condition="${pdict.items.length === 0}">
+        <div class="container cart-empty">
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <h2>${Resource.msg('info.cart.empty.msg', 'cart', null)}</h2>
+                </div>
+            </div>
+        </div>
+    <iselse/>
+        <div class="container cart cart-page" data-otc-benefit-status="${pdict.OTCStatus}" data-otc-status-url="${pdict.OTCStatusURL}">
+            <div class="row">
+                <!---product cards--->
+                <div class="col-md-7">
+                    <div class="error-message-text-container line-item-error-message-section">
+                        <isloop items=${pdict.cartErrorMessages} var="message">
+                            <p class="error-message-text large-text">${message}</p>
+                        </isloop>
+                    </div>
+                    <div class="line-item-wrapper <isif condition="${hasErrorMessages}">error-box</isif>">
+                        <isloop items="${pdict.items}" var="lineItem">
+                            <isif condition="${lineItem.productType === 'bundle'}">
+                                <isinclude template="cart/productCard/cartBundleCard" />
+                            <iselse/>
+                                <isif condition="${lineItem.noProduct === true}">
+                                    <isinclude template="cart/productCard/uncategorizedCartProductCard" />
+                                <iselse/>
+                                    <isinclude template="cart/productCard/cartProductCard" />
+                                </isif>
+                            </isif>
+                        </isloop>
+                    </div>
+                </div>
+                <!---totals, and checkout actions--->
+                <div class="col-md-5 col-lg-4 offset-lg-1">
+                    <div class="totals mt-md-4">
+                        <!-- OTC Benefit application -->
+                        <div class="otc-benefit-status-container d-none d-sm-block">
+                            <iscontentasset aid="otc-benefit-application-messages" />
+                        </div>
+                        <isinclude template="cart/cartPromoCode" />
+                        <div class="coupons-and-promos">
+                            <isinclude template="cart/cartCouponDisplay" />
+                        </div>
+                        <div class="row total-block">
+                            <!-- OTC Benefit application -->
+                            <div class="otc-benefit-status-container col-lg d-sm-none">
+                                <iscontentasset aid="otc-benefit-application-messages" />
+                            </div>
+                            <div class="col-12">
+                                <isinclude template="cart/cartTotals" />
+                            </div>
+                            <isif condition="${!customer.authenticated}">
+                                <div class="col-12 authorization-container">
+                                    <a href="${URLUtils.https('Login-OAuthLogin', 'oauthLoginTargetEndPoint', 2)}" title="Create an account">${Resource.msg('content.create.account','cart',null)}</a> ${Resource.msg('content.or','cart',null)} <a href="${URLUtils.https('Login-OAuthLogin', 'oauthLoginTargetEndPoint', 2)}" title="Sign in">${Resource.msg('content.sign.in','cart',null)}</a> ${Resource.msg('content.complete.checkout','cart',null)}
+                                </div>
+                            </isif>
+                             <isif condition="${!customer.authenticated}">
+                                <div class="col-12 authorization-container">
+                                    <a class="btn btn-primary btn-block" href="${URLUtils.https('Login-OAuthLogin', 'oauthLoginTargetEndPoint', 2)}" title="Sign In">${Resource.msg('label.btn.sign.in','cart',null)}</a> 
+                                </div>
+                            </isif>
+                        </div>
+                        <div class="row">
+                            <isset name="isAARPValidCustomer" value="${false}" scope="page" />
+                            <isif condition="${customer.authenticated && !miniCart && ((session.privacy.AARP_Member && session.privacy.AARP_Member === 'true') || (session.privacy.customerType === 'UHCVerified'))}">
+                                <isset name="isAARPValidCustomer" value="${true}" scope="page" />
+                            </isif>
+
+                            <isif condition="${customer.authenticated && !isAARPValidCustomer}">
+                                <isinclude template="cart/aarpSubscriberIdForm" />
+                            </isif>
+                            
+                            <isif condition="${isAARPValidCustomer}">
+                                <div class="col-12 checkout-continue">
+                                    <isif condition="${customer.authenticated && isAARPValidCustomer}">
+                                        <isinclude template="cart/checkoutButtons" />
+                                    <iselse/>
+                                        <div class="row btn-container">
+                                            <div class="col-lg-6 col-md-12 col-sm-12 btn-container-create-account padding-top-btn-container">
+                                                <a href="${URLUtils.https('Login-OAuthLogin', 'oauthLoginTargetEndPoint', 2)}" class="btn btn-primary btn-width-100 btn-create-account" title="Create account">
+                                                    ${Resource.msg('label.btn.create.account','cart',null)}
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12 col-sm-12 btn-container-sign-in padding-top-btn-container">
+                                                <a href="${URLUtils.https('Login-OAuthLogin', 'oauthLoginTargetEndPoint', 2)}" class="btn btn-outline-primary btn-width-100">
+                                                    ${Resource.msg('label.btn.sign.in','cart',null)}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </isif>
+                                </div>
+                            </isif>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <isinclude template="cart/cartRemoveProductModal" />
+        </div>
+
+        <isinclude template="cart/cartRemoveCouponModal" />
+    </isif>
+</isdecorate>

@@ -1,0 +1,21 @@
+<div class="view-coverage-page">
+    <div class="container">
+        <h1 class="guest-coverage-title uhc-blue">
+            ${Resource.msg('guest.coverage.title','coverage',null)}
+        </h1>
+
+        <div class="guest-coverage-message">
+            <isif condition="${session.privacy.customerType === 'UHCNotVerified'}">
+                ${Resource.msg('guest.coverage.message','coverage',null)}
+            <iselse/>
+                ${Resource.msg('guest.coverage.review.message','coverage',null)}
+            </isif>
+        </div>
+
+        <div class="btn-container">
+            <a href="${URLUtils.https('HearingTest-Landing')}" class="btn btn-outline-primary">
+                ${Resource.msg('guest.coverage.button','coverage',null)}
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<span class="health-plan-main"
+    data-showmodel="${pdict.showmodel}"
+    data-heading="${Resource.msg('hearingplan.heading', 'hearingplan', null)}"
+    data-body="${Resource.msg('hearingplan.body', 'hearingplan', null)}"
+    data-accepttext="${Resource.msg('hearingplan.accept.text', 'hearingplan', null)}"
+    data-rejecttext="${Resource.msg('hearingplan.reject.text', 'hearingplan', null)}"
+    data-footertext="${Resource.msg('hearingplan.footer.text', 'hearingplan', null)}"
+    data-accept="${URLUtils.url('HealthPlan-SetPlan', 'healthplan', 'true')}"
+    data-reject="${URLUtils.url('HealthPlan-SetPlan', 'healthplan', 'false')}"
+    ></span> 

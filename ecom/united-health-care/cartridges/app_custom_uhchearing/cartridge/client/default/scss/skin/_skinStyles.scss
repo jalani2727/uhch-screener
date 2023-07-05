@@ -1,0 +1,111 @@
+body {
+    background-color: $uhc-white;
+}
+
+body,
+.card,
+.card-header,
+.hero {
+    font-family: $uhc-body-font;
+    color: $body-text-color;
+}
+
+.main-menu {
+    background-color: $uhc-sec-nav;
+}
+
+.btn {
+    border-radius: 30px;
+    font-size: 16px;
+    font-family: $uhc-btn-font;
+    line-height: 19px;
+    letter-spacing: 0.1px;
+    padding: 11px 20px;
+
+    &:hover {
+        color: $uhc-link-color;
+    }
+}
+
+.btn-primary {
+    background-color: $uhc-btn-primary;
+    border-color: $uhc-btn-primary;
+    color: $uhc-btn-primary-text;
+}
+
+.btn-primary:hover {
+    color: $uhc-btn-primary-hover-text;
+    border-color: $uhc-btn-primary-hover;
+    background-color: $uhc-btn-primary-hover;
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+    background-color: $uhc-btn-disabled;
+    border-color: $uhc-btn-disabled;
+    color: $uhc-btn-disabled-text;
+    opacity: 1;
+}
+
+.btn-outline-primary {
+    color: $uhc-btn-outline-primary-text;
+    border-color: $uhc-btn-outline-primary;
+    border-width: 2px;
+}
+
+.btn-outline-primary:hover {
+    color: $uhc-btn-outline-primary-hover-text;
+    background-color: $uhc-btn-outline-primary;
+    border-color: $uhc-btn-outline-primary;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $uhc-heading-font-1;
+}
+
+h4,
+h5,
+h6 {
+    font-family: $uhc-heading-font-2;
+}
+
+a {
+    color: $uhc-link-color;
+
+    &:hover {
+        color: $uhc-link-color;
+    }
+}
+
+.custom-select,
+.custom-select.form-control.is-invalid {
+    color: $uhc-select-color;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMC41OSAwLjU5MDAyN0w2IDUuMTcwMDNMMS40MSAwLjU5MDAyN0wwIDIuMDAwMDNMNiA4LjAwMDAzTDEyIDIuMDAwMDNMMTAuNTkgMC41OTAwMjdaIiBmaWxsPSIjNUE1QTVBIi8+Cjwvc3ZnPgo=);
+    background-size: 12px 8px;
+    background-position-x: calc(100% - 16px);
+}
+
+h1.page-title {
+    background: transparent;
+    color: $uhc-page-title;
+    font-size: 36px;
+    line-height: 44px;
+    margin: 20px 0;
+
+    @media (max-width: 768px) { // stylelint-disable-line
+        font-size: 26px;
+        line-height: 34px;
+        padding: 0;
+        margin: 0;
+    }
+
+    &::before {
+        display: none;
+    }
+}
+
+hr {
+    border-color: $uhc-border-color;
+}

@@ -1,0 +1,59 @@
+<isset name="orderDetailsPage" value="${false}" scope="page" />
+<div class="row justify-content-center">
+    <div class="col-sm-6">
+        <!---Profile--->
+        <isinclude template="account/profileCard"/>
+         
+        <!---Address Book--->
+        <isif condition="${pdict.account.preferredAddress}">
+            <isinclude template="account/addressBookCard"/>
+        </isif>
+    </div>
+
+    <div class="col-sm-6">
+         <!--View Coverage-->
+        <div class="card view-coverage">
+            <div class="card-header clearfix">
+                <h2 class="pull-left">${Resource.msg('label.view-coverage','account',null)}</h2>
+            </div>
+            <div class="card-body">
+                <div class="view-coverage-heading">${Resource.msg('content.view-coverage','account',null)}
+                </div>
+                <div class="content-btn-margin">
+                    <a href="${URLUtils.url('Coverage-Show')}" class="btn btn-outline-primary">
+                        ${Resource.msg('label.btn.view-coverage','account',null)}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--Hearing Test-->
+        <div class="card hearing-test">
+            <div class="card-header clearfix">
+                <h2 class="pull-left">${Resource.msg('label.hearing-test','account',null)}</h2>
+            </div>
+            <div class="card-body">
+                <div class="hearing-test-heading">${Resource.msg('content.hearing-test','account',null)}
+                </div>
+
+                <isif condition="${session.privacy.hearingTestDate && session.privacy.hearingTestDate !== null}">
+                    <div class="uploaded-file">
+                        ${pdict.account.profile.firstName} ${Resource.msg('label.hearing-test-message','account',null)} ${session.privacy.hearingTestDate} <img class="check-mark-success" src="${URLUtils.staticURL('/images/hearing-test/checkmark.svg')}" alt="" />
+                    </div>
+                </isif>
+
+                <div class="content-btn-margin">
+                    <a href="${URLUtils.url('HearingTest-UploadFile')}" class="btn btn-outline-primary">
+                        ${Resource.msg('label.btn.upload-file','account',null)}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!---Order History--->
+        <isif condition="${pdict.account.orderHistory}">
+            <isset name="order" value="${pdict.account.orderHistory}" scope="page"/>
+            <isinclude template="account/order/orderHistoryCard"/>
+        </isif>
+    </div>
+</div>

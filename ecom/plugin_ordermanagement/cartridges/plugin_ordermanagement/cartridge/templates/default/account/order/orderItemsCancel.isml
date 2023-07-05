@@ -1,0 +1,61 @@
+<isloop items="${groupedItem.orderItems.orderItems}" var="orderItem" status="itemsLoopState">
+    <isif condition="${pdict.orderCardContext === 'account' && itemsLoopState.count > 5}">
+        <isbreak/>
+    </isif>
+
+    <div class="row order-history-card-details">
+        <div class="col-1 form-group align-self-center order-history-card-check">
+            <div class="form-group order-cancel-select-all-form">
+                <div class="custom-control custom-checkbox">
+                    <input id="lineItem-${orderItem.orderItemSummaryId}"
+                        name="lineItemId-${orderItem.orderItemSummaryId}"
+                        data-price = ${orderItem.price}
+                        class="custom-control-input item-cancel-checkboxt-input"
+                        type="checkbox"
+                        value="${orderItem.sfccProductId}"
+                        <isif condition="${!orderItem.quantityAvailableToCancel || orderItem.quantityAvailableToCancel < 1}"> disabled="disabled"</isif>/>
+                    <label for="lineItem-${orderItem.orderItemSummaryId}" class="custom-control-label item-cancel-checkboxt-label"></label>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 form-group">
+            <img class="img-fluid"
+                src   = "${orderItem.images.small[0].url}"
+                alt   = "${orderItem.images.small[0].alt}"
+                title = "${orderItem.images.small[0].title}">
+        </div>
+        <div class="col-7 item-details form-group">
+            <p class="item-detail">
+                <isprint value="${orderItem.productName}"/>
+                <isif condition="${orderItem.quantity > 1}">
+                    ${Resource.msgf('label.order.item.x.quantity', 'orderDetails', null, orderItem.quantity)}
+                </isif>
+            </p>
+
+            <p class="item-detail"> ${orderItem.totalPrice} </p>
+
+            <isloop items="${orderItem.variationAttributes}" var="attribute">
+                <p class="line-item-attributes item-details">${attribute.displayName}: ${attribute.displayValue}</p>
+            </isloop>
+        </div>
+
+        <isif condition="${orderItem.quantityAvailableToCancel && orderItem.quantityAvailableToCancel > 1}">
+            <div class="col-11 offset-1 form-group required cancelation-count-form d-none" id="selectCount-form-lineItem-${orderItem.orderItemSummaryId}">
+                <label class="form-control-label">
+                    ${Resource.msg('label.order.cancel.number','orderCancel',null)}
+                </label>
+                <select class="form-control quantity custom-select cancelation-count" id="ccount-${orderItem.orderItemSummaryId}" name="ccount-${orderItem.orderItemSummaryId}">
+                    <isloop begin="1"
+                            end="${orderItem.quantityAvailableToCancel}"
+                            status="status">
+                        <isif condition="${orderItem.quantityAvailableToCancel === status.index}">
+                            <option selected="selected">${status.index}</option>
+                        <iselse/>
+                            <option>${status.index}</option>
+                        </isif>
+                    </isloop>
+                </select>
+            </div>
+        </isif>
+    </div>
+</isloop>

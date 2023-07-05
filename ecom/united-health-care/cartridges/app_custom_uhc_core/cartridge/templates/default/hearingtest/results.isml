@@ -1,0 +1,15 @@
+<isdecorate template="common/layout/hearingtestpage">
+    <isinclude template="/components/modules" sf-toolkit="off" />
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/hearingTest.js');
+        assets.addCss('/css/hearingTest.css');
+    </isscript>
+    <div class="hearing-test-results-page <isif condition=" ${!customer.authenticated}">adobe-form-event</isif>"
+        data-form-custom="${Resource.msg('label.adobe.oht.member', 'hearingtest', null)}">
+        <isslot id="hearingtest-result" description="Results Page Content for Hearing" context="global" />
+        <isslot id="hearingtest-createaccount" description="Content for creating Account" context="global" />
+        <isslot id="hearingtest-careoptions" description="Content for Caring based on results" context="global" />
+        <iscontentasset aid="hearingtest-simplesteps" />
+    </div>
+</isdecorate>

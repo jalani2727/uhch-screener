@@ -1,0 +1,7 @@
+@import '~base/account/account';
+@import '../variables';
+@import '~uhchearing/account/accountStyles';
+
+.my-account-details .card .card-body:not(.fulfillment-info) dd {
+    color: $uhc-black;
+}

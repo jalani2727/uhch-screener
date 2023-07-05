@@ -1,0 +1,21 @@
+<div class="inner">
+    <div class="left">
+        <div class="content">
+            <h2>${pdict.leftHeadline}</h2>
+            <isprint value="${pdict.leftParagraph}" encoding="off" />
+
+            <div class="cta">
+                <a href="${pdict.buttonLink}" class="primary button">
+                    ${pdict.buttonText}
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="content">
+            <div class="image">
+                <img src="${pdict.rightImage.src.desktop}" alt="${pdict.rightAlt ? pdict.rightAlt : imageName}" />
+            </div>
+        </div>
+    </div>
+</div>

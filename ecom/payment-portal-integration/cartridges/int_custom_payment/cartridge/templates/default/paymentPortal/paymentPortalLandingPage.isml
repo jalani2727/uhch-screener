@@ -1,0 +1,87 @@
+<isdecorate template="common/layout/page">
+    <isinclude template="/components/modules" sf-toolkit="off" />
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/paymentPortal.js');
+        assets.addCss('/css/paymentPortal.css');
+    </isscript>
+    <div class="container payment-portal-container payment-portal-landing-page" data-verify-captcha-error="${Resource.msg('error.msg.verify-captcha','paymentportal',null)}">
+        <div class="justify-content-center">
+            <div class="payment-portal-title-container text-center uhc-blue">
+                <h1 class="uhc-main-title-one">
+                    <iscontentasset aid="payment-portal-landing-page-title" />
+                </h1>
+            </div>
+            <div class="payment-portal-landing-form-container">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="uhc-blue uhc-sub-title">
+                            <iscontentasset aid="payment-portal-landing-form-title" />
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-info">
+                            <iscontentasset aid="payment-portal-landing-form-desc" />
+                        </div>
+                        <form action="${pdict.actionUrl}" class="payment-portal-landing-form adobe-form-event" data-name="${Resource.msg('label.adobe.payment-portal.landing-form', 'paymentportal', null)}" method="POST" name="paymentPortalLanding"
+                            has-recaptcha-v2 data-recaptchaenable="${pdict.recaptchaEnable}">
+                            <!-- Error Message Container -->
+                            <div class="form-group alert alert-danger error-msg d-none" role="alert"></div>
+                            <div class="form-group alert alert-danger error-change-in-cost d-none" role="alert">
+                                <iscontentasset aid="payment-portal-change-in-cost-error" />
+                            </div>
+
+                            <!--- Invoice number --->
+                            <div class="col px-0">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="invoice-number">
+                                        ${Resource.msg('label.input.invoice-number', 'paymentportal', null)}
+                                    </label>
+                                    <input type="text" required class="form-control required"
+                                        aria-describedby="form-invoice-number-error" id="invoice-number"
+                                        name="invoiceNumber" data-missing-error="${Resource.msg('error.msg.missing-required-field', 'paymentportal', null)}">
+                                    <div class="invalid-feedback" id="form-invoice-number-error"></div>
+                                </div>
+                            </div>
+
+                            <!--- Date of birth --->
+                            <div class="col px-0">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="user-dob">
+                                        ${Resource.msg('label.input.dateofbirth', 'paymentportal', null)}
+                                    </label>
+                                    <input type="date" required class="form-control required" max="${pdict.maxDate}"
+                                        aria-describedby="form-user-dob-error" id="user-dob" name="userDOB"
+                                        data-range-error="${Resource.msg('error.message.invalid-dob','forms',null)}" data-missing-error="${Resource.msg('error.msg.missing-required-field', 'paymentportal', null)}">
+                                    <div class="invalid-feedback" id="form-user-dob-error"></div>
+                                </div>
+                            </div>
+
+                           <!-- Recaptcha -->
+                            <isif condition="${pdict.recaptchaEnable}">
+                                <div class="captcha-container">
+                                    <div id="recaptcha-element"></div>
+                                    <div id="g-recaptcha-error" class="recaptcha-error"></div>
+                                </div>
+                            </isif>
+                            
+                            <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+                            <!--- continue button --->
+                            <div class="continue-btn-container">
+                            <button class="btn btn-block btn-primary continue-btn custom-datalayer"
+                                    data-name="${Resource.msg('label.adobe.payment-portal.submit', 'paymentportal', null)}"
+                                    data-location="${Resource.msg('label.adobe.payment-portal.submit-location', 'paymentportal', null)}" type="submit"
+                                    name="continue" value="continue">
+                                    ${Resource.msg('label.btn.continue', 'paymentportal', null)}
+                                </button>
+                            </div>
+                        </form>
+                        <isif condition="${pdict.recaptchaEnable}">
+                            <isinclude template="/recaptcha/recaptchaScript" />
+                        </isif>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

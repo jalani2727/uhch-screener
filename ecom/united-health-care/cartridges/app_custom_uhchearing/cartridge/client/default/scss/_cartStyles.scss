@@ -1,0 +1,249 @@
+$cart-btn-disable: #dadbdc;
+$valid-cart-error-bg: #fdf3f6;
+
+.number-of-items {
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 15px;
+
+    @include media-breakpoint-down(sm) {
+        text-align: center;
+    }
+}
+
+.continue-shopping-link {
+    font-family: $uhc-font-sans-semi-bold;
+}
+
+.cart-page {
+    margin-bottom: 80px;
+
+    .card {
+        padding: 0 0 10px;
+        margin-bottom: 21px;
+        border-bottom: 1px solid $uhc-border-color;
+        background: transparent;
+
+        @include media-breakpoint-down(sm) {
+            padding-bottom: 21px;
+            margin-bottom: 12px;
+        }
+    }
+
+    .item-image {
+        width: 146px;
+        height: 146px;
+        margin-right: 28px;
+
+        @include media-breakpoint-down(sm) {
+            width: 101px;
+            height: 101px;
+            margin-right: 13px;
+        }
+    }
+
+    .line-item-name {
+        font-family: $uhc-font-sans-bold;
+    }
+
+    .line-item-attributes,
+    .line-item-price-info,
+    .line-item-pricing-info {
+        font-size: 14px;
+        line-height: 23px;
+    }
+
+    .line-item-price-info {
+        margin-bottom: 13px;
+    }
+
+    .line-item-pricing-info {
+        margin-bottom: 6px;
+        vertical-align: top;
+    }
+
+    .quantity-form {
+        margin-top: 0;
+    }
+
+    .product-info .remove-product {
+        width: 20px;
+        height: 100%;
+        text-indent: -9999px;
+        background: transparent $close-blue no-repeat center 28%;
+        display: inline-block;
+    }
+
+    .price {
+        color: $uhc-black;
+    }
+
+    .price {
+        font-family: $uhc-font-sans-bold;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 28px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 16px;
+        }
+    }
+
+    .product-edit {
+        margin-top: 0;
+    }
+}
+
+.totals {
+    @include media-breakpoint-up(md) {
+        padding: 30px;
+        background: $tints-col-4;
+        align-self: self-start;
+    }
+
+    p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 26px;
+        color: $uhc-black;
+    }
+
+    .final-total p {
+        font-size: 18px;
+        font-family: $uhc-font-sans-bold;
+        margin-bottom: 17px;
+    }
+
+    .optional-promo {
+        color: $uhc-link-color;
+        padding-bottom: 16px;
+    }
+
+    .otc-benefit-status-container {
+        font-size: 14px;
+
+        img {
+            background-color: $white;
+            border-radius: 50%;
+            border: 1px solid $primary-col-1;
+            height: 22px;
+            padding: 1px;
+            width: 22px;
+        }
+    }
+}
+
+.coupon-block {
+    font-size: 16px;
+    line-height: 21px;
+    color: $uhc-form-label;
+    font-family: $uhc-font-sans-semi-bold;
+}
+
+.coupon-price-adjustment {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 14px;
+    font-family: $uhc-font-sans-semi-bold;
+}
+
+.coupon-code {
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.coupon-applied {
+    font-size: 16px;
+    line-height: 21px;
+    padding-right: 30px;
+    color: $uhc-form-label;
+    background: transparent $check-icon no-repeat center right;
+}
+
+.remove-coupon {
+    padding: 0;
+    color: $uhc-link-color;
+}
+
+.checkout-continue {
+    .checkout-btn.disabled {
+        border: 2px solid $cart-btn-disable;
+    }
+
+    .checkout-items-error-message-section {
+        margin-bottom: 20px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .coupons-and-promos {
+        margin-bottom: 20px;
+    }
+
+    .total-block {
+        background: $tints-col-4;
+        padding: 27px 0 10px;
+    }
+}
+
+.valid-cart-error {
+    min-height: 124px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $valid-cart-error-bg;
+}
+
+.coupon-error {
+    width: 180%;
+    color: $uhc-error;
+    font-size: 14px;
+}
+
+.applied-promotion-discount {
+    color: $uhc-black;
+}
+
+.duplicate-error {
+    font-size: 18px;
+    line-height: 20px;
+    color: $uhc-error;
+    padding-bottom: 20px;
+
+    .totals & {
+        font-size: 16px;
+    }
+}
+
+.error-box {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid $uhc-error;
+}
+
+.cart-page .error-box .card:last-child {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-empty {
+    min-height: 300px;
+}
+
+#removeProductModal,
+#removeCouponModal {
+    .modal-title {
+        color: $uhc-title;
+    }
+}
+
+.coupon-to-remove {
+    font-weight: bold;
+}
+
+.promo-code-btn {
+    color: $uhc-link-color;
+}

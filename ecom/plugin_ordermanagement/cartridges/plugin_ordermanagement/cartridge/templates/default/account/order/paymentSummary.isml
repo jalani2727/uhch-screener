@@ -1,0 +1,10 @@
+<div class="summary-details payment-summary">
+    <div class="summary-section-label payment-info-label">
+        ${Resource.msg('label.order.details.payment', 'orderDetails', null)}
+    </div>
+    <div class="payment-details">
+        <isprint value="${payment.CardCategory}"/> <isprint value="${payment.CardType}"/></br>
+        <isprint value="${payment.DisplayCardNumber}"/></br>
+        ${Resource.msg('label.order.details.payment.ending', 'orderDetails', null)} <isprint value="${payment.ExpiryMonth}" formatter="00"/> / <isprint value="${payment.ExpiryYear}" formatter="0000"/>
+    </div>
+</div>

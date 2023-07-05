@@ -1,0 +1,60 @@
+.shop-by-type-heading-primary {
+    font-family: $uhc-heading-font-1;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 34px;
+    color: $uhc-title;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+.shop-by-type-heading-secondary {
+    font-family: $uhc-heading-font-1;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 32px;
+    color: $uhc-title;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 28px;
+        line-height: 44px;
+    }
+}
+
+.shop-by-type-tile-title {
+    font-family: $uhc-heading-font-1;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 32px;
+    color: $uhc-title;
+
+    @include media-breakpoint-up(lg) {
+        line-height: 34px;
+    }
+}
+
+.shop-by-type-tile-description {
+    font-family: $uhc-body-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    @include media-breakpoint-up(lg) {
+        line-height: 23px;
+    }
+}
+
+.shop-by-type-tile-note {
+    font-family: $uhc-font-sans-bold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+}

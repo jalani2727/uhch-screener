@@ -1,0 +1,16 @@
+<div class="product-manual col-12 col-sm-6">
+    <isif condition="${!empty(product.productManualLink_en)}">
+        <div class="row product-manual-en ">
+            <a target="_blank" href="${URLUtils.httpsStatic(URLUtils.CONTEXT_CATALOG, 'masterCatalog_UHCHearing', '/pdfs/' + product.productManualLink_en)}" title="${Resource.msg('label.product.manual', 'product', null)}">
+                <isprint value="${Resource.msg('label.product.manual.en', 'product', null)}" encoding="off" />
+            </a>
+        </div>
+    </isif>
+    <isif condition="${!empty(product.productManualLink_es)}">
+        <div class="row product-manual-es">
+            <a href="${URLUtils.httpsStatic(URLUtils.CONTEXT_CATALOG, 'masterCatalog_UHCHearing', '/pdfs/' + product.productManualLink_es)}" target="_blank" title="${Resource.msg('label.product.manual', 'product', null)}">
+                <isprint value="${Resource.msg('label.product.manual.es', 'product', null)}" encoding="off" />
+            </a>
+        </div>
+    </isif>
+</div>

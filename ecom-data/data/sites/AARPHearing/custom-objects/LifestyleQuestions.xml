@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-objects xmlns="http://www.demandware.com/xml/impex/customobject/2006-10-31">
+    <custom-object type-id="LifestyleQuestions" object-id="UHC100">
+        <object-attribute attribute-id="answers">
+            <value>Yes</value>
+            <value>No</value>
+            <value>I'm not Sure</value>
+        </object-attribute>
+        <object-attribute attribute-id="nextQuestionID">UHC200</object-attribute>
+        <object-attribute attribute-id="question">Would you like to attend your hearing appointments using your smart phone/tablet from the comfort of your home, instead of going into a physical clinic?</object-attribute>
+        <object-attribute attribute-id="questionImage">images/lifestyle/UHC-Lifestyle_virtual-appt.jpg</object-attribute>
+        <object-attribute attribute-id="questionType">radio</object-attribute>
+    </custom-object>
+
+    <custom-object type-id="LifestyleQuestions" object-id="UHC200">
+        <object-attribute attribute-id="answers">
+            <value>Employer or Group</value>
+            <value>Dual Special Needs (D-SNP)</value>
+            <value>Medicaid</value>
+            <value>Medicare</value>
+            <value>I'm not sure</value>
+            <value>None</value>
+        </object-attribute>
+        <object-attribute attribute-id="nextQuestionID">UHC300</object-attribute>
+        <object-attribute attribute-id="previousQuestionID">UHC100</object-attribute>
+        <object-attribute attribute-id="question">What type of health insurance plan do you have?</object-attribute>
+        <object-attribute attribute-id="questionImage">images/lifestyle/UHC-Lifestyle_insurance.jpg</object-attribute>
+        <object-attribute attribute-id="questionType">radio</object-attribute>
+    </custom-object>
+
+    <custom-object type-id="LifestyleQuestions" object-id="UHC300">
+        <object-attribute attribute-id="answers">
+            <value>I maintain a busy lifestyle, travel, and/or actively work</value>
+            <value>I maintain a quiet lifestyle and/or rely on friends and family for transportation.</value>
+            <value>I'd like to think I'm trifty with my savings and look for the best value.</value>
+            <value>I'm savvy with my smartphone and Bluetooth® enabled devices</value>
+        </object-attribute>
+        <object-attribute attribute-id="nextQuestionID">Finish</object-attribute>
+        <object-attribute attribute-id="previousQuestionID">UHC200</object-attribute>
+        <object-attribute attribute-id="question">Which lifestyle best describe you (check all that apply):</object-attribute>
+        <object-attribute attribute-id="questionType">checkbox</object-attribute>
+    </custom-object>
+
+</custom-objects>

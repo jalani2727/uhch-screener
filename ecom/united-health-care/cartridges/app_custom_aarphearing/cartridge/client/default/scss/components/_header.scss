@@ -1,0 +1,20 @@
+$aarp-nav-black: #2d2d2d;
+
+.brand {
+    width: 170px;
+    margin-left: -85px;
+
+    @include media-breakpoint-up(md) {
+        width: 330px;
+        padding-top: 35px;
+        margin-left: 0;
+    }
+}
+
+.menu-toggleable-left {
+    &.in .nav-item .nav-link,
+    .secondary-menu li a,
+    .dropdown-link {
+        color: $aarp-nav-black;
+    }
+}

@@ -1,0 +1,52 @@
+.map-container {
+    position: relative;
+    min-height: 800px;
+
+    .recommended-provider-section {
+        display: flex;
+        align-items: center;
+        padding: 18px 20px;
+        background-color: $uhc-white;
+        max-width: 280px;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        img {
+            max-width: 24px;
+            margin-right: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 21px;
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .recommended-provider-tooltip {
+                display: block;
+            }
+        }
+    }
+
+    .recommended-provider-tooltip {
+        padding: 26px 22px;
+        background-color: $primary-col-2;
+        border: 1px solid $uhc-border-color;
+        border-radius: 5px;
+        position: absolute;
+        width: 680px;
+        top: 104px;
+        right: 30px;
+        display: none;
+
+        .box-heading {
+            display: block;
+            font-family: $uhc-font-sans-bold;
+            margin-bottom: 15px;
+        }
+    }
+}

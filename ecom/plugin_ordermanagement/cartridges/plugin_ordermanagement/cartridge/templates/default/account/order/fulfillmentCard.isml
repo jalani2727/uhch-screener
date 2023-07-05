@@ -1,0 +1,25 @@
+<isloop items="${groupedItems}" var="groupedItem" status="loopState">
+    <div class="card-body fulfillment-info ">
+        <div class="row fulfillment-status-row">
+            <div class="col">
+                <p>
+                    <a href="${URLUtils.https('Order-Details', 'orderSummaryId', groupedItem.orderSummaryId, 'fulfillmentId', groupedItem.id,
+                                            'fulfillmentStatus', groupedItem.status, 'orderID', order.sfccOrderNumber)}" aria-label="${groupedItem.a11yViewOrderDetailsText}">
+                        ${groupedItem.statusDisplayLabel}
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="row order-date-row">
+            <div class="col">
+                <p class='order-date'>
+                    ${Resource.msg('label.orderhistory.ordered.date.label','account',null)}
+                    <isprint value="${order.orderedDate}"/>
+                </p>
+            </div>
+        </div>
+        <isset name="orderItems" value="${groupedItem.orderItems.orderItems}" scope="page" />
+        <isinclude template="account/order/orderItems"/>
+    </div>
+</isloop>

@@ -1,0 +1,80 @@
+<isdecorate template="common/layout/hearingtestpage">
+<isinclude template="/components/modules" sf-toolkit="off" />
+
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/hearingTest.js');
+    assets.addCss('/css/hearingTest.css');
+</isscript>
+
+<div class="ls-form m-auto">
+    <div class="container">
+        <h1 class="life-style-guest-heading page-title-custom mb-2 pb-1">
+            ${Resource.msg('lifestyle.guest.heading', 'hearingtest', null)}
+        </h1>
+
+        <iscontentasset aid="lifestyle-guest-information" />
+
+        <div class="life-style-guest-accurate my-3 pt-1">
+            ${Resource.msg('lifestyle.guest.accurate', 'hearingtest', null)}
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <form action="${pdict.actionUrl}" data-action="${pdict.actionUrl}" class="life-style-guest-form adobe-form-event" data-name="${Resource.msg('label.adobe.oht.member', 'hearingtest', null)}" method="POST" name="life-style-quest-form">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group required">
+                                <label class="form-control-label" for="lifestyle-guest-first-name">
+                                    ${Resource.msg('label.input.lifestyle.guest.first.name', 'hearingtest', null)}
+                                </label>
+                                <input type="text" required class="form-control required"
+                                    aria-describedby="lifestyle-guest-first-name-error" id="lifestyle-guest-first-name"
+                                    name="lifestyleFirstName" value="">
+                                <div class="invalid-feedback" id="lifestyle-guest-first-name-error"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-group required">
+                                <label class="form-control-label" for="lifestyle-guest-last-name">
+                                    ${Resource.msg('label.input.lifestyle.guest.last.name', 'hearingtest', null)}
+                                </label>
+                                <input type="text" required class="form-control required"
+                                    aria-describedby="lifestyle-guest-last-name-error" id="lifestyle-guest-last-name"
+                                    name="lifestyleLastName" value="">
+                                <div class="invalid-feedback" id="lifestyle-guest-last-name-error"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-group required">
+                                <label class="form-control-label" for="lifestyle-guest-email">
+                                    ${Resource.msg('label.input.lifestyle.guest.email', 'hearingtest', null)}
+                                </label>
+                                <input type="email" required class="form-control required"
+                                    aria-describedby="lifestyle-guest-email-error" id="lifestyle-guest-email"
+                                    name="lifestyleEmail" value="">
+                                <div class="invalid-feedback" id="lifestyle-guest-email-error"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+                    <div class="row lifestyle-guest-submit my-4">
+                        <div class="col">
+                            <div class="form-group">
+                                <button class="btn btn-block btn-primary lifestyle-guest custom-datalayer" type="submit" 
+                                    data-name="${Resource.msg('label.adobe.member.info', 'hearingtest', null)}" 
+                                    data-location="${Resource.msg('label.adobe.online.hearing', 'hearingtest', null)}" 
+                                    name="submit" value="submit">
+                                    ${Resource.msg('label.button.lifestyle.guest.submit', 'hearingtest', null)}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <iscontentasset aid="lifestyle-guest-policy" />
+            </div>
+        </div>
+    </div>
+</div>
+</isdecorate>

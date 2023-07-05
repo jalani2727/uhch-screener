@@ -1,0 +1,2237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slot-configurations xmlns="http://www.demandware.com/xml/impex/slot/2008-09-08">
+    <slot-configuration slot-id="404-banner-m" context="global" configuration-id="404 banner" assigned-to-site="true">
+        <template>slots/content/giftcertificates.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="404-banner"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="account-banner-m" context="global" configuration-id="Account Banner" assigned-to-site="false">
+        <template>slots/content/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="request-appointment-confirmation" context="global" configuration-id="AuthenticatedUser" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-center section-separator confirmation-page-info"&gt;
+                &lt;p&gt;
+                    Our hearing team is working to confirm your benefits and help coordinate your care by matching you with a local provider.
+                &lt;/p&gt;
+                &lt;p class="font-family-bold"&gt;
+                   Keep an eye out in your inbox or mailbox for information about the provider so you can schedule your appointment.
+                &lt;/p&gt;
+                &lt;p&gt;
+                    We’ll let that provider know you’re coming and keep you informed about the process.
+                &lt;/p&gt;
+            &lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Registered"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cart-footer-m" context="global" configuration-id="CartFooterFeatured" assigned-to-site="true">
+        <description>Featured Products that display in the footer of the cart page, below the cart-actions buttons.</description>
+        <template>slots/product/product_listing.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">Featured Products</callout-msg>
+        <content>
+            <products>
+                <product product-id="25697682M"/>
+                <product product-id="25686544M"/>
+                <product product-id="25697087M"/>
+                <product product-id="793775370033M"/>
+                <product product-id="25697294M"/>
+                <product product-id="62516752M"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="hearingtest-createaccount" context="global" configuration-id="CreateAccount" assigned-to-site="true">
+        <description>Sign in or Create an Account on Hearing Test Results page</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="section-create-account"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="results-info-2-heading"&gt;Ready to move forward?
+        &lt;/div&gt;
+        &lt;div class="heading-content-separator"&gt;
+            &lt;a class="link-styling" href="$url('Login-OAuthLogin', 'oauthProvider', 'SFIDP', 'oauthLoginTargetEndPoint', 1)$"&gt;Sign in
+            &lt;/a&gt;
+            or 
+            &lt;a class="link-styling" href="$url('Login-OAuthLogin', 'oauthProvider', 'SFIDP', 'oauthLoginTargetEndPoint', 1)$"&gt;Create an account
+            &lt;/a&gt;
+            to view your coverage, pricing and select a provider.
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Unregistered"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="error-banner-m" context="global" configuration-id="Error Banner" assigned-to-site="false">
+        <template>slots/content/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cart-banner-m" context="global" configuration-id="Global cart slot" assigned-to-site="true">
+        <description>Global cart slot</description>
+        <template>slots/product/horizontalcarousel.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <callout-msg xml:lang="x-default">Take a look at one of these!</callout-msg>
+        <content>
+            <products>
+                <product product-id="P0150M"/>
+                <product product-id="013742000320M"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="provider-search-landing-content" context="global" configuration-id="Guest" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;p class="provider-search-description"&gt;
+UnitedHealthcare Hearing, you have access to more than 7000+ URAC accredited * hearing professionals nationwide. 
+&lt;a href="$url('Login-OAuthLogin', 'oauthProvider', 'SFIDP', 'oauthLoginTargetEndPoint', 1')$" class="link-inside-content-styling"&gt;
+            Sign in
+        &lt;/a&gt;
+to your member account or continue with our guest search to get started. When you choose a provider and request an appointment, you can complete a hearing test, talk with a hearing professional and get follow-up care and support.
+&lt;/p&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Unregistered"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="request-appointment-confirmation" context="global" configuration-id="GuestUser" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="col-12 text-center section-separator confirmation-page-info"&gt;
+                &lt;p&gt;
+                    Our hearing team is working to confirm your benefits and help coordinate your care by matching you with a local provider.
+                &lt;/p&gt;
+                &lt;p class="font-family-bold"&gt;
+                   Keep an eye out in your inbox or mailbox for information about the provider so you can schedule your appointment.
+                &lt;/p&gt;
+                &lt;p&gt;
+                    We’ll let that provider know you’re coming and keep you informed about the process.
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;a href="${URLUtils.https('Login-Show', 'action', 'register')}" class="link-inside-content-styling"&gt;Create an account&lt;/a&gt; or &lt;a href="${URLUtils.https('Login-Show', 'action', 'register')}" class="link-inside-content-styling"&gt;Sign in&lt;/a&gt; to view benefit info and more.
+                &lt;/p&gt;
+            &lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Unregistered"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="search-promo-m" context="global" configuration-id="New Slot Configuration - 2011-11-14 09:51:41" assigned-to-site="true">
+        <template>slots/content/homepage/home-bottom-slot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="folder-main-slot-m" context="folder" context-id="about-us" configuration-id="New Slot Configuration - 2014-12-31 11:14:21" default="true" assigned-to-site="false">
+        <description>default slot for about us page</description>
+        <template>slots/content/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="folder-slot"&gt;
+    &lt;h2&gt;
+        About Commerce Cloud
+    &lt;/h2&gt;
+    &lt;p&gt;
+It all started with a series of observations: eCommerce merchandising and marketing innovation is what generates the revenue, yet most operations are spending 80% of their budgets simply maintaining current infrastructure. The pace of ecommerce accelerates daily, yet most operations are scrambling to stand still. Merchandisers and marketers are supremely frustrated, spending more time chasing outsourced providers and internal IT organizations, than actually merchandising and marketing their own businesses. There had to be a better way.
+    &lt;/p&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="folder-main-slot-m" context="folder" context-id="customer-service" configuration-id="New Slot Configuration - 2014-12-31 11:43:32" default="true" assigned-to-site="false">
+        <template>slots/content/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="folder-slot"&gt;
+&lt;h2&gt;
+Customer Service
+&lt;/h2&gt;
+&lt;p&gt;
+Here you will find answers to your questions about shopping at our online store, your order, payment options and more. Simply select from the categories below for you complete information.
+&lt;/p&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="get-started-slot" context="global" configuration-id="New Slot Configuration - 2022-05-06 17:00:51" default="true" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container getting-started-container"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/getting-started-mobile.jpg?$staticlink$" /&gt; &lt;img alt="getting started image" src="images/homepage/getting-started-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;h2 class="getting-started-title"&gt;Affordable hearing aids and hearing care&lt;/h2&gt;
+
+&lt;div class="getting-started-description"&gt;
+&lt;p&gt;Have you noticed a change in your hearing? With UnitedHealthcare Hearing, you get the options, care and convenience to help make it easier to hear the sounds you've been missing.&lt;/p&gt;
+
+&lt;p&gt;Whether you're just beginning to notice a hearing loss or have been wearing hearing aids for years, UnitedHealthcare Hearing can meet you where you are in your journey to better hearing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a class="getting-started-button btn btn-outline-primary" href=""&gt;Get started&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="direction-slot" context="global" configuration-id="New Slot Configuration - 2022-05-10 16:51:30" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="sign-in-container"&gt;
+&lt;div class="sign-in-content container"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/computer-with-tablet-mobile.jpg?$staticlink$" /&gt; &lt;img alt="sign in image" src="images/homepage/computer-with-tablet-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;h2 class="sign-in-title"&gt;Sign in for a personalized view of your hearing benefits&lt;/h2&gt;
+
+&lt;div class="sign-in-info-items"&gt;
+&lt;div class="sign-in-info-item"&gt;
+&lt;p class="sign-in-info-title"&gt;Access your plan information&lt;/p&gt;
+
+&lt;p class="sign-in-info-description"&gt;Check out your hearing coverage&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="sign-in-info-item"&gt;
+&lt;p class="sign-in-info-title"&gt;Search for providers&lt;/p&gt;
+
+&lt;p class="sign-in-info-description"&gt;Find a hearing care professional in your area.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="sign-in-info-item"&gt;
+&lt;p class="sign-in-info-title"&gt;Search products and view pricing&lt;/p&gt;
+
+&lt;p class="sign-in-info-description"&gt;Discover hearing aids for your lifestyle and budget&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;button class="sign-in-button btn btn-primary"&gt;Sign in or create an account&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Unregistered"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="take-test-slot" context="global" configuration-id="New Slot Configuration - 2022-05-12 13:39:32" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="take-the-test-container container"&gt;
+&lt;div class="take-the-test-content"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/go-digital-mobile.jpg?$staticlink$" /&gt; &lt;img alt="Go digital image" src="images/homepage/go-digital-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;h3 class="take-the-test-title"&gt;Take a quick online hearing test to check for hearing loss and find a care option that&amp;rsquo;s right for you.&lt;/h3&gt;
+&lt;a class="btn btn-outline-primary" href="$url('HearingTest-Landing')$"&gt;Take the test&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="header-need-help" context="global" configuration-id="New Slot Configuration - 2022-05-30 18:37:23" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="header-needhelp"&gt;
+	Need Help? &lt;span&gt;Call 1-855-523-9355, TTY 711&lt;/span&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="footer-text-slot" context="global" configuration-id="New Slot Configuration - 2022-07-11 18:42:13" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container"&gt;
+    &lt;div class="footer-content"&gt;
+        &lt;p&gt;
+            This is not a Horizon BCBSNJ product. EPIC Hearing Healthcare underwrites and has sole financial responsibility for the Hearing Benefit product. EPIC is an independent company that does not provide Blue Cross Blue Shield products or services. Horizon Blue Cross Blue Shield of New Jersey is an independent license of the Blue Cross and Blue Shield Association. The Blue Cross® and Blue Shield® names and symbols are registered marks of the Blue Cross and Blue Shield Association. The Horizon® name and symbols are registered marks of Horizon Blue Cross Blue Shield of New Jersey.
+        &lt;/p&gt;
+        &lt;p&gt;
+            EPIC Hearing Healthcare supports Horizon Blue Cross Blue Shield of New Jersey in the administration of hearing plan benefits. EPIC Hearing Healthcare is independent from and not affiliated with the Horizon Blue Cross Blue Shield of New Jersey.
+        &lt;/p&gt;
+        &lt;p&gt;
+            Underwritten by Fidelity Security Life Insurance Company, Kansas City, MO. administered by Forrest T. Jones &amp;amp; Company. Policy No. HC-118/HC-119.
+        &lt;/p&gt;
+        &lt;p&gt;
+            Fully Insured Exclusions: No benefits will be paid for services or materials; Provided free of charge in the absence of insurance; payable under any Workers Compensation law or similar statutory authority; payable under any governmental plan or program whether Federal, State, or subdivisions thereof, except for medical assistance benefits under Title XIX of the Social Security Act (Medicaid); for the medical and/or surgical treatment of the internal or external structures of the ear(s); or provided by a Hearing Aid Dispenser; required by an employer as a condition of employment; or not prescribed by a Physician or Audiologist; for Hearing Aid batteries, cleaning supplies or accessories; or for ear protection devices or plugs; for Assistive Listening Devices; for replacement due to loss, theft or damage to the Hearing Aid. Termination of Coverage: The Insured's insurance will cease on the date the Policy ends; the end of the last period for which any required premium has been made; or the date the Insured is no longer eligible for insurance.
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_SOI"/>
+            <customer-group group-id="UHCH_medicare"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slot" context="category" context-id="shopproducts" configuration-id="New Slot Configuration - 2022-07-21 12:21:16" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="shop-hearing-aids-1"/>
+                <content-asset content-id="shop-hearing-aids-2"/>
+                <content-asset content-id="shop-hearing-aids-3"/>
+                <content-asset content-id="shop-hearing-aids-4"/>
+                <content-asset content-id="shop-hearing-aids-5"/>
+                <content-asset content-id="shop-hearing-aids-6"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slot" context="category" context-id="Prescription-Hearing-Aids" configuration-id="New Slot Configuration - 2022-07-21 12:22:51" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="prescription-hearing-aids-1"/>
+                <content-asset content-id="prescription-hearing-aids-2"/>
+                <content-asset content-id="prescription-hearing-aids-3"/>
+                <content-asset content-id="prescription-hearing-aids-4"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slot" context="category" context-id="Shop-by-Type" configuration-id="New Slot Configuration - 2022-07-21 17:22:44" default="true" assigned-to-site="true">
+        <template>slots/category/shopByType.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="bte"/>
+                <category category-id="ric"/>
+                <category category-id="ite"/>
+                <category category-id="itc"/>
+                <category category-id="cic"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-plp-slot" context="category" context-id="Over-the-Counter-Devices" configuration-id="New Slot Configuration - 2022-07-29 13:58:12" default="true" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="text-content"&gt;
+            &lt;div class="hero-title"&gt;Here to help&lt;/div&gt;
+            &lt;div class="hero-description"&gt;Our hearing care providers can recommend a hearing device to fit your hearing needs. Call today for a personalized recommendation.&lt;/div&gt;
+            &lt;div class="hero-phone"&gt;(866) XXX-XXXX&lt;/div&gt;
+        &lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-plp-slot" context="category" context-id="Accessories" configuration-id="New Slot Configuration - 2022-07-29 13:59:25" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="text-content"&gt;
+            &lt;div class="hero-title"&gt;Here to help&lt;/div&gt;
+            &lt;div class="hero-description"&gt;Our hearing care providers can recommend a hearing device to fit your hearing needs. Call today for a personalized recommendation.&lt;/div&gt;
+            &lt;div class="hero-phone"&gt;1-855-523-9355&lt;/div&gt;
+        &lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-plp-slot" context="category" context-id="Supplies" configuration-id="New Slot Configuration - 2022-07-29 14:00:04" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="text-content"&gt;
+            &lt;div class="hero-title"&gt;Here to help&lt;/div&gt;
+            &lt;div class="hero-description"&gt;Our hearing care providers can recommend a hearing device to fit your hearing needs. Call today for a personalized recommendation.&lt;/div&gt;
+            &lt;div class="hero-phone"&gt;(866) XXX-XXXX&lt;/div&gt;
+        &lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="noresult-banner-m" context="global" configuration-id="Noresult Banner" assigned-to-site="false">
+        <template>slots/content/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="placeorder-slot-m" context="global" configuration-id="Placeorder Slot" assigned-to-site="false">
+        <template>slots/content/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="404-promo-m" context="global" configuration-id="Promo Zune" default="true" assigned-to-site="true">
+        <description>Free Microsoft Zune with Purchase of $500 or More in Electronics</description>
+        <template>slots/content/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;p style="margin:10px 0 0 0"&gt;&lt;img height="139" width="350" alt="Free Microsoft Zune with Purchase of $500 or More in Electronics" src="images/slot/404-promo-zune.jpg?$staticlink$" /&gt;&lt;/p&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="provider-search-landing-content" context="global" configuration-id="Regiestered" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;p class="provider-search-description"&gt;
+UnitedHealthcare Hearing, you have access to more than 7000+ URAC accredited * hearing professionals nationwide.to your member account or continue with our guest search to get started. When you choose a provider and request an appointment, you can complete a hearing test, talk with a hearing professional and get follow-up care and support.
+&lt;/p&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Registered"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slot" context="category" context-id="Shop-by-Technology" configuration-id="Registered Customer" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="shop-by-technology-1"/>
+                <content-asset content-id="shop-by-technology-2"/>
+                <content-asset content-id="shop-by-technology-3"/>
+            </content-assets>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Registered"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="direction-slot" context="global" configuration-id="Registered Slot" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="direction-container"&gt;
+&lt;div class="direction-content container"&gt;
+&lt;div class="box"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/direction-1-mobile.jpg?$staticlink$" /&gt; &lt;img alt="Computer with tablet image" src="images/homepage/direction-1-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;h4 class="direction-title"&gt;Already have a hearing test?&lt;/h4&gt;
+
+&lt;p class="direction-description"&gt;Get a personalized recommendation on which hearing aid will work best when you upload a recent hearing test.&lt;/p&gt;
+&lt;a class="btn btn-primary" href="https://bgxl-001.sandbox.us01.dx.commercecloud.salesforce.com/on/demandware.store/Sites-UHCHearing-Site/default/HearingTest-UploadFile"&gt;Upload hearing test&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="box"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/direction-2-mobile.jpg?$staticlink$" /&gt; &lt;img alt="Piggy Bank image" src="images/homepage/direction-2-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;h4 class="direction-title"&gt;How much will hearing aids cost?&lt;/h4&gt;
+
+&lt;p class="direction-description"&gt;Understanding your health plan and knowing how much your hearing aid(s) will cost is important.&lt;/p&gt;
+&lt;a class="btn btn-primary" href=""&gt;View your coverage&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Registered"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="path-selection-slot" context="global" configuration-id="RegisteredUsers-Slot" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="path-selection-container"&gt;
+&lt;div class="path-selection-content container"&gt;
+&lt;h2&gt;Continue your path to better hearing&lt;/h2&gt;
+
+&lt;div class="paths"&gt;
+&lt;div class="path-content"&gt;&lt;img alt="Path selection desktop icon" class="path-image" src="images/homepage/path-selection-icon-2-clipboardchecked.png?$staticlink$" /&gt;
+&lt;p class="path-label"&gt;Choose a convenient care option&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="seperator-arrow"&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div class="path-content"&gt;&lt;img alt="Path selection location icon" class="path-image" src="images/homepage/path-selection-icon-3-location.png?$staticlink$" /&gt;
+&lt;p class="path-label"&gt;See a hearing professional&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="seperator-arrow"&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div class="path-content"&gt;&lt;img alt="Path selection location icon" class="path-image" src="images/homepage/path-selection-icon-5-upload-test.png?$staticlink$" /&gt;
+&lt;p class="path-label"&gt;Upload hearing test&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="seperator-arrow"&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div class="path-content"&gt;&lt;img alt="Path selection hear aid icon" class="path-image" src="images/homepage/path-selection-icon-4-hearaid.png?$staticlink$" /&gt;
+&lt;p class="path-label"&gt;Discover hearing aid brands and accessories&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Registered"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="registry-header-m" context="global" configuration-id="Registry Header" assigned-to-site="false">
+        <template>slots/content/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="get-started-slot" context="global" configuration-id="SOI-healthcare" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container getting-started-container"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/getting-started-mobile.jpg?$staticlink$" /&gt; &lt;img alt="getting started image" src="images/homepage/getting-started-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;div class="custom-logo-container"&gt;&lt;img alt="SOI-healthcare" class="custom-logo" src="images/homepage/SOI-State-of-Illinois_Microsite-logo.png?$staticlink$" title="SOI-healthcare" /&gt;&lt;/div&gt;
+&lt;h2 class="getting-started-title"&gt;Hearing health care designed for State of Illinois retirees.&lt;/h2&gt;
+
+&lt;div class="getting-started-description"&gt;
+&lt;p&gt;Have you noticed a change in your hearing? With UnitedHealthcare Hearing, you get the options, care and convenience to help make it easier to hear the sounds you've been missing.&lt;/p&gt;
+
+&lt;p&gt;Whether you're just beginning to notice a hearing loss or have been wearing hearing aids for years, UnitedHealthcare Hearing can meet you where you are in your journey to better hearing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a class="getting-started-button btn btn-outline-primary" href=""&gt;Get started&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_SOI"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="coverage-slot-1" context="global" configuration-id="Slot 1" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="coverage-hearing-test"/>
+                <content-asset content-id="coverage-find-provider"/>
+                <content-asset content-id="coverage-update-health-insurance"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="coverage-slot-2" context="global" configuration-id="Slot 2" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="coverage-alternative-approach"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="get-started-slot" context="global" configuration-id="UHCH_AllSavers" assigned-to-site="true">
+        <description>UHCH AllSavers introduction</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container getting-started-container"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/getting-started-mobile.jpg?$staticlink$" /&gt; &lt;img alt="getting started image" src="images/homepage/getting-started-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;div class="custom-logo-container"&gt;
+&lt;img class="custom-logo" alt="" src="" title="" /&gt;
+&lt;/div&gt;
+&lt;h2 class="getting-started-title"&gt;Hearing health care designed for All Savers members &lt;/h2&gt;
+
+&lt;div class="getting-started-description"&gt;
+&lt;p&gt;Have you noticed a change in your hearing? With UnitedHealthcare Hearing, you get the options, care and convenience to help make it easier to hear the sounds you've been missing.&lt;/p&gt;
+
+&lt;p&gt;Whether you're just beginning to notice a hearing loss or have been wearing hearing aids for years, UnitedHealthcare Hearing can meet you where you are in your journey to better hearing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a class="getting-started-button btn btn-outline-primary" href=""&gt;Get started&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_AllSavers"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="dynamic-phone-number" context="global" configuration-id="UHCH_AllSavers_phone" assigned-to-site="true">
+        <template>slots/html/dynamicPhonenumber.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">1-866-445-2079,</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_AllSavers"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="get-started-slot" context="global" configuration-id="UHCH_CT" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container getting-started-container"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/getting-started-mobile.jpg?$staticlink$" /&gt; &lt;img alt="getting started image" src="images/homepage/getting-started-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;div class="custom-logo-container"&gt;&lt;img alt="UHCH_CT" class="custom-logo" src="images/homepage/stateofconnecticut_new_image.png?$staticlink$" title="UHCH_CT" /&gt;&lt;/div&gt;
+
+&lt;h2 class="getting-started-title"&gt;Hearing health care designed for State of Connecticut or CT Partnership Plan retirees&lt;/h2&gt;
+
+&lt;div class="getting-started-description"&gt;
+&lt;p&gt;Have you noticed a change in your hearing? With UnitedHealthcare Hearing, you get the options, care and convenience to help make it easier to hear the sounds you've been missing.&lt;/p&gt;
+
+&lt;p&gt;Whether you're just beginning to notice a hearing loss or have been wearing hearing aids for years, UnitedHealthcare Hearing can meet you where you are in your journey to better hearing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a class="getting-started-button btn btn-outline-primary" href=""&gt;Get started&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_CT"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="dynamic-phone-number" context="global" configuration-id="UHCH_CT_phone" assigned-to-site="true">
+        <template>slots/html/dynamicPhonenumber.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">1-855-523-8355</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_CT"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="dynamic-phone-number" context="global" configuration-id="UHCH_Default" default="true" assigned-to-site="true">
+        <description>Default UHC phone number</description>
+        <template>slots/html/dynamicPhonenumber.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">1-855-523-9355</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="get-started-slot" context="global" configuration-id="UHCH_ERS" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container getting-started-container"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/getting-started-mobile.jpg?$staticlink$" /&gt; &lt;img alt="getting started image" src="images/homepage/getting-started-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;div class="custom-logo-container"&gt;&lt;img class="custom-logo" alt="UHCH_ERS" src="images/homepage/uhch_ers_logo%201.svg?$staticlink$" title="UHCH_ERS" /&gt;&lt;/div&gt;
+
+&lt;h2 class="getting-started-title"&gt;Hearing health care designed for HealthSelect Medicare Advantage Plan for Employees Retirement System of Texas members.&lt;/h2&gt;
+
+&lt;div class="getting-started-description"&gt;
+&lt;p&gt;Have you noticed a change in your hearing? With UnitedHealthcare Hearing, you get the options, care and convenience to help make it easier to hear the sounds you've been missing.&lt;/p&gt;
+
+&lt;p&gt;Whether you're just beginning to notice a hearing loss or have been wearing hearing aids for years, UnitedHealthcare Hearing can meet you where you are in your journey to better hearing.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;a class="getting-started-button btn btn-outline-primary" href=""&gt;Get started&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_ERS"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="dynamic-phone-number" context="global" configuration-id="UHCH_ERS_phone" assigned-to-site="true">
+        <template>slots/html/dynamicPhonenumber.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">1-877-482-4669</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_ERS"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="get-started-slot" context="global" configuration-id="UHCH_MCHCP" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container getting-started-container"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/getting-started-mobile.jpg?$staticlink$" /&gt; &lt;img alt="getting started image" src="images/homepage/getting-started-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;div class="custom-logo-container"&gt;&lt;img alt="UHCH_MCHCP" src="images/homepage/StateofMissouri_new_image.png?$staticlink$" class="custom-logo" title="UHCH_MCHCP" /&gt;&lt;/div&gt;
+
+&lt;h2 class="getting-started-title"&gt;Hearing health care designed for Missouri Consolidated Health Care Plan retirees.&lt;/h2&gt;
+
+&lt;div class="getting-started-description"&gt;
+&lt;p&gt;Have you noticed a change in your hearing? With UnitedHealthcare Hearing, you get the options, care and convenience to help make it easier to hear the sounds you've been missing.&lt;/p&gt;
+
+&lt;p&gt;Whether you're just beginning to notice a hearing loss or have been wearing hearing aids for years, UnitedHealthcare Hearing can meet you where you are in your journey to better hearing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a class="getting-started-button btn btn-outline-primary" href=""&gt;Get started&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_MCHCP"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="dynamic-phone-number" context="global" configuration-id="UHCH_MCHCP_phone" assigned-to-site="true">
+        <template>slots/html/dynamicPhonenumber.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">1-866-445-2071</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_MCHCP"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="get-started-slot" context="global" configuration-id="UHCH_SHBP" assigned-to-site="true">
+        <description>UHCH SHBP introduction</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container getting-started-container"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/getting-started-mobile.jpg?$staticlink$" /&gt; &lt;img alt="getting started image" src="images/homepage/getting-started-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;div class="custom-logo-container"&gt;&lt;img alt="UHCH_SHBP" class="custom-logo" src="images/homepage/shbp_new_image.png?$staticlink$" title="UHCH_SHBP" /&gt;&lt;/div&gt;
+
+&lt;h2 class="getting-started-title"&gt;Hearing health care designed for State Health Benefit Plan retirees&lt;/h2&gt;
+
+&lt;div class="getting-started-description"&gt;
+&lt;p&gt;If you've noticed a change in your hearing, you're not alone. Hearing loss is the third most common chronic condition among Americans, but it's also the most treatable.&lt;/p&gt;
+
+&lt;p&gt;Whether you're just beginning to notice a hearing loss or have been wearing hearing aids for years, UnitedHealthcare Hearing can meet you where you are in your journey to better hearing.&lt;/p&gt;
+
+&lt;p&gt;As part of your Group Medicare Advantage plan, you will receive:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Routine hearing exam: $0 copay every 12 months.&lt;/li&gt;
+	&lt;li&gt;Hearing aid allowance: Plan pays up to $1,000 every 4 years.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;a class="getting-started-button btn btn-outline-primary" href=""&gt;Get started&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_SHBP"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="dynamic-phone-number" context="global" configuration-id="UHCH_SHBP_phone" assigned-to-site="true">
+        <template>slots/html/dynamicPhonenumber.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">1-855-714-9490</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_SHBP"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="get-started-slot" context="global" configuration-id="UHCH_SNP" assigned-to-site="true">
+        <description>UHCH SNP</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container getting-started-container"&gt;
+&lt;div class="image-content"&gt;
+&lt;picture&gt; 
+&lt;source media="(max-width: 320px)" srcset="images/homepage/getting-started-mobile.jpg?$staticlink$" /&gt; 
+&lt;img alt="getting started image" src="images/homepage/getting-started-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;
+&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;div class="custom-logo-container"&gt;&lt;img alt="" class="custom-logo" src="" title="" /&gt;&lt;/div&gt;
+
+&lt;h2 class="getting-started-title"&gt;Hearing health care designed for
+UnitedHealthcare members&lt;/h2&gt;
+
+&lt;div class="getting-started-description"&gt;
+&lt;p&gt;If you've noticed a change in your hearing, you're not alone. Hearing loss is the third most common chronic condition among Americans, but it's also the most treatable.&lt;/p&gt;
+&lt;p&gt; With UnitedHealthcare Hearing, you'll get the options, care and convenience to help make it easier to hear the sounds you've been missing. Whether you're just beginning to notice a hearing loss or have been wearing hearing aids for years, UnitedHealthcare Hearing can meet you where you are in your journey to better hearing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a class="getting-started-button btn btn-outline-primary" href=""&gt;Get started&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_SNP"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="dynamic-phone-number" context="global" configuration-id="UHCH_SNP_phone" assigned-to-site="true">
+        <template>slots/html/dynamicPhonenumber.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">1-877-704-3384</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_SNP"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="dynamic-phone-number" context="global" configuration-id="UHCH_SOI_phone" assigned-to-site="true">
+        <template>slots/html/dynamicPhonenumber.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">1-877-706-1737</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_SOI"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="get-started-slot" context="global" configuration-id="UHCH_TRB" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container getting-started-container"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/getting-started-mobile.jpg?$staticlink$" /&gt; &lt;img alt="getting started image" src="images/homepage/getting-started-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;
+&lt;/div&gt;
+&lt;div class="text-content"&gt;
+&lt;div class="custom-logo-container"&gt;&lt;img alt="TRB logo" class="custom-logo" src="images/homepage/Connecticut_TRB_Logo.jpg?$staticlink$" title="TRB logo" /&gt;&lt;/div&gt;
+
+&lt;h2 class="getting-started-title"&gt;Hearing health care designed for Connecticut Teachers' Retirement Board retirees&lt;/h2&gt;
+
+&lt;div class="getting-started-description"&gt;
+&lt;p&gt;If you've noticed a change in your hearing, you're not alone. Hearing loss is the third most common chronic condition among Americans, but it's also the most treatable.&lt;/p&gt;
+
+&lt;p&gt;With UnitedHealthcare Hearing, you'll get the options, care and convenience to help make it easier to hear the sounds you've been missing. Whether you're just beginning to notice a hearing loss or have been wearing hearing aids for years, UnitedHealthcare Hearing can meet you where you are in your journey to better hearing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a class="getting-started-button btn btn-outline-primary" href=""&gt;Get started&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_TRB"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="dynamic-phone-number" context="global" configuration-id="UHCH_TRB_phone" assigned-to-site="true">
+        <template>slots/html/dynamicPhonenumber.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">1-866-445-2071</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_TRB"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="get-started-slot" context="global" configuration-id="UHCH_TRS" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container getting-started-container"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/getting-started-mobile.jpg?$staticlink$" /&gt; &lt;img alt="getting started image" src="images/homepage/getting-started-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;div class="custom-logo-container"&gt;&lt;img alt="UHCH_TRS" class="custom-logo" src="images/homepage/uhch_trs_logo%201.jpg?$staticlink$" title="UHCH_TRS" /&gt;&lt;/div&gt;
+
+&lt;h2 class="getting-started-title"&gt;&lt;font style="vertical-align: inherit;"&gt;&lt;font style="vertical-align: inherit;"&gt;Hearing health care designed for TRS-Care Medicare Advantage Plan retirees&lt;/font&gt;&lt;/font&gt;&lt;/h2&gt;
+
+&lt;div class="getting-started-description"&gt;
+&lt;p&gt;Have you noticed a change in your hearing? With UnitedHealthcare Hearing, you get the options, care and convenience to help make it easier to hear the sounds you've been missing.&lt;/p&gt;
+
+&lt;p&gt;Whether you're just beginning to notice a hearing loss or have been wearing hearing aids for years, UnitedHealthcare Hearing can meet you where you are in your journey to better hearing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a class="getting-started-button btn btn-outline-primary" href=""&gt;&lt;font style="vertical-align: inherit;"&gt;&lt;font style="vertical-align: inherit;"&gt;Get started&lt;/font&gt;&lt;/font&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_TRS"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="dynamic-phone-number" context="global" configuration-id="UHCH_TRS_phone" assigned-to-site="true">
+        <template>slots/html/dynamicPhonenumber.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">1-888-547-1374</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_TRS"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="get-started-slot" context="global" configuration-id="UHCH_employee" assigned-to-site="true">
+        <description>UHCH employee introduction</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container getting-started-container"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/getting-started-mobile.jpg?$staticlink$" /&gt; &lt;img alt="getting started image" src="images/homepage/getting-started-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;div class="custom-logo-container"&gt;&lt;img alt="" class="custom-logo" src="" title="" /&gt;&lt;/div&gt;
+
+&lt;h2 class="getting-started-title"&gt;Hearing health care designed for UnitedHealthcare members&lt;/h2&gt;
+
+&lt;div class="getting-started-description"&gt;
+&lt;p&gt;If you've noticed a change in your hearing, you're not alone. Hearing loss is the third most common chronic condition among Americans, but it's also the most treatable.&lt;/p&gt;
+
+&lt;p&gt;Whether you're just beginning to notice a hearing loss or have been wearing hearing aids for years, UnitedHealthcare Hearing can meet you where you are in your journey to better hearing.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;a class="getting-started-button btn btn-outline-primary" href=""&gt;Get started&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_employee"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="dynamic-phone-number" context="global" configuration-id="UHCH_employee_phone" assigned-to-site="true">
+        <template>slots/html/dynamicPhonenumber.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">1-866-926-6632</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_employee"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="get-started-slot" context="global" configuration-id="UHCH_hearing" assigned-to-site="true">
+        <description>UHCH hearing introduction</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container getting-started-container"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/getting-started-mobile.jpg?$staticlink$" /&gt; &lt;img alt="getting started image" src="images/homepage/getting-started-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;div class="custom-logo-container"&gt;
+&lt;img class="custom-logo" alt="" src="" title="" /&gt;
+&lt;/div&gt;
+&lt;h2 class="getting-started-title"&gt;Hearing care designed with you in mind.&lt;/h2&gt;
+
+&lt;div class="getting-started-description"&gt;
+&lt;p&gt;If you've noticed a change in your hearing, you're not alone. Hearing loss is the third most common chronic condition among Americans, but it's also the most treatable.&lt;/p&gt;
+
+&lt;p&gt;Whether you're just beginning to notice a hearing loss or have been wearing hearing aids for years, UnitedHealthcare Hearing can meet you where you are in your journey to better hearing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a class="getting-started-button btn btn-outline-primary" href=""&gt;Get started&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_hearing"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="get-started-slot" context="global" configuration-id="UHCH_medicare" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container getting-started-container"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/getting-started-mobile.jpg?$staticlink$" /&gt; &lt;img alt="getting started image" src="images/homepage/getting-started-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;div class="custom-logo-container"&gt;&lt;img class="custom-logo" alt="UHCH_medicare" src="images/homepage/uhch_ers_logo%201.svg?$staticlink$" title="UHCH_medicare" /&gt;&lt;/div&gt;
+
+&lt;h2 class="getting-started-title"&gt;Hearing health care designed for Horizon Blue Cross Blue Shield of New Jersey members&lt;/h2&gt;
+
+&lt;div class="getting-started-description"&gt;
+&lt;p&gt;Have you noticed a change in your hearing? With UnitedHealthcare Hearing, you get the options, care and convenience to help make it easier to hear the sounds you've been missing.&lt;/p&gt;
+
+&lt;p&gt;Whether you're just beginning to notice a hearing loss or have been wearing hearing aids for years, UnitedHealthcare Hearing can meet you where you are in your journey to better hearing.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;a class="getting-started-button btn btn-outline-primary" href=""&gt;Get started&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_medicare"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="dynamic-phone-number" context="global" configuration-id="UHCH_medicare_phone" assigned-to-site="true">
+        <template>slots/html/dynamicPhonenumber.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">1-855-523-9355</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_medicare"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="get-started-slot" context="global" configuration-id="UHCH_relate" assigned-to-site="true">
+        <description>UHCH relate introduction</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container getting-started-container"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/getting-started-mobile.jpg?$staticlink$" /&gt; &lt;img alt="getting started image" src="images/homepage/getting-started-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;
+&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;div class="custom-logo-container"&gt;&lt;img alt="Relate™ hearing aids" class="custom-logo" src="images/homepage/relate-logo.jpeg?$staticlink$" title="Relate™ hearing aids" /&gt;&lt;/div&gt;
+
+&lt;h2 class="getting-started-title"&gt;Relate&amp;trade; hearing aids&lt;/h2&gt;
+
+&lt;div class="getting-started-description"&gt;
+&lt;p&gt;If you've noticed a change in your hearing, you're not alone. Hearing loss is the third most common chronic condition among Americans, but it's also the most treatable.&lt;/p&gt;
+&lt;p&gt; With UnitedHealthcare Hearing, you'll get the options, care and convenience to help make it easier to hear the sounds you've been missing. Whether you're just beginning to notice a hearing loss or have been wearing hearing aids for years, UnitedHealthcare Hearing can meet you where you are in your journey to better hearing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a class="getting-started-button btn btn-outline-primary" href=""&gt;Get started&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_relate"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="dynamic-phone-number" context="global" configuration-id="UHCH_relate_phone" assigned-to-site="true">
+        <template>slots/html/dynamicPhonenumber.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">855-523-9355</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_relate"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="get-started-slot" context="global" configuration-id="UHCH_retiree" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="container getting-started-container"&gt;
+&lt;div class="image-content"&gt;&lt;picture&gt; &lt;source media="(max-width: 320px)" srcset="images/homepage/getting-started-mobile.jpg?$staticlink$" /&gt; &lt;img alt="getting started image" src="images/homepage/getting-started-desktop.jpg?$staticlink$" /&gt; &lt;/picture&gt;&lt;/div&gt;
+
+&lt;div class="text-content"&gt;
+&lt;div class="custom-logo-container"&gt;
+&lt;img class="custom-logo" alt="" src="" title="" /&gt;
+&lt;/div&gt;
+&lt;h2 class="getting-started-title"&gt;Hearing health care designed for UnitedHealthcare Group retirees&lt;/h2&gt;
+
+&lt;div class="getting-started-description"&gt;
+&lt;p&gt;Have you noticed a change in your hearing? With UnitedHealthcare Hearing, you get the options, care and convenience to help make it easier to hear the sounds you've been missing.&lt;/p&gt;
+
+&lt;p&gt;Whether you're just beginning to notice a hearing loss or have been wearing hearing aids for years, UnitedHealthcare Hearing can meet you where you are in your journey to better hearing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;a class="getting-started-button btn btn-outline-primary" href=""&gt;Get started&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_retiree"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="dynamic-phone-number" context="global" configuration-id="UHCH_retiree_phone" assigned-to-site="true">
+        <template>slots/html/dynamicPhonenumber.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">1-866-445-2071</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="UHCH_retiree"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="path-selection-slot" context="global" configuration-id="Unregistered-Users-Slot" assigned-to-site="true">
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="path-selection-container"&gt;
+            &lt;div class="path-selection-content container"&gt;
+                &lt;h2&gt;Start your path to better hearing&lt;/h2&gt;
+                &lt;div class="paths"&gt;
+                    &lt;div class="path-content"&gt;
+                        &lt;img class="path-image" src="images/homepage/path-selection-icon-1-desktop.png?$staticlink$"
+                            alt="Path selection desktop icon" /&gt;
+                        &lt;p class="path-label"&gt;Take the online hearing test&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="seperator-arrow"&gt;&lt;/div&gt;
+                    &lt;div class="path-content"&gt;
+                        &lt;img class="path-image"
+                            src="images/homepage/path-selection-icon-2-clipboardchecked.png?$staticlink$"
+                            alt="Path selection clipboard checked icon" /&gt;
+                        &lt;p class="path-label"&gt;Choose a convenient care option&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="seperator-arrow"&gt;&lt;/div&gt;
+                    &lt;div class="path-content"&gt;
+                        &lt;img class="path-image" src="images/homepage/path-selection-icon-3-location.png?$staticlink$"
+                            alt="Path selection location icon" /&gt;
+                        &lt;p class="path-label"&gt;See a hearing professional&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="seperator-arrow"&gt;&lt;/div&gt;
+                    &lt;div class="path-content"&gt;
+                        &lt;img class="path-image" src="images/homepage/path-selection-icon-4-hearaid.png?$staticlink$"
+                            alt="Path selection hear aid icon" /&gt;
+                        &lt;p class="path-label"&gt;Discover hearing aid brands and accessories&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Unregistered"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="wishlist-banner-m" context="global" configuration-id="Wishlist Banner" assigned-to-site="false">
+        <template>slots/content/htmlSlotContainer.isml</template>
+        <enabled-flag>false</enabled-flag>
+        <content>
+            <html/>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slotbottom2-m" context="category" context-id="womens" configuration-id="WomensSubCatProducts" default="true" assigned-to-site="false">
+        <description>Products from sub categories of Womens</description>
+        <template>slots/product/cat_product_listing.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <products>
+                <product product-id="799927735422M"/>
+                <product product-id="013742002898M"/>
+                <product product-id="701643472376M"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="error-promo-m" context="global" configuration-id="Zune Promo Image" assigned-to-site="true">
+        <template>slots/content/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;p style="margin:10px 0 0 0"&gt;&lt;img height="139" width="350" alt="Free Microsoft Zune With Purchase Of $500 Or More In Electronics" src="images/slot/404-promo-zune.jpg?$staticlink$" /&gt;&lt;/p&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cart-empty-m" context="global" configuration-id="cartempty-lastvisited" assigned-to-site="true">
+        <description>Slot for products which displays below the empty cart message.</description>
+        <template>slots/product/product_listing.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">Product Recommendations</callout-msg>
+        <content>
+            <products>
+                <product product-id="640188017003M"/>
+                <product product-id="013742003048M"/>
+                <product product-id="095068990509M"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="electronic-games" configuration-id="electronic-games" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="electronic-games"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="electronics-televisions-flat-screen" configuration-id="electronics-FlatTV" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="electronics-televisions-flat-screen"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="electronics-digital-cameras" configuration-id="electronics-cameras" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="electronics-digital-cameras"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="electronics-game-consoles" configuration-id="electronics-gameconsoles" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="electronics-game-consoles"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="electronics-gaming" configuration-id="electronics-gaming" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="electronics-gaming"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="electronics-gps-units" configuration-id="electronics-gps" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="electronics-gps-units"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="electronics-digital-media-players" configuration-id="electronics-mp3" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="electronics-digital-media-players"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slotbottom-m" context="category" context-id="electronics" configuration-id="electronics-products" default="true" assigned-to-site="true">
+        <description>Products from electronics categories.</description>
+        <template>slots/product/cat_product_listing.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">Latest Products</callout-msg>
+        <content>
+            <products>
+                <product product-id="vizio-vw46lfM"/>
+                <product product-id="sony-cybershot-t77M"/>
+                <product product-id="microsoft-zune120M"/>
+                <product product-id="easports-nascar-09-ps3M"/>
+                <product product-id="garmin-foretrex-101M"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="electronics-televisions-projection" configuration-id="electronics-projectionTV" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="electronics-televisions-projection"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slotbanner-m" context="category" context-id="electronics" configuration-id="electronics-subcategories" default="true" assigned-to-site="true">
+        <description>Subcategory tiles for electronics.</description>
+        <template>slots/category/categoryTile.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="electronics-televisions"/>
+                <category category-id="electronics-digital-cameras"/>
+                <category category-id="electronics-digital-media-players"/>
+                <category category-id="electronics-gps-units"/>
+                <category category-id="electronics-gaming"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="electronics-televisions" configuration-id="electronics-tv" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="electronics-televisions"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="footer-column-m" context="global" configuration-id="footer-social-email" assigned-to-site="true">
+        <description>Footer slot containing the social icons and email form.</description>
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="footer-social-email"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-bottom-center-m" context="global" configuration-id="free-shipping-orders-over-150" assigned-to-site="true">
+        <description>This is the free shipping promotion slot at the bottom of the home page.</description>
+        <template>slots/content/homepage/home-bottom-center.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="home-free-shipping-orders-over-150"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="header-banner-m" context="global" configuration-id="free2dayshiporderover300" default="true" assigned-to-site="true">
+        <description>HTML slot for Free 2 Day Shipping</description>
+        <template>slots/content/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="header-promotion"&gt;&lt;strong&gt;FREE 2-Day SHIPPING&lt;/strong&gt; FOR ORDERS OVER $300&lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="hearingtest-result" context="global" configuration-id="good" assigned-to-site="true">
+        <description>When the hearing test result is Good</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="section-hearing-test-results-1"&gt;
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm-12 col-md-12 col-lg-12 your-results-heading"&gt;Your results&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-2 col-lg-2 result-guage-bar"&gt;&lt;img alt="good-hearing" src="hearing-test/good-hearing_gauge-bar.png?$staticlink$" title="good-hearing" /&gt;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-10 col-lg-10 result-details"&gt;
+&lt;div class="your-test-result-heading"&gt; Your test results indicate that you have:&lt;/div&gt;
+&lt;div class="your-test-result"&gt; Good hearing&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-12 results-info-1"&gt;While you may not have hearing loss today, there are many stages of hearing loss and it may naturally decline as you get older. It's important to take steps to help minimize your degree of hearing loss. We recommend exploring solutions that may help enhance your hearing in noisy environments or improve the clarity of your conversations on phone calls or at a busy restaurant. It's never too early to start talking about your hearing health.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="GoodHearing"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="hearingtest-careoptions" context="global" configuration-id="goodhearing-careoptions" assigned-to-site="true">
+        <description>Care options when the hearing test result is Good</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="section-hearing-test-results-2"&gt;
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm-12 col-md-12 col-lg-12"&gt;
+&lt;div class="section-2-sub-heading"&gt;My care options&lt;/div&gt;
+
+&lt;div class="heading-content-separator"&gt;We recommend you schedule an in-person appointment so you can discuss your hearing health with a hearing professional and determine if hearing loss exists. With the help of a professional, you can explore solutions that may help enhance your hearing in noisy environments or improve the clarity of your conversations. Or, if you feel confident your hearing loss is minimal, consider an over-the-counter product and start shopping today.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row custom-card-container"&gt;
+&lt;div class="col-sm-12 col-md-12 col-lg-6"&gt;
+&lt;div class="custom-card mx-auto"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm-12 col-md-12 col-lg-1 hidden-md-down"&gt;&lt;img alt="user_icon" src="hearing-test/user_icon.svg?$staticlink$" title="user_icon" /&gt;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-11 custom-card-heading"&gt;In person care&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-1 hidden-md-down"&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-11 heading-content-separator"&gt;If you want to learn more about hearing health, or think you may have hearing loss, the best place to start is with a hearing professional.&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-1 hidden-md-down"&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-11 btn-container"&gt;
+&lt;div&gt;&lt;a class="btn btn-outline-primary mt-3" href="$url('ProviderSearch-Show')$"&gt;&lt;button class="btn btn-primary"&gt;Find a provider&lt;/button&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;div&gt;&lt;button class="btn btn-outline-primary margin-top-20"&gt;Discover in-person care&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-6 card-container-separator-top"&gt;
+&lt;div class="custom-card mx-auto"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm-12 col-md-12 col-lg-1 hidden-md-down"&gt;&lt;img alt="user_icon" src="hearing-test/user_icon.svg?$staticlink$" title="user_icon" /&gt;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-11 custom-card-heading"&gt;Shop over the counter&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-1 hidden-md-down"&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-11 heading-content-separator"&gt;Hearing aids aren&amp;rsquo;t just for people with hearing loss. Shop products to help enhance the clarity of your conversations.&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-1 hidden-md-down"&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-11 btn-container"&gt;
+&lt;div&gt;&lt;button class="btn btn-outline-primary"&gt;Shop&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="section-hearing-test-learn-more"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="section-2-sub-heading"&gt;Learn more&lt;/div&gt;
+        &lt;div class="heading-content-separator"&gt;
+            Learn what to expect for your hearing test. Plus, find out how to prepare and how often you should get tested. Once your hearing test is complete, you’ll have the chance to review the results with a hearing professional.
+        &lt;/div&gt;
+        &lt;div class="link-styling uhc-sans-700 margin-top-20"&gt;Read more about hearing loss &gt;&lt;/div&gt;
+        &lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="GoodHearing"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slot" context="category" context-id="Shop-by-Technology" configuration-id="guest" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="shop-by-technology-1"/>
+                <content-asset content-id="shop-by-technology-2"/>
+                <content-asset content-id="shop-by-technology-4"/>
+            </content-assets>
+        </content>
+        <customer-groups>
+            <customer-group group-id="Unregistered"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-bottom-left-m" context="global" configuration-id="home-bottom-womens-shoes" default="true" assigned-to-site="false">
+        <description>The slot displays on the bottom left of the home page.</description>
+        <template>slots/content/homepage/home-bottom-left.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="home-bottom-womens-shoes"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-categories-m" context="global" configuration-id="home-categories" default="true" assigned-to-site="true">
+        <description>Category links and images for the home page.</description>
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="home-categories"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-product-set-m" context="global" configuration-id="home-product-set" default="true" assigned-to-site="true">
+        <description>homepage product set(Spring Has Sprung) slot</description>
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="home-product-set-content"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-products-m" context="global" configuration-id="home-products" default="true" assigned-to-site="true">
+        <description>Homepage product tiles slot.</description>
+        <template>slots/product/homePageProductSlot.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <products>
+                <product product-id="701644329402M"/>
+                <product product-id="701644391737M"/>
+                <product product-id="750518699578M"/>
+                <product product-id="25519318M"/>
+                <product product-id="013742003154M"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-main-m" context="global" configuration-id="homepage-main-image" default="true" assigned-to-site="true">
+        <description>Homepage main home page image</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="hero-container"&gt;
+        &lt;div class="image-content"&gt;
+            &lt;picture&gt;
+                &lt;source media="(max-width: 320px)" srcset="images/homepage/hero-banner-mobile.png?$staticlink$" /&gt;
+                &lt;img src="images/homepage/hero-banner-desktop.png?$staticlink$" alt="hero banner image" /&gt;
+            &lt;/picture&gt;
+        &lt;/div&gt;
+        &lt;div class="text-content"&gt;
+            &lt;h1 class="hero-title"&gt;Find the care that fits&lt;/h1&gt;
+            &lt;p class="hero-description"&gt;Your hearing health. Your way. Take a quick online hearing test, then
+                explore our convenient care options to see which one is right for you. &lt;/p&gt;
+            &lt;a class="btn btn-primary hero-button" href="$url('HearingTest-Landing')$"&gt;Take the test&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slotbanner-m" context="category" context-id="mens" configuration-id="mens" assigned-to-site="true">
+        <description>Default banner for mens category landing page</description>
+        <template>slots/category/catLandingBanner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="mens"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="mens-accessories" configuration-id="mens-accessories" default="true" assigned-to-site="true">
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="mens-accessories"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="mens-clothing" configuration-id="mens-clothing" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="mens-clothing"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="mens-accessories-gloves" configuration-id="mens-gloves" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="mens-accessories-gloves"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="mens-clothing-jackets" configuration-id="mens-jackets" default="true" assigned-to-site="true">
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="mens-clothing-jackets"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="mens-accessories-luggage" configuration-id="mens-luggage" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="mens-accessories-luggage"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="mens-clothing-pants" configuration-id="mens-pants" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="mens-clothing-pants"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="mens-clothing-dress-shirts" configuration-id="mens-shirts" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="mens-clothing-dress-shirts"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="mens-clothing-shorts" configuration-id="mens-shorts" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="mens-clothing-shorts"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slotbottom-m" context="category" context-id="mens" configuration-id="mens-subcategories" assigned-to-site="true">
+        <description>Default slot to link to sub-categories under men's</description>
+        <template>slots/category/categoryTile.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="mens-clothing-suits"/>
+                <category category-id="mens-clothing-jackets"/>
+                <category category-id="mens-clothing-shorts"/>
+                <category category-id="mens-clothing-dress-shirts"/>
+                <category category-id="mens-clothing-pants"/>
+                <category category-id="mens-accessories"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="mens-clothing-suits" configuration-id="mens-suits" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="mens-clothing-suits"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="mens-accessories-ties" configuration-id="mens-ties" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="mens-accessories-ties"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="hearingtest-result" context="global" configuration-id="moderate" assigned-to-site="true">
+        <description>When the hearing test result is Moderate</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="section-hearing-test-results-1"&gt;
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm-12 col-md-12 col-lg-12 your-results-heading"&gt;Your results&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-2 col-lg-2 result-guage-bar"&gt;&lt;img alt="moderate-hearing" src="hearing-test/moderate-hearing_gauge-bar.png?$staticlink$" title="moderate-hearing" /&gt;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-10 col-lg-10 result-details"&gt;
+&lt;div class="your-test-result-heading"&gt; Your test results indicate that you have:&lt;/div&gt;
+&lt;div class="your-test-result"&gt; Moderate hearing loss&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-12 results-info-1"&gt;With mild to moderate hearing loss, early treatment helps the brain maintain speech understanding, resulting in a better outcome. Many people with mild to moderate hearing loss have difficult hearing high-pitched consonant sounds (d, t, sh, s, f, th) compared to lower-pitched vowel sounds (o, a, ah, i, e). One of the simplest ways to take care of your hearing is by having a comprehensive hearing exam and routine follow-up care.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="ModerateHearing"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="hearingtest-careoptions" context="global" configuration-id="moderatehearing-careoptions" assigned-to-site="true">
+        <description>Care options when the hearing test result is Moderate</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="section-hearing-test-results-2"&gt;
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm-12 col-md-12 col-lg-12"&gt;
+&lt;div class="section-2-sub-heading"&gt;My care options&lt;/div&gt;
+
+&lt;div class="heading-content-separator"&gt;We recommend you schedule an in-person or virtual appointment with one of our trusted providers.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row custom-card-container"&gt;
+&lt;div class="col-sm-12 col-md-12 col-lg-6"&gt;
+&lt;div class="custom-card mx-auto"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm-12 col-md-12 col-lg-1 hidden-md-down"&gt;&lt;img alt="user_icon" src="hearing-test/user_icon.svg?$staticlink$" title="user_icon" /&gt;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-11 custom-card-heading"&gt;Virtual care&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-1 hidden-md-down"&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-11 heading-content-separator"&gt;Our convenient remote care program makes it possible to enjoy real-time hearing aid adjustments &amp;amp; support from the comfort of your home.&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-1 hidden-md-down"&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-11 btn-container"&gt;
+&lt;div&gt;&lt;a href="$url('ProviderSearch-Show')$"&gt;&lt;button class="btn btn-primary"&gt;Find a provider&lt;/button&gt;&lt;/a&gt;&lt;/div&gt;
+
+&lt;div&gt;&lt;button class="btn btn-outline-primary margin-top-20"&gt;Discover virtual care&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-6 card-container-separator-top"&gt;
+&lt;div class="custom-card mx-auto"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm-12 col-md-12 col-lg-1 hidden-md-down"&gt;&lt;img alt="user_icon" src="hearing-test/user_icon.svg?$staticlink$" title="user_icon" /&gt;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-11 custom-card-heading"&gt;In person care&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-1 hidden-md-down"&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-11 heading-content-separator"&gt;If you prefer a more traditional in person setting, enjoy hearing aid support at a network location in your area.&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-1 hidden-md-down"&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-11 btn-container"&gt;
+&lt;div&gt;&lt;button class="btn btn-primary"&gt;Find a provider&lt;/button&gt;&lt;/div&gt;
+
+&lt;div&gt;&lt;button class="btn btn-outline-primary margin-top-20"&gt;Discover in-person care&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="section-hearing-test-learn-more"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="section-2-sub-heading"&gt;Learn more&lt;/div&gt;
+        &lt;div class="heading-content-separator"&gt;
+            Learn what to expect for your hearing test. Plus, find out how to prepare and how often you should get tested. Once your hearing test is complete, you’ll have the chance to review the results with a hearing professional.
+        &lt;/div&gt;
+        &lt;div class="link-styling uhc-sans-700 margin-top-20"&gt;Read more about hearing loss &gt;&lt;/div&gt;
+        &lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="ModerateHearing"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="newarrivals-electronics" configuration-id="newarrivals-electronics" default="true" assigned-to-site="true">
+        <description>Default banner for this catagory</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="newarrivals-electronics"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="newarrivals-mens" configuration-id="newarrivals-men" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="newarrivals-mens"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slotbottom2-m" context="category" context-id="newarrivals" configuration-id="newarrivals-mens-products" default="true" assigned-to-site="true">
+        <description>New Arrival Products for Mens</description>
+        <template>slots/product/product_listing.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">Mens New Arrivals</callout-msg>
+        <content>
+            <products>
+                <product product-id="25604524M"/>
+                <product product-id="25686514M"/>
+                <product product-id="25686571M"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slotbanner-m" context="category" context-id="newarrivals" configuration-id="newarrivals-subcategories" default="true" assigned-to-site="true">
+        <description>Default slot to link to sub-categories under new arrivals</description>
+        <template>slots/category/categoryTile.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="newarrivals-womens"/>
+                <category category-id="newarrivals-mens"/>
+                <category category-id="newarrivals-electronics"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="newarrivals-womens" configuration-id="newarrivals-women" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="newarrivals-womens"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slotbottom-m" context="category" context-id="newarrivals" configuration-id="newarrivals-womens-products" default="true" assigned-to-site="true">
+        <description>New Arrival Products for Womens</description>
+        <template>slots/product/product_listing.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">Womens New Arrivals</callout-msg>
+        <content>
+            <products>
+                <product product-id="701644259280M"/>
+                <product product-id="25697151M"/>
+                <product product-id="25696513M"/>
+                <product product-id="25695436M"/>
+                <product product-id="25697561M"/>
+                <product product-id="25695217M"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="noresults-help" context="global" configuration-id="noresults-help" default="true" assigned-to-site="true">
+        <description>Recommendations for no result search</description>
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="noresults-help"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="hearingtest-result" context="global" configuration-id="poor" assigned-to-site="true">
+        <description>When the hearing test result is Severe Hearing Loss</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="section-hearing-test-results-1"&gt;
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm-12 col-md-12 col-lg-12 your-results-heading"&gt;Your results&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-2 col-lg-2 result-guage-bar"&gt;&lt;img alt="severe-hearing-loss" src="hearing-test/severe-hearing-loss_gauge-bar.png?$staticlink$" title="severe-hearing-loss" /&gt;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-10 col-lg-10 result-details"&gt;
+&lt;div class="your-test-result-heading"&gt; Your test results indicate that you have:&lt;/div&gt;
+&lt;div class="your-test-result"&gt; Severe hearing loss&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-12 results-info-1"&gt;Severe hearing loss can lead to many life challenges, impacting your physical, emotional and overall well-being. It&amp;rsquo;s important to take good care of your hearing. One of the simplest ways to do that is by having a comprehensive hearing exam and routine follow-up care.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="PoorHearing"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="hearingtest-careoptions" context="global" configuration-id="poorhearing-careoptions" assigned-to-site="true">
+        <description>Care options when the hearing test result is Severe Hearing Loss</description>
+        <template>slots/html/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;div class="section-hearing-test-results-2"&gt;
+&lt;div class="container"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm-12 col-md-12 col-lg-12"&gt;
+&lt;div class="section-2-sub-heading"&gt;My care options&lt;/div&gt;
+
+&lt;div class="heading-content-separator"&gt;We recommend you schedule an &lt;font class="font-family-bold"&gt;in-person appointment &lt;/font&gt; with one of our trusted providers.&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row custom-card-container"&gt;
+&lt;div class="col-sm-12 col-md-12 col-lg-6"&gt;
+&lt;div class="custom-card mx-auto"&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm-12 col-md-12 col-lg-1 hidden-md-down"&gt;&lt;img alt="user_icon" src="hearing-test/user_icon.svg?$staticlink$" title="user_icon" /&gt;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-11 custom-card-heading"&gt;In person care&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-1 hidden-md-down"&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-11 heading-content-separator"&gt;Our more traditional in person setting offers hearing aid care and support at a network location in your area.&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-1 hidden-md-down"&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;div class="col-sm-12 col-md-12 col-lg-11 btn-container"&gt;
+&lt;div&gt;&lt;button class="btn btn-primary"&gt;Find a provider&lt;/button&gt;&lt;/div&gt;
+
+&lt;div&gt;&lt;button class="btn btn-outline-primary margin-top-20"&gt;Discover virtual care&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="section-hearing-test-learn-more"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="section-2-sub-heading"&gt;Learn more&lt;/div&gt;
+        &lt;div class="heading-content-separator"&gt;
+            Learn what to expect for your hearing test. Plus, find out how to prepare and how often you should get tested. Once your hearing test is complete, you’ll have the chance to review the results with a hearing professional.
+        &lt;/div&gt;
+        &lt;div class="link-styling uhc-sans-700 margin-top-20"&gt;Read more about hearing loss &gt;&lt;/div&gt;
+        &lt;/div&gt;
+&lt;/div&gt;</body>
+            </html>
+        </content>
+        <customer-groups>
+            <customer-group group-id="PoorHearing"/>
+        </customer-groups>
+    </slot-configuration>
+
+    <slot-configuration slot-id="search-result-banner-m" context="global" configuration-id="search-results-banner" default="true" assigned-to-site="true">
+        <description>Slot Banner that displays above search results</description>
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="search-result-banner"/>
+            </content-assets>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="home-bottom-right-m" context="global" configuration-id="this-weeks-deals" default="true" assigned-to-site="true">
+        <description>Product Carousel of This Weeks Deals</description>
+        <template>slots/product/homerightcarousel.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <callout-msg xml:lang="x-default">&lt;h2&gt;This Weeks&lt;/h2&gt;&lt;h3&gt;Deals&lt;/h3&gt;</callout-msg>
+        <content>
+            <products>
+                <product product-id="25591535M"/>
+                <product product-id="640188017003M"/>
+                <product product-id="54736828M"/>
+                <product product-id="25590891M"/>
+                <product product-id="793775370033M"/>
+            </products>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slotbanner-m" context="category" context-id="womens" configuration-id="womens" default="true" assigned-to-site="true">
+        <description>Default banner for womens category landing page</description>
+        <template>slots/category/catLandingBanner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slotbanner-m" context="category" context-id="womens" configuration-id="womens-abtest" assigned-to-site="false">
+        <description>AB Test slot for womens-landing slot</description>
+        <template>slots/content/htmlSlotContainer.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <html>
+                <body xml:lang="x-default">&lt;img alt="Image for Womens Category" src="images/slot/landing/cat-landing-slotbanner-womens-abtest.jpg?$staticlink$" title="" /&gt;</body>
+            </html>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="womens-accessories" configuration-id="womens-accessories" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-accessories"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="womens-clothing-bottoms" configuration-id="womens-bottoms" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-clothing-bottoms"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="womens-jewelry-bracelets" configuration-id="womens-bracelets" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-jewelry-bracelets"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="womens-clothing" configuration-id="womens-clothing" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-clothing"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="womens-clothing-dresses" configuration-id="womens-dresses" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-clothing-dresses"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="womens-jewelry-earrings" configuration-id="womens-earrings" default="true" assigned-to-site="true">
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-jewelry-earrings"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="womens-clothing-feeling-red" configuration-id="womens-feelingred" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-clothing-feeling-red"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="womens-clothing-jackets" configuration-id="womens-jackets" default="true" assigned-to-site="true">
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-clothing-jackets"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="womens-jewelry" configuration-id="womens-jewelry" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-jewelry"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="womens-jewelry-necklaces" configuration-id="womens-necklaces" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-jewelry-necklaces"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="womens-outfits" configuration-id="womens-outfits" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-outfits"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="womens-accessories-scarves" configuration-id="womens-scarves" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-accessories-scarves"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="womens-accessories-shoes" configuration-id="womens-shoes-cat-banner" default="true" assigned-to-site="true">
+        <description>This is the default banner for the womens shoes banner.</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-accessories-shoes"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-landing-slotbottom-m" context="category" context-id="womens" configuration-id="womens-subcategories" default="true" assigned-to-site="true">
+        <description>Default slot to link to sub-categories under Womens</description>
+        <template>slots/category/categoryTile.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-clothing"/>
+                <category category-id="womens-jewelry"/>
+                <category category-id="womens-accessories"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="cat-banner-m" context="category" context-id="womens-clothing-tops" configuration-id="womens-tops" default="true" assigned-to-site="true">
+        <description>Default banner for this category</description>
+        <template>slots/category/cat-banner.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <categories>
+                <category category-id="womens-clothing-tops"/>
+            </categories>
+        </content>
+    </slot-configuration>
+
+    <slot-configuration slot-id="header-secondary-navigation" context="global" configuration-id="Slot 1" default="true" assigned-to-site="true">
+        <template>slots/content/contentAssetBody.isml</template>
+        <enabled-flag>true</enabled-flag>
+        <content>
+            <content-assets>
+                <content-asset content-id="header-secondary-navigation"/>
+            </content-assets>
+        </content>
+        <customer-groups>
+            <customer-group group-id="NonMicroSiteUsers"/>
+        </customer-groups>
+    </slot-configuration>
+
+</slot-configurations>

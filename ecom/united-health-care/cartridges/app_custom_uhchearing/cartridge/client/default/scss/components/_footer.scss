@@ -1,0 +1,206 @@
+@import '~base/components/footer';
+
+footer {
+    background: $footer-background-color;
+
+    h2 {
+        font-family: $footer-heading-font;
+        font-size: 20px;
+        line-height: 44px;
+        color: $footer-h2;
+    }
+
+    .footer-item {
+        @include media-breakpoint-down(xs) {
+            border-bottom: 1px solid $footer-border-line;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        .collapsible-xs .title::after {
+            float: right;
+            content: '\f054';
+            font-family: 'FontAwesome';
+            color: $footer-arrow-icon;
+        }
+    }
+
+    @include media-breakpoint-down(xs) {
+        .collapsible-xs.active .title::after {
+            float: right;
+            content: '\f078';
+            font-family: 'FontAwesome';
+            color: $footer-arrow-icon;
+        }
+    }
+
+    p {
+        margin: auto;
+    }
+
+    .locate-text {
+        display: none;
+    }
+
+    .footer-container .collapsible-xs {
+        a {
+            color: $footer-link-lext;
+            font-family: $footer-sub-heading-font;
+            font-size: 16px;
+            line-height: 38.4px;
+        }
+
+        button.title {
+            color: $footer-button;
+            height: 56px;
+            font-size: 20px;
+            font-family: $uhc-font-sans-bold;
+        }
+    }
+
+    .footer-container .locate-text {
+        @include media-breakpoint-down(xs) {
+            display: contents;
+
+            .addon-text {
+                padding: 10px 15px;
+                color: $footer-store;
+                font-family: $uhc-font-sans-semi-bold;
+                font-size: 16px;
+                line-height: 38px;
+            }
+        }
+    }
+
+    .uhc-logo {
+        border-bottom: none;
+        background: $footer-background-color;
+        float: right;
+
+        .icon-container {
+            width: 108px;
+            color: $footer-logo-details;
+
+            .logo-description {
+                color: $footer-logo-details;
+                text-align: center;
+
+                .accredited {
+                    font-family: $footer-search-text-font;
+                    font-size: 14px;
+                    line-height: 31px;
+                }
+
+                .parah-container {
+                    font-size: 12px;
+                    line-height: 17px;
+                }
+            }
+        }
+
+        .social {
+            @include media-breakpoint-up(md) {
+                bottom: 0;
+                position: absolute;
+            }
+
+            .social-followText {
+                font-family: $footer-social-media-font;
+                font-size: 14px;
+                line-height: 35px;
+                color: $footer-social-media;
+            }
+
+            .social-links {
+                display: flex;
+                flex-wrap: wrap;
+                width: auto;
+
+                li {
+                    margin: 0 25px 0 0;
+                    width: auto;
+                }
+
+                a {
+                    font-size: 15px;
+                    color: $footer-social-media;
+                }
+            }
+        }
+    }
+
+    .content {
+        li {
+            height: auto;
+        }
+    }
+
+    .store {
+        .find-store-text {
+            color: $footer-store;
+            font-family: $uhc-font-sans-medium;
+            font-size: 16px;
+            line-height: 22.72px;
+            padding-top: 8px;
+        }
+
+        .additional-info {
+            color: $footer-store;
+            font-family: $footer-additional-text;
+            font-size: 16px;
+            line-height: 38px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            border-bottom: 1px solid $footer-border-line;
+
+            .content {
+                display: contents;
+            }
+
+            .additional-info {
+                display: none;
+            }
+
+            h2 {
+                @include clearfix;
+            }
+        }
+
+        .button-container {
+            padding-bottom: 47px;
+            padding-top: 23px;
+
+            .footer-search-btn {
+                border-color: $footer-button;
+                background-color: transparent;
+                color: $footer-button;
+                font-family: $footer-search-text-font;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: 0.1px;
+                text-align: center;
+            }
+        }
+    }
+
+    hr {
+        border-top: 1px solid $footer-border-line;
+    }
+
+    .copyright {
+        color: $footer-copyright;
+        font-family: $footer-copyright-text-font;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 0;
+    }
+}
+
+.create-account-footer-content {
+    background: $tints-col-4;
+
+    .footer-section-1 {
+        font-size: 18px;
+    }
+}

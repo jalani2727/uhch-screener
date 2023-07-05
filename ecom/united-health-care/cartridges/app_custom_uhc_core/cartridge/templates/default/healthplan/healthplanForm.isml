@@ -1,0 +1,69 @@
+<isinclude template="/components/modules" sf-toolkit="off" />
+<div class="modal-header border-0 d-block">
+    <div class="uhc-blue uhc-serif uhc-main-title text-center pb-2 pb-md-5">
+        ${Resource.msg('hearingplan.form.heading', 'hearingplan', null)}
+    </div>
+    <button type="button" class="close" data-dismiss="modal" data-url="${URLUtils.url('HealthPlan-SetPlan', 'healthplan', 'false')}" aria-label="Close">
+        <span aria-hidden="true"> </span>
+        <span class="sr-only"> </span>
+    </button>
+</div>
+
+<div class="modal-body">
+    <form action="${pdict.actionURL}" class="health-plan-form" method="POST" name="health-plan-form">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group required">
+                    <label class="form-control-label" for="health-plan-first-name">
+                        ${Resource.msg('label.input.first.name', 'hearingplan', null)}
+                    </label>
+                    <input type="text" required class="form-control required"
+                        aria-describedby="health-plan-first-name-error" id="health-plan-first-name"
+                        name="healthPlanFirstName" value="">
+                    <div class="invalid-feedback" id="health-plan-first-name-error"></div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="form-group required">
+                    <label class="form-control-label" for="health-plan-last-name">
+                        ${Resource.msg('label.input.last.name', 'hearingplan', null)}
+                    </label>
+                    <input type="text" required class="form-control required"
+                        aria-describedby="health-plan-last-name-error" id="health-plan-last-name"
+                        name="healthPlanLastName" value="">
+                    <div class="invalid-feedback" id="health-plan-last-name-error"></div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="form-group required">
+                    <label class="form-control-label" for="health-plan-member-id">
+                        ${Resource.msg('label.membership.id', 'cart', null)}
+                        <div class="info-aarp-card">
+                            <div class="info-aarp-card-icon"></div>
+                            <div class="info-aarp-card-img">
+                                <iscontentasset aid="healthplan-memberid-info-tooltip"/>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="text" required class="form-control required"
+                        aria-describedby="health-plan-member-id-error" id="health-plan-member-id"
+                        name="healthPlanMemberID" value="">
+                    <div class="invalid-feedback" id="health-plan-member-id"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row health-plan-submit my-4">
+            <div class="col">
+                <div class="form-group">
+                    <button class="btn btn-block btn-primary health-plan mt-2 mb-4" type="submit"
+                        name="submit" value="submit">
+                        ${Resource.msg('label.button.submit', 'hearingplan', null)}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

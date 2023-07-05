@@ -1,0 +1,5 @@
+<isif condition="${!empty(product.featureCompare)}">
+    <div class="uhc-comprison-table">
+        <isprint value="${product.featureCompare}" encoding="off" />
+    </div>
+</isif>

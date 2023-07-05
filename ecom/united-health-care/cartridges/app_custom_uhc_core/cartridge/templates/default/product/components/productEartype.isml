@@ -1,0 +1,6 @@
+<label for="eartype">${Resource.msg('label.eartype', 'product', null)}</label>
+<select class="eartype-select custom-select form-control">
+    <option value="${Resource.msg('option.value.prescription.product.eartype.left', 'product', 'L')}" >${Resource.msg('label.prescription.product.eartype.left', 'product', null)}</option>
+    <option value="${Resource.msg('option.value.prescription.product.eartype.right', 'product', 'R')}" >${Resource.msg('label.prescription.product.eartype.right', 'product', null)}</option>
+    <option value="${Resource.msg('option.value.prescription.product.eartype.both', 'product', 'B')}" >${Resource.msg('label.prescription.product.eartype.both', 'product', null)}</option>
+</select>

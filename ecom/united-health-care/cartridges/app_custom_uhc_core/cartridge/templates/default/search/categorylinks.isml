@@ -1,0 +1,14 @@
+<isif condition="${pdict.subCategories !== null}">
+    <div class="clp-btn-row">
+        <div class="row">
+            <isloop items="${pdict.subCategories}" var="subCategory" >
+                <div class="col-12 col-md-auto pt-4 pt-md-0">
+                    <a href="${URLUtils.https('Search-Show', 'cgid', subCategory.getID())}" class="btn btn-outline-primary btn-block"
+                    role="button" aria-pressed="true">
+                        <isprint value="${subCategory.getDisplayName()}" encoding="on" />
+                    </a>
+                </div>
+            </isloop>
+        </div>
+    </div>
+</isif>

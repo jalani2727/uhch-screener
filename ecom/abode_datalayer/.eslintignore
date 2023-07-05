@@ -1,0 +1,7 @@
+cartridges/*/cartridge/static/
+thirdParty/
+coverage/
+doc/
+bin/
+codecept.conf.js
+webpack.config.js

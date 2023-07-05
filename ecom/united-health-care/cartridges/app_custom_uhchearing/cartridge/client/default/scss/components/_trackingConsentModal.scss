@@ -1,0 +1,79 @@
+$modal-heading: $uhc-font-serif;
+$modal-heading-color: $primary-col-1;
+$modal-body-text-font: $uhc-font-sans-medium;
+$modal-button-colors: $primary-col-1;
+$modal-decline-button-color: $primary-col-2;
+
+#consent-tracking {
+    .tracking-consent-modal-content {
+        margin-top: 130px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 180px;
+        }
+    }
+
+    .modal-header {
+        justify-content: center;
+        border-bottom: none;
+        padding-top: 55px;
+        font-family: $modal-heading;
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 20px;
+        color: $modal-heading-color;
+
+        @include media-breakpoint-down(xs) {
+            text-align: center;
+        }
+    }
+
+    .modal-dialog {
+        max-width: 808px;
+        max-height: 402px;
+    }
+
+    .modal-body {
+        font-family: $modal-body-text-font;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+        padding: 1px 100px;
+
+        @include media-breakpoint-down(xs) {
+            padding: 15px 25px;
+        }
+    }
+
+    .modal-footer {
+        justify-content: center;
+        border-top: none;
+
+        .affirm {
+            width: 85px;
+            border-radius: 30px;
+            border-color: $modal-button-colors;
+        }
+
+        .decline {
+            width: 85px;
+            border-radius: 35px;
+            border-color: $modal-button-colors;
+            color: $modal-button-colors;
+            background-color: $modal-decline-button-color;
+        }
+
+        .decline:hover {
+            color: $modal-decline-button-color;
+            background-color: $modal-button-colors;
+            border-color: $uhc-btn-outline-primary;
+        }
+
+        .button-wrapper {
+            button {
+                margin-top: 19px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

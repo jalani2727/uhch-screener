@@ -1,0 +1,28 @@
+.lp-hero {
+  background-size: cover;
+  background-position: 50%;
+  height: auto;
+  max-height: 25vw;
+  min-height: 520px;
+  overflow: hidden;
+  padding: 83px;
+  position: relative;
+}
+.lp-hero .image {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.lp-hero .image img {
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+}
+.lp-hero .content {
+  background-color: #FFFFFF;
+  color: #002677;
+  max-width: 290px;
+  padding: 40px;
+  position: absolute;
+}

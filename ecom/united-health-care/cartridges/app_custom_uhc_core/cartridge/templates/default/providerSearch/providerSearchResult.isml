@@ -1,0 +1,51 @@
+<isdecorate template="common/layout/page">
+    <isinclude template="/components/modules" sf-toolkit="off" />
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/providerSearchResults.css');
+        assets.addJs('/js/providerSearchResults.js');
+    </isscript>
+
+    <div class="${pdict.isVirtual === true ? 'container' : 'container-fluid'}">
+        <div class="${pdict.isVirtual === true ? 'virtual-appointment-content' : ''}">
+            <div class="row">
+                <div class="col-12 ${pdict.isVirtual === true ? 'col-lg-6' : 'lr-padding-zero col-lg-auto left-section'}">
+                    <div class="provider-search-content">
+                        <isif condition="${!pdict.isVirtual}">
+                            <isinclude template="/providerSearch/providerResultAuthenticated.isml" />
+                        </isif>
+                        <isif condition="${pdict.isVirtual && pdict.isAuthenticated}">
+                            <isinclude template="/providerSearch/authenticatedVirtualRequestAppointmentForm.isml" />
+                        </isif>
+                        <isif condition="${pdict.isVirtual && !pdict.isAuthenticated}">
+                            <isinclude template="/providerSearch/guestRequestAppointmentForm.isml" />
+                        </isif>
+                    </div>
+                </div>
+                <isif condition="${!pdict.isVirtual}">
+                    <div class="col-12 col-lg d-lg-block lr-padding-zero hidden-sm-down map-container">
+                        <div id="map" data-standard-provider-marker="${URLUtils.staticURL('/images/standard-provider.svg')}"
+                            data-preferred-provider-marker="${URLUtils.staticURL('/images/preferred-provider.svg')}"
+                            data-preferred-provider-label="${Resource.msg('label.preferredprovider', 'providersearch', null)}"
+                            data-standard-provider-label="${Resource.msg('label.standardprovider', 'providersearch', null)}"
+                            data-customer-type="${customer.authenticated ? 'registered' : 'guest'}">
+                        </div>
+
+                        <div class="recommended-provider-section">
+                            <img src="${URLUtils.staticURL('/images/preferred-provider.svg')}" alt="recommended provider image" />
+                            <p>${Resource.msg('label.recommendedprovider', 'providersearch', null)}</p>
+                            <iscontentasset aid="recommended-provider-rollover"/>
+                        </div>
+                    </div>
+                <iselse/>
+                    <div class="col-12 col-lg-6">
+                        <isinclude template="providerSearch/fileUpload" />
+                    </div>
+                </isif>
+            </div>
+        </div>
+    </div>
+    <isif condition="${!pdict.isVirtual}">
+        <script src="${pdict.mapURL}" defer="defer"></script>
+    </isif>
+</isdecorate>

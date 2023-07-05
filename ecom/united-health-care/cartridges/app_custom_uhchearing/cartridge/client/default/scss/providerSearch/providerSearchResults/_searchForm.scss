@@ -1,0 +1,84 @@
+.provider-search-results-form-container {
+    background-color: $tints-col-4;
+    position: relative;
+    z-index: 1;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+
+    button {
+        margin-top: 28px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        flex-direction: row;
+
+        .form-group {
+            flex: 1 1 0;
+            margin-right: 10px;
+        }
+    }
+}
+
+.results-view {
+    .card {
+        background-color: $primary-col-2;
+    }
+
+    .filter-container {
+        padding-bottom: 10px;
+
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 15px;
+        }
+    }
+
+    .search-results-title {
+        font-size: 22px;
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+
+        @include media-breakpoint-up(md) {
+            font-size: 26px;
+        }
+    }
+}
+
+.zip-radius-form-container {
+    background-color: $uhc-border-color;
+}
+
+.form-container.provider-search-results-form-container {
+    padding: 22px 15px;
+
+    @include media-breakpoint-up(lg) {
+        padding: 22px 40px;
+    }
+}
+
+.provider-search-results-form-container {
+    position: relative;
+}
+
+.zipcode-custom-error,
+.state-custom-error {
+    display: none;
+    font-size: 80%;
+    color: $uhc-error;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    background: $tints-col-4;
+
+    @include media-breakpoint-down(md) {
+        left: 20px;
+        bottom: 88px;
+    }
+}
+
+.form-control.is-invalid ~ {
+    .zipcode-custom-error,
+    .state-custom-error {
+        display: block;
+    }
+}

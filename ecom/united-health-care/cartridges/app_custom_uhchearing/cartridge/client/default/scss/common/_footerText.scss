@@ -1,0 +1,9 @@
+.footer-text-slot {
+    .footer-content {
+        padding-bottom: 34px;
+
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 53px;
+        }
+    }
+}

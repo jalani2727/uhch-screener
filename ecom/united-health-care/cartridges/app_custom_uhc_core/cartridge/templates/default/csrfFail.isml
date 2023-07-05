@@ -1,0 +1,21 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/csrf.css');
+    </isscript>
+
+    <div class="container error-page-content">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="error-message uhc-blue uhc-main-title mt-0 mt-md-5">${Resource.msg('error.csrf.token.wrong', 'common', null)}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <a href="${URLUtils.url('Home-Show')}" class="btn btn-primary btn-block continue-shopping" role="button" aria-pressed="true">
+                    ${Resource.msg('button.continue.shopping','confirmation',null)}
+                </a>
+            </div>
+        </div>
+    </div>
+</isdecorate>

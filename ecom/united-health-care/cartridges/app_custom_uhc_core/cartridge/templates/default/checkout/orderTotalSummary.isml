@@ -1,0 +1,59 @@
+<!--- Subtotal --->
+<div class="row subtotal-item">
+    <div class="col-6 start-lines">
+        <p class="order-receipt-label order-summary-header-style"><span>${Resource.msg('label.order.confirmation.subtotal','confirmation', null)}</span></p>
+    </div>
+    <div class="col-6 end-lines">
+        <p class="text-right order-summary-header-style"><span class="sub-total">${pdict.order.totals.subTotal}</span></p>
+    </div>
+</div>
+
+<!--- Plan Benefit --->
+<div class="row order-discount uhc-black-333 <isif condition=" ${pdict.totals.productLevelDiscounts.value === 0}"> hide-order-discount </isif>">
+    <div class="col-8">
+        <p>${Resource.msg('label.order.benefit', 'common', null)}</p>
+    </div>
+    <div class="col-4">
+        <p class="text-right order-discount-total"> - ${pdict.totals.productLevelDiscounts.formatted}</p>
+    </div>
+</div>
+
+<!--- Order Discount --->
+<div class="row order-discount <isif condition="${pdict.order.totals.orderLevelDiscountTotal.value === 0}">hide-order-discount</isif>">
+    <div class="col-6 start-lines">
+        <p class="order-receipt-label"><span class="order-discount-label">${Resource.msg('label.order.confirmation.discounts', 'confirmation', null)}</span></p>
+    </div>
+    <div class="col-6 end-lines">
+        <p class="text-right"><span class="order-discount-total">- ${pdict.order.totals.orderLevelDiscountTotal.formatted}</span></p>
+    </div>
+</div>
+
+<!--- Shipping Cost --->
+<div class="row shipping-item">
+    <div class="col-6 start-lines">
+        <p class="order-receipt-label order-summary-header-style"><span>${Resource.msg('label.order.shipping.cost','confirmation', null)}</span></p>
+    </div>
+    <div class="col-6 end-lines">
+        <p class="text-right order-summary-header"><span class="shipping-total-cost">${pdict.order.totals.totalShippingCost}</span></p>
+    </div>
+</div>
+
+<!--- Shipping Discount --->
+<div class="row shipping-discount <isif condition="${pdict.order.totals.shippingLevelDiscountTotal.value === 0}">hide-shipping-discount</isif>">
+    <div class="col-6 start-lines">
+        <p class="order-receipt-label order-summary-header-style"><span>${Resource.msg('label.shipping.discount', 'common', null)}</span></p>
+    </div>
+    <div class="col-6 end-lines">
+        <p class="text-right"><span class="shipping-discount-total">- ${pdict.order.totals.shippingLevelDiscountTotal.formatted}</span></p>
+    </div>
+</div>
+
+<!--- Grand Total --->
+<div class="row grand-total">
+    <div class="col-6 start-lines">
+        <p class="order-receipt-label checkout-total-amount"><span>${Resource.msg('label.order.grand.total','confirmation', null)}</span></p>
+    </div>
+    <div class="col-6 end-lines">
+        <p class="text-right checkout-total-amount"><span class="grand-total-sum">${pdict.order.totals.grandTotal}</span></p>
+    </div>
+</div>

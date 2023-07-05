@@ -1,0 +1,73 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/account/orderTrack.css');
+        assets.addCss('/css/account/profile.css');
+        assets.addJs('/js/somItemCancelation.js');
+    </isscript>
+
+    <div class="hero slant-down account-image">
+        <h1 class="page-title">${Resource.msg('title.orders', 'orderDetails', null)}</h1>
+    </div>
+
+    <isset name="order" value="${pdict.order}" scope="page"/>
+
+    <isif condition="${pdict.fulfillmentStatus === 'Ordered'}">
+        <isset name="groupedItem" value="${order.orderedStatusGroupItems[0]}" scope="page"/>
+    </isif>
+
+    <div class="container">
+        <!---Breadcrumbs--->
+        <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+
+        <div class="row">
+            <div class="col">
+                <h2>${Resource.msg('title.order.cancel', 'orderCancel', null)}</h2>
+            </div>
+        </div>
+        <form action="${URLUtils.https('Order-Cancelation')}" method="POST" name="cancel-form" id="itemsCancelationSelectForm">
+            <input type="hidden" name="summaryId" value="${pdict.order.id}">
+            <input type="hidden" name="orderId" value="${pdict.order.sfccOrderNumber}">
+            <input type="hidden" name="currencyCode" value="${pdict.order.currencyCode}">
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class="order-cancel-reason">
+                        <div class="form-group required">
+                            <label class="form-control-label">
+                                ${Resource.msg('label.order.cancel.reason','orderCancel',null)}
+                            </label>
+                            <select class="form-control custom-select" id="reason" name="reason" required="" aria-required="true">
+                                <option value="false">${Resource.msg('label.order.cancel.select.reason','orderCancel',null)}</option>
+                                <isloop items="${pdict.reasons}" var="reason" status="loopState">
+                                    <option value="${reason.value}">${Resource.msg(reason.label, 'orderCancel', null)}</option>
+                                </isloop>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card" >
+                        <div class="card-header clearfix">
+                            <div class="form-group order-cancel-select-all-form">
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" type="checkbox" id='selectAll' value="true">
+                                    <label class="custom-control-label order-cancel-select-all-label" for='selectAll'>
+                                        ${Resource.msg('label.order.cancel.select.all', 'orderCancel', null)}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <isinclude template="account/order/orderItemsCancel"/>
+                        </div>
+                    </div>
+                    <isinclude template="/account/orderConfirmCancelation"/>
+                </div>
+            </div>
+        </form>
+        <div class="my-account">
+            <a href="${pdict.exitLinkUrl}" title="${Resource.msg('link.orderdetails.myaccount','account',null)}" aria-label="${Resource.msg('link.orderdetails.myaccount','account',null)}">
+                ${pdict.exitLinkText}
+            </a>
+        </div>
+    </div>
+</isdecorate>

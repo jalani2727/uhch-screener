@@ -1,0 +1,39 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/articles.css');
+    </isscript>
+
+    <div class="video-tutorials-landing">
+        <div class="container">
+            <h1 class="uhc-blue uhc-serif uhc-main-title mb-0">
+                <isprint value="${pdict.displayName}" encoding="off" />
+            </h1>
+            <p class="my-4 mb-md-5"><isprint value="${pdict.description}" encoding="off" /></p>
+            <div class="article-tile-section">
+                <div class="row align-items-stretch">
+                    <isloop items="${pdict.content}" var="asset">
+                        <div class="col-12 col-md-4 pb-4">
+                            <div class="article-tile">
+                                <isif condition="${asset.custom.tileImage && asset.custom.tileImage.getAbsURL()}">
+                                    <div class="article-tile-img d-flex justify-content-center overflow-hidden play-video-container">
+                                        <img alt="${asset.name}" src="${asset.custom.tileImage.getAbsURL()}" title="${asset.name}" />
+                                        <div class="play-video-icon"></div>
+                                    </div>
+                                    <div class="article-tile-bottom d-flex align-items-start flex-column">
+                                        <div class="uhc-blue uhc-serif uhc-sub-title-two mb-4 article-tile-title">
+                                            <isprint value="${asset.name}" encoding="off" />
+                                        </div>
+                                        <a class="mt-auto btn btn-primary" href="${URLUtils.https('Search-DisplayVideo', 'videoID', asset.custom.videoID, 'videocid', asset.ID)}" target="_blank" role="button" aria-pressed="true">
+                                            ${Resource.msg('resources.btn.watch.video', 'search', null)}
+                                        </a>
+                                    </div>
+                                </isif>
+                            </div>
+                        </div>
+                    </isloop>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

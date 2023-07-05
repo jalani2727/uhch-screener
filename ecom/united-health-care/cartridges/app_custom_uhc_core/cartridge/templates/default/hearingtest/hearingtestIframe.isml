@@ -1,0 +1,14 @@
+<isdecorate template="common/layout/hearingtestpage">
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/hearingTest.js');
+    assets.addCss('/css/hearingTest.css');
+</isscript>
+
+<div class="container">
+    <div class="ht-iframe-wrapper m-auto">
+        <iframe src="${pdict.hearingTestDesktopURL ? pdict.hearingTestDesktopURL : ''}" id="hearing-test-iframe" title="Hearing Test" sandbox="allow-top-navigation allow-scripts allow-forms allow-same-origin allow-popups"></iframe>
+    </div>
+</div>
+
+</isdecorate>

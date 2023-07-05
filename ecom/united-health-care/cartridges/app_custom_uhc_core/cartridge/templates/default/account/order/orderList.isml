@@ -1,0 +1,19 @@
+<isset name="isorderHistory" value="${true}" scope="page" />
+<isset name="orderDetailsPage" value="${false}" scope="page" />
+<isif condition="${pdict.orders.length === 0}">
+    <div class="row justify-content-center">
+        <div class="col-6 text-center">
+            <h5>${Resource.msg('msg.no.orders', 'account', null)}</h5>
+        </div>
+    </div>
+</isif>
+  <isif condition="${pdict.isOrderhistory}">
+        <isset name="isorderHistory" value="${true}" scope="page" />
+    </isif>
+<isloop items="${pdict.orders}" var="order">
+    <div class="row">
+        <div class="col-12">
+            <isinclude template="account/order/orderHistoryCard"/>
+        </div>
+    </div>
+</isloop>

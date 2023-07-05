@@ -1,0 +1,71 @@
+<div class="card-body order-total-summary">
+    <!--- Subtotal --->
+    <div class="row leading-lines subtotal-item">
+        <div class="col-6 start-lines">
+            <p class="order-receipt-label"><span>${Resource.msg('label.order.total.subtotal', 'orderDetails', null)}</span></p>
+        </div>
+        <div class="col-6 end-lines">
+            <p class="text-right"><span class="sub-total">${totals.subTotal}</span></p>
+        </div>
+    </div>
+
+    <!--- Order Discount --->
+    <isif condition="${totals.productDiscount === 0}">
+        <isset name="hideorderdiscountclass" value="hide-order-discount" scope="page" />
+    <iselse/>
+        <isset name="hideorderdiscountclass" value="" scope="page" />
+    </isif>
+    <div class="row leading-lines order-discount ${hideorderdiscountclass}">
+        <div class="col-6 start-lines">
+            <p class="order-receipt-label"><span>${Resource.msg('label.order.total.order.discount', 'orderDetails', null)}</span></p>
+        </div>
+        <div class="col-6 end-lines">
+            <p class="text-right"><span class="order-discount-total">${totals.productDiscount}</span></p>
+        </div>
+    </div>
+
+    <!--- Shipping Cost --->
+    <div class="row leading-lines shipping-item">
+        <div class="col-6 start-lines">
+            <p class="order-receipt-label"><span>${Resource.msg('label.order.total.shipping', 'orderDetails', null)}</span></p>
+        </div>
+        <div class="col-6 end-lines">
+            <p class="text-right"><span class="shipping-total-cost">${totals.shipping}</span></p>
+        </div>
+    </div>
+
+    <!--- Shipping Discount --->
+    <isif condition="${totals.shippingDiscount === 0}">
+        <isset name="hideshippingdiscountclass" value="hide-shipping-discount" scope="page" />
+    <iselse/>
+        <isset name="hideshippingdiscountclass" value="" scope="page" />
+    </isif>
+    <div class="row leading-lines shipping-discount ${hideshippingdiscountclass}">
+        <div class="col-6 start-lines">
+            <p class="order-receipt-label"><span>${Resource.msg('label.order.total.shipping.discount', 'orderDetails', null)}</span></p>
+        </div>
+        <div class="col-6 end-lines">
+            <p class="text-right"><span class="shipping-discount-total">${totals.shippingDiscount}</span></p>
+        </div>
+    </div>
+
+    <!--- Sale Taxes --->
+    <div class="row leading-lines sales-tax-item">
+        <div class="col-6 start-lines">
+            <p class="order-receipt-label"><span>${Resource.msg('label.order.total.sales.tax', 'orderDetails', null)}</span></p>
+        </div>
+        <div class="col-6 end-lines">
+            <p class="text-right"><span class="tax-total">${totals.tax}</span></p>
+        </div>
+    </div>
+
+    <!--- Grand Total --->
+    <div class="row grand-total leading-lines">
+        <div class="col-6 start-lines">
+            <p class="order-receipt-label"><span>${Resource.msg('label.order.total.total', 'orderDetails', null)}</span></p>
+        </div>
+        <div class="col-6 end-lines">
+            <p class="text-right"><span class="grand-total-sum">${totals.grandTotal}</span></p>
+        </div>
+    </div>
+</div>

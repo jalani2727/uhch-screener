@@ -1,0 +1,69 @@
+{
+  "name": "Section One",
+  "description": "The first section on the landing page.",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "leftSide",
+      "name": "Left Side",
+      "attribute_definitions": [
+        {
+          "id": "leftHeadline",
+          "name": "Left Headline Text",
+          "description": "The headline shown to the left of the video panel.",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "leftDescription",
+          "name": "Left Description Text",
+          "description": "The paragraph below the headline to the left of the video panel.",
+          "type": "markup",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "rightSide",
+      "name": "Right Side",
+      "attribute_definitions": [
+        {
+          "id": "rightHeadline",
+          "name": "Headline Text",
+          "description": "The headline shown above the videos.",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "rightDescription",
+          "name": "Description Text",
+          "description": "The paragraph below the headline.",
+          "type": "markup",
+          "required": true
+        },
+        {
+          "id": "videoOneCaption",
+          "name": "Video One Caption",
+          "description": "The caption below the left video.",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "videoTwoCaption",
+          "name": "Video Two Caption",
+          "description": "The caption below the right video.",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "videoAttribution",
+          "name": "Video Attribution",
+          "description": "The attribution displayed below the videos",
+          "type": "markup",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

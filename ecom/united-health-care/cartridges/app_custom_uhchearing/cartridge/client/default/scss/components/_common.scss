@@ -1,0 +1,126 @@
+$uhc-page-title: $primary-col-1;
+
+header ~ #maincontent .container a:not(.btn-primary, .btn-outline-primary) {
+    color: $uhc-link-color;
+}
+
+.page-title-custom {
+    color: $uhc-page-title;
+    font-size: 26px;
+    line-height: 34px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+.order-discount {
+    color: $body-text-color;
+}
+
+.error-message-text {
+    font-family: $uhc-font-sans-medium;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $uhc-error;
+
+    &.large-text {
+        font-size: 18px;
+    }
+}
+
+.error-message-text-container {
+    .error-message-text {
+        color: $uhc-error;
+    }
+}
+
+.price {
+    .strike-through {
+        color: $strike-price;
+
+        &.list {
+            .product-line-item &,
+            .cart-page & {
+                display: block;
+                margin: 0;
+            }
+        }
+    }
+
+    div.strike-through {
+        margin-right: 0;
+    }
+}
+
+.uhc-blue {
+    color: $primary-col-1;
+}
+
+.uhc-black-333 {
+    color: $grey8;
+}
+
+.uhc-main-title {
+    font-size: 26px;
+    line-height: 34px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+.uhc-main-title-one {
+    font-size: 28px;
+    line-height: 36px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+.uhc-main-title-two {
+    font-size: 26px;
+    line-height: 32px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+.uhc-sub-title {
+    font-size: 22px;
+    line-height: 32px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 28px;
+        line-height: 44px;
+    }
+}
+
+.uhc-sub-title-two {
+    font-size: 22px;
+    line-height: 34px;
+}
+
+.uhc-sans-700 {
+    font-family: $uhc-font-sans-bold;
+}
+
+.uhc-serif {
+    font-family: $uhc-font-serif;
+}
+
+.uhc-sans-500 {
+    font-family: $uhc-font-sans-medium;
+}
+
+.uhc-sans-600 {
+    font-family: $uhc-font-sans-semi-bold;
+}

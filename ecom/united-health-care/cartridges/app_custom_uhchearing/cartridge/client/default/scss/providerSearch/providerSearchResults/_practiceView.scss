@@ -1,0 +1,119 @@
+.practice-view {
+    .goto-results-view {
+        display: block;
+        margin: 0 0 16px;
+        width: 100%;
+
+        &::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            margin-right: 10px;
+            display: inline-block;
+            background-image: url('../images/vector-left-white.png');
+            background-repeat: no-repeat;
+        }
+    }
+
+    .practice-detail-section {
+        padding: 25px 0 0;
+        border-top: 1px solid $uhc-border-color;
+        border-bottom: 1px solid $uhc-border-color;
+
+        .rqst-btn-container {
+            padding-left: 15px;
+            padding-right: 15px;
+
+            @include media-breakpoint-up(lg) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
+    .practice-name {
+        margin-bottom: 6px;
+    }
+
+    .request-appointment-cta {
+        display: inline-block;
+        margin-bottom: 25px;
+    }
+
+    .practice-name,
+    .practice-phone-number {
+        color: $uhc-form-label;
+    }
+
+    .practice-providers-list-section {
+        padding: 25px 0;
+
+        .practice-provider-title,
+        .practice-provider {
+            margin-bottom: 25px;
+        }
+    }
+
+    .service-item {
+        display: flex;
+
+        .service-name {
+            margin-left: 12px;
+            line-height: 16px;
+        }
+
+        .service-icon {
+            width: 30px;
+            height: 24px;
+            background-repeat: no-repeat;
+
+            &.service-icon-pediatrics {
+                background-image: $icon-pediatrics;
+            }
+
+            &.service-icon-mobile-provider {
+                background-image: $icon-mobile;
+            }
+
+            &.service-icon-same-day-fit {
+                background-image: $icon-same-day-fit;
+            }
+
+            &.service-icon-relate {
+                background-image: $icon-relate;
+            }
+
+            &.service-icon-virtual-care {
+                background-image: $icon-virtual-care;
+            }
+
+            &.service-icon-in-office-payment {
+                background-image: $icon-in-office-payment;
+            }
+        }
+    }
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include media-breakpoint-up(lg) {
+        padding-left: 40px;
+        padding-right: 40px;
+
+        .goto-results-view {
+            display: inline-block;
+            margin: 25px 0;
+            width: auto;
+
+            &::before {
+                content: '';
+                width: 12px;
+                height: 12px;
+                margin-right: 10px;
+                display: inline-block;
+                background-image: url('../images/vector-left-white.png');
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

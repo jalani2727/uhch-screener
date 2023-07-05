@@ -1,0 +1,31 @@
+{
+	"viewTypeMapping": {
+		"hi-res":"hi-res",
+		"large":"hi-res",
+		"medium": "hi-res",
+		"small": "hi-res",
+		"swatch":"hi-res"
+	},
+	"large": {
+		"scaleWidth": 540,
+		"scaleHeight": 540
+	},
+	"medium": {
+		"scaleWidth": 247,
+		"scaleHeight": 247
+	},
+	"small": {
+		"scaleWidth": 90,
+		"scaleHeight": 90
+	},
+	"swatch": {
+		"scaleWidth": 40,
+		"scaleHeight": 40
+	},
+	"missingImages": {
+		"large": "large_missing.jpg",
+		"medium": "medium_missing.jpg",
+		"small": "small_missing.jpg",
+		"swatch":"swatch_missing.jpg"
+	}
+}

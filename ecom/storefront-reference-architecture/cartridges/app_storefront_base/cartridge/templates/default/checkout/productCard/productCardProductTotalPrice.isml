@@ -1,0 +1,6 @@
+<div class="strike-through uhc-sans-700
+<isif condition=${!lineItem.priceTotal.nonAdjustedPrice}>non-adjusted-price</isif>"
+>
+    ${lineItem.priceTotal.nonAdjustedPrice}
+</div>
+<div class="pricing line-item-total-price-amount item-total-${lineItem.UUID}">${lineItem.priceTotal.price}</div>

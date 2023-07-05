@@ -1,0 +1,58 @@
+{
+    "name": "Hero",
+    "description": "Hero section",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "heroImage",
+            "attribute_definitions": [
+                {
+                    "id": "image",
+                    "name": "Hero Image",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "alt",
+                    "name": "Alt Text",
+                    "description": "The image alt text shown by the component.",
+                    "type": "string",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "id": "heroContent",
+            "attribute_definitions": [
+                {
+                    "id": "logo",
+                    "name": "Logo",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "headline",
+                    "name": "Headline Text",
+                    "description": "The headline shown in the left-aligned box.",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "buttonText",
+                    "name": "Button Text",
+                    "description": "The text shown in the button within the white box.",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "buttonLink",
+                    "name": "Button Link",
+                    "description": "The link to which users will be directed once clicking the button.",
+                    "type": "string",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

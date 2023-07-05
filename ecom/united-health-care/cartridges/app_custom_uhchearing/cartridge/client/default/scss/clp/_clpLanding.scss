@@ -1,0 +1,124 @@
+@import '../common/takeTheTest';
+
+$vdo-banner-br: #b7b7b7;
+$clp-banner-bg: $tints-col-4;
+
+.clp-section-1.hero-container .text-content {
+    @include media-breakpoint-down(md) {
+        padding-bottom: 0;
+        border: 0;
+    }
+}
+
+.clp-section-2 {
+    max-width: 1060px;
+
+    .clp-title {
+        padding: 8px 0 24px;
+
+        @include media-breakpoint-up(md) {
+            padding: 63px 0 17px;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        .clp-btn-row {
+            padding: 43px 0 91px;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
+.clp-section-3 {
+    background-color: $clp-banner-bg;
+    padding: 88px 0 72px;
+
+    table {
+        color: $uhc-form-label;
+
+        th,
+        td {
+            width: calc(100% / var(--no-of-columns));
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .compare-table-ul {
+        padding-left: 20px;
+        margin-bottom: 0;
+    }
+
+    .clp-table-label {
+        font-size: 20px;
+    }
+
+    .list-with-icon {
+        padding-left: 38px;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 18px;
+            height: 14px;
+            display: inline-block;
+            position: absolute;
+            top: 2px;
+            left: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxOCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01Ljk5OTk3IDExLjE2OThMMS44Mjk5NyA2Ljk5OTg0TDAuNDA5OTczIDguNDA5ODRMNS45OTk5NyAxMy45OTk4TDE4IDEuOTk5ODRMMTYuNTkgMC41ODk4NDRMNS45OTk5NyAxMS4xNjk4WiIgZmlsbD0iI0ZGNjgxRiIvPgo8L3N2Zz4K');
+        }
+    }
+}
+
+.clp-section-4 {
+    padding: 50px 0 34px;
+
+    @include media-breakpoint-up(md) {
+        padding: 81px 0 90px;
+    }
+}
+
+.clp-section-5 {
+    background-color: $clp-banner-bg;
+
+    .clp-video-container {
+        padding: 30px 0 47px;
+
+        @include media-breakpoint-up(md) {
+            max-width: 835px;
+            padding: 60px 0;
+        }
+    }
+
+    .clp-video-banner {
+        position: relative;
+        padding-bottom: calc(56.25% + 36px);
+        margin-bottom: 13px;
+        border: 1px solid $vdo-banner-br;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .clp-video-caption {
+        font-size: 18px;
+        line-height: 24px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+}

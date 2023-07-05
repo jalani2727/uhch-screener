@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coupons xmlns="http://www.demandware.com/xml/impex/coupon/2008-06-17">
+    <coupon coupon-id="20PCTOFF">
+        <enabled-flag>true</enabled-flag>
+        <case-insensitive>true</case-insensitive>
+        <redemption-limits>
+            <allow-multiple-codes-per-order>false</allow-multiple-codes-per-order>
+        </redemption-limits>
+        <multiple-codes/>
+    </coupon>
+
+    <coupon coupon-id="AndreRules">
+        <enabled-flag>true</enabled-flag>
+        <case-insensitive>true</case-insensitive>
+        <redemption-limits>
+            <limit-per-code>20</limit-per-code>
+            <limit-per-customer>20</limit-per-customer>
+            <allow-multiple-codes-per-order>false</allow-multiple-codes-per-order>
+        </redemption-limits>
+        <single-code>AndreRules</single-code>
+    </coupon>
+
+    <coupon coupon-id="FREESHIP">
+        <enabled-flag>true</enabled-flag>
+        <case-insensitive>true</case-insensitive>
+        <redemption-limits>
+            <allow-multiple-codes-per-order>false</allow-multiple-codes-per-order>
+        </redemption-limits>
+        <multiple-codes/>
+    </coupon>
+
+    <coupon-codes coupon-id="20PCTOFF">
+        <code>20PCTOFF</code>
+
+    </coupon-codes>
+    <coupon-codes coupon-id="FREESHIP">
+        <code>freeship</code>
+
+    </coupon-codes>
+</coupons>

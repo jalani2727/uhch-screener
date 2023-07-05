@@ -1,0 +1,10 @@
+apiVersion: v1
+metadata:
+
+  askId: AIDE_0075704
+  caAgileId: 63083165243
+  projectKey: com.optum.UHCHearing:Ecommerce
+  projectFriendlyName: SFDCHearing
+  componentType: code
+
+  targetQG: GATE_0

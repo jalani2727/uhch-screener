@@ -1,0 +1,85 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/account/orderTrack.css');
+        assets.addCss('/css/account/profile.css');
+        assets.addJs('/js/somItemReturn.js');
+    </isscript>
+
+    <div class="hero slant-down account-image">
+        <h1 class="page-title">${Resource.msg('title.orders', 'orderDetails', null)}</h1>
+    </div>
+
+    <isset name="order" value="${pdict.order}" scope="page"/>
+
+    <isif condition="${pdict.fulfillmentStatus === 'Shipped'}">
+        <isset name="groupedItem" value="${order.shippedStatusGroupItems[0]}" scope="page"/>
+    </isif>
+
+    <div class="container">
+        <!---Breadcrumbs--->
+        <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+        <div class="row">
+            <div class="col">
+                <h2>${Resource.msg('title.order.return','orderReturn',null)}</h2>
+            </div>
+        </div>
+        <form action="${URLUtils.https('Order-Return')}" method="POST" name="cancel-form" id="itemsReturnSelectForm">
+            <input type="hidden" name="summaryId" value="${pdict.order.id}">
+            <input type="hidden" name="orderId" value="${pdict.order.sfccOrderNumber}">
+            <input type="hidden" name="currencyCode" value="${pdict.order.currencyCode}">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class="card" >
+                        <div class="card-header clearfix">
+                            <div class="form-group order-cancel-select-all-form">
+                                <div class="custom-control custom-checkbox">
+                                    <input class="custom-control-input" type="checkbox" id='selectAll' value="true">
+                                    <label class="custom-control-label order-cancel-select-all-label" for='selectAll'>
+                                        ${Resource.msg('label.order.cancel.select.all', 'orderCancel', null)}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <isinclude template="account/order/orderItemsReturn"/>
+                        </div>
+                        <isif condition="${pdict.nonRMAInfo.body}">
+                            <div class="card-footer-border order-return-ineligible">
+                                <a class="order-return-ineligible-link" href="">
+                                    <span>${Resource.msg('text.order.return.ineligible1','orderReturn',null)}</span><br/>
+                                    ${Resource.msg('text.order.return.ineligible2','orderReturn',null)}
+                                </a>
+                            </div>
+                        </isif>
+                    </div>
+
+                    <isif condition="${pdict.nonRMAInfo.body}">
+                        <!-- Ineligible Modal -->
+                        <div class="modal fade" id="ineligibleModal" tabindex="-1" aria-labelledby="ineligibleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="ineligibleModalLabel"><isprint value="${pdict.nonRMAInfo.title}" encoding="on" /></h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <isprint value="${pdict.nonRMAInfo.body}" encoding="on" />
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button class="decline btn btn-block btn-primary" data-url="" data-dismiss="modal">${Resource.msg('btn.item.return.ok', 'orderReturn', null)}</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </isif>
+                    <isinclude template="/account/orderConfirmReturn"/>
+                </div>
+            </div>
+        </form>
+        <div class="my-account">
+            <a href="${pdict.exitLinkUrl}" title="${Resource.msg('link.orderdetails.myaccount','account',null)}" aria-label="${Resource.msg('link.orderdetails.myaccount','account',null)}">
+                ${pdict.exitLinkText}
+            </a>
+        </div>
+    </div>
+</isdecorate>

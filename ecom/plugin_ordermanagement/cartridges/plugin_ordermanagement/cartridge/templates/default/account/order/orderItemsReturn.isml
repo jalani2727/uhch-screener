@@ -1,0 +1,72 @@
+<isloop items="${groupedItem.orderItems.orderItems}" var="orderItem" status="itemsLoopState">
+    <isif condition="${pdict.orderCardContext === 'account' && itemsLoopState.count > 5}">
+        <isbreak/>
+    </isif>
+
+    <div class="row order-history-card-details">
+        <div class="col-1 align-self-center form-group order-history-card-check">
+            <div class="form-group order-return-select-all-form">
+                <div class="custom-control custom-checkbox">
+                    <input id="lineItem-${orderItem.orderItemSummaryId}"
+                        name="lineItemId-${orderItem.orderItemSummaryId}"
+                        data-price = ${orderItem.price}
+                        class="custom-control-input item-return-checkboxt-input"
+                        type="checkbox"
+                        value="${orderItem.sfccProductId}"
+                        <isif condition="${!orderItem.quantityAvailableToReturn || orderItem.quantityAvailableToReturn < 1}"> disabled="disabled"</isif>/>
+                    <label for="lineItem-${orderItem.orderItemSummaryId}" class="custom-control-label item-return-checkboxt-label"></label>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 form-group">
+            <img class="img-fluid"
+                src   = "${orderItem.images.small[0].url}"
+                alt   = "${orderItem.images.small[0].alt}"
+                title = "${orderItem.images.small[0].title}">
+        </div>
+        <div class="col-7 item-details form-group">
+            <p class="item-detail">
+                <isprint value="${orderItem.productName}"/>
+                <isif condition="${orderItem.quantity > 1}">
+                    ${Resource.msgf('label.order.item.x.quantity', 'orderDetails', null, orderItem.quantity)}
+                </isif>
+            </p>
+
+            <p class="item-detail"> ${orderItem.totalPrice} </p>
+
+            <isloop items="${orderItem.variationAttributes}" var="attribute">
+                <p class="line-item-attributes item-details">${attribute.displayName}: ${attribute.displayValue}</p>
+            </isloop>
+        </div>
+        <isif condition="${orderItem.quantityAvailableToReturn && orderItem.quantityAvailableToReturn > 1}">
+            <input type="hidden" name="quantityMax-${orderItem.orderItemSummaryId}" value="${orderItem.quantityAvailableToReturn}">
+            <div class="col-11 offset-1 form-group required return-count-form d-none" id="selectCount-form-lineItem-${orderItem.orderItemSummaryId}">
+                <label class="form-control-label">
+                    ${Resource.msg('label.order.return.number','orderReturn',null)}
+                </label>
+                <select class="form-control quantity custom-select return-count" id="rcount-${orderItem.orderItemSummaryId}" name="rcount-${orderItem.orderItemSummaryId}">
+                    <isloop begin="1"
+                            end="${orderItem.quantityAvailableToReturn}"
+                            status="status">
+                        <isif condition="${orderItem.quantityAvailableToReturn === status.index}">
+                            <option selected="selected" value="${status.index}">${status.index}</option>
+                        <iselse/>
+                            <option value="${status.index}">${status.index}</option>
+                        </isif>
+                    </isloop>
+                </select>
+            </div>
+        </isif>
+        <div class="col-11 offset-1 form-group required return-reason-form d-none" id="selectReason-form-lineItem-${orderItem.orderItemSummaryId}">
+            <label class="form-control-label">
+                ${Resource.msg('label.order.return.reason','orderReturn',null)}
+            </label>
+            <select class="form-control custom-select" id="reason-${orderItem.orderItemSummaryId}" name="reason-${orderItem.orderItemSummaryId}" required="" aria-required="true">
+                <option value="false">${Resource.msg('order.items.return.select.reason','orderReturn',null)}</option>
+                <isloop items="${pdict.reasons}" var="reason" status="loopState">
+                    <option value="${reason.value}">${Resource.msg(reason.label, 'orderReturn', null)}</option>
+                </isloop>
+            </select>
+        </div>
+    </div>
+</isloop>

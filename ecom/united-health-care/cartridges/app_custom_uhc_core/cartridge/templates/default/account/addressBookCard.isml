@@ -1,0 +1,25 @@
+<div class="card address-card">
+    <div class="card-header clearfix">
+        <h2 class="pull-left">${Resource.msg('label.shipping-address','account',null)}</h2>
+        <isif condition="${pdict.account.preferredAddress}">
+            <a href="${URLUtils.url('Address-List')}" class="pull-right" aria-label="${Resource.msg('label.addressbook.viewaddress','account',null)}">${Resource.msg('link.view','account',null)}</a>
+        </isif>
+    </div>
+    <isif condition="${pdict.account.preferredAddress}">
+        <div class="card-body">
+            <div>
+                <div class="address-info">
+                    <div>${pdict.account.preferredAddress.address.firstName} ${pdict.account.preferredAddress.address.lastName}</div>
+                    <div>${pdict.account.preferredAddress.address.address1}</div>
+                    <isif condition="${pdict.account.preferredAddress.address.address2 && pdict.account.preferredAddress.address.address2 !== null}">
+                        <div>${pdict.account.preferredAddress.address.address2}</div>
+                    </isif>
+                    <div>${pdict.account.preferredAddress.address.city}, ${pdict.account.preferredAddress.address.stateCode} ${pdict.account.preferredAddress.address.postalCode}</div>
+                    <div>
+                        <input class="input-phone input-unset-all" value="${pdict.account.preferredAddress.address.phone}" readonly aria-labelledby="${Resource.msg('label.profile.phone','account',null)}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </isif>
+</div>

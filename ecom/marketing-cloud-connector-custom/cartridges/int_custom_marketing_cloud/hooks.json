@@ -1,0 +1,20 @@
+{
+    "hooks": [
+        {
+            "name": "app.communication.appointment.request",
+            "script": "~/cartridge/scripts/communication/appointmentRequest"
+        },
+        {
+            "name": "app.communication.hearingtest.result",
+            "script": "~/cartridge/scripts/communication/hearingTest"
+        },
+        {
+            "name": "app.communication.paymentportal.confirmation",
+            "script": "~/cartridge/scripts/communication/paymentportal"
+        },
+        {
+            "name": "app.customer.email",
+            "script": "~/cartridge/scripts/hookProxy/emailProxy"
+        }
+    ]
+}

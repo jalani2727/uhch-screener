@@ -1,0 +1,20 @@
+.most-recent-order {
+    color: $uhc-form-label;
+    font-family: $uhc-font-sans-bold;
+}
+
+.od-bold-font {
+    font-family: $uhc-font-sans-bold;
+}
+
+.od-font-size-18 {
+    font-size: 18px;
+}
+
+.uploaded-file {
+    margin-top: 22px;
+
+    @include media-breakpoint-up(lg) {
+        margin-top: 24px;
+    }
+}

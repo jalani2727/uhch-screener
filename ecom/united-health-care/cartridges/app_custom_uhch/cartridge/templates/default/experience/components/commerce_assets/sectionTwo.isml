@@ -1,0 +1,23 @@
+<div class="inner">
+    <div class="left">
+        <div class="content">
+            <div class="image">
+                <img src="${pdict.leftImage.src.desktop}" alt="${pdict.leftAlt ? pdict.leftAlt : imageName}" />
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="content">
+            <h2>${pdict.rightHeadline}</h2>
+            <isinclude template="/components/modules" sf-toolkit="off" />
+            <iscontentasset aid="bsh-s2-rightSubheadline"/>
+            <isprint value="${pdict.rightParagraph}" encoding="off" />
+
+            <div class="cta">
+                <a href="${pdict.buttonLink}" class="primary button">
+                    ${pdict.buttonText}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

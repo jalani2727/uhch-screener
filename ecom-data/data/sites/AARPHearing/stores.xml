@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stores xmlns="http://www.demandware.com/xml/impex/store/2007-04-30">
+    <store store-id="UnitedHealthcareHearing-WestChester-OH">
+        <name>UnitedHealthcare Hearing</name>
+        <address1>9050 Centre Pointe Dr</address1>
+        <city>West Chester Township</city>
+        <postal-code>45069</postal-code>
+        <state-code>OH</state-code>
+        <country-code>US</country-code>
+        <latitude>77.4977</latitude>
+        <longitude>27.2046</longitude>
+        <store-locator-enabled-flag>true</store-locator-enabled-flag>
+        <demandware-pos-enabled-flag>false</demandware-pos-enabled-flag>
+        <pos-enabled-flag>false</pos-enabled-flag>
+    </store>
+
+</stores>

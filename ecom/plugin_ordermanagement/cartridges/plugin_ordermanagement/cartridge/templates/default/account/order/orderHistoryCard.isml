@@ -1,0 +1,49 @@
+<div class="card">
+    <isif condition="${pdict.orderCardContext === 'account'}">
+        <div class="card-header clearfix">
+            <h2 class="pull-left">${Resource.msg('label.orderhistory','account',null)}</h2>
+            <a href="${URLUtils.https('Order-History')}" class="pull-right"  aria-label="${Resource.msg('label.orderhistory.vieworderhistory','account',null)}">${Resource.msg('link.view','account',null)}</a>
+        </div>
+    </isif>
+    <div class="card-header clearfix">
+        <isif condition="${pdict.orderCardContext === 'account'}">
+            <div class="row">
+                <div class="col">
+                    ${Resource.msg('label.orderhistory.mostrecentorder','account',null)}
+                </div>
+            </div>
+        </isif>
+        <div class="row">
+            <div class="col-5 card-info-group">
+                <p>
+                    <isprint value="${order.totals.totalQuantity}" formatter="#"/>
+                    <isif condition="${order.totals.totalQuantity > 1}">
+                        ${Resource.msg('label.orderhistory.total.items','account',null)}
+                    <iselse>
+                        ${Resource.msg('label.orderhistory.total.item','account',null)}
+                    </isif>
+                </p>
+            </div>
+            <div class="col-7 card-info-group">
+                <p class="pull-right">
+                    ${order.totals.grandTotal}
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <isset name="groupedItems" value="${order.orderedStatusGroupItems}" scope="page"/>
+    <isinclude template="account/order/fulfillmentCard"/>
+
+    <isset name="groupedItems" value="${order.inProgressStatusGroupItems}" scope="page"/>
+    <isinclude template="account/order/fulfillmentCard"/>
+
+    <isset name="groupedItems" value="${order.shippedStatusGroupItems}" scope="page"/>
+    <isinclude template="account/order/fulfillmentCard"/>
+
+    <isset name="groupedItems" value="${order.returnedStatusGroupItems}" scope="page"/>
+    <isinclude template="account/order/fulfillmentCard"/>
+
+    <isset name="groupedItems" value="${order.canceledStatusGroupItems}" scope="page"/>
+    <isinclude template="account/order/fulfillmentCard"/>
+</div>

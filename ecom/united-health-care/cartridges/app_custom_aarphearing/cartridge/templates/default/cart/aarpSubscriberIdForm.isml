@@ -1,0 +1,24 @@
+<isinclude template="/components/modules" sf-toolkit="off" />
+<div class="col aarp-subscribe-form">
+    <form action="${URLUtils.url('Checkout-ValidateAARPSubscriberId')}" class="aarp-subscriber-id-form" method="POST" name="aarp-subscriber-id-form">
+        <div class="error-message-text pb-3 mb-1">${Resource.msg('label.aarp.membership.id.needed','cart',null)}</div>
+        <div class="form-group required pb-2">
+            <label class="form-control-label" for="aarp-subscriber-id">
+                ${Resource.msg('label.aarp.membership.id', 'cart', null)}
+            </label>
+            <input type="text" required class="form-control required aarp-subscriber-id-field"
+                aria-describedby="form-aarp-subscriber-id-error" id="aarp-subscriber-id"
+                name="aarpSubscriberId"
+                data-iserrormessage="${((pdict.valid && pdict.valid.error) || hasErrorMessages) && !miniCart}">
+            <div class="invalid-feedback" id="form-aarp-subscriber-id-error"></div>
+        </div>
+        <div class="pb-4">
+            <iscontentasset aid="aarp-join-or-renew" />
+        </div>
+        <div class="col-12 checkout-continue p-0">
+            <div class="mb-sm-3">
+                <button class="btn btn-primary btn-block checkout-btn disabled" type="submit">${Resource.msg('button.checkout', 'cart', null)}</button>
+            </div>
+        </div>
+    </form>
+</div>

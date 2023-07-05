@@ -1,0 +1,260 @@
+<isdecorate template="common/layout/page">
+    <isinclude template="/components/modules" sf-toolkit="off" />
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/hearingTest.js');
+        assets.addCss('/css/hearingTest.css');
+    </isscript>
+    <div class="container hearing-test-upload-page" data-file-size-error="${Resource.msg('error.msg.file-size','hearingtest',null)}" data-file-format-error="${Resource.msg('error.msg.unsupported-file-format','hearingtest',null)}" data-verify-captcha-error="${Resource.msg('error.msg.verify-captcha','hearingtest',null)}" >
+        <div class="justify-content-center">
+            <div class="card hearing-test-user-details">
+                <h1 class="card-header page-title">
+                    ${Resource.msg('title.upload.hearing.test', 'hearingtest', null)}
+                </h1>
+                <div class="card-body">
+                    <div class="hearing-test-upload-info">
+                        <iscontentasset aid="hearingtest-upload-text" />
+                    </div>
+                    <div class="api-error-message"> </div>
+                    <form action="${pdict.actionUrl}" class="hearingtest-result <isif condition="
+                        ${!pdict.authenticated}">adobe-form-event</isif>"
+                        data-name="${Resource.msg('label.adobe.upload.hearing', 'hearingtest', null)}" method="POST"
+                        name="hearingtest-result" has-recaptcha-v2 data-recaptchaenable="${pdict.recaptchaEnable}" enctype="multipart/form-data">
+                        <isif condition="${!pdict.authenticated}">
+                            <!--- User's first name --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="user-first-name">
+                                        ${Resource.msg('label.firstname', 'hearingtest', null)}
+                                    </label>
+                                    <input type="text" required class="form-control required" id="user-first-name"
+                                        name="userFirstName" value="${pdict.profile ? pdict.profile.firstName : ''}">
+                                    <div class="invalid-feedback" id="user-first-name-error"></div>
+                                </div>
+                            </div>
+
+                            <!--- User's  last name --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="user-last-name">
+                                        ${Resource.msg('label.lastname', 'hearingtest', null)}
+                                    </label>
+                                    <input type="text" required class="form-control required" id="user-last-name"
+                                        name="userLastName">
+                                    <div class="invalid-feedback" id="user-last-name-error"></div>
+                                </div>
+                            </div>
+
+                        </isif>
+                        <!--- Street --->
+                        <div class="col">
+                            <div class="form-group required">
+                                <label class="form-control-label" for="user-street">
+                                    ${Resource.msg('label.input.contact.us.street', 'contactUs', null)}
+                                </label>
+                                <input type="text" required class="form-control required" id="user-street"
+                                    name="userStreet">
+                                <div class="invalid-feedback" id="user-street-error"></div>
+                            </div>
+                        </div>
+
+                        <!--- City --->
+                        <div class="col">
+                            <div class="form-group required">
+                                <label class="form-control-label" for="user-city">
+                                    ${Resource.msg('label.input.contact.us.city', 'contactUs', null)}
+                                </label>
+                                <input type="text" required class="form-control required" id="user-city"
+                                    name="userCity">
+                                <div class="invalid-feedback" id="user-city-error"></div>
+                            </div>
+                        </div>
+
+                        <!--- State --->
+                        <div class="col">
+                            <div class="form-group required">
+                                <label class="form-control-label" for="user-state">
+                                    ${Resource.msg('label.input.contact.us.state', 'contactUs', null)}
+                                </label>
+                                <select type="text" required class="form-control required custom-select" id="user-state"
+                                    name="userState">
+                                    <isinclude template="/contactUs/contactUsState" />
+                                </select>
+                                <div class="invalid-feedback" id="user-state-error"></div>
+                            </div>
+                        </div>
+
+                        <!--- ZipCode --->
+                        <div class="col">
+                            <div class="form-group required">
+                                <label class="form-control-label" for="user-zipcode">
+                                    ${Resource.msg('label.input.contact.us.zipcode', 'contactUs', null)}
+                                </label>
+                                <input type="text" required class="form-control required" id="user-zipcode"
+                                    name="userZipCode" maxlength="10" minlength="5"
+                                    pattern="(^\d{5}(-\d{4})?$)|(^[abceghjklmnprstvxyABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Za-z]{1} *\d{1}[A-Za-z]{1}\d{1}$)">
+                                <div class="invalid-feedback" id="user-zipcode-error"></div>
+                            </div>
+                        </div>
+
+                        <isif condition="${!pdict.authenticated}">
+                            <!--- User's Phone --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="user-phone">
+                                        ${Resource.msg('label.input.contact.us.phone', 'contactUs', null)}
+                                    </label>
+                                    <input type="text"
+                                        placeholder="${Resource.msg('label.form.field.phone.placeholder', 'forms', null)}"
+                                        required class="form-control required input-phone" id="user-phone"
+                                        maxlength="12" pattern="(^\d{3}-\d{3}-\d{4}$)"
+                                        data-pattern-mismatch="${Resource.msg('error.message.parse.phone', 'forms', null)}"
+                                        name="userPhone"
+                                        value="${pdict.profile && pdict.profile.phoneHome ? pdict.profile.phone : ''}">
+                                    <div class="invalid-feedback" id="user-phone-error"></div>
+                                </div>
+                            </div>
+
+                            <!--- User's email --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="user-email">
+                                        ${Resource.msg('label.input.contact-us-email', 'contactUs', null)}
+                                    </label>
+                                    <input type="email" required class="form-control required" id="user-email"
+                                        name="userEmail" value="${pdict.profile ? pdict.profile.email : ''}"
+                                        pattern="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$"
+                                        data-pattern-mismatch="${Resource.msg('error.message.form.invalid-email','forms',null)}">
+                                    <div class="invalid-feedback" id="user-email-error"></div>
+                                </div>
+                            </div>
+
+                            <!--- User's  DOB --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="user-dob">
+                                        ${Resource.msg('label.input.contact.us.dateofbirth', 'contactUs', null)}
+                                    </label>
+                                    <input type="date" required class="form-control required" id="user-dob"
+                                        max="${pdict.maxDate}" name="userDob"
+                                        value="${pdict.profile ? pdict.profile.dob : ''}"
+                                        data-range-error="${Resource.msg('error.message.invalid-dob','forms',null)}">
+                                    <div class="invalid-feedback" id="user-dob-error"></div>
+                                </div>
+                            </div>
+
+                            <!--- Health plan insurer --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="health-plan-insurer">
+                                        ${Resource.msg('label.health.plan.insurer', 'hearingtest', null)}
+                                    </label>
+                                    <input type="text" required class="form-control required" id="health-plan-insurer"
+                                        name="healthPlanInsurerId">
+                                    <div class="invalid-feedback" id="health-plan-insurer-error"></div>
+                                </div>
+                            </div>
+
+                            <!--- Health plan member Id --->
+                            <div class="col">
+                                <div class="form-group required">
+                                    <label class="form-control-label" for="health-plan-member-id">
+                                        ${Resource.msg('label.membership.id', 'cart', null)}
+                                    </label>
+                                    <input type="text" required class="form-control required" id="health-plan-member-id"
+                                        name="healthPlanMemberId">
+                                    <div class="invalid-feedback" id="health-plan-member-id-error"></div>
+                                </div>
+                            </div>
+                        </isif>
+
+                        <!--- Is Hearing Aid User --->
+                        <div class="col">
+                            <div class="form-group required">
+                                <label class="form-control-label" for="is-hearing-aid-user">
+                                    ${Resource.msg('label.hearing.aid.user', 'hearingtest', null)}
+                                </label>
+                                <select type="text" required class="form-control required custom-select"
+                                    id="is-hearing-aid-user" name="isHearingAidUser">
+                                    <option value="">${Resource.msg('label.select', 'common', null)}</option>
+                                    <option value="${Resource.msg('label.value.yes', 'hearingtest', null)}">
+                                        ${Resource.msg('label.yes', 'hearingtest', null)}</option>
+                                    <option value="${Resource.msg('label.value.no', 'hearingtest', null)}">
+                                        ${Resource.msg('label.no', 'hearingtest', null)}</option>
+                                </select>
+                                <div class="invalid-feedback" id="is-hearing-aid-user-error"></div>
+                            </div>
+                        </div>
+
+                        <!--- Is Ear Mold User --->
+                        <div class="col">
+                            <div class="form-group required">
+                                <label class="form-control-label" for="is-ear-mold-user">
+                                    ${Resource.msg('label.ear.mold.user', 'hearingtest', null)}
+                                </label>
+                                <select type="text" required class="form-control required custom-select"
+                                    id="is-ear-mold-user" name="isEarMoldUser">
+                                    <option value=""> ${Resource.msg('label.select', 'common', null)}</option>
+                                    <option value="${Resource.msg('label.value.yes', 'hearingtest', null)}">
+                                        ${Resource.msg('label.yes', 'hearingtest', null)}</option>
+                                    <option value="${Resource.msg('label.value.no', 'hearingtest', null)}">
+                                        ${Resource.msg('label.no', 'hearingtest', null)}</option>
+                                </select>
+                                <div class="invalid-feedback" id="is-ear-mold-user-error"></div>
+                            </div>
+                        </div>
+
+                        <!-- Upload File -->
+                        <div class="upload-file-container">
+                            ${Resource.msg('label.upload.file.info', 'hearingtest', null)}
+                            <div class="upload-file">
+                                <div>
+                                    <span class="file-name-container"></span>
+                                    <span class="file-upload-label">${Resource.msg('label.file.upload', 'hearingtest', null)}</span>
+                                    <span class="upload-file-error"></span>
+                                    <input type="hidden" name="allowed-file-length"
+                                        value="${pdict.allowedFileLength}" />
+                                    <img class="check-mark-success"
+                                        src="${URLUtils.staticURL('/images/hearing-test/checkmark.svg')}" alt="" />
+                                </div>
+                                <label class="btn btn-outline-primary select-file-btn">
+                                    <input type="file" id="hearing-test-file" name="hearing-test-file"
+                                        accept="${pdict.allowedTypes}">
+                                    ${Resource.msg('label.select.file', 'hearingtest', null)}
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- User's consent  -->
+                        <div class="user-consent-container">
+                            <iscontentasset aid="hearingtest-consent" />
+                        </div>
+
+                        <!--Recaptcha-->
+                        <isif condition="${pdict.recaptchaEnable}">
+                            <div class="captcha-container">
+                                <div id="recaptcha-element"></div>
+                                <div id="g-recaptcha-error"></div>
+                            </div>
+                        </isif>
+                        <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+                        <!--- Hearing test submit --->
+                        <div class="hearing-test-submit mx-auto">
+                            <button class="btn btn-primary hearing-test-submit-btn custom-datalayer" 
+                                data-name="${Resource.msg('label.adobe.upload.hearing.btn', 'hearingtest', null)}" 
+                                data-location="${Resource.msg('label.adobe.upload.hearing.test', 'hearingtest', null)}" 
+                                type="submit" 
+                                name="submit"
+                                value="submit">
+                                ${Resource.msg('label.input.contact-us-submit', 'contactUs', null)}
+                            </button>
+                        </div>
+                    </form>
+                    <isif condition="${pdict.recaptchaEnable}">
+                        <isinclude template="/recaptcha/recaptchaScript" />
+                    </isif>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

@@ -1,0 +1,111 @@
+.provider-view {
+    .provider-cta-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 25px;
+
+        p {
+            display: inline-block;
+            margin-bottom: 0;
+        }
+    }
+
+    .goto-practice-view {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 25px;
+
+        &::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            margin-right: 10px;
+            display: inline-block;
+            background-image: url('../images/vector-left-white.png');
+            background-repeat: no-repeat;
+        }
+    }
+
+    .practice-provider-title {
+        padding-bottom: 15px;
+        border-bottom: 1px solid $uhc-border-color;
+        margin-bottom: 20px;
+    }
+
+    .provider-label {
+        color: $uhc-form-label;
+    }
+
+    .service-item {
+        display: flex;
+
+        .service-name {
+            margin-left: 12px;
+            line-height: 16px;
+        }
+
+        .service-icon {
+            width: 30px;
+            height: 24px;
+            background-repeat: no-repeat;
+
+            &.service-icon-pediatrics {
+                background-image: $icon-pediatrics;
+            }
+
+            &.service-icon-mobile-provider {
+                background-image: $icon-mobile;
+            }
+
+            &.service-icon-same-day-fit {
+                background-image: $icon-same-day-fit;
+            }
+
+            &.service-icon-relate {
+                background-image: $icon-relate;
+            }
+
+            &.service-icon-virtual-care {
+                background-image: $icon-virtual-care;
+            }
+
+            &.service-icon-in-office-payment {
+                background-image: $icon-in-office-payment;
+            }
+        }
+    }
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include media-breakpoint-up(lg) {
+        padding-left: 40px;
+        padding-right: 40px;
+
+        .provider-cta-container {
+            padding: 25px 0;
+            flex-direction: row;
+            align-items: center;
+
+            p {
+                width: 190px;
+                margin-left: 20px;
+            }
+        }
+
+        .goto-practice-view {
+            width: auto;
+            margin-bottom: 0;
+
+            &::before {
+                content: '';
+                width: 12px;
+                height: 12px;
+                margin-right: 10px;
+                display: inline-block;
+                background-image: url('../images/vector-left-white.png');
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

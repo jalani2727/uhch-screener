@@ -1,0 +1,7 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+
+<img class="sr-only" id="timeout-pixel" src="${pdict.communityLogoutURL}" alt="" role="hidden" />
+
+<script>
+    window.location.href = "<isprint value="${URLUtils.https('Home-Show')}" encoding="off" />";
+</script>

@@ -1,0 +1,34 @@
+<isinclude template="/components/modules" />
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/checkout/checkout.css');
+        assets.addJs('/js/checkoutRegistration.js');
+    </isscript>
+
+    <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+        <isinclude template="reporting/reportingUrls" />
+    </isif>
+
+    <div class="container receipt order-invoice <isif condition="${pdict.order.shipping.length > 1}">multi-ship</isif>">
+        <div class="row">
+            <div class="col-12 thank-you-msg-container">
+                <div class="order-thank-you-msg">${Resource.msg('msg.placed.order.thank.you','confirmation',null)}</div>
+                <isif condition="${pdict.order.orderEmail}">
+                    <p class="order-thank-you-email-msg"><isprint value="${Resource.msg('info.receive.email.confirmation', 'confirmation', null)}" encoding="htmlcontent" /><span class="confirmation-email">${pdict.order.orderEmail}</span></p>
+                </isif>
+                <iscontentasset aid="order-confirmation-alert-message" />
+            </div>
+        </div>
+        <div class="row order-confirmation-detail-cards">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 order-confirmation-details">
+                <isinclude template="checkout/confirmation/confirmationDetails" />
+                <div class="mb-3">
+                    <a href="${URLUtils.url('Home-Show')}" class="btn btn-primary btn-block order-confirmation-continue-shopping" role="button" aria-pressed="true">
+                        ${Resource.msg('button.continue.shopping','confirmation',null)}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</isdecorate>

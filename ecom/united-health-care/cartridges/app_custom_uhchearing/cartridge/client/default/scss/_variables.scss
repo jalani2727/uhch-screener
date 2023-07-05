@@ -1,0 +1,135 @@
+@import '~base/variables';
+@import './svgVariables';
+
+//UHC-Colors
+$primary-col-1: #002677;
+$primary-col-2: $white;
+$secondary-col-1: #00bed5;
+$secondary-col-2: #f5b700;
+$secondary-col-3: #ff681f;
+$tints-col-1: #ccf2f7;
+$tints-col-2: #99e5ee;
+$tints-col-3: #5a5a5a;
+$tints-col-4: #f4f4f4;
+$tints-col-5: #dadbdc;
+
+$uhc-black: $black;
+$uhc-white: $primary-col-2;
+$uhc-title: $primary-col-1;
+$body-text-color: $tints-col-3;
+$uhc-link-color: #196ecf;
+$uhc-form-label: $grey8;
+$uhc-form-input: $tints-col-3;
+$uhc-form-input-border: $tints-col-3;
+$uhc-error: #c71300;
+$uhc-border-color: #c4c4c4;
+$uhc-section-border-color: #b3b9bc;
+$strike-price: $uhc-error;
+$grey-out-color: #bebebe;
+
+//Font
+$uhc-font-serif: 'UHCSerif', serif;
+$uhc-font-sans-medium: 'UHCSansMedium', sans-serif;
+$uhc-font-sans-semi-bold: 'UHCSansSemiBold', sans-serif;
+$uhc-font-sans-bold: 'UHCSansBold', sans-serif;
+
+$uhc-body-font: $uhc-font-sans-medium;
+$uhc-heading-font-1: $uhc-font-serif;
+$uhc-heading-font-2: $uhc-font-sans-bold;
+$uhc-link-font: $uhc-font-sans-medium;
+$uhc-form-label-font: $uhc-font-sans-semi-bold;
+
+//Buttons
+$uhc-btn-primary: $primary-col-1;
+$uhc-btn-primary-text: $primary-col-2;
+$uhc-btn-primary-hover: $primary-col-2;
+$uhc-btn-primary-hover-text: $primary-col-1;
+
+$uhc-btn-outline-primary: $primary-col-1;
+$uhc-btn-outline-primary-text: $primary-col-1;
+$uhc-btn-outline-primary-hover-text: $primary-col-2;
+
+$uhc-btn-disabled: $tints-col-4;
+$uhc-btn-disabled-text: #6f6f6f;
+
+//Inputs
+$checkbox-border: #6f6f6f;
+$checkbox-bg: $primary-col-1;
+$checkbox-bg-checked: #196ecf;
+
+//Grid
+$grid-breakpoints: (
+    xs: 0,
+    sm: 544px,
+    md: 769px,
+    lg: 1280px,
+    xl: 1440px
+);
+
+$container-max-widths: (
+    lg: 1220px,
+    xl: 1272px
+);
+
+//header.scss, headerSearch.scss & menu.scss
+$uhc-header-banner: $primary-col-1;
+$uhc-myaccount: $primary-col-1;
+$uhc-myaccount-text: $primary-col-2;
+$uhc-minicart-count: #356cc8;
+$uhc-need-help: $primary-col-2;
+$uhc-sec-nav: $primary-col-1;
+$search-sub-heading-font-color: $tints-col-3;
+$search-sub-heading-medium-font: $uhc-font-sans-medium;
+$search-content-bold-font: $uhc-font-sans-bold;
+$uhc-nav: $primary-col-2;
+$uhc-nav-hover: #0c55b8;
+$uhc-nav-l2: $uhc-link-color;
+$uhc-nav-l2-bg: $primary-col-2;
+$uhc-main-nav: $uhc-font-sans-bold;
+
+//footer.scss
+$footer-border-line: #667cad;
+$footer-background-color: $primary-col-1;
+$footer-h2: $primary-col-2;
+$footer-link-lext: $primary-col-2;
+$footer-button: $primary-col-2;
+$footer-store: $primary-col-2;
+$footer-logo-details: $primary-col-2;
+$footer-social-media: $primary-col-2;
+$footer-copyright: $primary-col-2;
+$footer-arrow-icon: $uhc-link-color;
+$footer-heading-font: $uhc-font-sans-bold;
+$footer-search-text-font: $uhc-font-sans-bold;
+$footer-social-media-font: $uhc-font-sans-bold;
+$footer-sub-heading-font: $uhc-font-sans-semi-bold;
+$footer-additional-text: $uhc-font-sans-semi-bold;
+$footer-copyright-text-font: $uhc-font-sans-medium;
+
+//Hearing-Test
+$hearing-test-background: #e7f7fa;
+$hearing-test-background-two: $hearing-test-background;
+$ht-exit-col: $primary-col-1;
+$ht-head-col: #979797;
+$hearing-test-results-section-2-bg: #f6f7f8;
+$font-black: $uhc-form-label;
+$ls-bg: #f6f7f8;
+$ls-radio-col: #4b4b4b;
+$ls-btn-col: #ababab;
+$ls-btn-bg: #dedede;
+$ls-btn-bg-hover: $primary-col-1;
+$ls-btn-back-hover: #c0c0c0;
+
+//productTileStyles
+$uhc-tile-price: $black;
+$badge-bg: #196ecf;
+
+//detail.scss
+$product-name-font-color: $primary-col-1;
+$pdp-title-font: $uhc-font-serif;
+$pdp-select-color-bold-font: $uhc-font-sans-bold;
+$product-color-selector-border-color: $checkbox-bg-checked;
+$border-line-color: $uhc-border-color;
+$table-text-color: $primary-col-1;
+$comparison-table-color: $tints-col-4;
+$table-header-font: $uhc-font-sans-bold;
+$table-content-font: $uhc-font-sans-medium;

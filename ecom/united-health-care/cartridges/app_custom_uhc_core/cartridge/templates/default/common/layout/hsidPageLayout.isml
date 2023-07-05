@@ -1,0 +1,19 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<isinclude template="/components/modules" sf-toolkit="off" />
+
+<!DOCTYPE html>
+<html lang="${require('dw/util/Locale').getLocale(request.getLocale()).getLanguage() || 'en'}">
+
+    <head>
+        <isinclude sf-toolkit="off" template="/common/scripts" />
+        <isinclude template="/common/htmlHead" />
+    </head>
+
+    <body>
+        <isinclude template="/components/header/logoOnlyPageHeader" />
+        <div role="main" id="maincontent">
+            <isreplace/>
+        </div>
+        <isinclude template="/components/footer/messageOnlyPageFooter" />
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<div class="summary-details billing-address-summary">
+    <div class="summary-section-label billing-address-info-label">
+        ${Resource.msg('label.order.details.billing.address', 'orderDetails', null)}
+    </div>
+    <div class="billing-address-details">
+        <span class="postalCode">${billing.address.postalCode}</span>
+        <span class="stateCode">${billing.address.state} ${billing.address.city}</span>
+        <div class="address1">${billing.address.street}</div>
+        <div class="address2"></div>
+        <div>
+            <span class="lastName">${billing.address.lastName}</span>
+            <span class="firstName">${billing.address.firstName}</span>
+        </div>
+        <div class="phone">${billing.address.phone}</div>
+    </div>
+</div>

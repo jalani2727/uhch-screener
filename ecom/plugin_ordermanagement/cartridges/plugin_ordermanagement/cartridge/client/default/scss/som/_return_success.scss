@@ -1,0 +1,11 @@
+.return-success {
+    color: $success;
+
+    &-first-line {
+        font-weight: bold;
+    }
+
+    &-second-line {
+        margin-bottom: 0;
+    }
+}

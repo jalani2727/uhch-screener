@@ -1,0 +1,28 @@
+<div class="description-and-detail">
+    <div class="row description <isif condition="${!product.shortDescription}">hidden-xl-down</isif>">
+        <isinclude template="product/components/description" />
+    </div>
+
+    <div class="row details <isif condition="${!product.longDescription}">hidden-xl-down</isif>">
+        <div class="col-12">
+            <h2 class="title">
+                ${Resource.msg('label.details', 'product', null)}
+            </h2>
+        </div>
+
+        <isinclude template="product/components/details" />
+    </div>
+
+    <isinclude template="product/components/manualLink" />    
+
+    <isif condition="${product.followUpCare}">
+        <div class="row follow-up">
+            <div class="col-12">
+                <h2 class="title">
+                    ${Resource.msg('label.followup.care', 'product', null)}
+                </h2>
+            </div>
+            <isinclude template="product/components/followUpCare" />
+        </div>
+    </isif>
+</div>

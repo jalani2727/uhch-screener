@@ -1,0 +1,66 @@
+.provider-search-title {
+    font-family: $uhc-font-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 10px;
+    color: $primary-col-1;
+}
+
+.provider-search-description {
+    font-family: $uhc-font-sans-medium;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $body-text-color;
+}
+
+label {
+    font-family: $uhc-font-sans-bold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14.22px;
+    line-height: 16px;
+    color: $uhc-form-label;
+}
+
+.practice-name,
+.practice-phone-number {
+    font-family: $uhc-font-sans-bold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: $body-text-color;
+}
+
+.practice-provider-title {
+    font-family: $uhc-font-sans-bold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: $uhc-form-label;
+}
+
+.provider-name,
+.provider-label {
+    font-family: $uhc-font-sans-bold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: $uhc-link-color;
+}
+
+.practice-address,
+.practice-distance {
+    font-family: $uhc-font-sans-medium;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: $body-text-color;
+}

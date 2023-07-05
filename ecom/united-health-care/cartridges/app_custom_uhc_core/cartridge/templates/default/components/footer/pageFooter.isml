@@ -1,0 +1,42 @@
+<div class="footer-text-slot">
+    <isslot id="footer-text-slot" description="Footer Text Slot" context="global" />
+</div>
+<footer id="footercontent">
+    <div class="container">
+        <div class="footer-container row">
+            <div class="footer-item col-sm-8 col-md-4 pb-sm-4 pb-md-0 store">
+                <iscontentasset aid="footer-locate-store"/>
+                <div class = "button-container">
+                    <iscontentasset aid="footer-search-button"/>
+                </div>
+                <div class="additional-info">
+                    <iscontentasset aid="footer-locate-store-additional-info"/>
+                </div>
+            </div>
+            <div class="footer-item col-sm-4 col-md-2 pb-sm-4 pb-md-0 collapsible-xs about">
+                <iscontentasset aid="footer-about" />
+            </div>
+            <div class="footer-item col-sm-4 col-md-2 collapsible-xs account">
+                <iscontentasset aid="footer-account" />
+            </div>
+            <div class="footer-item col-sm-4 col-md-2 collapsible-xs support">
+                <iscontentasset aid="footer-support" />
+            </div>
+            <div class="footer-item locate-text">
+                <iscontentasset aid="footer-locate-store-additional-info"/>
+            </div>
+            <div class="footer-item col-sm-4 col-md-2 uhc-logo">
+                <div class = "icon-container">
+                    <iscontentasset aid="footer-uarc-logo-description" />
+                </div>
+                <div class="social">
+                    <isslot id="footer-column-m" description="Content in column 1 of the Footer" context="global" />
+                </div>
+            </div>
+        </div>
+        <hr class="hidden-xs-down" />
+        <div class="copyright-notice">
+            <iscontentasset aid="footer-copy" />
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,56 @@
+<div class="search-form-container">
+    <h1 class="provider-search-title">${Resource.msg('title.provider.search.find.provider', 'providersearch', null)}</h1>
+    <isslot id="provider-search-landing-content" description="Content for Provider Search Landing" context="global" />
+    <div class="form-container">
+        <form action="${pdict.actionURL}" class="provider-search-form" method="POST" name="provider-search-form">
+            <div class="text-container">
+                <div class="form-group zipcode-wrapper required">
+                    <label for="provider-search-zipcode" class="form-control-label">${Resource.msg('label.form.field.zip','providersearch',null)}</label>
+                    <input id="provider-search-zipcode" class="form-control" type="text" required value="${pdict.searchForm.zipCode.value || ''}" <isprint value="${pdict.searchForm.zipCode.attributes}" encoding="off" />/>
+                    <div class="zipcode-custom-error">${Resource.msg('label.form.error.zipstate', 'providersearch', null)}</div>
+                </div>
+                <div class="form-group state-wrapper required">
+                    <label for="provider-search-state" class="form-control-label">${Resource.msg('label.form.field.state', 'providersearch', null)}</label>
+                    <select id="provider-search-state" class="form-control custom-select"
+                        <isprint value="${pdict.searchForm.stateCode.attributes}" encoding="off" /> >
+                        <option id="" value="">${Resource.msg('option.state.empty', 'providersearch', null)}</option>
+                        <isloop items="${pdict.searchForm.stateCode.options}" var="state">
+                            <option id="${state.id}" value="${state.htmlValue}" <isif condition="${state.selected}"> selected </isif> >${state.htmlValue}</option>
+                        </isloop>
+                    </select>
+                    <div class="state-custom-error">${Resource.msg('label.form.error.zipstate', 'providersearch', null)}</div>
+                </div>
+                <div class="form-group radius-wrapper">
+                    <label for="provider-search-radius" class="form-control-label">${Resource.msg('label.form.field.radius', 'providersearch', null)}</label>
+                    <select id="provider-search-radius" class="form-control custom-select"  <isprint value="${pdict.searchForm.radius.attributes}" encoding="off" /> >
+                        <isloop items="${pdict.radiusValues}" var="radius">
+                            <option value = "${radius}" <isif condition="${pdict.searchForm.radius.value === radius}"> selected </isif> >${radius} ${Resource.msg('label.miles', 'providersearch', null)}</option>
+                        </isloop>
+                    </select>
+                </div>
+                <div class="form-group search-button-wrapper">
+                    <button class="btn btn-primary submit-btn" type="submit">${Resource.msg('label.btn.search', 'providersearch', null)}</button>
+                </div>
+            </div>
+
+            <div class="radio-container">
+                <div class="form-group custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" id="in-person-provider-type" name="${pdict.searchForm.providerType.htmlName}"
+                        value="In-Person"  checked  />
+                    <label class="custom-control-label" for="in-person-provider-type">${Resource.msg('label.provider.in-person', 'providersearch', null)}</label>
+                </div>
+                <div class="form-group custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" id="virtual-provider-type" name="${pdict.searchForm.providerType.htmlName}"
+                        value="Virtual" data-target="virtual"   />
+                    <label class="custom-control-label" for="virtual-provider-type">${Resource.msg('label.provider.virtual', 'providersearch', null)}</label>
+                </div>
+            </div>
+            <div class="virtual-visits-container" style="display: none;">
+                <h4>${Resource.msg('heading.provider.virtual-visits', 'providersearch', null)}</h4>
+                <p class="provider-search-description">
+                    ${Resource.msg('content.provider.virtual.visits', 'providersearch', null)}
+                </p>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,157 @@
+.guest-request-form {
+    .card-btn-container {
+        padding-bottom: 16px;
+    }
+
+    .section-1-heading,
+    .section-2-heading,
+    .section-3-heading-1,
+    .section-3-heading-2,
+    .virtual-visit-heading {
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .section-3-heading-2 {
+        margin-top: 25px;
+    }
+
+    .section-1 {
+        &.card {
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .section-2 {
+        &.card {
+            background: $primary-col-2;
+            padding-bottom: 27px;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+                padding-bottom: 58px;
+
+                .section-2-heading {
+                    font-size: 28px;
+                    line-height: 44px;
+                }
+            }
+        }
+
+        .card-body {
+            padding-bottom: 0;
+        }
+
+        .card-header {
+            border-bottom: 1px solid $uhc-border-color;
+        }
+
+        .view-coverage-btn-container {
+            margin-top: 5px;
+
+            @include media-breakpoint-up(lg) {
+                margin-top: 2px;
+            }
+        }
+
+        .view-coverage-btn {
+            width: 100%;
+
+            @include media-breakpoint-up(lg) {
+                width: 172px;
+            }
+        }
+    }
+
+    .section-3 {
+        &.card {
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .guest-info-submit {
+        margin-top: 24px;
+
+        .guest-info-submit-btn {
+            width: 100%;
+        }
+    }
+
+    .form-2-body {
+        margin-top: 22px;
+    }
+
+    .btn-create-acc {
+        @include media-breakpoint-up(lg) {
+            padding-right: 5px;
+        }
+    }
+
+    .btn-sign-in {
+        margin-top: 24px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
+            padding-left: 5px;
+        }
+    }
+
+    .card-separator-margin-top {
+        margin-top: 22px;
+    }
+
+    .card-header.virtual-visit-heading {
+        border-bottom: hidden;
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 25px;
+        }
+    }
+
+    label.user-consent-label {
+        font-family: $uhc-font-sans-medium;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .is-invalid ~ label.user-consent-label {
+        color: $uhc-form-label;
+    }
+
+    .go-back-btn-container {
+        padding: 0 18px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 0;
+        }
+    }
+
+    .goto-results-view {
+        display: block;
+        margin: 11px 0 16px;
+        width: 100%;
+
+        &::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            margin-right: 10px;
+            display: inline-block;
+            background-image: url('../images/vector-left-white.png');
+            background-repeat: no-repeat;
+        }
+
+        @include media-breakpoint-up(lg) {
+            display: inline-block;
+            margin: 30px 0;
+            width: auto;
+        }
+    }
+}

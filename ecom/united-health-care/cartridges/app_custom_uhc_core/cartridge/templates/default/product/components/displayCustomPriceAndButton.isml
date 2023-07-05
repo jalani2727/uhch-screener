@@ -1,0 +1,14 @@
+<div class="prices-add-to-cart-actions">
+    <isif condition="${pdict.product && pdict.product.price && (pdict.product.price !== null)}">
+        <div class="row">
+            <div class="col-12">
+                <!-- Prices -->
+                <div class="prices">
+                    <isset name="price" value="${pdict.product && pdict.product.price && pdict.product.price !== null ? pdict.product.price : ''}" scope="page" />
+                    <isinclude template="product/components/pricing/main" />
+                </div>
+            </div>
+        </div>
+    </isif>
+    <isinclude template="product/components/addToCartProduct" />
+</div>

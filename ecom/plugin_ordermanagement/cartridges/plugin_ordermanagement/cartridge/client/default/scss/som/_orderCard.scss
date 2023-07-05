@@ -1,0 +1,78 @@
+@import "~base/variables";
+
+.order-history-card-details {
+    padding-bottom: 1rem;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .item-details {
+        padding-left: 0;
+
+        .item-detail {
+            font-weight: bold;
+        }
+    }
+
+    .return-quantity,
+    .return-reason,
+    .return-amount {
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+.order-history-card-check {
+    @include media-breakpoint-only(xs) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.order-history-card-details:last-child {
+    padding-bottom: 0;
+}
+
+.order-details-cancel,
+.order-details-return {
+    margin-top: 1rem;
+}
+
+.fulfillment-info + .fulfillment-info::before {
+    content: "";
+    display: block;
+    border-bottom: 1px dashed #999;
+    margin: 0 -0.938rem 1.25rem -0.938rem;
+}
+
+.fulfillment-info + .fulfillment-info {
+    padding-top: 0;
+}
+
+.fulfillment-status-row {
+    p {
+        margin-bottom: 0;
+    }
+
+    font-weight: bold;
+}
+
+.order-date-row {
+    font-size: 0.813rem;
+
+    .order-date {
+        color: $blue;
+    }
+}
+
+.order-return-ineligible {
+    padding: 0.75rem 1.25rem;
+    border-top: 1px dashed $horizontal-border-grey;
+    text-align: center;
+
+    span {
+        font-weight: bold;
+    }
+}

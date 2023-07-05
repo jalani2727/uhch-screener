@@ -1,0 +1,103 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+<isdecorate template="common/layout/page">
+    <isinclude template="/components/modules" sf-toolkit="off" />
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/providerSearchNoResults.css');
+        assets.addJs('/js/providerSearchResults.js');
+    </isscript>
+    <script>
+        var results;
+        try {
+            results = JSON.parse('<isprint value="${JSON.stringify(pdict.providerResult)}" encoding="jsblock"/>');
+        } catch(e) {
+            results = {}
+        }
+    </script>
+    
+    <div class="container-fluid">
+        <h1 class="sr-only">${Resource.msg('heading.provider-search-results', 'providersearch', null)}</h1>
+        <div class="no-results-found-page">
+            <div class="row">
+                <div class="col-12 col-lg-auto lr-padding-zero left-section">
+                    <form class="form-container provider-search-results-form-container" action="${pdict.searchActionURL}" method="POST">
+                        <div class="row zip-radius-form mx-auto pl-lg-0 full-width-bckg">
+                            <div class="col-12 col-lg-3 form-group required pl-lg-0">
+                                <label for="provider-search-zipcode" class="form-control-label">${Resource.msg('label.form.field.zip', 'providersearch', null)}</label>
+                                <input id="provider-search-zipcode" class="form-control" type="text" required value="${pdict.searchForm.zipCode.value || ''}" <isprint value="${pdict.searchForm.zipCode.attributes}" encoding="off" />/>
+                                <div class="zipcode-custom-error">${Resource.msg('label.form.error.zipstate', 'providersearch', null)}</div>
+                            </div>
+                            <div class="col-12 col-lg-3 form-group required pl-lg-0 state-wrapper">
+                                <label for="provider-search-state" class="form-control-label">${Resource.msg('label.form.field.state', 'providersearch', null)}</label>
+                                <select id="provider-search-state" class="form-control custom-select"
+                                    <isprint value="${pdict.searchForm.stateCode.attributes}" encoding="off" /> >
+                                    <option id="" value="" > ${Resource.msg('option.state.empty', 'providersearch', null)}</option>
+                                    <isloop items="${pdict.searchForm.stateCode.options}" var="state">
+                                        <option id="${state.id}" value="${state.htmlValue}" <isif condition="${state.selected}"> selected </isif> >${state.htmlValue}</option>
+                                    </isloop>
+                                </select>
+                                <div class="state-custom-error">${Resource.msg('label.form.error.zipstate', 'providersearch', null)}</div>
+                            </div>
+                            <div class="col-12 col-lg-3 form-group pl-lg-0">
+                                <label for="provider-search-radius" class="form-control-label">${Resource.msg('label.form.field.radius', 'providersearch', null)}</label>
+                                <select id="provider-search-radius" class="form-control custom-select" <isprint value="${pdict.searchForm.radius.attributes}" encoding="off" /> >
+                                    <isloop items="${pdict.radiusValues}" var="radius">
+                                        <option value = "${radius}" <isif condition="${pdict.searchForm.radius.value === radius}"> selected </isif> >${radius} ${Resource.msg('label.miles', 'providersearch', null)}</option>
+                                    </isloop>
+                                </select>
+                            </div>
+                            <div class="col-12 col-lg-3 form-group pl-lg-0">
+                                <button class="btn btn-block btn-outline-primary submit-btn btn-width-100 provider-search-btn" type="submit">${Resource.msg('label.btn.search', 'providersearch', null)}</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="lr-padding-zero no-results-found">
+                        <div class="card pl-lg-0">
+                            <div class="card-header">
+                                ${Resource.msg('heading.no-results-found', 'providersearch', null)}
+                            </div>
+                            <div class="card-body">
+                                ${Resource.msg('content.no-results-found', 'providersearch', null)}
+                                <div class="btn-container mx-auto">
+                                    <form action="${pdict.searchActionURL}" class="provider-search-no-result-virtual-form" method="POST" name="provider-search-form">
+                                        <input class="form-control" type="text" value="${pdict.zipCode || ''}" <isprint value="${pdict.searchForm.zipCode.attributes}" encoding="off" />/>
+                                        <select id="provider-search-state" class="form-control custom-select"
+                                            <isprint value="${pdict.searchForm.stateCode.attributes}" encoding="off" /> >
+                                            <option id="" value="" <isif condition="${state.selected}"> selected </isif> > ${Resource.msg('option.state.empty', 'providersearch', null)}</option>
+                                            <isloop items=${pdict.searchForm.stateCode.options} var="state">
+                                                <option id="${state.id}" value="${state.htmlValue}" <isif condition="${state.selected}"> selected </isif> >${state.htmlValue}</option>
+                                            </isloop>
+                                        </select>
+                                        <select class="form-control custom-select <isprint value="${pdict.radius}" encoding="off" /> ">
+                                            <isloop items="${pdict.radiusValues}" var="radius">
+                                                <option value = "${radius}" <isif condition="${pdict.searchForm.radius.value === pdict.radius}"> selected </isif> >${radius} ${Resource.msg('label.miles', 'providersearch', null)}</option>
+                                            </isloop>
+                                        </select>
+                                        <input class="custom-control-input" type="radio" id="virtual-provider-type" name="${pdict.searchForm.providerType.htmlName}"
+                                            value="Virtual" checked/>
+                                        <button class="btn btn-primary btn-width-100" type="submit">${Resource.msg('label.btn.request.virtual.appointment', 'providersearch', null)}</button>
+                                    </form>
+                                </div>
+                                ${Resource.msg('info.no-results-found', 'providersearch', null)}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg lr-padding-zero hidden-sm-down map-container">
+                    <div id="map" data-standard-provider-marker="${URLUtils.staticURL('/images/standard-provider.svg')}"
+                        data-preferred-provider-marker="${URLUtils.staticURL('/images/preferred-provider.svg')}"
+                        data-preferred-provider-label="${Resource.msg('label.preferredprovider', 'providersearch', null)}"
+                        data-standard-provider-label="${Resource.msg('label.standardprovider', 'providersearch', null)}"
+                        data-customer-type="${customer.authenticated ? 'registered' : 'guest'}">
+                    </div>
+                    <div class="recommended-provider-section">
+                        <img src="${URLUtils.staticURL('/images/preferred-provider.svg')}" alt="recommended provider image" />
+                        <p>${Resource.msg('label.recommendedprovider', 'providersearch', null)}</p>
+                        <iscontentasset aid="recommended-provider-rollover"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="${pdict.mapURL}" defer="defer"></script>
+</isdecorate>

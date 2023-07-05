@@ -1,0 +1,5 @@
+<body>
+
+    <h1>${Resource.msg('msg.passwordemail.dear','login',null)}&nbsp;${pdict.firstName}&nbsp;${pdict.lastName},</h1>
+
+</body>

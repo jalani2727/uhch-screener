@@ -1,0 +1,57 @@
+.link-with-r-vector::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+    background-image: url('../images/vector-right.svg');
+    background-repeat: no-repeat;
+}
+
+.link-styling {
+    color: $uhc-link-color;
+    font-family: $uhc-font-sans-bold;
+}
+
+.link-inside-content-styling {
+    color: $uhc-link-color;
+}
+
+.font-family-bold {
+    font-family: $uhc-font-sans-bold;
+}
+
+.lr-padding-zero {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.bottom-padding-zero {
+    padding-bottom: 0;
+}
+
+.btn-width-100 {
+    width: 100%;
+}
+
+.left-section {
+    width: 500px;
+    padding-left: calc((100vw - 1242px) / 2);
+    box-sizing: content-box;
+}
+
+.full-width-bckg {
+    position: relative;
+
+    &::before {
+        content: '';
+        background-color: $tints-col-4;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: calc((100vw - 1140px) / 2);
+        left: calc((100vw - 1140px) / 2 * -1);
+    }
+}

@@ -1,0 +1,30 @@
+.shop-by-type-slider {
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+    .carousel-control-next,
+    .carousel-control-prev,
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        opacity: 1;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        top: -50%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-image: url('../images/vector-right.svg');
+    }
+
+    .carousel-control-prev-icon {
+        transform: rotate(180deg);
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}

@@ -1,0 +1,46 @@
+<header>
+    <nav role="navigation">
+        <div class="header container ht-header">
+            <div class="row align-items-center justify-content-between ht-header-row">
+                <div class="col-auto d-md-none m-3"></div>
+                <div class="col-auto">
+                    <div class="navbar-header brand m-0 position-static">
+                        <a class="logo-home" href="${URLUtils.url('Home-Show')}" title="${ Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg('global.home', 'common', null)) }">
+                            <img class="hidden-md-down" src="${URLUtils.staticURL('/images/logo.svg')}" alt="${Resource.msg('global.storename', 'common', null)}" />
+                            <img class="d-lg-none" src="${URLUtils.staticURL('/images/logo-small.svg')}" alt="${Resource.msg('global.storename', 'common', null)}" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md ht-tracker-wrapper">
+                    <div class="ht-tracker ${pdict.stage} d-flex justify-content-around">
+                        <div class="ht-level ht-level-1">
+                            <div class="ht-head">${Resource.msg('header.hearing.test', 'hearingtest', null)}</div>
+                            <div class="ht-radio"></div>
+                        </div>
+                        <div class="ht-level ht-level-2">
+                            <div class="ht-head">${Resource.msg('header.lifestyle.evaluation', 'hearingtest', null)}</div>
+                            <div class="ht-radio"></div>
+                        </div>
+                        <div class="ht-level ht-level-3">
+                            <div class="ht-head">${Resource.msg('header.member.information', 'hearingtest', null)}</div>
+                            <div class="ht-radio"></div>
+                        </div>
+                        <div class="ht-level ht-level-4">
+                            <div class="ht-head">${Resource.msg('header.hearing.test.results', 'hearingtest', null)}</div>
+                            <div class="ht-radio"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <isif condition="${pdict.stage == 'stage-4'}">
+                        <a href="${URLUtils.url('HearingTest-Landing')}"> <div class="ht-close"></div> </a>
+                    <iselse/>
+                        <div class="ht-close" data-toggle="modal" data-target="#lifestyle-exit"></div>
+                    </isif>
+                    <div class="ht-exit d-none d-md-block">${Resource.msg('header.hearing.test.exit', 'hearingtest', null)}</div> 
+                </div>
+            </div>
+        </div>
+    </nav>
+    <isinclude template="hearingtest/hearingtestExitModal"/>
+</header>

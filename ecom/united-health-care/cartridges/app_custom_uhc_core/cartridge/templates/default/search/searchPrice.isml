@@ -1,0 +1,10 @@
+
+<script>
+    var productPrices;
+    try {
+        window.productPrices = JSON.parse('<isprint value="${JSON.stringify(pdict.priceObj)}" encoding="jsblock"/>');
+    } catch(e) {
+        window.productPrices = {}
+    }
+</script>
+<input type="hidden" id="price-obj" name="price-obj" value="${JSON.stringify(pdict.priceObj)}" />

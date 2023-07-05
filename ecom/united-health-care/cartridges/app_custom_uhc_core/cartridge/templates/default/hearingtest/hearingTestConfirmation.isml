@@ -1,0 +1,8 @@
+<isdecorate template="common/layout/page">
+<isinclude template="/components/modules" sf-toolkit="off" />
+  <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/hearingTest.css');
+    </isscript>
+    <iscontentasset aid="hearingtest-confirmation" />
+</isdecorate>

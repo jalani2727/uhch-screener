@@ -1,0 +1,67 @@
+<header>
+    <isinclude template="/components/header/skipNav" />
+    <div class="header-banner slide-up d-none">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div></div>
+                <div class="content">
+                    <isslot id="header-banner-m" description="Slot above the site header" context="global" />
+                </div>
+                <div class="close-button">
+                    <button type="button" class="close" aria-label="${Resource.msg('label.header.banner.close', 'common', null)}">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav role="navigation">
+        <div class="header container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="navbar-header brand">
+                        <a class="logo-home" href="${dw.system.Site.current.preferences.custom.isHostURL ? 'https://' +request.httpHost : URLUtils.url('Home-Show')+ '/'} " title="${ Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg('global.home', 'common', null)) }">
+                            <img class="hidden-sm-down" src="${URLUtils.staticURL('/images/logo.svg')}" alt="${Resource.msg('global.storename', 'common', null)}" />
+                            <img class="d-md-none" src="${URLUtils.staticURL('/images/logo-small.svg')}" alt="${Resource.msg('global.storename', 'common', null)}" />
+                        </a>
+                    </div>
+                    <div class="navbar-header">
+                        <div class="float-md-right">
+                            <div class="secondary-menu hidden-sm-down">
+                                <isslot id="header-secondary-navigation" description="Slot above the site header" context="global" />
+                            </div>
+                            <div class="search hidden-sm-down">
+                                <isinclude template="components/header/search" />
+                            </div>
+                            <div class="my-account">
+                                <div class="hidden-sm-down">
+                                    <isinclude url="${URLUtils.url('Account-Header', 'oAuthId', pdict.oauthLoginTargetEndPoint, 'pid', pdict.queryString)}" />
+                                    <isinclude url="${URLUtils.url('Page-Locale')}" />
+                                </div>
+                                <button class="navbar-toggler d-md-none" type="button" aria-controls="sg-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="uhc-menu-toggle">Menu</span>
+                                </button>
+                            </div>
+                            <div class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
+                                <isinclude url="${URLUtils.url('Cart-MiniCart')}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-menu navbar-toggleable-sm menu-toggleable-left multilevel-dropdown d-none d-md-block" id="sg-navbar-collapse">
+            <div class="container">
+                <div class="row">
+                    <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu')}"/>
+                </div>
+                <div class="secondary-menu d-md-none">
+                                <isslot id="header-secondary-navigation" description="Slot above the site header" context="global" />
+                </div>
+                <iscontentasset aid="header-need-help" />
+            </div>
+        </div>
+        <div class="search-mobile d-md-none">
+            <isinclude template="components/header/search" />
+        </div>
+    </nav>
+</header>

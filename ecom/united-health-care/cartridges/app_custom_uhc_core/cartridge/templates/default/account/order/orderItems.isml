@@ -1,0 +1,111 @@
+<isloop items="${orderItems}" var="orderItem" status="itemsLoopState">
+    <isif condition="${pdict.orderCardContext === 'account' && itemsLoopState.count > 5}">
+        <isbreak/>
+    </isif>
+  
+    <div id="order-history-card-items" class="row order-history-card-details">
+        <div class="col-12 col-sm-auto pr-0">
+            <img class="img-fluid image-on-history" src="${orderItem.images.small[0].url}"
+                alt="${orderItem.images.small[0].alt}"
+                title="${orderItem.images.small[0].title}">
+        </div>
+
+        <isif condition="${pdict.orderCardContext === 'account'}">
+            <div class="col-12 col-sm-auto">
+                <p class="mb-2">
+                    ${Resource.msg('label.order.ordernumber','account',null)}:
+                    <isprint value="${order.sfccOrderNumber}"/>
+                </p>
+                <p class="mb-2">
+                    ${Resource.msg('label.order.dateordered','account',null)}:
+                    <isprint value="${order.orderedDate}"/>
+                </p>
+                <p class="mb-2">
+                    <span class="order-status-label">${Resource.msg('label.orderhistory.status','account',null)}</span> ${groupedItem.statusDisplayLabel}
+                </p>
+                <isif condition="${order.customerName && order.customerName !== null}">
+                    <p class="mb-2">
+                        ${Resource.msg('label.order.shippedto','account',null)}: ${order.customerName}
+                    </p>
+                </isif>
+            </div>
+        </isif>
+
+        <isif condition="${!(pdict.orderCardContext === 'account')}">
+            <div class="col item-details order-history-order-items">
+                <p class="item-detail od-bold-font od-font-size-18">
+                    <span class="product-name-order-history uhc-black-333"><isprint value="${orderItem.productName}"/></span>
+                    <isif condition="${orderItem.quantity > 1}">
+                        (x<isprint value="${orderItem.quantity}" formatter="#"/>)
+                    </isif>
+                </p>
+                <isif condition="${!orderDetailsPage}">
+                    <isif condition="${orderItem.totalOrigPrice > orderItem.totalPrice}">
+                        <div class="price">
+                            <span class="strike-through od-bold-font">${orderItem.totalOrigPrice}</span>
+                        </div>
+                    </isif>
+                    <p class="item-detail od-bold-font"> ${orderItem.totalPrice} </p>
+                </isif>
+
+                <isif condition="${orderDetailsPage}">
+                    <isloop items="${orderItem.variationAttributes}" var="attribute">
+                        <p class="line-item-attributes item-details">${attribute.displayName}: ${attribute.displayValue}</p>
+                    </isloop>
+                </isif>
+            </div>
+        </isif>
+
+        <iscomment> <isif condition="${orderItemsOptions}">
+            <div class="col-12">
+                <div class="return-quantity"><span>${Resource.msg('label.order.return.number','orderReturn',null)}:</span> ${orderItem.quantity} of ${orderItem.qMax}</div>
+                <div class="return-reason"><span>${Resource.msg('label.order.return.reason','orderReturn',null)}:</span> ${orderItem.reason} </div>
+                <div class="return-amount"><span>${Resource.msg('label.order.return.amount','orderReturn',null)}:</span> ${orderItem.totalPrice}</div>
+            </div>
+        </isif> </iscomment>
+    </div>
+
+    <isif condition="${orderDetailsPage}">
+        <div class="card-footer mt-3">
+            <div class="row align-items-start final-order-summary justify-content-between">
+                <div class="col-5">
+                    <div class="od-item-price">
+                        <span>${Resource.msg('label.each.item.price','cart',null)}</span>
+                        <div class="od-value od-bold-font">${dw.util.StringUtils.formatMoney(new dw.value.Money(orderItem.price, request.session.currency.currencyCode))}</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="od-item-qty">
+                        <span>${Resource.msg('field.selectquantity','cart',null)}</span>
+                        <div class="od-value od-bold-font">${orderItem.quantity}</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="od-item-total text-right price">
+                        <span>${Resource.msg('label.total.price','cart',null)}</span>
+                        <isif condition="${orderItem.totalOrigPrice > orderItem.totalPrice}">
+                            <div class="strike-through od-bold-font">
+                                ${orderItem.totalOrigPrice}
+                            </div>
+                        </isif>
+                        <div class="od-value od-bold-font">${orderItem.totalPrice}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Tracking-->
+        <div class="card-footer">
+            <div class="order-details-status">
+                <span class="order-details-status uhc-black-333 od-bold-font">${Resource.msg('label.orderhistory.orderstatus','account',null)}</span> 
+                ${orderType.statusDisplayLabel}
+            </div>
+
+            <isif condition="${orderItem.trackingURL || orderItem.trackingNumber}">
+                <div class="uhc-black-333 od-bold-font">${Resource.msg('label.order.trackingNumber','account',null)}:
+                    <a href="${orderItem.trackingURL}" target="_blank" title="${Resource.msg('label.order.trackingNumber','account',null)}">${orderItem.trackingNumber}</a>
+                </div>
+            </isif>
+        </div>
+    </isif>
+</isloop>

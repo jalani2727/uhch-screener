@@ -1,0 +1,110 @@
+.authenticated-user-form {
+    position: relative;
+
+    .provider-search-form {
+        position: absolute;
+        z-index: 1;
+        right: 30px;
+        margin-top: 30px;
+
+        input,
+        select {
+            display: none;
+        }
+
+        .edit-user-detail-link {
+            background-color: transparent;
+            border: none;
+            color: $uhc-link-color;
+            font-family: $uhc-font-sans-semi-bold;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    .user-form-section-heading,
+    .virtual-visit-heading {
+        font-family: $uhc-font-serif;
+        color: $primary-col-1;
+        font-size: 22px;
+        line-height: 34px;
+
+        @include media-breakpoint-up(lg) {
+            line-height: 44px;
+        }
+    }
+
+    .section-2-heading-1 {
+        margin-top: 25px;
+    }
+
+    .user-form-section-card-1 {
+        &.card {
+            margin-bottom: 0;
+            background-color: $primary-col-2;
+        }
+
+        .card-header {
+            padding-bottom: 0;
+            border-bottom: hidden;
+        }
+    }
+
+    .user-form-section-card-2 {
+        &.card {
+            background: $tints-col-4;
+            margin-bottom: 0;
+
+            .card-header {
+                background: $tints-col-4;
+            }
+        }
+
+        .card-header.virtual-visit-heading {
+            border-bottom: hidden;
+            padding-top: 24px;
+
+            @include media-breakpoint-up(lg) {
+                padding-top: 25px;
+            }
+        }
+
+        .card-body {
+            @include media-breakpoint-down(sm) {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .user-form-section-card-3 {
+        &.card {
+            background: $primary-col-2;
+        }
+    }
+
+    .user-info-submit {
+        margin-top: 14px;
+        padding-bottom: 12px;
+        width: 100%;
+
+        .user-info-submit-btn {
+            width: 100%;
+        }
+    }
+
+    .form-2-body {
+        margin-top: 22px;
+    }
+
+    label.user-consent-label {
+        font-family: $uhc-font-sans-medium;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .is-invalid ~ label.user-consent-label {
+        color: $uhc-form-label;
+    }
+}
