@@ -1,0 +1,3 @@
+<div class="hearing-screener-content container">
+    <h2>${Resource.msg('label.hearing-screener.header','lifestylescreener',null)}</h2>
+</div>

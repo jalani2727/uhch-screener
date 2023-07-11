@@ -10,6 +10,11 @@
     <div class="get-started-slot">
         <isslot id="get-started-slot" description="Get Started Slot" context="global" />
     </div>
+
+    <div class="hearing-screener-container">
+        <isinclude url="${URLUtils.url('Screener-IncludeHealthScreener')}" />
+    </div>
+
     <div class="path-selection-slot">
         <isslot id="path-selection-slot" description="Path Selection Slot" context="global" />
     </div>
