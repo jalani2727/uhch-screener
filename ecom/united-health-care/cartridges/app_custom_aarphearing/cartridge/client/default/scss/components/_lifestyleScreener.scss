@@ -41,97 +41,158 @@ $hs: hearing-screener;
 
     .#{$hs}-container {
         margin: 72px auto 82px;
-        h2 {
-            @include hearing-screener-title-font;
 
-            margin-bottom: 72px;
-        }
-
-        p {
-            @include hearing-screener-label-font;
-            padding: 0 31%;
-            line-height: 22px;
-        }
-
+        
         .#{$hs}-header {
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: $color-blue-dark;
         }
-
+        
         .#{$hs}-body {
             display: flex;
             background-color: $uhc-white;
             border: 1px solid $uhc-border-color;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
-
-            .#{$hs}-content {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                img {
-                    max-height: 200px;
-                    margin-top: 30px;
-                }
-
+        }
+        
+        .#{$hs}-content {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            &.screener-form-container {
+                display: block;
+                padding: 36px 36px 42px;
+                
                 h1 {
-                    text-align: center;
-                    color: $color-blue-dark;
-                    font-size: 42px;
-                    padding: 0px 31%;
-                    margin: 22px 0;
+                    padding: 0;
                 }
-
-                .screener-info {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    
-                    p {
-                        padding: 0;
-                        &.mins-icon {
-                            &::before {
-                                display: inline-flex;
-                                content: '';
-                                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.75 7C12.75 6.58579 12.4142 6.25 12 6.25C11.5858 6.25 11.25 6.58579 11.25 7V12C11.25 12.2586 11.3832 12.4989 11.6025 12.636L14.6025 14.511C14.9538 14.7305 15.4165 14.6238 15.636 14.2725C15.8555 13.9212 15.7488 13.4585 15.3975 13.239L12.75 11.5843V7Z' fill='%23002677'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 3.25C7.16751 3.25 3.25 7.16751 3.25 12C3.25 16.8325 7.16751 20.75 12 20.75C16.8325 20.75 20.75 16.8325 20.75 12C20.75 7.16751 16.8325 3.25 12 3.25ZM4.75 12C4.75 7.99594 7.99594 4.75 12 4.75C16.0041 4.75 19.25 7.99594 19.25 12C19.25 16.0041 16.0041 19.25 12 19.25C7.99594 19.25 4.75 16.0041 4.75 12Z' fill='%23002677'/%3E%3C/svg%3E%0A");
-                                background-size: 20px 20px;
-                                height: 20px;
-                                width: 20px;
-                                position: relative;
-                                top: 4px;
-                                margin-right: 5px;
-                            }
-                            
-                        }
-                        &.question-icon {
-                            &::before {
-                                display: inline-flex;
-                                content: '';
-                                background-image: url("data:image/svg+xml,%3Csvg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 4.25C7.20508 4.25 5.75 5.70507 5.75 7.5C5.75 9.29493 7.20508 10.75 9 10.75C10.7949 10.75 12.25 9.29493 12.25 7.5C12.25 5.70507 10.7949 4.25 9 4.25ZM7.25 7.5C7.25 6.5335 8.03351 5.75 9 5.75C9.9665 5.75 10.75 6.5335 10.75 7.5C10.75 8.4665 9.9665 9.25 9 9.25C8.03351 9.25 7.25 8.4665 7.25 7.5Z' fill='%23002677'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 0.25C4.99594 0.25 1.75 3.49594 1.75 7.5C1.75 8.96813 2.18639 10.3343 2.93652 11.476L0.350482 15.9551C0.203417 16.2099 0.218821 16.527 0.389877 16.7663C0.560933 17.0056 0.856064 17.1228 1.14467 17.066L3.75854 16.5522L4.62047 19.0728C4.71564 19.3511 4.96471 19.5481 5.25745 19.5766C5.5502 19.6051 5.83258 19.4599 5.97965 19.2051L8.55942 14.7368C8.70516 14.7456 8.85207 14.75 9 14.75C9.14794 14.75 9.29485 14.7456 9.44059 14.7368L12.0204 19.2051C12.1676 19.4601 12.4504 19.6054 12.7434 19.5765C13.0364 19.5477 13.2854 19.3501 13.3801 19.0713L14.2376 16.5455L16.8537 17.0657C17.1425 17.1232 17.4382 17.0063 17.6097 16.767C17.7812 16.5276 17.7967 16.2101 17.6495 15.9551L15.0635 11.476C15.8136 10.3343 16.25 8.96813 16.25 7.5C16.25 3.49594 13.0041 0.25 9 0.25ZM3.25 7.5C3.25 4.32436 5.82437 1.75 9 1.75C12.1756 1.75 14.75 4.32436 14.75 7.5C14.75 10.6756 12.1756 13.25 9 13.25C5.82437 13.25 3.25 10.6756 3.25 7.5ZM6.98376 14.466C5.83078 14.1328 4.79597 13.5212 3.95691 12.7086L2.4747 15.2759L4.11167 14.9541C4.47972 14.8817 4.84463 15.0924 4.96599 15.4473L5.50579 17.0259L6.98376 14.466ZM12.4918 17.0217L11.0163 14.466C12.1692 14.1328 13.204 13.5212 14.0431 12.7086L15.5229 15.2717L13.8851 14.9461C13.516 14.8727 13.1497 15.0842 13.0287 15.4406L12.4918 17.0217Z' fill='%23002677'/%3E%3C/svg%3E%0A");
-                                background-size: 20px 20px;
-                                height: 20px;
-                                width: 20px;
-                                position: relative;
-                                top: 4px;
-                                margin-right: 5px;
-                            }
-                            
-                        }
-    
-                    }
-                }
-
-
-                .btn-next {
-                    margin-top: 20px;
-                    width: fit-content;
+                p {
+                    display: inline-block;
+                    padding: 0;
+                    color: $secondary-col-3;
                 }
             }
+            
+            img {
+                max-height: 200px;
+                margin-top: 30px;
+            }
+            
+            h1 {
+                text-align: center;
+                color: $color-blue-dark;
+                font-size: 42px;
+                padding: 0px 31%;
+                margin: 22px 0;
+            }
+
+            h2 {
+                @include hearing-screener-title-font;
+    
+                margin-bottom: 72px;
+            }
+    
+            p {
+                @include hearing-screener-label-font;
+                padding: 0 31%;
+                line-height: 22px;
+            }
+
+            .screener-info {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                p {
+                    padding: 0;
+
+                    &.mins-icon {
+                        &::before {
+                            display: inline-flex;
+                            content: '';
+                            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.75 7C12.75 6.58579 12.4142 6.25 12 6.25C11.5858 6.25 11.25 6.58579 11.25 7V12C11.25 12.2586 11.3832 12.4989 11.6025 12.636L14.6025 14.511C14.9538 14.7305 15.4165 14.6238 15.636 14.2725C15.8555 13.9212 15.7488 13.4585 15.3975 13.239L12.75 11.5843V7Z' fill='%23002677'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 3.25C7.16751 3.25 3.25 7.16751 3.25 12C3.25 16.8325 7.16751 20.75 12 20.75C16.8325 20.75 20.75 16.8325 20.75 12C20.75 7.16751 16.8325 3.25 12 3.25ZM4.75 12C4.75 7.99594 7.99594 4.75 12 4.75C16.0041 4.75 19.25 7.99594 19.25 12C19.25 16.0041 16.0041 19.25 12 19.25C7.99594 19.25 4.75 16.0041 4.75 12Z' fill='%23002677'/%3E%3C/svg%3E%0A");
+                            background-size: 20px 20px;
+                            height: 20px;
+                            width: 20px;
+                            position: relative;
+                            top: 4px;
+                            margin-right: 5px;
+                        }
+
+                    }
+
+                    &.question-icon {
+                        &::before {
+                            display: inline-flex;
+                            content: '';
+                            background-image: url("data:image/svg+xml,%3Csvg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 4.25C7.20508 4.25 5.75 5.70507 5.75 7.5C5.75 9.29493 7.20508 10.75 9 10.75C10.7949 10.75 12.25 9.29493 12.25 7.5C12.25 5.70507 10.7949 4.25 9 4.25ZM7.25 7.5C7.25 6.5335 8.03351 5.75 9 5.75C9.9665 5.75 10.75 6.5335 10.75 7.5C10.75 8.4665 9.9665 9.25 9 9.25C8.03351 9.25 7.25 8.4665 7.25 7.5Z' fill='%23002677'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 0.25C4.99594 0.25 1.75 3.49594 1.75 7.5C1.75 8.96813 2.18639 10.3343 2.93652 11.476L0.350482 15.9551C0.203417 16.2099 0.218821 16.527 0.389877 16.7663C0.560933 17.0056 0.856064 17.1228 1.14467 17.066L3.75854 16.5522L4.62047 19.0728C4.71564 19.3511 4.96471 19.5481 5.25745 19.5766C5.5502 19.6051 5.83258 19.4599 5.97965 19.2051L8.55942 14.7368C8.70516 14.7456 8.85207 14.75 9 14.75C9.14794 14.75 9.29485 14.7456 9.44059 14.7368L12.0204 19.2051C12.1676 19.4601 12.4504 19.6054 12.7434 19.5765C13.0364 19.5477 13.2854 19.3501 13.3801 19.0713L14.2376 16.5455L16.8537 17.0657C17.1425 17.1232 17.4382 17.0063 17.6097 16.767C17.7812 16.5276 17.7967 16.2101 17.6495 15.9551L15.0635 11.476C15.8136 10.3343 16.25 8.96813 16.25 7.5C16.25 3.49594 13.0041 0.25 9 0.25ZM3.25 7.5C3.25 4.32436 5.82437 1.75 9 1.75C12.1756 1.75 14.75 4.32436 14.75 7.5C14.75 10.6756 12.1756 13.25 9 13.25C5.82437 13.25 3.25 10.6756 3.25 7.5ZM6.98376 14.466C5.83078 14.1328 4.79597 13.5212 3.95691 12.7086L2.4747 15.2759L4.11167 14.9541C4.47972 14.8817 4.84463 15.0924 4.96599 15.4473L5.50579 17.0259L6.98376 14.466ZM12.4918 17.0217L11.0163 14.466C12.1692 14.1328 13.204 13.5212 14.0431 12.7086L15.5229 15.2717L13.8851 14.9461C13.516 14.8727 13.1497 15.0842 13.0287 15.4406L12.4918 17.0217Z' fill='%23002677'/%3E%3C/svg%3E%0A");
+                            background-size: 20px 20px;
+                            height: 20px;
+                            width: 20px;
+                            position: relative;
+                            top: 4px;
+                            margin-right: 5px;
+                        }
+
+                    }
+
+                }
+            }
+
+
+            .btn-next {
+                margin-top: 20px;
+                width: fit-content;
+            }
+
+            .btn-back {
+                @include hearing-screener-label-font;
+                color: $uhc-link-color;
+
+                &::before {
+                    display: inline-flex;
+                    content: '';
+                    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='CTA arrow' clip-path='url(%23clip0_716_13572)'%3E%3Cpath id='Path' d='M6 12L7.0575 10.9425L2.8725 6.75L12 6.75L12 5.25L2.8725 5.25L7.0575 1.0575L6 -5.24537e-07L5.24537e-07 6L6 12Z' fill='%23196ECF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_716_13572'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+                    background-size: 10px 10px;
+                    height: 10px;
+                    width: 10px;
+                }
+            }
+
+            .btn-skip {
+                @include hearing-screener-label-font;
+                color: $uhc-link-color;
+
+                &::before {
+                    display: inline-flex;
+                    content: '';
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cg clip-path='url(%23clip0_716_14959)'%3E%3Cpath d='M6 0L4.9425 1.0575L9.1275 5.25H0V6.75H9.1275L4.9425 10.9425L6 12L12 6L6 0Z' fill='%23196ECF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_716_14959'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+                    background-size: 10px 10px;
+                    height: 10px;
+                    width: 10px;
+                }
+            }
+
+            .btn-submit {
+                @include hearing-screener-label-font;
+                color: $uhc-white;
+
+                &::before {
+                    display: inline-flex;
+                    content: '';
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cg clip-path='url(%23clip0_1370_569)'%3E%3Cpath d='M10.6667 10.6667H1.33333V1.33333H6V0H1.33333C0.593333 0 0 0.6 0 1.33333V10.6667C0 11.4 0.593333 12 1.33333 12H10.6667C11.4 12 12 11.4 12 10.6667V6H10.6667V10.6667ZM7.33333 0V1.33333H9.72667L3.17333 7.88667L4.11333 8.82667L10.6667 2.27333V4.66667H12V0H7.33333Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1370_569'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+                    background-size: 10px 10px;
+                    height: 10px;
+                    width: 10px;
+                }
+            }
+
         }
+
     }
 
     // Mobile Styles
@@ -144,11 +205,11 @@ $hs: hearing-screener;
         //             padding: 0;
         //             font-size: 28px;
         //         }
-        
+
         //         h2 {
         //             margin-bottom: 42px;
         //         }
-        
+
         //         p {
         //             padding: 0;
         //         }
@@ -160,50 +221,44 @@ $hs: hearing-screener;
 
             h2 {
                 @include hearing-screener-title-font;
-    
+
                 margin-bottom: 35px;
                 text-align: center;
             }
-    
+
             p {
                 padding: 0;
             }
-    
-            .#{$hs}-header {
-                
-            }
-    
+
+            .#{$hs}-header {}
+
             .#{$hs}-body {
                 border: none;
-    
-                .#{$hs}-content {
-                  
-    
-                    img {
-                       
-                    }
-    
-                    h1 {
-                        padding: 0;
-                        font-size: 28px;
-                    }
+            }
 
-                    h2 {
-                        margin-bottom: 42px;
-                    }
-    
-                    .screener-info {
-
-                        
-                        p {
-                           
-                        }
-                    }
-
-                    .btn-next {
-
-                    }
+            .#{$hs}-content {
+                &.screener-form-container {
+                    padding: 16px 16px 42px;
                 }
+
+                img {}
+
+                h1 {
+                    padding: 0;
+                    font-size: 28px;
+                }
+
+                h2 {
+                    margin-bottom: 42px;
+                }
+
+                .screener-info {
+
+
+                    p {}
+                }
+
+                .btn-next {}
             }
         }
 

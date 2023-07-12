@@ -1,0 +1,46 @@
+<a href="javascript:void(0)" class="btn-back">
+    ${Resource.msg('global.label.back', 'common', null)}
+</a>
+
+<fieldset>
+    <h1>
+        ${Resource.msg('text.question.q1', 'hearingscreener', null)}
+    </h1>
+    <p>
+        ${Resource.msg('text.question.select-one', 'hearingscreener', null)}
+    </p>
+
+    <ul>
+        <li>
+            <input type="radio" id="q1-1" />
+            <label for="q1-1">${Resource.msg('text.question.q1.choice-1', 'hearingscreener', null)}</label>
+        </li>
+        <li>
+            <input type="radio" id="q1-2" />
+            <label for="q1-2">${Resource.msg('text.question.q1.choice-2', 'hearingscreener', null)}</label>
+        </li>
+        <li>
+            <input type="radio" id="q1-3" />
+            <label for="q1-3">${Resource.msg('text.question.q1.choice-3', 'hearingscreener', null)}</label>
+        </li>
+        <li>
+            <input type="radio" id="q1-4" />
+            <label for="q1-4">${Resource.msg('text.question.q1.choice-4', 'hearingscreener', null)}</label>
+        </li>
+    </ul>
+</fieldset>
+<fieldset>
+
+</fieldset>
+<fieldset>
+
+</fieldset>
+<fieldset>
+
+</fieldset>
+<fieldset>
+
+</fieldset>
+<fieldset>
+
+</fieldset>
