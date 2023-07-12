@@ -1,5 +1,7 @@
 <div class="hearing-screener-container container">
-    <h2>${Resource.msg('label.hearing-screener.header','lifestylescreener',null)}</h2>
+    <div class="container">
+        <h2>${Resource.msg('label.hearing-screener.header','lifestylescreener',null)}</h2>
+    </div>
 
     <div class="hearing-screener-header">
         <div class="hearing-screener-progress-bar container">
