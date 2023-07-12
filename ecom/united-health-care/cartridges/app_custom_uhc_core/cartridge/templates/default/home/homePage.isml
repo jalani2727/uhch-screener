@@ -11,7 +11,7 @@
         <isslot id="get-started-slot" description="Get Started Slot" context="global" />
     </div>
 
-    <div class="hearing-screener-container">
+    <div class="hearing-screener">
         <isinclude url="${URLUtils.url('Screener-IncludeHealthScreener')}" />
     </div>
 

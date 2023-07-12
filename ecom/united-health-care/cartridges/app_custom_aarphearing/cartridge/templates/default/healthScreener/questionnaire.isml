@@ -1,3 +1,47 @@
-<div class="hearing-screener-content container">
+<div class="hearing-screener-container container">
     <h2>${Resource.msg('label.hearing-screener.header','lifestylescreener',null)}</h2>
+
+    <div class="hearing-screener-header">
+        <div class="hearing-screener-progress-bar container">
+        <iscomment> Toggle styles that show different svgs based on the current state </iscomment>
+        <iscomment> Use JS to update the color of the line found between the circle svg's </iscomment>
+            Start - Complete
+        </div>
+
+    </div>
+    <div class="hearing-screener-body">
+        <div class="hearing-screener-content container screener-pg-1">
+            <img alt="getting started image" src="${URLUtils.staticURL('/images/questionnaire-ear.svg')}"/>
+            <h1>
+                ${Resource.msg('label.hearing-screener.body-1.heading','lifestylescreener',null)}
+            </h1>
+            <p>
+                ${Resource.msg('label.hearing-screener.body-1.subheading','lifestylescreener',null)}
+            </p>
+            <iscomment> Put ::after with the svg's here </iscomment>
+            <div class="screener-info">
+                <p class="mins-icon">5 minutes </p>
+                <p class="question-icon">4 questions</p>
+            </div>
+            <a href="javascript:void(0)" class="btn-next btn btn-primary mb-5"> Start Now </a>
+        </div>
+        <iscomment> Toggle display classes on Back/Next CTA clicks. </iscomment>
+        <iscomment> Put transition and animation effects on class changes. </iscomment>
+        <div class="hearing-screener-content container screener-pg-1 d-none">
+
+        </div>
+        <div class="hearing-screener-content container screener-pg-2 d-none">
+
+        </div>
+        <div class="hearing-screener-content container screener-pg-3 d-none">
+
+        </div>
+        <div class="hearing-screener-content container screener-pg-4 d-none">
+
+        </div>
+        <div class="hearing-screener-content container screener-pg-5 d-none">
+
+        </div>
+
+    </div>
 </div>
