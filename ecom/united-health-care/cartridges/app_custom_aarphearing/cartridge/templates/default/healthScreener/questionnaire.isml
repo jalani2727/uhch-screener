@@ -22,8 +22,8 @@
             </p>
             <iscomment> Put ::after with the svg's here </iscomment>
             <div class="screener-info">
-                <p class="mins-icon">5 minutes </p>
-                <p class="question-icon">4 questions</p>
+                <p class="mins-icon">${Resource.msg('text.screener-info-minutes','lifestylescreener',null)}</p>
+                <p class="question-icon">${Resource.msg('text.screener-info-questions','lifestylescreener',null)}</p>
             </div>
             <a href="javascript:void(0)" class="btn-next btn btn-primary mb-5"> Start Now </a>
         </div>

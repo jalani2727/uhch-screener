@@ -103,6 +103,7 @@ $hs: hearing-screener;
                                 width: 20px;
                                 position: relative;
                                 top: 4px;
+                                margin-right: 5px;
                             }
                             
                         }
@@ -116,6 +117,7 @@ $hs: hearing-screener;
                                 width: 20px;
                                 position: relative;
                                 top: 4px;
+                                margin-right: 5px;
                             }
                             
                         }
@@ -125,6 +127,7 @@ $hs: hearing-screener;
 
 
                 .btn-next {
+                    margin-top: 20px;
                     width: fit-content;
                 }
             }
@@ -196,10 +199,9 @@ $hs: hearing-screener;
                            
                         }
                     }
-    
-    
+
                     .btn-next {
-                        margin-top: 20px;
+
                     }
                 }
             }
