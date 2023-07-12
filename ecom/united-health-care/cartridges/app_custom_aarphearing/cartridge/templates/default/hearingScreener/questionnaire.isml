@@ -39,23 +39,23 @@
             <form id="hearingScreenerForm" class="hearing-screener-form" action="" method="POST" name="hearing-screener-form">
                 
                 <div class="container screener-pg-2 ">
-                    <isinclude template="healthScreener/screenerQuestion.isml" />
+                    <isinclude template="hearingScreener/screenerQuestion.isml" />
                 </div>
 
                 <div class="container screener-pg-3 d-none">
-                    <isinclude template="healthScreener/screenerQuestion.isml" />
+                    <isinclude template="hearingScreener/screenerQuestion.isml" />
                 </div>
 
                 <div class="container screener-pg-4 d-none">
-                    <isinclude template="healthScreener/screenerQuestion.isml" />
+                    <isinclude template="hearingScreener/screenerQuestion.isml" />
                 </div>
 
                 <div class="container screener-pg-5 d-none">
-                    <isinclude template="healthScreener/screenerQuestion.isml" />
+                    <isinclude template="hearingScreener/screenerQuestion.isml" />
                 </div>
 
                 <div class="container screener-pg-6 d-none">
-                    <isinclude template="healthScreener/screenerQuestion.isml" />
+                    <isinclude template="hearingScreener/screenerQuestion.isml" />
                 </div>
             </form>
         </div>

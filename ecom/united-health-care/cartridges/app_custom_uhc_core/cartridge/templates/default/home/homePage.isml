@@ -12,7 +12,7 @@
     </div>
 
     <div class="hearing-screener">
-        <isinclude url="${URLUtils.url('Screener-IncludeHealthScreener')}" />
+        <isinclude url="${URLUtils.url('Screener-IncludeHearingScreener')}" />
     </div>
 
     <div class="path-selection-slot">

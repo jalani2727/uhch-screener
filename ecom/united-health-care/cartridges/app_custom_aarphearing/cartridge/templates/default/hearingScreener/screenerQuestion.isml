@@ -12,19 +12,19 @@
 
     <ul>
         <li>
-            <input type="radio" id="q1-1" />
+            <input type="radio" id="q1-1" name="q1" />
             <label for="q1-1">${Resource.msg('text.question.q1.choice-1', 'hearingscreener', null)}</label>
         </li>
         <li>
-            <input type="radio" id="q1-2" />
+            <input type="radio" id="q1-2" name="q1" />
             <label for="q1-2">${Resource.msg('text.question.q1.choice-2', 'hearingscreener', null)}</label>
         </li>
         <li>
-            <input type="radio" id="q1-3" />
+            <input type="radio" id="q1-3" name="q1" />
             <label for="q1-3">${Resource.msg('text.question.q1.choice-3', 'hearingscreener', null)}</label>
         </li>
         <li>
-            <input type="radio" id="q1-4" />
+            <input type="radio" id="q1-4" name="q1" />
             <label for="q1-4">${Resource.msg('text.question.q1.choice-4', 'hearingscreener', null)}</label>
         </li>
     </ul>

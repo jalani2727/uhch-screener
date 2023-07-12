@@ -75,6 +75,14 @@ $hs: hearing-screener;
                     padding: 0;
                     color: $secondary-col-3;
                 }
+
+                ul {
+                    padding: 0;
+                }
+                
+                li {
+                    list-style-type: none
+                };
             }
             
             img {
