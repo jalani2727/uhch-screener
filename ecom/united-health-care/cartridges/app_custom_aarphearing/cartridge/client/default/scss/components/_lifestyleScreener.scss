@@ -104,7 +104,6 @@ $hs: hearing-screener;
                         input[type="checkbox"]::before {
                             left: 990px;
                             top: -3px;
-                            
                         }
                         label {
                             font-weight: 600;
@@ -112,7 +111,6 @@ $hs: hearing-screener;
                             &.email-opt-in {
                                 padding-left: 15px;
                                 margin-top: 15px;
-                                
                             }
                         }
                     }
@@ -129,13 +127,11 @@ $hs: hearing-screener;
                             }
                         }
 
-
                         input[type="email"]{
                             width: 70%;
                             margin-bottom: 10px;
                         }
                     }
-
                 }
 
                 h1 {
@@ -344,31 +340,12 @@ $hs: hearing-screener;
 
     // Mobile Styles
     @include media-breakpoint-down(md) {
-        // .#{$hs}-container {
-        //     margin: 44px auto 64px;
-
-        //     .#{$hs}-content {
-        //         h1 {
-        //             padding: 0;
-        //             font-size: 28px;
-        //         }
-
-        //         h2 {
-        //             margin-bottom: 42px;
-        //         }
-
-        //         p {
-        //             padding: 0;
-        //         }
-        //     }
-        // }
         .#{$hs}-container {
             margin: 35px auto 82px;
             padding: 0;
 
             h2 {
                 @include hearing-screener-title-font;
-
                 margin-bottom: 35px;
                 text-align: center;
             }
@@ -408,8 +385,6 @@ $hs: hearing-screener;
                     }
                 }
 
-                img {}
-
                 h1 {
                     // text-align: start;
                     padding: 0;
@@ -424,13 +399,6 @@ $hs: hearing-screener;
                     padding: 0;
                 }
 
-                .screener-info {
-
-
-                    p {}
-                }
-
-                .btn-next {}
             }
         }
 
