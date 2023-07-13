@@ -55,7 +55,7 @@ $hs: hearing-screener;
         }
         
         .#{$hs}-body {
-            display: flex;
+            // display: flex;
             background-color: $uhc-white;
             border: 1px solid $uhc-border-color;
             border-bottom-left-radius: 10px;
@@ -63,11 +63,14 @@ $hs: hearing-screener;
         }
         
         .#{$hs}-content {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            &.screener-form-container {
+            .screener-pg-1{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+
+            }
+            .screener-form-container {
                 display: block;
                 padding: 36px 36px 42px;
                 

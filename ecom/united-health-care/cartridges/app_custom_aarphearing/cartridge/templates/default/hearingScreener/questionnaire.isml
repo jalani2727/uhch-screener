@@ -15,30 +15,32 @@
 
 <!-- Begin: Screener Body-->
     <div class="hearing-screener-body">
-        <div class="hearing-screener-content container screener-pg-1 d-none">
-            <img alt="getting started image" src="${URLUtils.staticURL('/images/questionnaire-ear.svg')}"/>
-            <h1>
-                ${Resource.msg('label.hearing-screener.body-1.heading','hearingscreener',null)}
-            </h1>
-            <p>
-                ${Resource.msg('label.hearing-screener.body-1.subheading','hearingscreener',null)}
-            </p>
-            <iscomment> Put ::after with the svg's here </iscomment>
-            <div class="screener-info">
-                <p class="mins-icon">${Resource.msg('text.screener-info-minutes','hearingscreener',null)}</p>
-                <p class="question-icon">${Resource.msg('text.screener-info-questions','hearingscreener',null)}</p>
-            </div>
-            <a href="javascript:void(0)" class="btn-next btn btn-primary mb-5">
-                ${Resource.msg('label.hearing-screener.btn.start','hearingscreener',null)}
-            </a>
-        </div>
 
         <iscomment> Toggle display classes on Back/Next CTA clicks. </iscomment>
         <iscomment> Put transition and animation effects on class changes. </iscomment>
-        <div class="hearing-screener-content screener-form-container">
-            <form id="hearingScreenerForm" class="hearing-screener-form" action="" method="POST" name="hearing-screener-form">
-                    <isinclude template="hearingScreener/screenerQuestion.isml" />
-            </form>
+        <div class="hearing-screener-content">
+            <div class=" container screener-pg-1 ">
+                <img alt="getting started image" src="${URLUtils.staticURL('/images/questionnaire-ear.svg')}"/>
+                <h1>
+                    ${Resource.msg('label.hearing-screener.body-1.heading','hearingscreener',null)}
+                </h1>
+                <p>
+                    ${Resource.msg('label.hearing-screener.body-1.subheading','hearingscreener',null)}
+                </p>
+                <iscomment> Put ::after with the svg's here </iscomment>
+                <div class="screener-info">
+                    <p class="mins-icon">${Resource.msg('text.screener-info-minutes','hearingscreener',null)}</p>
+                    <p class="question-icon">${Resource.msg('text.screener-info-questions','hearingscreener',null)}</p>
+                </div>
+                <a href="javascript:void(0)" class="btn-next btn btn-primary mb-5">
+                    ${Resource.msg('label.hearing-screener.btn.start','hearingscreener',null)}
+                </a>
+            </div>
+            <div class=" screener-form-container">
+                <form id="hearingScreenerForm" class="hearing-screener-form" action="" method="POST" name="hearing-screener-form">
+                        <isinclude template="hearingScreener/screenerQuestion.isml" />
+                </form>
+            </div>
         </div>
 
     </div>

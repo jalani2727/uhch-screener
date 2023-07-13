@@ -40,7 +40,7 @@
     </fieldset>
 </div>
 
-<div class="screener-q2 d-none">
+<div class="screener-q2 ">
     <fieldset>
         <h1>
             ${Resource.msg('text.question.q2', 'hearingscreener', null)}
@@ -70,7 +70,7 @@
     </fieldset>
 </div>
 
-<div class="screener-q3 d-none">
+<div class="screener-q3 ">
     <fieldset>
         <h1>
             ${Resource.msg('text.question.q3', 'hearingscreener', null)}
