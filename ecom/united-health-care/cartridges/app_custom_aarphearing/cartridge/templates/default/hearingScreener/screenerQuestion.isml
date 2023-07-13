@@ -188,6 +188,15 @@
 
                 <input type="checkbox" id="email-opt-in" name="email-opt-in" />
                 <label for="email-opt-in" class="email-opt-in">${Resource.msg('label.input.screener-email-opt-in', 'hearingscreener', null)}</label>
+
+                <div class="submit-btns pt-4">
+                    <a href="javascript:void(0)" id="q4-btn" class="btn-submit btn btn-primary">
+                        ${Resource.msg('label.input.screener-submit','hearingscreener',null)}
+                    </a>
+                     <a href="javascript:void(0)" id="skip-to-results" class="btn-skip ml-4">
+                        ${Resource.msg('label.input.screener-skip', 'hearingscreener', null)}
+                    </a>
+                </div>
             </div>
         </div>
     </div>
