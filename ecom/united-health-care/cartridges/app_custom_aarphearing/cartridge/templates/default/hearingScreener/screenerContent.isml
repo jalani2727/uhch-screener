@@ -93,7 +93,7 @@
 </fieldset>
 
 
-<fieldset class="screener-q3 ">
+<fieldset class="screener-q3">
     <a href="javascript:void(0)" id="q2-back" class="previous btn-back">
         ${Resource.msg('global.label.back', 'common', null)}
     </a>
@@ -174,7 +174,7 @@
     </ul>
 
     <a href="javascript:void(0)" id="results-btn" class="next btn-next btn btn-primary mb-5">
-        ${Resource.msg('label.hearing-screener.btn.next-question', 'hearingscreener', null)}
+        ${Resource.msg('label.input.screener-submit', 'hearingscreener', null)}
     </a>
 </fieldset>
 

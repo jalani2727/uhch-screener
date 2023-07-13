@@ -204,7 +204,7 @@ $hs: hearing-screener;
                 .screener-complete {
                     justify-content: center;
                     align-items: center;
-                    display: flex;
+                    // display: flex;
 
                     .screener-complete-container {
                         // padding: 0;
@@ -513,4 +513,15 @@ $hs: hearing-screener;
         }
 
     }
+}
+
+// hearinScreener.js
+fieldset {
+    &:not(:first-of-type) {
+        display: none;
+    }
+}
+
+.render {
+    display: block;
 }

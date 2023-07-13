@@ -1,4 +1,5 @@
-<div class="hearing-screener-container container">
+<div class="hearing-screener-container container"> 
+<iscomment> Set a heigh value for mobile and desktop to prevent position change when changing slides </iscomment>
     <div class="container">
         <h2>${Resource.msg('label.hearing-screener.header','hearingscreener',null)}</h2>
     </div>
