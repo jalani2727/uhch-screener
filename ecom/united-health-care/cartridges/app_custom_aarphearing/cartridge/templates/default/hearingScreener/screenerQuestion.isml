@@ -1,8 +1,8 @@
-<a href="javascript:void(0)" class="btn-back">
-    ${Resource.msg('global.label.back', 'common', null)}
-</a>
 
 <div class="screener-q1">
+    <a href="javascript:void(0)" id="pg1-back" class="btn-back">
+        ${Resource.msg('global.label.back', 'common', null)}
+    </a>
     <fieldset>
         <h1>
             ${Resource.msg('text.question.q1', 'hearingscreener', null)}
@@ -41,6 +41,9 @@
 </div>
 
 <div class="screener-q2 ">
+     <a href="javascript:void(0)" id="q1-back" class="btn-back">
+        ${Resource.msg('global.label.back', 'common', null)}
+    </a>
     <fieldset>
         <h1>
             ${Resource.msg('text.question.q2', 'hearingscreener', null)}
@@ -71,6 +74,9 @@
 </div>
 
 <div class="screener-q3 ">
+     <a href="javascript:void(0)" id="q2-back" class="btn-back">
+        ${Resource.msg('global.label.back', 'common', null)}
+    </a>
     <fieldset>
         <h1>
             ${Resource.msg('text.question.q3', 'hearingscreener', null)}
@@ -101,6 +107,9 @@
 </div>
 
 <div class="screener-q4">
+     <a href="javascript:void(0)" id="q3-back" class="btn-back">
+        ${Resource.msg('global.label.back', 'common', null)}
+    </a>
     <fieldset>
         <h1>
             ${Resource.msg('text.question.q3', 'hearingscreener', null)}
@@ -151,3 +160,35 @@
     </fieldset>
 </div>
 
+<div class="screener-complete">
+    <div class="desktop-background-gray">
+        <img alt="Questionnaite Complete Image" src="${URLUtils.staticURL('/images/CheckMrk.svg')}"/>
+
+        <div class="screener-complete-container container">
+            <h1>
+                ${Resource.msg('label.hearing-screener.complete.heading','hearingscreener',null)}
+            </h1>
+            <p>
+                ${Resource.msg('label.hearing-screener.complete.subheading1','hearingscreener',null)}
+            </p>
+            <h3 class="pt-3 pb-3">
+                ${Resource.msg('label.hearing-screener.complete.subheading2','hearingscreener',null)}
+            </h3>
+
+            <div class="form-group">
+                <label class="form-control-label" for="contact-email">
+                    ${Resource.msg('label.input.screener-email', 'hearingscreener', null)}
+                </label>
+                <input placeholder="Email address" type="email"  class="form-control"
+                    aria-describedby="form-contact-email-error" id="contact-email"
+                    name="contactEmail" value="${pdict.profile ? pdict.profile.email : ''}"
+                    pattern="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$"
+                    data-pattern-mismatch="${Resource.msg('error.message.form.invalid-email','forms',null)}">
+                <div class="invalid-feedback" id="form-contact-email-error"></div>
+
+                <input type="checkbox" id="email-opt-in" name="email-opt-in" />
+                <label for="email-opt-in" class="email-opt-in">${Resource.msg('label.input.screener-email-opt-in', 'hearingscreener', null)}</label>
+            </div>
+        </div>
+    </div>
+</div>
