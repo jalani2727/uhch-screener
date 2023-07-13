@@ -5,10 +5,9 @@
 
 <!-- Begin: Screener Progress Bar-->
     <div class="hearing-screener-header">
-        <div class="hearing-screener-progress-bar container">
+        <div class="hearing-screener-progress-bar q1-unfilled container">
         <iscomment> Toggle styles that show different svgs based on the current state </iscomment>
         <iscomment> Use JS to update the color of the line found between the circle svg's </iscomment>
-            Start - Complete
         </div>
     </div>
 <!-- End: Screener Progress Bar-->
