@@ -2,45 +2,152 @@
     ${Resource.msg('global.label.back', 'common', null)}
 </a>
 
-<fieldset>
-    <h1>
-        ${Resource.msg('text.question.q1', 'hearingscreener', null)}
-    </h1>
-    <p>
-        ${Resource.msg('text.question.select-one', 'hearingscreener', null)}
-    </p>
+<div class="screener-q1">
+    <fieldset>
+        <h1>
+            ${Resource.msg('text.question.q1', 'hearingscreener', null)}
+        </h1>
+        <p>
+            ${Resource.msg('text.question.select-one', 'hearingscreener', null)}
+        </p>
 
-    <ul>
-        <li>
-            <input type="radio" id="q1-1" name="q1" />
-            <label for="q1-1">${Resource.msg('text.question.q1.choice-1', 'hearingscreener', null)}</label>
-        </li>
-        <li>
-            <input type="radio" id="q1-2" name="q1" />
-            <label for="q1-2">${Resource.msg('text.question.q1.choice-2', 'hearingscreener', null)}</label>
-        </li>
-        <li>
-            <input type="radio" id="q1-3" name="q1" />
-            <label for="q1-3">${Resource.msg('text.question.q1.choice-3', 'hearingscreener', null)}</label>
-        </li>
-        <li>
-            <input type="radio" id="q1-4" name="q1" />
-            <label for="q1-4">${Resource.msg('text.question.q1.choice-4', 'hearingscreener', null)}</label>
-        </li>
-    </ul>
-</fieldset>
-<fieldset>
+        <ul>
+            <li>
+                <input type="radio" id="q1-1" name="q1" />
+                <label for="q1-1">${Resource.msg('text.question.q1.choice-1', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="radio" id="q1-2" name="q1" />
+                <label for="q1-2">${Resource.msg('text.question.q1.choice-2', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="radio" id="q1-3" name="q1" />
+                <label for="q1-3">${Resource.msg('text.question.q1.choice-3', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="radio" id="q1-4" name="q1" />
+                <label for="q1-4">${Resource.msg('text.question.q1.choice-4', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="radio" id="q1-4" name="q1" />
+                <label for="q1-4">${Resource.msg('text.question.q1.choice-5', 'hearingscreener', null)}</label>
+            </li>
+        </ul>
 
-</fieldset>
-<fieldset>
+        <a href="javascript:void(0)" id="q2-btn" class="btn-next btn btn-primary mb-5">
+            ${Resource.msg('label.hearing-screener.btn.next-question','hearingscreener',null)}
+        </a>
+    </fieldset>
+</div>
 
-</fieldset>
-<fieldset>
+<div class="screener-q2 d-none">
+    <fieldset>
+        <h1>
+            ${Resource.msg('text.question.q2', 'hearingscreener', null)}
+        </h1>
+        <p>
+            ${Resource.msg('text.question.select-one', 'hearingscreener', null)}
+        </p>
 
-</fieldset>
-<fieldset>
+        <ul>
+            <li>
+                <input type="radio" id="q2-1" name="q2" />
+                <label for="q2-1">${Resource.msg('text.question.q2.choice-1', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="radio" id="q2-2" name="q2" />
+                <label for="q2-2">${Resource.msg('text.question.q2.choice-2', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="radio" id="q2-3" name="q2" />
+                <label for="q2-3">${Resource.msg('text.question.q2.choice-3', 'hearingscreener', null)}</label>
+            </li>
+        </ul>
 
-</fieldset>
-<fieldset>
+        <a href="javascript:void(0)" id="q3-btn" class="btn-next btn btn-primary mb-5">
+            ${Resource.msg('label.hearing-screener.btn.next-question','hearingscreener',null)}
+        </a>
+    </fieldset>
+</div>
 
-</fieldset>
+<div class="screener-q3 d-none">
+    <fieldset>
+        <h1>
+            ${Resource.msg('text.question.q3', 'hearingscreener', null)}
+        </h1>
+        <p>
+            ${Resource.msg('text.question.select-one', 'hearingscreener', null)}
+        </p>
+
+        <ul>
+            <li>
+                <input type="radio" id="q3-1" name="q3" />
+                <label for="q3-1">${Resource.msg('text.question.q3.choice-1', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="radio" id="q3-2" name="q3" />
+                <label for="q3-2">${Resource.msg('text.question.q3.choice-2', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="radio" id="q3-3" name="q3" />
+                <label for="q3-3">${Resource.msg('text.question.q3.choice-3', 'hearingscreener', null)}</label>
+            </li>
+        </ul>
+
+        <a href="javascript:void(0)" id="q4-btn" class="btn-next btn btn-primary mb-5">
+            ${Resource.msg('label.hearing-screener.btn.next-question','hearingscreener',null)}
+        </a>
+    </fieldset>
+</div>
+
+<div class="screener-q4">
+    <fieldset>
+        <h1>
+            ${Resource.msg('text.question.q3', 'hearingscreener', null)}
+        </h1>
+        <p>
+            ${Resource.msg('text.question.select-all', 'hearingscreener', null)}
+        </p>
+
+        <ul>
+            <li>
+                <input type="checkbox" id="q4-1" name="q4" />
+                <label for="q4-1">${Resource.msg('text.question.q4.choice-1', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="checkbox" id="q4-2" name="q4" />
+                <label for="q4-2">${Resource.msg('text.question.q4.choice-2', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="checkbox" id="q4-3" name="q4" />
+                <label for="q4-3">${Resource.msg('text.question.q4.choice-3', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="checkbox" id="q4-4" name="q4" />
+                <label for="q4-4">${Resource.msg('text.question.q4.choice-4', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="checkbox" id="q4-5" name="q4" />
+                <label for="q4-5">${Resource.msg('text.question.q4.choice-5', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="checkbox" id="q4-6" name="q4" />
+                <label for="q4-6">${Resource.msg('text.question.q4.choice-6', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="checkbox" id="q4-7" name="q4" />
+                <label for="q4-7">${Resource.msg('text.question.q4.choice-7', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="checkbox" id="q4-8" name="q4" />
+                <label for="q4-8">${Resource.msg('text.question.q4.choice-8', 'hearingscreener', null)}</label>
+            </li>
+            
+        </ul>
+
+        <a href="javascript:void(0)" id="results-btn" class="btn-next btn btn-primary mb-5">
+            ${Resource.msg('label.hearing-screener.btn.next-question','hearingscreener',null)}
+        </a>
+    </fieldset>
+</div>
+
