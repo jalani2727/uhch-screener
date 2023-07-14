@@ -76,7 +76,6 @@ $(".previous").click(function () {
     current_fs = $(this).parent();
     previous_fs = $(this).parent().prev();
 
-    //TODO: Change current step on progressbar
     updateProgressBar(current_fs, previous_fs);
 
     // Clear the inputs of the current and previous fieldsets when going backwards

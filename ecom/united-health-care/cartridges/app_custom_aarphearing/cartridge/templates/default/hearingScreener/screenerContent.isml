@@ -18,6 +18,7 @@
 </fieldset>
 <iscomment> End: Start Page </iscomment>
 
+<iscomment> Begin: Question Slides </iscomment>
 <fieldset class="screener-q1" id="screener-q1" data-question-filled="q1-filled" data-question-start="q1-unfilled">
 
     <a href="javascript:void(0)" id="pg1-back" class="previous btn-back">
@@ -124,8 +125,6 @@
     </a>
 </fieldset>
 
-
-
 <fieldset class="screener-q4" id="screener-q4" data-question-filled="q4-filled" data-question-start="q4-unfilled">
     <a href="javascript:void(0)" id="q3-back" class="previous btn-back">
         ${Resource.msg('global.label.back', 'common', null)}
@@ -178,7 +177,7 @@
         ${Resource.msg('label.input.screener-submit', 'hearingscreener', null)}
     </a>
 </fieldset>
-
+<iscomment> End: Question Slides </iscomment>
 
 <fieldset class="screener-complete" data-question-start="progress-bar-complete">
     <div class="desktop-background-gray">

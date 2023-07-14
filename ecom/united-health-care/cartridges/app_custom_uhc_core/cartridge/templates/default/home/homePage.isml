@@ -11,17 +11,15 @@
     <div class="get-started-slot">
         <isslot id="get-started-slot" description="Get Started Slot" context="global" />
     </div>
-
     <div class="hearing-screener">
         <isinclude url="${URLUtils.url('Screener-IncludeHearingScreener')}" />
     </div>
-
     <div class="path-selection-slot">
         <isslot id="path-selection-slot" description="Path Selection Slot" context="global" />
     </div>
     <div class="direction-slot">
         <isslot id="direction-slot" description="Direction Slot" context="global" />
-    </div> 
+    </div>
     <div class="take-test-slot">
         <isslot id="take-test-slot" description="Take the test slot" context="global" />
     </div>
