@@ -5,6 +5,16 @@ var animating; //flag to prevent quick multi-click glitches
 
 const fieldsets = $('.screener-form-container fieldset');
 
+const progressBar = $('.hearing-screener-progress-bar');
+
+function updateProgressBar(curr, upcoming) {
+    if (progressBar.hasClass(curr.get(0).dataset.progress)) {
+        progressBar.removeClass(curr.get(0).dataset.progress);
+        progressBar.addClass(upcoming.get(0).dataset.progress);
+    };
+};
+// TODO: Change current step when a radio button or checkbox is selected.
+
 $(".next").click(function () {
     if (animating) return false;
     animating = true;
@@ -16,6 +26,11 @@ $(".next").click(function () {
     fieldsets.each(function(index, fs) {
         // Update CSS on current fieldset
         if (fs == current_fs.get(0)){
+            // Logic to update Progress Bar Classes
+            // Grab an attribute from next_fs and apply it as a class name to the progressBar
+            updateProgressBar(current_fs, next_fs);
+
+
             current_fs.hide();
 
             current_fs.animate({
@@ -58,7 +73,7 @@ $(".previous").click(function () {
     previous_fs = $(this).parent().prev();
 
     //TODO: Change current step on progressbar
-
+    updateProgressBar(current_fs, previous_fs);
 
     //show the previous fieldset
     previous_fs.show();
@@ -95,3 +110,4 @@ $(".previous").click(function () {
 $(".submit").click(function () {
     return false;
 })
+
