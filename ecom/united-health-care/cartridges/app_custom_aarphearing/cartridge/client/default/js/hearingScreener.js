@@ -1,19 +1,32 @@
 
 var current_fs, next_fs, previous_fs; //fieldsets
-var left, opacity, scale; //fieldset properties which we will animate
+var left, opacity, scale; //fieldset properties being animated
 var animating; //flag to prevent quick multi-click glitches
 
 const fieldsets = $('.screener-form-container fieldset');
-
 const progressBar = $('.hearing-screener-progress-bar');
 
-function updateProgressBar(curr, upcoming) {
-    if (progressBar.hasClass(curr.get(0).dataset.progress)) {
-        progressBar.removeClass(curr.get(0).dataset.progress);
-        progressBar.addClass(upcoming.get(0).dataset.progress);
+function updateProgressBar(currentField, upcoming) {
+    // Grab data-attribute from expected fieldset and apply it as a class name to the progressBar
+    if (progressBar.hasClass(currentField.get(0).dataset.questionStart)) {
+        progressBar.removeClass(currentField.get(0).dataset.questionStart);
+        progressBar.addClass(upcoming.get(0).dataset.questionStart);
     };
+    if (progressBar.hasClass(currentField.get(0).dataset.questionFilled)) {
+        progressBar.removeClass(currentField.get(0).dataset.questionFilled);
+        progressBar.addClass(upcoming.get(0).dataset.questionStart);
+    };
+
 };
-// TODO: Change current step when a radio button or checkbox is selected.
+
+// Change current Progress Bar step when a radio button or checkbox is selected.
+fieldsets.each(function(index, fs) {
+    let fieldset = $(this);
+
+    fieldset.find(':input').click(function() {
+        progressBar.hasClass(fieldset.get(0).dataset.questionFilled) ? '' : progressBar.addClass(fieldset.get(0).dataset.questionFilled);
+    });
+})
 
 $(".next").click(function () {
     if (animating) return false;
@@ -22,47 +35,38 @@ $(".next").click(function () {
     current_fs = $(this).parent();
     next_fs = $(this).parent().next();
 
-    // Iterate through fieldsets
-    fieldsets.each(function(index, fs) {
-        // Update CSS on current fieldset
-        if (fs == current_fs.get(0)){
-            // Logic to update Progress Bar Classes
-            // Grab an attribute from next_fs and apply it as a class name to the progressBar
-            updateProgressBar(current_fs, next_fs);
+    // Logic to update Progress Bar Classes
+    updateProgressBar(current_fs, next_fs);
+    // Hide current fieldset
+    current_fs.hide();
 
-
-            current_fs.hide();
-
-            current_fs.animate({
-                opacity: 0
-            }, {
-                step: function (now, mx) {
-                    //as the opacity of current_fs reduces to 0 - stored in "now"
-                    //1. scale current_fs down to 80%
-                    scale = 1.2 - (1 - now) * 0.2;
-                    //2. bring next_fs from the right(50%)
-                    left = (now * 50) + "%";
-                    //3. increase opacity of next_fs to 1 as it moves in
-                    opacity = 1 - now;
-                    current_fs.css({
-                        'transform': 'scale(' + scale + ')',
-                    });
-                    next_fs.css({
-                        'transform': 'scale(' + scale + ')',
-                        'opacity': opacity
-                    });
-                    //show the next fieldset
-                    next_fs.show();
-                },
-                duration: 800,
-                complete: function () {
-                    animating = false;
-                },
+    // Update CSS on current fieldset
+    current_fs.animate({
+        opacity: 0
+    }, {
+        step: function (now, mx) {
+            //as the opacity of current_fs reduces to 0 - stored in "now"
+            //1. scale current_fs down to 80%
+            scale = 1.2 - (1 - now) * 0.2;
+            //2. bring next_fs from the right(50%)
+            left = (now * 50) + "%";
+            //3. increase opacity of next_fs to 1 as it moves in
+            opacity = 1 - now;
+            current_fs.css({
+                'transform': 'scale(' + scale + ')',
             });
-        }
+            next_fs.css({
+                'transform': 'scale(' + scale + ')',
+                'opacity': opacity
+            });
+            //show the next fieldset
+            next_fs.show();
+        },
+        duration: 800,
+        complete: function () {
+            animating = false;
+        },
     });
-
-
 });
 
 $(".previous").click(function () {
@@ -75,8 +79,13 @@ $(".previous").click(function () {
     //TODO: Change current step on progressbar
     updateProgressBar(current_fs, previous_fs);
 
+    // Clear the inputs of the current and previous fieldsets when going backwards
+    previous_fs.find(':input').prop('checked', false);
+    current_fs.find(':input').prop('checked', false);
+
     //show the previous fieldset
     previous_fs.show();
+
     //hide the current fieldset
     current_fs.animate({
         opacity: 0
@@ -101,7 +110,6 @@ $(".previous").click(function () {
         },
         duration: 800,
         complete: function () {
-            // current_fs.hide();
             animating = false;
         },
     });

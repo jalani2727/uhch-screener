@@ -1,5 +1,5 @@
 <iscomment> Begin: Start Page </iscomment>
-<fieldset class="screener-pg-1" data-progress="q1-unfilled">
+<fieldset class="screener-pg-1" data-question-start="q1-unfilled">
     <img alt="getting started image" src="${URLUtils.staticURL('/images/questionnaire-ear.svg')}" />
     <h1>
         ${Resource.msg('label.hearing-screener.body-1.heading', 'hearingscreener', null)}
@@ -18,7 +18,7 @@
 </fieldset>
 <iscomment> End: Start Page </iscomment>
 
-<fieldset class="screener-q1" id="screener-q1" data-filled="q1-filled" data-progress="q1-unfilled">
+<fieldset class="screener-q1" id="screener-q1" data-question-filled="q1-filled" data-question-start="q1-unfilled">
 
     <a href="javascript:void(0)" id="pg1-back" class="previous btn-back">
         ${Resource.msg('global.label.back', 'common', null)}
@@ -59,7 +59,7 @@
 
 </fieldset>
 
-<fieldset class="screener-q2" id="screener-q2" data-filled="q2-filled" data-progress="q2-unfilled">
+<fieldset class="screener-q2" id="screener-q2" data-question-filled="q2-filled" data-question-start="q2-unfilled">
 
     <a href="javascript:void(0)" id="q1-back" class="previous btn-back">
         ${Resource.msg('global.label.back', 'common', null)}
@@ -93,7 +93,7 @@
 </fieldset>
 
 
-<fieldset class="screener-q3" id="screener-q3" data-filled="q3-filled" data-progress="q3-unfilled">
+<fieldset class="screener-q3" id="screener-q3" data-question-filled="q3-filled" data-question-start="q3-unfilled">
     <a href="javascript:void(0)" id="q2-back" class="previous btn-back">
         ${Resource.msg('global.label.back', 'common', null)}
     </a>
@@ -126,7 +126,7 @@
 
 
 
-<fieldset class="screener-q4" id="screener-q4" data-filled="q4-filled" data-progress="q4-unfilled">
+<fieldset class="screener-q4" id="screener-q4" data-question-filled="q4-filled" data-question-start="q4-unfilled">
     <a href="javascript:void(0)" id="q3-back" class="previous btn-back">
         ${Resource.msg('global.label.back', 'common', null)}
     </a>
@@ -180,7 +180,7 @@
 </fieldset>
 
 
-<fieldset class="screener-complete" data-progress="progress-bar-complete">
+<fieldset class="screener-complete" data-question-start="progress-bar-complete">
     <div class="desktop-background-gray">
         <img alt="Questionnaite Complete Image" src="${URLUtils.staticURL('/images/CheckMrk.svg')}" />
 
