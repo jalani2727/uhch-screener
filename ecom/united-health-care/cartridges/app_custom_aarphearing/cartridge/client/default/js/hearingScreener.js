@@ -80,8 +80,8 @@ $(".previous").click(function () {
     updateProgressBar(current_fs, previous_fs);
 
     // Clear the inputs of the current and previous fieldsets when going backwards
-    previous_fs.find(':input').prop('checked', false);
-    current_fs.find(':input').prop('checked', false);
+    // previous_fs.find(':input').prop('checked', false);
+    // current_fs.find(':input').prop('checked', false);
 
     //show the previous fieldset
     previous_fs.show();

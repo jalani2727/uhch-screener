@@ -244,12 +244,12 @@ $hs: hearing-screener;
                     }
                 }
 
-                h1 {
+                :not(.screener-pg-1) h1 {
                     padding: 0;
                     text-align: left;
                 }
 
-                p {
+                :not(.screener-pg-1) p {
                     display: inline-block;
                     padding: 0;
                     color: $secondary-col-3;
