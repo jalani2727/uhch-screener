@@ -62,7 +62,7 @@ $(".next").click(function () {
             //show the next fieldset
             next_fs.show();
         },
-        duration: 800,
+        duration: 600,
         complete: function () {
             animating = false;
         },

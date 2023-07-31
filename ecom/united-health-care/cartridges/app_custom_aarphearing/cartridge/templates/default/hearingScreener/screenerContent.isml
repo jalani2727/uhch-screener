@@ -130,46 +130,52 @@
         ${Resource.msg('global.label.back', 'common', null)}
     </a>
     <h1>
-        ${Resource.msg('text.question.q3', 'hearingscreener', null)}
+        ${Resource.msg('text.question.q4', 'hearingscreener', null)}
     </h1>
     <p>
         ${Resource.msg('text.question.select-all', 'hearingscreener', null)}
     </p>
 
 <iscomment> TODO: update layout to show two colums with 4 options each </iscomment>
-    <ul>
-        <li>
-            <input type="checkbox" id="q4-1" name="q4" />
-            <label for="q4-1">${Resource.msg('text.question.q4.choice-1', 'hearingscreener', null)}</label>
-        </li>
-        <li>
-            <input type="checkbox" id="q4-2" name="q4" />
-            <label for="q4-2">${Resource.msg('text.question.q4.choice-2', 'hearingscreener', null)}</label>
-        </li>
-        <li>
-            <input type="checkbox" id="q4-3" name="q4" />
-            <label for="q4-3">${Resource.msg('text.question.q4.choice-3', 'hearingscreener', null)}</label>
-        </li>
-        <li>
-            <input type="checkbox" id="q4-4" name="q4" />
-            <label for="q4-4">${Resource.msg('text.question.q4.choice-4', 'hearingscreener', null)}</label>
-        </li>
-        <li>
-            <input type="checkbox" id="q4-5" name="q4" />
-            <label for="q4-5">${Resource.msg('text.question.q4.choice-5', 'hearingscreener', null)}</label>
-        </li>
-        <li>
-            <input type="checkbox" id="q4-6" name="q4" />
-            <label for="q4-6">${Resource.msg('text.question.q4.choice-6', 'hearingscreener', null)}</label>
-        </li>
-        <li>
-            <input type="checkbox" id="q4-7" name="q4" />
-            <label for="q4-7">${Resource.msg('text.question.q4.choice-7', 'hearingscreener', null)}</label>
-        </li>
-        <li>
-            <input type="checkbox" id="q4-8" name="q4" />
-            <label for="q4-8">${Resource.msg('text.question.q4.choice-8', 'hearingscreener', null)}</label>
-        </li>
+    <ul class="row">
+        <div class="col-12 col-md-6">
+            <li>
+                <input type="checkbox" id="q4-1" name="q4" />
+                <label for="q4-1">${Resource.msg('text.question.q4.choice-1', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="checkbox" id="q4-2" name="q4" />
+                <label for="q4-2">${Resource.msg('text.question.q4.choice-2', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="checkbox" id="q4-3" name="q4" />
+                <label for="q4-3">${Resource.msg('text.question.q4.choice-3', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="checkbox" id="q4-4" name="q4" />
+                <label for="q4-4">${Resource.msg('text.question.q4.choice-4', 'hearingscreener', null)}</label>
+            </li>
+            
+        </div>
+        <div class="col-12 col-md-6">
+            <li>
+                <input type="checkbox" id="q4-5" name="q4" />
+                <label for="q4-5">${Resource.msg('text.question.q4.choice-5', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="checkbox" id="q4-6" name="q4" />
+                <label for="q4-6">${Resource.msg('text.question.q4.choice-6', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="checkbox" id="q4-7" name="q4" />
+                <label for="q4-7">${Resource.msg('text.question.q4.choice-7', 'hearingscreener', null)}</label>
+            </li>
+            <li>
+                <input type="checkbox" id="q4-8" name="q4" />
+                <label for="q4-8">${Resource.msg('text.question.q4.choice-8', 'hearingscreener', null)}</label>
+            </li>
+            
+        </div>
 
     </ul>
 
