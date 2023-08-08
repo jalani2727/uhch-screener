@@ -83,4 +83,54 @@ $hero-description-font-color: $body-text-color;
         padding-left: 0;
         padding-right: 0;
     }
+
+    // 7/31/2023 - FIGMA - https://www.figma.com/file/zqqzzwcIxC3ZD34c9rDACh/UHCH-Questionnaire-Landing-Page-%2B-Simulator-CLIENT?node-id=69%3A4122&mode=dev
+    &.new-landing-hero-container {
+        max-height: none;
+
+        .new-landing {
+            // height: 30vw;
+            background-color: $primary-col-1;
+            align-items: center;
+
+            .hero-text {
+                margin: 0 auto;
+                padding: 0 20px;
+                color: $uhc-white;
+                max-width: 75%;
+
+                h1 {
+                    font-size: 56px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 64px;
+                    margin-bottom: 35px;
+                }
+
+                p {
+                    font-size: 30px;
+                    font-style: normal;
+
+                    line-height: 35px;
+                    margin-bottom: 35px;
+                }
+
+                .btn-primary {
+                    background-color: $secondary-col-3;
+                    border-color: $secondary-col-3;
+                    color: #fff;
+                }
+            }
+
+            .image-content {
+                clip-path: ellipse(67% 84% at 56% 79%);
+                transform: rotate(-37.445deg);
+
+                img {
+                    transform: rotate(37.445deg);
+                }
+
+            }
+        }
+    }
 }

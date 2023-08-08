@@ -1,0 +1,22 @@
+<div class="container content-banner banner-1 mt-5">
+    <div class="row">
+        <div class="col-12 col-md-7">
+            <h1>What could your ears be missing?</h1>
+            <p>From whispered conversations to family vacations, hearing loss could be affecting your life more than you
+                think. AARP® Hearing Solutions™ provided by UnitedHealthcare Hearing can help you hear more for less.
+            </p>
+            <p>Choose from a broad selection of traditional and over-the-counter hearing aids and flexible care
+                options—all backed by a national network of licensed hearing care professionals ready to help you find
+                your fit.</p>
+        </div>
+        <div class="col-12 col-md-5">
+            <h1>AARP member perks</h1>
+            <ul>
+                <li class="aarp-perk-desc">No-cost hearing exam and consultation</li>
+                <li class="aarp-perk-desc">Prescription hearing aids as low as $699 per ear</li>
+                <li class="aarp-perk-desc">Up to 20% off hearing aids and 15% off accessories</li>
+                <li class="aarp-perk-desc">4-year warranty on hearing aids <sup>1</sup></li>
+            </ul>
+        </div>
+    </div>
+</div>

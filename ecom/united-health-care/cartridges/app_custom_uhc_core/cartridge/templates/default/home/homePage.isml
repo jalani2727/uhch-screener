@@ -6,22 +6,42 @@
         assets.addCss('/css/homePage.css');
     </isscript>
     <div class="home-main homepage" data-is-pricebook-updated="${true}">
-        <isslot id="home-main-m" description="Main home page slot." context="global" />
+        <iscomment>
+            <isslot id="home-main-m" description="Main home page slot." context="global" />
+        </iscomment>
+        <div class="hero-container new-landing-hero-container">
+            <div class="row new-landing">
+                <div class="col-12 col-md-7">
+                    <div class="hero-text">
+                        <h1>Your hearing matters</h1>
+                        <p>Discover where you are in your hearing journey with a brief questionnaire.</p>
+                        <a href="javascript:void(0)" class="next btn-next btn btn-primary mb-5">Take questionnaire </a>
+                    </div>
+                </div>
+                <div class="hidden-md-down col-5">
+                    <div class="image-content">
+                        <picture>
+                            <img alt="sign in image" src="${URLUtils.staticURL('/images/red_shawl_2.png')}" />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div class="get-started-slot">
-        <isslot id="get-started-slot" description="Get Started Slot" context="global" />
-    </div>
-    <div class="hearing-screener">
-        <isinclude url="${URLUtils.url('Screener-IncludeHearingScreener')}" />
-    </div>
-    <div class="path-selection-slot">
-        <isslot id="path-selection-slot" description="Path Selection Slot" context="global" />
-    </div>
-    <div class="direction-slot">
-        <isslot id="direction-slot" description="Direction Slot" context="global" />
-    </div>
-    <div class="take-test-slot">
-        <isslot id="take-test-slot" description="Take the test slot" context="global" />
-    </div>
-    <isinclude template="home/registrationSuccessModal"/>
+
+    <!--TODO: Move this to another template and create controller to render the Questionnaire on a separate page -->
+        <div class="hearing-screener">
+            <isinclude url="${URLUtils.url('Screener-IncludeHearingScreener')}" />
+        </div>
+    
+    <iscomment> Perks </iscomment>
+    <isinclude template="home/banner-1" />
+    <iscomment> Questionnaire CTA </iscomment>
+    <isinclude template="home/banner-2" />
+    <iscomment> Asian Dude CTA </iscomment>
+    <isinclude template="home/banner-3" />
+
+
+    <isinclude template="home/registrationSuccessModal" />
 </isdecorate>

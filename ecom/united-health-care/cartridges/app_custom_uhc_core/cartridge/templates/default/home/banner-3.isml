@@ -1,0 +1,22 @@
+<div class="content-banner banner-3 mt-5">
+
+  <div class="row new-landing">
+    <div class="col-12 col-md-5">
+      <div class="hero-text">
+        <h1>What could your ears be missing?</h1>
+        <p>From whispered conversations to family vacations, hearing loss could be affecting your life more than you
+          think. AARP® Hearing Solutions™ provided by UnitedHealthcare Hearing can help you hear more for less.
+        </p>
+        <a href="javascript:void(0)" class="next btn-next btn btn-primary mb-5">Take questionnaire </a>
+      </div>
+    </div>
+    <div class="hidden-md-down col-7">
+      <div class="image-content">
+        <picture>
+          <img alt="sign in image" src="${URLUtils.staticURL('/images/Situational_Older_Gentleman.png')}" />
+        </picture>
+      </div>
+    </div>
+  </div>
+
+</div>

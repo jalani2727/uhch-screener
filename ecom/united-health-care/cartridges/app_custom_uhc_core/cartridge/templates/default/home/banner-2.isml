@@ -1,0 +1,13 @@
+<div class="container content-banner banner-2">
+    <div class="row banner-2-content">
+        <div class="col-12">
+            <p>
+                Find out if you could benefit from hearing care with this short questionnaire.
+            </p>
+        </div>
+        <div class="col-12">
+            <a href="javascript:void(0)" class="next btn-next btn btn-primary mb-5">Take the quiz </a>
+        </div>
+
+    </div>
+</div>
